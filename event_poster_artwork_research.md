@@ -304,3 +304,17 @@ The user created a staging ZIP containing only the custom small poster `UI4/Logo
 - This establishes that the generated small XDS and its newly compressed method-21 stream do not by themselves cause the earlier startup freeze, at least in this test.
 
 Next: test only the full-size custom XDS, basing the test archive on `Textures_event749_rawcopy.zip` (known-good duplicate-art archive), leaving the small poster as the original Ford Ka clone. Build a staging ZIP with just `UI4/Logos/Posters/EventBkgd749.xds`, replace that one entry, validate, then test Xenia. If it freezes, the full-size custom XDS or its stream is isolated as the cause. If it loads, investigate menu selection/rendering and whether the combination itself mattered.
+
+
+### Full-size recompression header comparison (2026-11-25)
+
+The user compared ZIP metadata for the working raw-copy archive and the freezing recompressed-full archive. For both Event302 (original) and Event749 (recompressed), the following values match: creator/version (made-by 0, version 10), needed version 10, flags 0, method 21, CRC32 0xAFDD3049, uncompressed size 2,375,732, and the central extra-field list contains only 0x1123. The local headers also match in version, flags, method, CRC, and size fields; neither local header has extra fields.
+
+The only differences for recompressed Event749 are compressed size (313,873 vs. original Event302 314,226) and the expected 0x1123 absolute payload offset. Therefore the tested ZIP metadata layout does not explain the Xenia freeze. The payload is the key remaining difference.
+
+Additional upstream notes checked:
+- CuteTenshii/lzx README says its encoder emits XMemCompress-style 32 KiB chunk framing, but explicitly says game loading of repacked archives has not been verified. Source include/lzx/lzx.h specifies the default 128 KiB window (17 bits); src/encoder.cpp uses 32 KiB frames.
+- D3FEKT/ForzaTechStudio docs say method 21 is XMemCompress LZX and that ForzaTech Studio can read/decompress method-21 entries through native xcompress64.dll, but does not currently write method 21. The documented typical Forza window is 0x20000 (128 KiB).
+- Current ForzaTech Studio release page lists V0.9.2.2 and asset ForzaTech.Studio.zip. This is a potential native-XMem validation tool, distinct from the older Forza Studio 4.6 the user previously investigated.
+
+Next best diagnostic: use ForzaTech Studio's ZIP viewer/extractor on both the original/working archive and the failed recompressed archive, extracting Event302 and Event749 and checking whether it can decode the recompressed stream. If native XMem extraction succeeds with matching CRC, the remaining failure is likely specific to Xenia or its stream-handling path; if it fails, the generated stream is not accepted by native XMem either.
