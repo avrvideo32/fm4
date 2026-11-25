@@ -1,0 +1,659 @@
+﻿FORZA MOTORSPORT 4 — EVENT DEPENDENCY AUDIT (READ ONLY)
+Database: D:\code\py\fm4\gamedb.slt
+Focus event: 600; championship range: 600..609
+No database writes performed.
+
+=== DATABASE INTEGRITY AND CORE COUNTS ===
+PRAGMA integrity_check: ok
+Events: 315 rows
+Races: 3064 rows
+EventParticipants: 1681 rows
+EventRestrictions: 340 rows
+EventShowroomChallenges: 26 rows
+RacesSpecial: 86 rows
+
+=== TABLES WITH EVENT / RACE IN THEIR NAME ===
+CareerEventTypes: 32 rows | id:INTEGER PK, Name:TEXT, BannerId:INT, RaceModeId:INT, Description:TEXT, IntroVO:TEXT, PosterPath:TEXT
+EventBonuses: 46 rows | Id:INTEGER PK, BonusTypeId:INT, Amount:INT
+EventGroups: 18 rows | Id:INTEGER PK, DisplayName:TEXT
+EventParticipants: 1681 rows | ID:INTEGER PK, EventID:INT, Priority:INT, Ordinal:INT, ColorSequence:INT, BucketId:INT
+EventRandomBonuses: 81 rows | RandomBonusTypeId:INT, BonusId:INT, Weight:INT, MinDriverLevel:INT, MaxDriverLevel:INT
+EventRestrictions: 340 rows | ID:INTEGER PK, EventID:INT, BucketId:INT, Value:TEXT
+EventScoring: 8 rows | ID:INTEGER PK, ScoringID:INT, place:INT, Credits:INT
+EventShowroomChallenges: 26 rows | CarID:INTEGER PK, EventID:INT
+Events: 315 rows | Id:INTEGER PK, Name:TEXT, Level:INT, CareerTypeId:INT, Description:TEXT, NumberOfRaces:INT, PittingProfileID:INT, CrowdSize:REAL, CrowdExcitement:REAL, NumberOfDrivers:INT, CashPrize:INT, IsDLC:INT, EventOrder:INT, GroupMask:INT, TargetClass:INT, AISkillEasy:INT, AISkillMed:INT, AISkillHard:INT, AISkillPro:INT, AITemperamentEasy:INT, AITemperamentMed:INT, AITemperamentHard:INT, AITemperamentPro:INT, BonusId:INT, CanDupPlayerCar:INT
+HopperRaces: 20 rows | Id:INTEGER PK, TrackId:INT, NumLaps:INT
+NewProfile_Career_EventResults: 0 rows | EventId:INTEGER PK, Place:INT
+NewProfile_Career_RaceResults: 0 rows | RaceId:INTEGER PK, Place:INT
+Races: 3064 rows | Id:INTEGER PK, EventId:INT, RaceNumber:INT, TrackId:INT, NumLaps:INT, ModeRaceNumber:INT, TimeOfDayIndex:INT
+RacesSpecial: 86 rows | RaceId:INTEGER PK, CollObjLayoutId:INT, TargetScore_Easy:REAL, TargetScore_Med:REAL, TargetScore_Hard:REAL, TargetScore_Pro:REAL, MinSpeedRequiredMPH:REAL
+
+=== EXACT EVENT-ID / RACE-ID COLUMNS ACROSS ALL TABLES ===
+EventParticipants.EventID [event reference]
+EventRestrictions.EventID [event reference]
+EventShowroomChallenges.EventID [event reference]
+NewProfile_Career_EventResults.EventId [event reference]
+NewProfile_Career_RaceResults.RaceId [race reference]
+Races.EventId [event reference]
+RacesSpecial.RaceId [race reference]
+
+=== EVENT REFERENCES TO 600..609 ===
+-- EventParticipants.EventID: 113 rows
+  { ID=23543, EventID=600, Priority=12, Ordinal=1391, ColorSequence=0, BucketId=0 }
+  { ID=23545, EventID=600, Priority=6, Ordinal=1371, ColorSequence=0, BucketId=0 }
+  { ID=23547, EventID=600, Priority=2, Ordinal=1365, ColorSequence=0, BucketId=0 }
+  { ID=23548, EventID=600, Priority=11, Ordinal=1363, ColorSequence=0, BucketId=0 }
+  { ID=23549, EventID=600, Priority=3, Ordinal=1362, ColorSequence=0, BucketId=0 }
+  { ID=23550, EventID=600, Priority=10, Ordinal=1361, ColorSequence=0, BucketId=0 }
+  { ID=23551, EventID=600, Priority=7, Ordinal=1360, ColorSequence=0, BucketId=0 }
+  { ID=23552, EventID=600, Priority=4, Ordinal=1359, ColorSequence=0, BucketId=0 }
+  { ID=23553, EventID=600, Priority=9, Ordinal=1358, ColorSequence=0, BucketId=0 }
+  { ID=23554, EventID=600, Priority=8, Ordinal=1357, ColorSequence=0, BucketId=0 }
+  { ID=23555, EventID=600, Priority=5, Ordinal=1356, ColorSequence=0, BucketId=0 }
+  { ID=23560, EventID=601, Priority=2, Ordinal=1507, ColorSequence=0, BucketId=0 }
+  { ID=23561, EventID=601, Priority=1, Ordinal=1082, ColorSequence=0, BucketId=0 }
+  { ID=23562, EventID=601, Priority=6, Ordinal=1061, ColorSequence=0, BucketId=0 }
+  { ID=23563, EventID=601, Priority=9, Ordinal=1058, ColorSequence=0, BucketId=0 }
+  { ID=23564, EventID=601, Priority=4, Ordinal=1047, ColorSequence=0, BucketId=0 }
+  { ID=23565, EventID=601, Priority=7, Ordinal=1037, ColorSequence=0, BucketId=0 }
+  { ID=23566, EventID=601, Priority=11, Ordinal=1066, ColorSequence=0, BucketId=0 }
+  { ID=23571, EventID=601, Priority=12, Ordinal=1480, ColorSequence=0, BucketId=0 }
+  { ID=23572, EventID=601, Priority=8, Ordinal=1374, ColorSequence=0, BucketId=0 }
+  { ID=23573, EventID=601, Priority=5, Ordinal=1298, ColorSequence=0, BucketId=0 }
+  { ID=71936, EventID=601, Priority=10, Ordinal=1261, ColorSequence=0, BucketId=0 }
+  { ID=23574, EventID=602, Priority=2, Ordinal=248, ColorSequence=0, BucketId=0 }
+  { ID=23575, EventID=602, Priority=12, Ordinal=1089, ColorSequence=0, BucketId=0 }
+  { ID=23576, EventID=602, Priority=10, Ordinal=1085, ColorSequence=0, BucketId=0 }
+  { ID=23577, EventID=602, Priority=7, Ordinal=1080, ColorSequence=0, BucketId=0 }
+  { ID=23580, EventID=602, Priority=3, Ordinal=614, ColorSequence=0, BucketId=0 }
+  { ID=23588, EventID=602, Priority=6, Ordinal=346, ColorSequence=0, BucketId=0 }
+  { ID=23594, EventID=602, Priority=5, Ordinal=1348, ColorSequence=0, BucketId=0 }
+  { ID=23595, EventID=602, Priority=11, Ordinal=1263, ColorSequence=0, BucketId=0 }
+  { ID=23596, EventID=602, Priority=9, Ordinal=1259, ColorSequence=0, BucketId=0 }
+  { ID=23597, EventID=602, Priority=8, Ordinal=1223, ColorSequence=0, BucketId=0 }
+  { ID=23599, EventID=602, Priority=1, Ordinal=1393, ColorSequence=0, BucketId=0 }
+  { ID=23600, EventID=602, Priority=4, Ordinal=1115, ColorSequence=0, BucketId=0 }
+  { ID=23602, EventID=603, Priority=8, Ordinal=1100, ColorSequence=0, BucketId=0 }
+  { ID=23603, EventID=603, Priority=10, Ordinal=1098, ColorSequence=0, BucketId=0 }
+  { ID=23605, EventID=603, Priority=6, Ordinal=1091, ColorSequence=0, BucketId=0 }
+  { ID=23606, EventID=603, Priority=9, Ordinal=1077, ColorSequence=0, BucketId=0 }
+  { ID=23609, EventID=603, Priority=4, Ordinal=658, ColorSequence=0, BucketId=0 }
+  { ID=23614, EventID=603, Priority=1, Ordinal=616, ColorSequence=0, BucketId=0 }
+  { ID=23615, EventID=603, Priority=2, Ordinal=469, ColorSequence=0, BucketId=0 }
+  { ID=23618, EventID=603, Priority=7, Ordinal=443, ColorSequence=0, BucketId=0 }
+  { ID=23627, EventID=603, Priority=13, Ordinal=371, ColorSequence=0, BucketId=0 }
+  { ID=23643, EventID=603, Priority=11, Ordinal=1118, ColorSequence=0, BucketId=0 }
+  { ID=70005, EventID=603, Priority=12, Ordinal=1203, ColorSequence=0, BucketId=0 }
+  { ID=23644, EventID=604, Priority=4, Ordinal=1099, ColorSequence=0, BucketId=0 }
+  { ID=23650, EventID=604, Priority=9, Ordinal=1035, ColorSequence=0, BucketId=0 }
+  { ID=23654, EventID=604, Priority=2, Ordinal=1008, ColorSequence=0, BucketId=0 }
+  { ID=23655, EventID=604, Priority=10, Ordinal=617, ColorSequence=0, BucketId=0 }
+  { ID=23662, EventID=604, Priority=1, Ordinal=425, ColorSequence=0, BucketId=0 }
+  { ID=23663, EventID=604, Priority=11, Ordinal=420, ColorSequence=0, BucketId=0 }
+  { ID=23671, EventID=604, Priority=6, Ordinal=374, ColorSequence=0, BucketId=0 }
+  { ID=23678, EventID=604, Priority=7, Ordinal=321, ColorSequence=0, BucketId=0 }
+  { ID=23685, EventID=604, Priority=13, Ordinal=1375, ColorSequence=0, BucketId=0 }
+  { ID=23686, EventID=604, Priority=12, Ordinal=1367, ColorSequence=0, BucketId=0 }
+  { ID=23695, EventID=604, Priority=8, Ordinal=1116, ColorSequence=0, BucketId=0 }
+  { ID=23698, EventID=605, Priority=3, Ordinal=1090, ColorSequence=0, BucketId=0 }
+  { ID=23702, EventID=605, Priority=11, Ordinal=1062, ColorSequence=0, BucketId=0 }
+  { ID=23704, EventID=605, Priority=10, Ordinal=1032, ColorSequence=0, BucketId=0 }
+  { ID=23709, EventID=605, Priority=8, Ordinal=569, ColorSequence=0, BucketId=0 }
+  { ID=23711, EventID=605, Priority=6, Ordinal=484, ColorSequence=0, BucketId=0 }
+  { ID=23717, EventID=605, Priority=9, Ordinal=433, ColorSequence=0, BucketId=0 }
+  { ID=23722, EventID=605, Priority=4, Ordinal=348, ColorSequence=0, BucketId=0 }
+  { ID=23723, EventID=605, Priority=1, Ordinal=341, ColorSequence=0, BucketId=0 }
+  { ID=23728, EventID=605, Priority=2, Ordinal=313, ColorSequence=0, BucketId=0 }
+  { ID=23735, EventID=605, Priority=7, Ordinal=1250, ColorSequence=0, BucketId=0 }
+  { ID=64616, EventID=605, Priority=5, Ordinal=1205, ColorSequence=0, BucketId=0 }
+  { ID=23739, EventID=606, Priority=11, Ordinal=1069, ColorSequence=0, BucketId=0 }
+  { ID=23742, EventID=606, Priority=12, Ordinal=1017, ColorSequence=0, BucketId=0 }
+  { ID=23754, EventID=606, Priority=1, Ordinal=1319, ColorSequence=0, BucketId=0 }
+  { ID=23755, EventID=606, Priority=7, Ordinal=1260, ColorSequence=0, BucketId=0 }
+  { ID=23760, EventID=606, Priority=8, Ordinal=1202, ColorSequence=0, BucketId=0 }
+  { ID=23761, EventID=606, Priority=4, Ordinal=1131, ColorSequence=0, BucketId=0 }
+  { ID=23762, EventID=606, Priority=2, Ordinal=1130, ColorSequence=0, BucketId=0 }
+  { ID=23763, EventID=606, Priority=6, Ordinal=1128, ColorSequence=0, BucketId=0 }
+  { ID=23764, EventID=606, Priority=3, Ordinal=1125, ColorSequence=0, BucketId=0 }
+  { ID=23765, EventID=606, Priority=5, Ordinal=1117, ColorSequence=0, BucketId=0 }
+  { ID=64597, EventID=606, Priority=10, Ordinal=1433, ColorSequence=0, BucketId=0 }
+  { ID=50605, EventID=607, Priority=1, Ordinal=588, ColorSequence=0, BucketId=0 }
+  { ID=50614, EventID=607, Priority=12, Ordinal=554, ColorSequence=0, BucketId=0 }
+  { ID=50619, EventID=607, Priority=9, Ordinal=548, ColorSequence=0, BucketId=0 }
+  { ID=50624, EventID=607, Priority=11, Ordinal=542, ColorSequence=0, BucketId=0 }
+  { ID=50625, EventID=607, Priority=5, Ordinal=541, ColorSequence=0, BucketId=0 }
+  { ID=50626, EventID=607, Priority=7, Ordinal=1449, ColorSequence=0, BucketId=0 }
+  { ID=50823, EventID=607, Priority=8, Ordinal=1408, ColorSequence=0, BucketId=0 }
+  { ID=50972, EventID=607, Priority=2, Ordinal=1235, ColorSequence=0, BucketId=0 }
+  { ID=50982, EventID=607, Priority=3, Ordinal=1222, ColorSequence=0, BucketId=0 }
+  { ID=51023, EventID=607, Priority=6, Ordinal=1146, ColorSequence=0, BucketId=0 }
+  { ID=51046, EventID=607, Priority=4, Ordinal=1111, ColorSequence=0, BucketId=0 }
+  { ID=51137, EventID=608, Priority=8, Ordinal=631, ColorSequence=0, BucketId=0 }
+  { ID=51150, EventID=608, Priority=9, Ordinal=1467, ColorSequence=0, BucketId=0 }
+  { ID=51151, EventID=608, Priority=7, Ordinal=1466, ColorSequence=0, BucketId=0 }
+  { ID=51165, EventID=608, Priority=3, Ordinal=551, ColorSequence=0, BucketId=0 }
+  { ID=51172, EventID=608, Priority=11, Ordinal=544, ColorSequence=0, BucketId=0 }
+  { ID=51180, EventID=608, Priority=6, Ordinal=526, ColorSequence=0, BucketId=0 }
+  { ID=51189, EventID=608, Priority=10, Ordinal=509, ColorSequence=0, BucketId=0 }
+  { ID=51194, EventID=608, Priority=2, Ordinal=501, ColorSequence=0, BucketId=0 }
+  { ID=51287, EventID=608, Priority=5, Ordinal=1406, ColorSequence=0, BucketId=0 }
+  { ID=51289, EventID=608, Priority=12, Ordinal=390, ColorSequence=0, BucketId=0 }
+  { ID=51373, EventID=608, Priority=1, Ordinal=1407, ColorSequence=0, BucketId=0 }
+  { ID=51578, EventID=608, Priority=4, Ordinal=1139, ColorSequence=0, BucketId=0 }
+  { ID=51696, EventID=609, Priority=3, Ordinal=1400, ColorSequence=0, BucketId=0 }
+  { ID=51711, EventID=609, Priority=8, Ordinal=555, ColorSequence=0, BucketId=0 }
+  { ID=51716, EventID=609, Priority=12, Ordinal=549, ColorSequence=0, BucketId=0 }
+  { ID=51725, EventID=609, Priority=1, Ordinal=1445, ColorSequence=0, BucketId=0 }
+  { ID=51730, EventID=609, Priority=10, Ordinal=524, ColorSequence=0, BucketId=0 }
+  { ID=51740, EventID=609, Priority=9, Ordinal=507, ColorSequence=0, BucketId=0 }
+  { ID=51741, EventID=609, Priority=11, Ordinal=505, ColorSequence=0, BucketId=0 }
+  { ID=51745, EventID=609, Priority=7, Ordinal=498, ColorSequence=0, BucketId=0 }
+  { ID=51758, EventID=609, Priority=5, Ordinal=1403, ColorSequence=0, BucketId=0 }
+  { ID=52104, EventID=609, Priority=2, Ordinal=1182, ColorSequence=0, BucketId=0 }
+  { ID=52115, EventID=609, Priority=4, Ordinal=1156, ColorSequence=0, BucketId=0 }
+  { ID=52123, EventID=609, Priority=6, Ordinal=1144, ColorSequence=0, BucketId=0 }
+-- EventRestrictions.EventID: 10 rows
+  { ID=285, EventID=600, BucketId=0, Value='0000000004' }
+  { ID=98, EventID=601, BucketId=0, Value='0000000004' }
+  { ID=244, EventID=602, BucketId=0, Value='0000000004' }
+  { ID=250, EventID=603, BucketId=0, Value='0000000004' }
+  { ID=226, EventID=604, BucketId=0, Value='0000000004' }
+  { ID=119, EventID=605, BucketId=0, Value='0000000004' }
+  { ID=109, EventID=606, BucketId=0, Value='0000000004' }
+  { ID=308, EventID=607, BucketId=0, Value='0000000004' }
+  { ID=300, EventID=608, BucketId=0, Value='0000000004' }
+  { ID=34, EventID=609, BucketId=0, Value='0000000004' }
+-- EventShowroomChallenges.EventID: 0 rows
+-- NewProfile_Career_EventResults.EventId: 0 rows
+-- Races.EventId: 400 rows
+  { Id=831, EventId=600, RaceNumber=13, TrackId=121, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=832, EventId=600, RaceNumber=14, TrackId=31, NumLaps=1, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=833, EventId=600, RaceNumber=15, TrackId=231, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=834, EventId=600, RaceNumber=16, TrackId=9, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=835, EventId=600, RaceNumber=17, TrackId=22, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=836, EventId=600, RaceNumber=18, TrackId=83, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=837, EventId=600, RaceNumber=19, TrackId=100, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=838, EventId=600, RaceNumber=20, TrackId=69, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=839, EventId=600, RaceNumber=21, TrackId=3, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=840, EventId=600, RaceNumber=22, TrackId=241, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=841, EventId=600, RaceNumber=23, TrackId=49, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=842, EventId=600, RaceNumber=24, TrackId=141, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=843, EventId=600, RaceNumber=25, TrackId=260, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=844, EventId=600, RaceNumber=26, TrackId=7, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=845, EventId=600, RaceNumber=27, TrackId=53, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=846, EventId=600, RaceNumber=28, TrackId=43, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=847, EventId=600, RaceNumber=29, TrackId=57, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=848, EventId=600, RaceNumber=30, TrackId=51, NumLaps=20, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=849, EventId=600, RaceNumber=31, TrackId=50, NumLaps=27, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=850, EventId=600, RaceNumber=32, TrackId=46, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=851, EventId=600, RaceNumber=33, TrackId=70, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=852, EventId=600, RaceNumber=34, TrackId=63, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=853, EventId=600, RaceNumber=35, TrackId=145, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=854, EventId=600, RaceNumber=36, TrackId=6, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=855, EventId=600, RaceNumber=37, TrackId=243, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=856, EventId=600, RaceNumber=38, TrackId=143, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=857, EventId=600, RaceNumber=39, TrackId=38, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=858, EventId=600, RaceNumber=40, TrackId=64, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2732, EventId=600, RaceNumber=1, TrackId=1, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2733, EventId=600, RaceNumber=2, TrackId=0, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2734, EventId=600, RaceNumber=3, TrackId=36, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2735, EventId=600, RaceNumber=4, TrackId=263, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2736, EventId=600, RaceNumber=5, TrackId=45, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2737, EventId=600, RaceNumber=6, TrackId=34, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2738, EventId=600, RaceNumber=7, TrackId=17, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2739, EventId=600, RaceNumber=8, TrackId=251, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2740, EventId=600, RaceNumber=9, TrackId=42, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2741, EventId=600, RaceNumber=10, TrackId=20, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2742, EventId=600, RaceNumber=11, TrackId=39, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2743, EventId=600, RaceNumber=12, TrackId=111, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=859, EventId=601, RaceNumber=13, TrackId=141, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=860, EventId=601, RaceNumber=14, TrackId=31, NumLaps=1, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=861, EventId=601, RaceNumber=15, TrackId=3, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=862, EventId=601, RaceNumber=16, TrackId=242, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=863, EventId=601, RaceNumber=17, TrackId=68, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=864, EventId=601, RaceNumber=18, TrackId=78, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=865, EventId=601, RaceNumber=19, TrackId=54, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=866, EventId=601, RaceNumber=20, TrackId=127, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=867, EventId=601, RaceNumber=21, TrackId=231, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=868, EventId=601, RaceNumber=22, TrackId=24, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=869, EventId=601, RaceNumber=23, TrackId=4, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=870, EventId=601, RaceNumber=24, TrackId=100, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=871, EventId=601, RaceNumber=25, TrackId=40, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=872, EventId=601, RaceNumber=26, TrackId=63, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=873, EventId=601, RaceNumber=27, TrackId=62, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=874, EventId=601, RaceNumber=28, TrackId=5, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=875, EventId=601, RaceNumber=29, TrackId=101, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=876, EventId=601, RaceNumber=30, TrackId=33, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=877, EventId=601, RaceNumber=31, TrackId=52, NumLaps=22, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=878, EventId=601, RaceNumber=32, TrackId=51, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=879, EventId=601, RaceNumber=33, TrackId=65, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=880, EventId=601, RaceNumber=34, TrackId=57, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=881, EventId=601, RaceNumber=35, TrackId=35, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=882, EventId=601, RaceNumber=36, TrackId=60, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=883, EventId=601, RaceNumber=37, TrackId=49, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=884, EventId=601, RaceNumber=38, TrackId=23, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=885, EventId=601, RaceNumber=39, TrackId=61, NumLaps=22, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=886, EventId=601, RaceNumber=40, TrackId=70, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2744, EventId=601, RaceNumber=1, TrackId=1, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2745, EventId=601, RaceNumber=2, TrackId=0, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2746, EventId=601, RaceNumber=3, TrackId=36, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2747, EventId=601, RaceNumber=4, TrackId=263, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2748, EventId=601, RaceNumber=5, TrackId=45, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2749, EventId=601, RaceNumber=6, TrackId=34, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2750, EventId=601, RaceNumber=7, TrackId=17, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2751, EventId=601, RaceNumber=8, TrackId=251, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2752, EventId=601, RaceNumber=9, TrackId=42, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2753, EventId=601, RaceNumber=10, TrackId=20, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2754, EventId=601, RaceNumber=11, TrackId=39, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2755, EventId=601, RaceNumber=12, TrackId=111, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=887, EventId=602, RaceNumber=13, TrackId=83, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=888, EventId=602, RaceNumber=14, TrackId=101, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=889, EventId=602, RaceNumber=15, TrackId=145, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=890, EventId=602, RaceNumber=16, TrackId=70, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=891, EventId=602, RaceNumber=17, TrackId=4, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=892, EventId=602, RaceNumber=18, TrackId=121, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=893, EventId=602, RaceNumber=19, TrackId=230, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=894, EventId=602, RaceNumber=20, TrackId=25, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=895, EventId=602, RaceNumber=21, TrackId=53, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=896, EventId=602, RaceNumber=22, TrackId=245, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=897, EventId=602, RaceNumber=23, TrackId=31, NumLaps=1, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=898, EventId=602, RaceNumber=24, TrackId=3, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=899, EventId=602, RaceNumber=25, TrackId=240, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=900, EventId=602, RaceNumber=26, TrackId=141, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=901, EventId=602, RaceNumber=27, TrackId=110, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=902, EventId=602, RaceNumber=28, TrackId=62, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=903, EventId=602, RaceNumber=29, TrackId=69, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=904, EventId=602, RaceNumber=30, TrackId=127, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=905, EventId=602, RaceNumber=31, TrackId=66, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=906, EventId=602, RaceNumber=32, TrackId=250, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=907, EventId=602, RaceNumber=33, TrackId=43, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=908, EventId=602, RaceNumber=34, TrackId=52, NumLaps=22, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=909, EventId=602, RaceNumber=35, TrackId=58, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=910, EventId=602, RaceNumber=36, TrackId=5, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=911, EventId=602, RaceNumber=37, TrackId=33, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=912, EventId=602, RaceNumber=38, TrackId=8, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=913, EventId=602, RaceNumber=39, TrackId=67, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=914, EventId=602, RaceNumber=40, TrackId=78, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2756, EventId=602, RaceNumber=1, TrackId=1, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2757, EventId=602, RaceNumber=2, TrackId=0, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2758, EventId=602, RaceNumber=3, TrackId=36, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2759, EventId=602, RaceNumber=4, TrackId=263, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2760, EventId=602, RaceNumber=5, TrackId=45, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2761, EventId=602, RaceNumber=6, TrackId=34, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2762, EventId=602, RaceNumber=7, TrackId=17, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2763, EventId=602, RaceNumber=8, TrackId=251, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2764, EventId=602, RaceNumber=9, TrackId=42, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2765, EventId=602, RaceNumber=10, TrackId=20, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2766, EventId=602, RaceNumber=11, TrackId=39, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2767, EventId=602, RaceNumber=12, TrackId=111, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=915, EventId=603, RaceNumber=13, TrackId=100, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=916, EventId=603, RaceNumber=14, TrackId=56, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=917, EventId=603, RaceNumber=15, TrackId=3, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=918, EventId=603, RaceNumber=16, TrackId=144, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=919, EventId=603, RaceNumber=17, TrackId=31, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=920, EventId=603, RaceNumber=18, TrackId=230, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=921, EventId=603, RaceNumber=19, TrackId=70, NumLaps=17, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=922, EventId=603, RaceNumber=20, TrackId=121, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=923, EventId=603, RaceNumber=21, TrackId=245, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=924, EventId=603, RaceNumber=22, TrackId=23, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=925, EventId=603, RaceNumber=23, TrackId=7, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=926, EventId=603, RaceNumber=24, TrackId=78, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=927, EventId=603, RaceNumber=25, TrackId=35, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=928, EventId=603, RaceNumber=26, TrackId=60, NumLaps=24, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=929, EventId=603, RaceNumber=27, TrackId=112, NumLaps=19, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=930, EventId=603, RaceNumber=28, TrackId=66, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=931, EventId=603, RaceNumber=29, TrackId=38, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=932, EventId=603, RaceNumber=30, TrackId=252, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=933, EventId=603, RaceNumber=31, TrackId=44, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=934, EventId=603, RaceNumber=32, TrackId=6, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=935, EventId=603, RaceNumber=33, TrackId=51, NumLaps=24, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=936, EventId=603, RaceNumber=34, TrackId=141, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=937, EventId=603, RaceNumber=35, TrackId=57, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=938, EventId=603, RaceNumber=36, TrackId=69, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=939, EventId=603, RaceNumber=37, TrackId=68, NumLaps=17, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=940, EventId=603, RaceNumber=38, TrackId=19, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=941, EventId=603, RaceNumber=39, TrackId=127, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=942, EventId=603, RaceNumber=40, TrackId=33, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2768, EventId=603, RaceNumber=1, TrackId=1, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2769, EventId=603, RaceNumber=2, TrackId=0, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2770, EventId=603, RaceNumber=3, TrackId=36, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2771, EventId=603, RaceNumber=4, TrackId=263, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2772, EventId=603, RaceNumber=5, TrackId=45, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2773, EventId=603, RaceNumber=6, TrackId=34, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2774, EventId=603, RaceNumber=7, TrackId=17, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2775, EventId=603, RaceNumber=8, TrackId=251, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2776, EventId=603, RaceNumber=9, TrackId=42, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2777, EventId=603, RaceNumber=10, TrackId=20, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2778, EventId=603, RaceNumber=11, TrackId=39, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2779, EventId=603, RaceNumber=12, TrackId=111, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=943, EventId=604, RaceNumber=13, TrackId=241, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=944, EventId=604, RaceNumber=14, TrackId=83, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=945, EventId=604, RaceNumber=15, TrackId=51, NumLaps=34, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=946, EventId=604, RaceNumber=16, TrackId=67, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=947, EventId=604, RaceNumber=17, TrackId=141, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=948, EventId=604, RaceNumber=18, TrackId=24, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=949, EventId=604, RaceNumber=19, TrackId=101, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=950, EventId=604, RaceNumber=20, TrackId=1, NumLaps=22, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=951, EventId=604, RaceNumber=21, TrackId=31, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=952, EventId=604, RaceNumber=22, TrackId=0, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=953, EventId=604, RaceNumber=23, TrackId=121, NumLaps=25, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=954, EventId=604, RaceNumber=24, TrackId=4, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=955, EventId=604, RaceNumber=25, TrackId=142, NumLaps=19, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=956, EventId=604, RaceNumber=26, TrackId=49, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=957, EventId=604, RaceNumber=27, TrackId=261, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=958, EventId=604, RaceNumber=28, TrackId=25, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=959, EventId=604, RaceNumber=29, TrackId=260, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=960, EventId=604, RaceNumber=30, TrackId=9, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=961, EventId=604, RaceNumber=31, TrackId=63, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=962, EventId=604, RaceNumber=32, TrackId=50, NumLaps=45, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=963, EventId=604, RaceNumber=33, TrackId=61, NumLaps=35, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=964, EventId=604, RaceNumber=34, TrackId=69, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=965, EventId=604, RaceNumber=35, TrackId=53, NumLaps=22, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=966, EventId=604, RaceNumber=36, TrackId=100, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=967, EventId=604, RaceNumber=37, TrackId=59, NumLaps=45, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=968, EventId=604, RaceNumber=38, TrackId=39, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=969, EventId=604, RaceNumber=39, TrackId=55, NumLaps=20, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=970, EventId=604, RaceNumber=40, TrackId=22, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2780, EventId=604, RaceNumber=1, TrackId=16, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2781, EventId=604, RaceNumber=2, TrackId=35, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2782, EventId=604, RaceNumber=3, TrackId=263, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2783, EventId=604, RaceNumber=4, TrackId=43, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2784, EventId=604, RaceNumber=5, TrackId=33, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2785, EventId=604, RaceNumber=6, TrackId=230, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2786, EventId=604, RaceNumber=7, TrackId=3, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2787, EventId=604, RaceNumber=8, TrackId=250, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2788, EventId=604, RaceNumber=9, TrackId=40, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2789, EventId=604, RaceNumber=10, TrackId=18, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2790, EventId=604, RaceNumber=11, TrackId=37, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2791, EventId=604, RaceNumber=12, TrackId=110, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=971, EventId=605, RaceNumber=13, TrackId=245, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=972, EventId=605, RaceNumber=14, TrackId=22, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=973, EventId=605, RaceNumber=15, TrackId=83, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=974, EventId=605, RaceNumber=16, TrackId=55, NumLaps=20, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=975, EventId=605, RaceNumber=17, TrackId=2, NumLaps=30, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=976, EventId=605, RaceNumber=18, TrackId=127, NumLaps=25, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=977, EventId=605, RaceNumber=19, TrackId=31, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=978, EventId=605, RaceNumber=20, TrackId=144, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=979, EventId=605, RaceNumber=21, TrackId=4, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=980, EventId=605, RaceNumber=22, TrackId=0, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=981, EventId=605, RaceNumber=23, TrackId=101, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=982, EventId=605, RaceNumber=24, TrackId=67, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=983, EventId=605, RaceNumber=25, TrackId=38, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=984, EventId=605, RaceNumber=26, TrackId=261, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=985, EventId=605, RaceNumber=27, TrackId=112, NumLaps=27, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=986, EventId=605, RaceNumber=28, TrackId=49, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=987, EventId=605, RaceNumber=29, TrackId=69, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=988, EventId=605, RaceNumber=30, TrackId=36, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=989, EventId=605, RaceNumber=31, TrackId=57, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=990, EventId=605, RaceNumber=32, TrackId=60, NumLaps=34, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=991, EventId=605, RaceNumber=33, TrackId=54, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=992, EventId=605, RaceNumber=34, TrackId=243, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=993, EventId=605, RaceNumber=35, TrackId=100, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=994, EventId=605, RaceNumber=36, TrackId=263, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=995, EventId=605, RaceNumber=37, TrackId=143, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=996, EventId=605, RaceNumber=38, TrackId=252, NumLaps=17, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=997, EventId=605, RaceNumber=39, TrackId=44, NumLaps=26, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=998, EventId=605, RaceNumber=40, TrackId=64, NumLaps=20, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2792, EventId=605, RaceNumber=1, TrackId=16, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2793, EventId=605, RaceNumber=2, TrackId=35, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2794, EventId=605, RaceNumber=3, TrackId=260, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2795, EventId=605, RaceNumber=4, TrackId=43, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2796, EventId=605, RaceNumber=5, TrackId=33, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2797, EventId=605, RaceNumber=6, TrackId=230, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2798, EventId=605, RaceNumber=7, TrackId=3, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2799, EventId=605, RaceNumber=8, TrackId=250, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2800, EventId=605, RaceNumber=9, TrackId=40, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2801, EventId=605, RaceNumber=10, TrackId=18, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2802, EventId=605, RaceNumber=11, TrackId=37, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2803, EventId=605, RaceNumber=12, TrackId=110, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=999, EventId=606, RaceNumber=13, TrackId=2, NumLaps=30, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1922, EventId=606, RaceNumber=14, TrackId=243, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1923, EventId=606, RaceNumber=15, TrackId=67, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1924, EventId=606, RaceNumber=16, TrackId=141, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1925, EventId=606, RaceNumber=17, TrackId=7, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1926, EventId=606, RaceNumber=18, TrackId=31, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1927, EventId=606, RaceNumber=19, TrackId=56, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1928, EventId=606, RaceNumber=20, TrackId=78, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1929, EventId=606, RaceNumber=21, TrackId=22, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1930, EventId=606, RaceNumber=22, TrackId=127, NumLaps=25, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1931, EventId=606, RaceNumber=23, TrackId=0, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1932, EventId=606, RaceNumber=24, TrackId=100, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1933, EventId=606, RaceNumber=25, TrackId=36, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1934, EventId=606, RaceNumber=26, TrackId=58, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1935, EventId=606, RaceNumber=27, TrackId=23, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1936, EventId=606, RaceNumber=28, TrackId=121, NumLaps=25, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1937, EventId=606, RaceNumber=29, TrackId=6, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1938, EventId=606, RaceNumber=30, TrackId=46, NumLaps=19, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1939, EventId=606, RaceNumber=31, TrackId=44, NumLaps=26, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1940, EventId=606, RaceNumber=32, TrackId=59, NumLaps=46, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1941, EventId=606, RaceNumber=33, TrackId=38, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1942, EventId=606, RaceNumber=34, TrackId=63, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1943, EventId=606, RaceNumber=35, TrackId=112, NumLaps=27, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1944, EventId=606, RaceNumber=36, TrackId=261, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1945, EventId=606, RaceNumber=37, TrackId=45, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1946, EventId=606, RaceNumber=38, TrackId=145, NumLaps=19, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1947, EventId=606, RaceNumber=39, TrackId=17, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1948, EventId=606, RaceNumber=40, TrackId=251, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2804, EventId=606, RaceNumber=1, TrackId=16, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2805, EventId=606, RaceNumber=2, TrackId=35, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2806, EventId=606, RaceNumber=3, TrackId=260, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2807, EventId=606, RaceNumber=4, TrackId=43, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2808, EventId=606, RaceNumber=5, TrackId=33, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2809, EventId=606, RaceNumber=6, TrackId=230, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2810, EventId=606, RaceNumber=7, TrackId=3, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2811, EventId=606, RaceNumber=8, TrackId=250, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2812, EventId=606, RaceNumber=9, TrackId=40, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2813, EventId=606, RaceNumber=10, TrackId=18, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2814, EventId=606, RaceNumber=11, TrackId=37, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2815, EventId=606, RaceNumber=12, TrackId=110, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1949, EventId=607, RaceNumber=13, TrackId=121, NumLaps=25, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1950, EventId=607, RaceNumber=14, TrackId=83, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1951, EventId=607, RaceNumber=15, TrackId=240, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1952, EventId=607, RaceNumber=16, TrackId=9, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1953, EventId=607, RaceNumber=17, TrackId=70, NumLaps=25, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1954, EventId=607, RaceNumber=18, TrackId=0, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1955, EventId=607, RaceNumber=19, TrackId=25, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1956, EventId=607, RaceNumber=20, TrackId=17, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1957, EventId=607, RaceNumber=21, TrackId=31, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1958, EventId=607, RaceNumber=22, TrackId=2, NumLaps=30, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1959, EventId=607, RaceNumber=23, TrackId=56, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1960, EventId=607, RaceNumber=24, TrackId=140, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1961, EventId=607, RaceNumber=25, TrackId=243, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1962, EventId=607, RaceNumber=26, TrackId=53, NumLaps=23, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1963, EventId=607, RaceNumber=27, TrackId=231, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1964, EventId=607, RaceNumber=28, TrackId=65, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1965, EventId=607, RaceNumber=29, TrackId=101, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1966, EventId=607, RaceNumber=30, TrackId=63, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1967, EventId=607, RaceNumber=31, TrackId=111, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1968, EventId=607, RaceNumber=32, TrackId=57, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1969, EventId=607, RaceNumber=33, TrackId=144, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1970, EventId=607, RaceNumber=34, TrackId=8, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1971, EventId=607, RaceNumber=35, TrackId=60, NumLaps=35, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1972, EventId=607, RaceNumber=36, TrackId=58, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1973, EventId=607, RaceNumber=37, TrackId=61, NumLaps=36, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1974, EventId=607, RaceNumber=38, TrackId=46, NumLaps=19, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1975, EventId=607, RaceNumber=39, TrackId=7, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1976, EventId=607, RaceNumber=40, TrackId=127, NumLaps=25, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2816, EventId=607, RaceNumber=1, TrackId=35, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2817, EventId=607, RaceNumber=2, TrackId=260, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2818, EventId=607, RaceNumber=3, TrackId=43, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2819, EventId=607, RaceNumber=4, TrackId=33, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2820, EventId=607, RaceNumber=5, TrackId=230, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2821, EventId=607, RaceNumber=6, TrackId=3, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2822, EventId=607, RaceNumber=7, TrackId=250, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2823, EventId=607, RaceNumber=8, TrackId=40, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2824, EventId=607, RaceNumber=9, TrackId=18, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2825, EventId=607, RaceNumber=10, TrackId=37, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2826, EventId=607, RaceNumber=11, TrackId=110, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2827, EventId=607, RaceNumber=12, TrackId=100, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1977, EventId=608, RaceNumber=13, TrackId=31, NumLaps=2, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1978, EventId=608, RaceNumber=14, TrackId=16, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1979, EventId=608, RaceNumber=15, TrackId=78, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1980, EventId=608, RaceNumber=16, TrackId=67, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1981, EventId=608, RaceNumber=17, TrackId=23, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1982, EventId=608, RaceNumber=18, TrackId=140, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1983, EventId=608, RaceNumber=19, TrackId=127, NumLaps=28, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1984, EventId=608, RaceNumber=20, TrackId=2, NumLaps=33, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1985, EventId=608, RaceNumber=21, TrackId=241, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1986, EventId=608, RaceNumber=22, TrackId=4, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1987, EventId=608, RaceNumber=23, TrackId=0, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1988, EventId=608, RaceNumber=24, TrackId=57, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1989, EventId=608, RaceNumber=25, TrackId=59, NumLaps=51, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1990, EventId=608, RaceNumber=26, TrackId=54, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1991, EventId=608, RaceNumber=27, TrackId=56, NumLaps=23, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1992, EventId=608, RaceNumber=28, TrackId=60, NumLaps=38, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1993, EventId=608, RaceNumber=29, TrackId=111, NumLaps=17, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1994, EventId=608, RaceNumber=30, TrackId=25, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1995, EventId=608, RaceNumber=31, TrackId=101, NumLaps=4, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1996, EventId=608, RaceNumber=32, TrackId=242, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1997, EventId=608, RaceNumber=33, TrackId=36, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1998, EventId=608, RaceNumber=34, TrackId=19, NumLaps=20, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=1999, EventId=608, RaceNumber=35, TrackId=39, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2000, EventId=608, RaceNumber=36, TrackId=240, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2001, EventId=608, RaceNumber=37, TrackId=144, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2002, EventId=608, RaceNumber=38, TrackId=243, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2003, EventId=608, RaceNumber=39, TrackId=63, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2004, EventId=608, RaceNumber=40, TrackId=49, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2828, EventId=608, RaceNumber=1, TrackId=35, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2829, EventId=608, RaceNumber=2, TrackId=260, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2830, EventId=608, RaceNumber=3, TrackId=43, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2831, EventId=608, RaceNumber=4, TrackId=33, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2832, EventId=608, RaceNumber=5, TrackId=230, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2833, EventId=608, RaceNumber=6, TrackId=3, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2834, EventId=608, RaceNumber=7, TrackId=250, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2835, EventId=608, RaceNumber=8, TrackId=40, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2836, EventId=608, RaceNumber=9, TrackId=18, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2837, EventId=608, RaceNumber=10, TrackId=37, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2838, EventId=608, RaceNumber=11, TrackId=110, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2839, EventId=608, RaceNumber=12, TrackId=100, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2005, EventId=609, RaceNumber=13, TrackId=2, NumLaps=34, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2006, EventId=609, RaceNumber=14, TrackId=83, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2007, EventId=609, RaceNumber=15, TrackId=57, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2008, EventId=609, RaceNumber=16, TrackId=17, NumLaps=19, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2009, EventId=609, RaceNumber=17, TrackId=245, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2010, EventId=609, RaceNumber=18, TrackId=6, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2011, EventId=609, RaceNumber=19, TrackId=0, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2012, EventId=609, RaceNumber=20, TrackId=145, NumLaps=22, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2013, EventId=609, RaceNumber=21, TrackId=127, NumLaps=29, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2014, EventId=609, RaceNumber=22, TrackId=22, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2015, EventId=609, RaceNumber=23, TrackId=31, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2016, EventId=609, RaceNumber=24, TrackId=70, NumLaps=29, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2017, EventId=609, RaceNumber=25, TrackId=251, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2018, EventId=609, RaceNumber=26, TrackId=53, NumLaps=26, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2019, EventId=609, RaceNumber=27, TrackId=8, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2020, EventId=609, RaceNumber=28, TrackId=69, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2021, EventId=609, RaceNumber=29, TrackId=56, NumLaps=24, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2022, EventId=609, RaceNumber=30, TrackId=121, NumLaps=29, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2023, EventId=609, RaceNumber=31, TrackId=78, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2024, EventId=609, RaceNumber=32, TrackId=54, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2025, EventId=609, RaceNumber=33, TrackId=111, NumLaps=18, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2026, EventId=609, RaceNumber=34, TrackId=1, NumLaps=26, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2027, EventId=609, RaceNumber=35, TrackId=51, NumLaps=39, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2028, EventId=609, RaceNumber=36, TrackId=231, NumLaps=13, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2029, EventId=609, RaceNumber=37, TrackId=55, NumLaps=23, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2030, EventId=609, RaceNumber=38, TrackId=141, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2031, EventId=609, RaceNumber=39, TrackId=143, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2032, EventId=609, RaceNumber=40, TrackId=66, NumLaps=15, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2840, EventId=609, RaceNumber=1, TrackId=35, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2841, EventId=609, RaceNumber=2, TrackId=260, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2842, EventId=609, RaceNumber=3, TrackId=43, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2843, EventId=609, RaceNumber=4, TrackId=33, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2844, EventId=609, RaceNumber=5, TrackId=230, NumLaps=14, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2845, EventId=609, RaceNumber=6, TrackId=3, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2846, EventId=609, RaceNumber=7, TrackId=250, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2847, EventId=609, RaceNumber=8, TrackId=40, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2848, EventId=609, RaceNumber=9, TrackId=18, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2849, EventId=609, RaceNumber=10, TrackId=37, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=1 }
+  { Id=2850, EventId=609, RaceNumber=11, TrackId=110, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2851, EventId=609, RaceNumber=12, TrackId=100, NumLaps=5, ModeRaceNumber=0, TimeOfDayIndex=0 }
+
+=== RACE REFERENCES TO RACES BELONGING TO EVENT 600 ===
+Event 600 has 40 race IDs: 2732, 2733, 2734, 2735, 2736, 2737, 2738, 2739, 2740, 2741, 2742, 2743, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858
+-- NewProfile_Career_RaceResults.RaceId: 0 rows referencing Event 600 race IDs
+-- RacesSpecial.RaceId: 0 rows referencing Event 600 race IDs
+
+=== EVENT / RACE TABLE PRIMARY KEYS, INDEXES AND CREATE SQL ===
+-- EventParticipants
+  column=ID type=INTEGER notnull=0 default=None pk=1
+  column=EventID type=INT notnull=0 default=None pk=0
+  column=Priority type=INT notnull=0 default=None pk=0
+  column=Ordinal type=INT notnull=0 default=None pk=0
+  column=ColorSequence type=INT notnull=0 default=None pk=0
+  column=BucketId type=INT notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [EventParticipants]  ( [ID] INTEGER PRIMARY KEY  ,[EventID] INT ,[Priority] INT ,[Ordinal] INT ,[ColorSequence] INT ,[BucketId] INT )
+-- EventRestrictions
+  column=ID type=INTEGER notnull=0 default=None pk=1
+  column=EventID type=INT notnull=0 default=None pk=0
+  column=BucketId type=INT notnull=0 default=None pk=0
+  column=Value type=TEXT notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [EventRestrictions]  ( [ID] INTEGER PRIMARY KEY  ,[EventID] INT ,[BucketId] INT ,[Value] TEXT )
+-- EventShowroomChallenges
+  column=CarID type=INTEGER notnull=0 default=None pk=1
+  column=EventID type=INT notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [EventShowroomChallenges]  ( [CarID] INTEGER PRIMARY KEY  ,[EventID] INT )
+-- Events
+  column=Id type=INTEGER notnull=0 default=None pk=1
+  column=Name type=TEXT notnull=0 default=None pk=0
+  column=Level type=INT notnull=0 default=None pk=0
+  column=CareerTypeId type=INT notnull=0 default=None pk=0
+  column=Description type=TEXT notnull=0 default=None pk=0
+  column=NumberOfRaces type=INT notnull=0 default=None pk=0
+  column=PittingProfileID type=INT notnull=0 default=None pk=0
+  column=CrowdSize type=REAL notnull=0 default=None pk=0
+  column=CrowdExcitement type=REAL notnull=0 default=None pk=0
+  column=NumberOfDrivers type=INT notnull=0 default=None pk=0
+  column=CashPrize type=INT notnull=0 default=None pk=0
+  column=IsDLC type=INT notnull=0 default=None pk=0
+  column=EventOrder type=INT notnull=0 default=None pk=0
+  column=GroupMask type=INT notnull=0 default=None pk=0
+  column=TargetClass type=INT notnull=0 default=None pk=0
+  column=AISkillEasy type=INT notnull=0 default=None pk=0
+  column=AISkillMed type=INT notnull=0 default=None pk=0
+  column=AISkillHard type=INT notnull=0 default=None pk=0
+  column=AISkillPro type=INT notnull=0 default=None pk=0
+  column=AITemperamentEasy type=INT notnull=0 default=None pk=0
+  column=AITemperamentMed type=INT notnull=0 default=None pk=0
+  column=AITemperamentHard type=INT notnull=0 default=None pk=0
+  column=AITemperamentPro type=INT notnull=0 default=None pk=0
+  column=BonusId type=INT notnull=0 default=None pk=0
+  column=CanDupPlayerCar type=INT notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [Events]  ( [Id] INTEGER PRIMARY KEY  ,[Name] TEXT ,[Level] INT ,[CareerTypeId] INT ,[Description] TEXT ,[NumberOfRaces] INT ,[PittingProfileID] INT ,[CrowdSize] REAL ,[CrowdExcitement] REAL ,[NumberOfDrivers] INT ,[CashPrize] INT ,[IsDLC] INT ,[EventOrder] INT ,[GroupMask] INT ,[TargetClass] INT ,[AISkillEasy] INT ,[AISkillMed] INT ,[AISkillHard] INT ,[AISkillPro] INT ,[AITemperamentEasy] INT ,[AITemperamentMed] INT ,[AITemperamentHard] INT ,[AITemperamentPro] INT ,[BonusId] INT ,[CanDupPlayerCar] INT )
+-- NewProfile_Career_EventResults
+  column=EventId type=INTEGER notnull=0 default=None pk=1
+  column=Place type=INT notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [NewProfile_Career_EventResults]  ( [EventId] INTEGER PRIMARY KEY  ,[Place] INT )
+-- NewProfile_Career_RaceResults
+  column=RaceId type=INTEGER notnull=0 default=None pk=1
+  column=Place type=INT notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [NewProfile_Career_RaceResults]  ( [RaceId] INTEGER PRIMARY KEY  ,[Place] INT )
+-- Races
+  column=Id type=INTEGER notnull=0 default=None pk=1
+  column=EventId type=INT notnull=0 default=None pk=0
+  column=RaceNumber type=INT notnull=0 default=None pk=0
+  column=TrackId type=INT notnull=0 default=None pk=0
+  column=NumLaps type=INT notnull=0 default=None pk=0
+  column=ModeRaceNumber type=INT notnull=0 default=None pk=0
+  column=TimeOfDayIndex type=INT notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [Races]  ( [Id] INTEGER PRIMARY KEY  ,[EventId] INT ,[RaceNumber] INT ,[TrackId] INT ,[NumLaps] INT ,[ModeRaceNumber] INT ,[TimeOfDayIndex] INT )
+-- RacesSpecial
+  column=RaceId type=INTEGER notnull=0 default=None pk=1
+  column=CollObjLayoutId type=INT notnull=0 default=None pk=0
+  column=TargetScore_Easy type=REAL notnull=0 default=None pk=0
+  column=TargetScore_Med type=REAL notnull=0 default=None pk=0
+  column=TargetScore_Hard type=REAL notnull=0 default=None pk=0
+  column=TargetScore_Pro type=REAL notnull=0 default=None pk=0
+  column=MinSpeedRequiredMPH type=REAL notnull=0 default=None pk=0
+  CREATE: CREATE TABLE [RacesSpecial]  ( [RaceId] INTEGER PRIMARY KEY  ,[CollObjLayoutId] INT ,[TargetScore_Easy] REAL ,[TargetScore_Med] REAL ,[TargetScore_Hard] REAL ,[TargetScore_Pro] REAL ,[MinSpeedRequiredMPH] REAL )
+
+=== NEXT AVAILABLE INTEGER IDS (RELEVANT TABLES) ===
+Events.Id: rows=315, max=726, next numeric=727
+Races.Id: rows=3064, max=3675, next numeric=3676
+EventParticipants.ID: rows=1681, max=72470, next numeric=72471
+EventRestrictions.ID: rows=340, max=340, next numeric=341
+RacesSpecial.RaceId: rows=86, max=3645, next numeric=3646
+sqlite_sequence: not present
+
+=== TRIGGERS REFERENCING EVENT / RACE TABLES ===
+No event/race-related triggers found.
+
+=== END ===
