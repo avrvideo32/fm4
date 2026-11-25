@@ -199,3 +199,19 @@ The open-source `CuteTenshii/xds` project can read/decode XDS and export PNG/DDS
 ## Handoff reminder
 
 When continuing this project, read this note first. Treat every status explicitly labelled “not yet verified” as unknown. The byte-preserving archive method is game-load-tested; custom XDS generation is not yet game-tested.
+
+
+## Committed helper scripts
+
+The helper scripts are now stored in this repository as source files:
+
+- [`tools/add_fm4_event749_posters.py`](tools/add_fm4_event749_posters.py) — first-time byte-preserving clone of the two Event 302 poster records to Event 749. It does not overwrite the input archive and refuses to add the Event 749 names if they already exist.
+- [`tools/make_fm4_xds_from_png.py`](tools/make_fm4_xds_from_png.py) — experimental PNG-to-XDS generator for the checked EventBkgd poster template format (format 50, tiled, endian 2, ZYXW, one mip).
+
+The XDS generator requires Pillow:
+
+```powershell
+python -m pip install pillow
+```
+
+These scripts have been committed to GitHub, but the archive patcher is tested in Xenia only for adding the original Event 302 artwork unchanged. The XDS generator has only passed the output-size check so far; its custom image has not yet been visually decoded or tested in the game.
