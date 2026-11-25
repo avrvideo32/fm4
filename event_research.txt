@@ -1,0 +1,1342 @@
+﻿FORZA MOTORSPORT 4 — CAREER EVENT RESEARCH EXTRACT
+Database: D:\code\py\fm4\gamedb.slt
+Size: 15,120,384 bytes
+READ ONLY: no database writes were performed.
+Output folder: D:\code\py\fm4\fm4_event_extract
+
+================== INTEGRITY AND COUNTS ==================
+PRAGMA integrity_check: ok
+Events rows: 315; IDs 1 .. 726
+Races rows: 3064; IDs 1 .. 3675
+Distinct EventId values in Races: 315
+Race rows whose EventId has no Events row: 0
+Events with no linked Races: 0
+Events where NumberOfRaces differs from linked Races rows: 0
+
+================== CAREER EVENT TYPES ==================
+id=1 name=_&445720843 banner=2 raceMode=1 desc=_&445771067 intro=VO_EVENTS_RoadRace poster=
+id=2 name=_&445720715 banner=1 raceMode=1 desc=_&445770939 intro=VO_EVENTS_RoadRace poster=
+id=3 name=_&445720587 banner=3 raceMode=1 desc=_&445770811 intro=VO_EVENTS_RoadRace poster=
+id=4 name=_&445721483 banner=1 raceMode=1 desc=_&445771707 intro=VO_EVENTS_RoadRace poster=
+id=5 name=_&445721355 banner=5 raceMode=110 desc=_&445771579 intro=VO_EVENTS_OvalRace poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\Speedway.tga
+id=6 name=_&445721227 banner=3 raceMode=2 desc=_&445771451 intro=VO_EVENTS_DragRace_heats poster=
+id=7 name=_&445721099 banner=5 raceMode=3 desc=_&445771323 intro=VO_EVENTS_Autocross poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\Autocross.tga
+id=8 name=_&445721995 banner=99 raceMode=5 desc=_&445770171 intro=VO_EVENTS_TimeAttackSolo poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\TimeAttackSolo.tga
+id=9 name=_&445721867 banner=99 raceMode=12 desc=_&445770043 intro=VO_EVENTS_TimeAttackAdvanced poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\TimeAttackAdvanced.tga
+id=10 name=_&445750676 banner=99 raceMode=6 desc=_&445744630 intro=VO_EVENTS_DriftTrial poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\Drift.tga
+id=11 name=_&445750548 banner=5 raceMode=7 desc=_&445744502 intro=VO_EVENTS_TrackDay poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\TrackDay.tga
+id=12 name=_&445750420 banner=5 raceMode=4 desc=_&445744374 intro=VO_EVENTS_TopGearChallenge poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\TopGear.tga
+id=13 name=_&445750292 banner=5 raceMode=9 desc=_&445744246 intro=VO_EVENTS_ExtremeMulticlass poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\Multiclass.tga
+id=14 name=_&445751188 banner=5 raceMode=9 desc=_&445745142 intro=VO_EVENTS_ExtremeMulticlass poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\ProMulticlass.tga
+id=15 name=_&445751060 banner=5 raceMode=8 desc=_&445745014 intro=VO_EVENTS_1on1Challenge poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\1on1_Nurb.tga
+id=16 name=_&445750932 banner=5 raceMode=8 desc=_&445744886 intro=VO_EVENTS_1on1Challenge poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\1on1_Fujimi.tga
+id=17 name=_&445750804 banner=6 raceMode=10 desc=_&445744758 intro=VO_EVENTS_ChampionshipHeatsRace poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\Championship.tga
+id=18 name=_&445749652 banner=1004 raceMode=2 desc=_&445743606 intro=VO_EVENTS_PointToPoint_heats poster=
+id=19 name=_&445749524 banner=4 raceMode=1 desc=_&445743478 intro=VO_EVENTS_RoadRace poster=
+id=20 name=_&445734292 banner=5 raceMode=13 desc=_&445728246 intro=VO_EVENTS_ExtremeMulticlass poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\MulticlassEntry.tga
+id=21 name=_&445734164 banner=5 raceMode=13 desc=_&445728118 intro=VO_EVENTS_ExtremeMulticlass poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\ProMulticlassEntry.tga
+id=31 name=_&445717780 banner=2 raceMode=112 desc=_&445711734 intro=VO_EVENTS_RoadRace poster=
+id=32 name=_&445717652 banner=1 raceMode=112 desc=_&445711606 intro=VO_EVENTS_RoadRace poster=
+id=33 name=_&445717524 banner=3 raceMode=112 desc=_&445711478 intro=VO_EVENTS_RoadRace poster=
+id=34 name=_&445718420 banner=4 raceMode=1 desc=_&445712374 intro=VO_EVENTS_RoadRace poster=
+id=35 name=_&445718292 banner=4 raceMode=1 desc=_&445712246 intro=VO_EVENTS_RoadRace poster=
+id=36 name=_&445718164 banner=4 raceMode=1 desc=_&445712118 intro=VO_EVENTS_RoadRace poster=
+id=37 name=_&445718036 banner=4 raceMode=1 desc=_&445711990 intro=VO_EVENTS_RoadRace poster=
+id=38 name=_&445716884 banner=4 raceMode=1 desc=_&445710838 intro=VO_EVENTS_RoadRace poster=
+id=39 name=_&445716756 banner=4 raceMode=110 desc=_&445710710 intro=VO_EVENTS_RoadRace poster=
+id=40 name=_&445767061 banner=4 raceMode=113 desc=_&445761015 intro=VO_EVENTS_RoadRace poster=
+id=41 name=_&445766933 banner=5 raceMode=114 desc=_&445760887 intro=VO_EVENTS_TrackDay poster=GAME:\Media\UI\Textures\UI4\Logos\Special_posters\TrackDay.tga
+
+================== EVENT GROUPS ==================
+id=1 displayName=Normal Events
+id=2 displayName=Asian Events
+id=3 displayName=Euro Events
+id=4 displayName=N.American Events
+id=5 displayName=Championship Series
+id=6 displayName=Topgear Bowling
+id=7 displayName=Autocross
+id=8 displayName=Time Attack
+id=9 displayName=Time Attack Advanced
+id=10 displayName=Drift Trial
+id=11 displayName=Track Day
+id=12 displayName=Speedway
+id=13 displayName=Drag
+id=14 displayName=1-v-1 Nurburgring
+id=15 displayName=1-v-1 Fujimi
+id=16 displayName=Multi-class
+id=17 displayName=Pro Multi-class
+id=30 displayName=Initial Event
+NOTE: GroupMask is recorded as a raw integer/hex mask. This report does not assume the bit-to-group mapping.
+
+================== EVENT DISTRIBUTIONS ==================
+CareerTypeId: 1=49, 11=10, 12=12, 13=7, 14=5, 15=10, 16=10, 17=10, 2=45, 20=3, 21=5, 3=30, 31=10, 32=16, 33=4, 34=10, 35=10, 36=10, 37=10, 38=10, 39=10, 40=1, 41=8, 5=10, 7=10
+Level: 0=13, 102=1, 11=14, 21=20, 31=55, 41=49, 51=54, 61=40, 71=34, 81=20, 90=15
+EventOrder: 0=2, 1=1, 10=3, 100=2, 1000=24, 105=2, 109=1, 11=2, 110=2, 111=1, 115=2, 116=1, 12=2, 120=2, 121=1, 122=1, 125=2, 13=3, 130=2, 131=2, 135=2, 139=1, 14=2, 140=2, 144=1, 145=2, 149=1, 15=2, 150=2, 154=1, 155=2, 156=1, 16=2, 160=2, 165=1, 17=1, 170=1, 175=1, 179=1, 18=2, 180=1, 19=1, 190=1, 195=1, 2=3, 20=3, 200=2, 201=2, 202=1, 203=1, 204=1, 205=2, 206=1, 207=1, 208=1, 209=1, 21=1, 22=1, 24=1, 25=4, 27=1, 28=2, 29=1, 3=2, 30=2, 300=1, 301=1, 302=1, 303=1, 304=1, 305=1, 306=1, 307=1, 308=1, 309=1, 35=2, 4=2, 40=2, 400=2, 401=2, 402=2, 403=2, 404=2, 405=2, 406=2, 407=2, 408=2, 409=2, 410=2, 411=2, 412=2, 413=2, 414=2, 415=2, 416=2, 417=2, 418=2, 419=2, 420=2, 421=2, 422=2, 423=2, 424=2, 425=2, 426=2, 427=2, 428=2, 429=2, 430=1, 431=1, 432=1, 433=1, 434=1, 435=1, 436=1, 437=1, 438=1, 439=1, 44=1, 440=1, 441=1, 442=1, 443=1, 444=1, 445=1, 446=1, 447=1, 448=1, 449=1, 45=1, 450=1, 451=1, 452=1, 453=1, 454=1, 455=1, 456=1, 457=1, 458=1, 459=1, 470=1, 471=1, 472=1, 473=1, 475=1, 476=2, 477=1, 478=1, 479=1, 5=3, 50=2, 500=2, 501=3, 502=2, 503=2, 504=2, 505=2, 506=2, 507=2, 508=2, 509=2, 53=1, 54=1, 55=2, 56=1, 6=2, 60=2, 600=1, 601=1, 602=1, 603=1, 604=1, 605=1, 606=1, 607=1, 608=1, 609=1, 65=2, 7=2, 70=1, 71=1, 74=1, 75=2, 76=1, 79=2, 8=2, 80=2, 84=1, 85=1, 9=4, 90=2, 95=2
+GroupMask: 0=25, 10=45, 128=10, 131072=1, 16=10, 16384=10, 18=30, 2=10, 2048=10, 30=50, 32=10, 32768=10, 4=10, 4096=10, 6=35, 64=10, 65536=19, 8=10
+TargetClass: 0=13, 1=14, 10=1, 2=20, 3=55, 4=49, 5=54, 6=40, 7=34, 8=20, 9=15
+IsDLC: 0=315
+NumberOfRaces: 1=67, 11=10, 12=10, 20=40, 24=10, 3=43, 32=10, 4=77, 40=10, 42=10, 5=18, 6=10
+Actual linked races per Event: 1 races=67 events, 3 races=43 events, 4 races=77 events, 5 races=18 events, 6 races=10 events, 11 races=10 events, 12 races=10 events, 20 races=40 events, 24 races=10 events, 32 races=10 events, 40 races=10 events, 42 races=10 events
+
+================== ALL EVENTS — CAREER CATALOG ==================
+Columns: ID | type ID/name token | level | order | group mask | target class | declared/actual races | drivers | participants | restrictions | name token
+302 | 33:_&445717524 | L0 | order=0 | group=30 | class=0 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756878
+307 | 33:_&445717524 | L11 | order=0 | group=30 | class=1 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756494
+311 | 32:_&445717652 | L21 | order=1 | group=30 | class=2 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202740366
+318 | 32:_&445717652 | L21 | order=2 | group=30 | class=2 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202741262
+324 | 32:_&445717652 | L21 | order=2 | group=30 | class=2 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202723342
+327 | 33:_&445717524 | L31 | order=2 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202723726
+322 | 32:_&445717652 | L21 | order=3 | group=30 | class=2 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202724110
+330 | 33:_&445717524 | L31 | order=3 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202707470
+106 | 3:_&445720587 | L31 | order=4 | group=18 | class=3 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202756430
+326 | 32:_&445717652 | L31 | order=4 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202723598
+30 | 1:_&445720843 | L11 | order=5 | group=6 | class=1 | races=5/5 | drivers=7 | participants=3 | restrictions=1 | _&202710420
+60 | 2:_&445720715 | L21 | order=5 | group=10 | class=2 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202726805
+115 | 3:_&445720587 | L31 | order=5 | group=18 | class=3 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202739918
+101 | 3:_&445720587 | L31 | order=6 | group=18 | class=3 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202756814
+114 | 3:_&445720587 | L31 | order=6 | group=18 | class=3 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202739790
+112 | 3:_&445720587 | L31 | order=7 | group=18 | class=3 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202740558
+113 | 3:_&445720587 | L31 | order=7 | group=18 | class=3 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202740686
+111 | 3:_&445720587 | L31 | order=8 | group=18 | class=3 | races=4/4 | drivers=7 | participants=2 | restrictions=1 | _&202740430
+309 | 31:_&445717780 | L11 | order=8 | group=30 | class=1 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202757774
+102 | 3:_&445720587 | L31 | order=9 | group=18 | class=3 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202756942
+127 | 3:_&445720587 | L31 | order=9 | group=18 | class=3 | races=5/5 | drivers=7 | participants=4 | restrictions=1 | _&202723790
+310 | 31:_&445717780 | L11 | order=9 | group=30 | class=1 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202740238
+332 | 32:_&445717652 | L31 | order=9 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202707726
+61 | 2:_&445720715 | L31 | order=10 | group=10 | class=3 | races=4/4 | drivers=7 | participants=2 | restrictions=1 | _&202726677
+128 | 3:_&445720587 | L31 | order=10 | group=18 | class=3 | races=5/5 | drivers=7 | participants=6 | restrictions=1 | _&202724942
+314 | 31:_&445717780 | L21 | order=10 | group=30 | class=2 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202739726
+17 | 1:_&445720843 | L21 | order=11 | group=6 | class=2 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202743316
+100 | 3:_&445720587 | L41 | order=11 | group=18 | class=4 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202756686
+104 | 3:_&445720587 | L41 | order=12 | group=18 | class=4 | races=3/3 | drivers=7 | participants=7 | restrictions=1 | _&202756174
+333 | 32:_&445717652 | L31 | order=12 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202707854
+105 | 3:_&445720587 | L41 | order=13 | group=18 | class=4 | races=3/3 | drivers=7 | participants=5 | restrictions=2 | _&202756302
+328 | 31:_&445717780 | L21 | order=13 | group=30 | class=2 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202724878
+334 | 32:_&445717652 | L31 | order=13 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202706958
+103 | 3:_&445720587 | L41 | order=14 | group=18 | class=4 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202757070
+331 | 32:_&445717652 | L31 | order=14 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202707598
+1 | 1:_&445720843 | L31 | order=15 | group=6 | class=3 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202713355
+129 | 3:_&445720587 | L41 | order=15 | group=18 | class=4 | races=5/5 | drivers=7 | participants=4 | restrictions=2 | _&202725070
+50 | 2:_&445720715 | L31 | order=16 | group=10 | class=3 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202743189
+117 | 3:_&445720587 | L41 | order=16 | group=18 | class=4 | races=4/4 | drivers=7 | participants=4 | restrictions=1 | _&202740174
+107 | 3:_&445720587 | L51 | order=17 | group=18 | class=5 | races=3/3 | drivers=7 | participants=6 | restrictions=1 | _&202756558
+116 | 3:_&445720587 | L51 | order=18 | group=18 | class=5 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202740046
+118 | 3:_&445720587 | L51 | order=18 | group=18 | class=5 | races=4/4 | drivers=7 | participants=3 | restrictions=3 | _&202741326
+108 | 3:_&445720587 | L51 | order=19 | group=18 | class=5 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202757710
+3 | 1:_&445720843 | L31 | order=20 | group=6 | class=3 | races=3/3 | drivers=7 | participants=7 | restrictions=1 | _&202713099
+51 | 2:_&445720715 | L31 | order=20 | group=10 | class=3 | races=3/3 | drivers=7 | participants=2 | restrictions=1 | _&202743061
+109 | 3:_&445720587 | L61 | order=20 | group=18 | class=6 | races=3/3 | drivers=7 | participants=5 | restrictions=1 | _&202757838
+119 | 3:_&445720587 | L61 | order=21 | group=18 | class=6 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202741454
+121 | 3:_&445720587 | L61 | order=22 | group=18 | class=6 | races=4/4 | drivers=7 | participants=6 | restrictions=1 | _&202724046
+110 | 3:_&445720587 | L71 | order=24 | group=18 | class=7 | races=3/3 | drivers=7 | participants=6 | restrictions=1 | _&202740302
+5 | 1:_&445720843 | L31 | order=25 | group=6 | class=3 | races=3/3 | drivers=7 | participants=4 | restrictions=2 | _&202713867
+62 | 2:_&445720715 | L31 | order=25 | group=10 | class=3 | races=4/4 | drivers=7 | participants=4 | restrictions=1 | _&202726549
+120 | 3:_&445720587 | L71 | order=25 | group=18 | class=7 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202723918
+130 | 3:_&445720587 | L71 | order=25 | group=18 | class=7 | races=5/5 | drivers=7 | participants=5 | restrictions=2 | _&202707534
+122 | 3:_&445720587 | L71 | order=27 | group=18 | class=7 | races=4/4 | drivers=7 | participants=4 | restrictions=1 | _&202724174
+123 | 3:_&445720587 | L81 | order=28 | group=18 | class=8 | races=4/4 | drivers=7 | participants=6 | restrictions=1 | _&202724302
+124 | 3:_&445720587 | L71 | order=28 | group=18 | class=7 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202723406
+125 | 3:_&445720587 | L90 | order=29 | group=18 | class=9 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202723534
+6 | 1:_&445720843 | L31 | order=30 | group=6 | class=3 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202713739
+65 | 2:_&445720715 | L31 | order=30 | group=10 | class=3 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202727189
+2 | 1:_&445720843 | L31 | order=35 | group=6 | class=3 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202713227
+64 | 2:_&445720715 | L31 | order=35 | group=10 | class=3 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202727317
+8 | 1:_&445720843 | L31 | order=40 | group=6 | class=3 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202714507
+63 | 2:_&445720715 | L31 | order=40 | group=10 | class=3 | races=4/4 | drivers=7 | participants=4 | restrictions=1 | _&202726421
+335 | 31:_&445717780 | L31 | order=44 | group=30 | class=3 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202707086
+7 | 1:_&445720843 | L31 | order=45 | group=6 | class=3 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202713611
+4 | 1:_&445720843 | L31 | order=50 | group=6 | class=3 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202713995
+89 | 2:_&445720715 | L41 | order=50 | group=10 | class=4 | races=5/5 | drivers=7 | participants=5 | restrictions=1 | _&202758422
+337 | 32:_&445717652 | L41 | order=53 | group=30 | class=4 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202707342
+340 | 32:_&445717652 | L41 | order=54 | group=30 | class=4 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756623
+16 | 1:_&445720843 | L31 | order=55 | group=6 | class=3 | races=4/4 | drivers=7 | participants=6 | restrictions=1 | _&202743444
+88 | 2:_&445720715 | L41 | order=55 | group=10 | class=4 | races=5/5 | drivers=7 | participants=6 | restrictions=1 | _&202758550
+67 | 2:_&445720715 | L41 | order=56 | group=10 | class=4 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202726933
+23 | 1:_&445720843 | L31 | order=60 | group=6 | class=3 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202726420
+66 | 2:_&445720715 | L41 | order=60 | group=10 | class=4 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202727061
+18 | 1:_&445720843 | L31 | order=65 | group=6 | class=3 | races=4/4 | drivers=7 | participants=2 | restrictions=1 | _&202742164
+68 | 2:_&445720715 | L41 | order=65 | group=10 | class=4 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202725781
+52 | 2:_&445720715 | L51 | order=70 | group=10 | class=5 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202742933
+31 | 1:_&445720843 | L31 | order=71 | group=6 | class=3 | races=5/5 | drivers=7 | participants=8 | restrictions=1 | _&202710292
+20 | 1:_&445720843 | L41 | order=74 | group=6 | class=4 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202726804
+9 | 1:_&445720843 | L41 | order=75 | group=6 | class=4 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202714379
+53 | 2:_&445720715 | L51 | order=75 | group=10 | class=5 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202742805
+341 | 31:_&445717780 | L41 | order=76 | group=30 | class=4 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756751
+338 | 31:_&445717780 | L41 | order=79 | group=30 | class=4 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202708494
+342 | 32:_&445717652 | L51 | order=79 | group=30 | class=5 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756879
+11 | 1:_&445720843 | L41 | order=80 | group=6 | class=4 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202743060
+55 | 2:_&445720715 | L51 | order=80 | group=10 | class=5 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202743573
+339 | 31:_&445717780 | L41 | order=84 | group=30 | class=4 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202708622
+10 | 1:_&445720843 | L41 | order=85 | group=6 | class=4 | races=3/3 | drivers=7 | participants=4 | restrictions=1 | _&202743188
+15 | 1:_&445720843 | L41 | order=90 | group=6 | class=4 | races=4/4 | drivers=7 | participants=7 | restrictions=2 | _&202743572
+70 | 2:_&445720715 | L51 | order=90 | group=10 | class=5 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202710421
+19 | 1:_&445720843 | L41 | order=95 | group=6 | class=4 | races=4/4 | drivers=7 | participants=4 | restrictions=1 | _&202742036
+69 | 2:_&445720715 | L51 | order=95 | group=10 | class=5 | races=4/4 | drivers=7 | participants=4 | restrictions=1 | _&202725653
+28 | 1:_&445720843 | L41 | order=100 | group=6 | class=4 | races=4/4 | drivers=7 | participants=6 | restrictions=2 | _&202725780
+74 | 2:_&445720715 | L51 | order=100 | group=10 | class=5 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202710933
+27 | 1:_&445720843 | L41 | order=105 | group=6 | class=4 | races=4/4 | drivers=7 | participants=7 | restrictions=2 | _&202726932
+72 | 2:_&445720715 | L51 | order=105 | group=10 | class=5 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202710165
+343 | 32:_&445717652 | L51 | order=109 | group=30 | class=5 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202757007
+22 | 1:_&445720843 | L41 | order=110 | group=6 | class=4 | races=4/4 | drivers=7 | participants=6 | restrictions=1 | _&202726548
+71 | 2:_&445720715 | L51 | order=110 | group=10 | class=5 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202710293
+93 | 2:_&445720715 | L51 | order=111 | group=10 | class=5 | races=5/5 | drivers=7 | participants=8 | restrictions=4 | _&202742806
+21 | 1:_&445720843 | L41 | order=115 | group=6 | class=4 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202726676
+75 | 2:_&445720715 | L51 | order=115 | group=10 | class=5 | races=4/4 | drivers=7 | participants=6 | restrictions=1 | _&202710805
+92 | 2:_&445720715 | L51 | order=116 | group=10 | class=5 | races=5/5 | drivers=7 | participants=7 | restrictions=2 | _&202742934
+24 | 1:_&445720843 | L41 | order=120 | group=6 | class=4 | races=4/4 | drivers=7 | participants=8 | restrictions=1 | _&202727316
+73 | 2:_&445720715 | L51 | order=120 | group=10 | class=5 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202710037
+33 | 1:_&445720843 | L41 | order=121 | group=6 | class=4 | races=5/5 | drivers=7 | participants=7 | restrictions=1 | _&202710036
+32 | 1:_&445720843 | L41 | order=122 | group=6 | class=4 | races=5/5 | drivers=7 | participants=8 | restrictions=2 | _&202710164
+34 | 1:_&445720843 | L41 | order=125 | group=6 | class=4 | races=5/5 | drivers=7 | participants=7 | restrictions=1 | _&202710932
+91 | 2:_&445720715 | L51 | order=125 | group=10 | class=5 | races=5/5 | drivers=7 | participants=7 | restrictions=1 | _&202743062
+13 | 1:_&445720843 | L51 | order=130 | group=6 | class=5 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202742804
+90 | 2:_&445720715 | L51 | order=130 | group=10 | class=5 | races=5/5 | drivers=7 | participants=5 | restrictions=1 | _&202743190
+79 | 2:_&445720715 | L61 | order=131 | group=10 | class=6 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202709269
+83 | 2:_&445720715 | L61 | order=131 | group=10 | class=6 | races=4/4 | drivers=7 | participants=6 | restrictions=1 | _&202759190
+12 | 1:_&445720843 | L51 | order=135 | group=6 | class=5 | races=3/3 | drivers=7 | participants=5 | restrictions=1 | _&202742932
+54 | 2:_&445720715 | L61 | order=135 | group=10 | class=6 | races=3/3 | drivers=7 | participants=7 | restrictions=1 | _&202743701
+345 | 32:_&445717652 | L61 | order=139 | group=30 | class=6 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756239
+26 | 1:_&445720843 | L51 | order=140 | group=6 | class=5 | races=4/4 | drivers=7 | participants=6 | restrictions=1 | _&202727060
+56 | 2:_&445720715 | L71 | order=140 | group=10 | class=7 | races=3/3 | drivers=7 | participants=7 | restrictions=1 | _&202743445
+347 | 32:_&445717652 | L71 | order=144 | group=30 | class=7 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756495
+25 | 1:_&445720843 | L51 | order=145 | group=6 | class=5 | races=4/4 | drivers=7 | participants=7 | restrictions=2 | _&202727188
+94 | 2:_&445720715 | L71 | order=145 | group=10 | class=7 | races=5/5 | drivers=7 | participants=6 | restrictions=1 | _&202743702
+344 | 31:_&445717780 | L61 | order=149 | group=30 | class=6 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756111
+14 | 1:_&445720843 | L61 | order=150 | group=6 | class=6 | races=3/3 | drivers=7 | participants=6 | restrictions=1 | _&202743700
+59 | 2:_&445720715 | L71 | order=150 | group=10 | class=7 | races=3/3 | drivers=7 | participants=2 | restrictions=1 | _&202742037
+346 | 31:_&445717780 | L61 | order=154 | group=30 | class=6 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202756367
+35 | 1:_&445720843 | L61 | order=155 | group=6 | class=6 | races=5/5 | drivers=7 | participants=4 | restrictions=2 | _&202710804
+58 | 2:_&445720715 | L71 | order=155 | group=10 | class=7 | races=3/3 | drivers=7 | participants=3 | restrictions=1 | _&202742165
+81 | 2:_&445720715 | L71 | order=156 | group=10 | class=7 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202759446
+29 | 1:_&445720843 | L81 | order=160 | group=6 | class=8 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202725652
+82 | 2:_&445720715 | L71 | order=160 | group=10 | class=7 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202759318
+78 | 2:_&445720715 | L71 | order=165 | group=10 | class=7 | races=4/4 | drivers=7 | participants=7 | restrictions=2 | _&202709397
+84 | 2:_&445720715 | L71 | order=170 | group=10 | class=7 | races=4/4 | drivers=7 | participants=5 | restrictions=1 | _&202760086
+57 | 2:_&445720715 | L81 | order=175 | group=10 | class=8 | races=3/3 | drivers=7 | participants=5 | restrictions=1 | _&202743317
+348 | 32:_&445717652 | L81 | order=179 | group=30 | class=8 | races=1/1 | drivers=11 | participants=1 | restrictions=1 | _&202757647
+80 | 2:_&445720715 | L81 | order=180 | group=10 | class=8 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202759574
+77 | 2:_&445720715 | L81 | order=190 | group=10 | class=8 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202710549
+76 | 2:_&445720715 | L81 | order=195 | group=10 | class=8 | races=4/4 | drivers=7 | participants=7 | restrictions=1 | _&202710677
+95 | 2:_&445720715 | L81 | order=200 | group=10 | class=8 | races=5/5 | drivers=7 | participants=7 | restrictions=1 | _&202743574
+200 | 34:_&445718420 | L0 | order=200 | group=30 | class=0 | races=20/20 | drivers=7 | participants=7 | restrictions=1 | _&202756654
+87 | 2:_&445720715 | L90 | order=201 | group=10 | class=9 | races=4/4 | drivers=7 | participants=3 | restrictions=1 | _&202759702
+201 | 34:_&445718420 | L21 | order=201 | group=30 | class=2 | races=20/20 | drivers=7 | participants=7 | restrictions=1 | _&202756782
+202 | 34:_&445718420 | L31 | order=202 | group=30 | class=3 | races=20/20 | drivers=7 | participants=7 | restrictions=1 | _&202756910
+203 | 34:_&445718420 | L41 | order=203 | group=30 | class=4 | races=20/20 | drivers=7 | participants=3 | restrictions=1 | _&202757038
+204 | 34:_&445718420 | L41 | order=204 | group=30 | class=4 | races=20/20 | drivers=7 | participants=6 | restrictions=1 | _&202756142
+86 | 2:_&445720715 | L90 | order=205 | group=10 | class=9 | races=4/4 | drivers=7 | participants=4 | restrictions=1 | _&202759830
+205 | 34:_&445718420 | L41 | order=205 | group=30 | class=4 | races=20/20 | drivers=7 | participants=7 | restrictions=1 | _&202756270
+207 | 34:_&445718420 | L41 | order=206 | group=30 | class=4 | races=20/20 | drivers=7 | participants=5 | restrictions=1 | _&202756526
+206 | 34:_&445718420 | L51 | order=207 | group=30 | class=5 | races=20/20 | drivers=7 | participants=6 | restrictions=1 | _&202756398
+208 | 34:_&445718420 | L51 | order=208 | group=30 | class=5 | races=20/20 | drivers=7 | participants=9 | restrictions=1 | _&202757678
+209 | 34:_&445718420 | L61 | order=209 | group=30 | class=6 | races=20/20 | drivers=7 | participants=11 | restrictions=1 | _&202757806
+210 | 35:_&445718292 | L0 | order=300 | group=30 | class=0 | races=20/20 | drivers=7 | participants=4 | restrictions=1 | _&202740270
+214 | 35:_&445718292 | L21 | order=301 | group=30 | class=2 | races=20/20 | drivers=7 | participants=3 | restrictions=1 | _&202739758
+211 | 35:_&445718292 | L11 | order=302 | group=30 | class=1 | races=20/20 | drivers=7 | participants=6 | restrictions=1 | _&202740398
+212 | 35:_&445718292 | L31 | order=303 | group=30 | class=3 | races=20/20 | drivers=7 | participants=7 | restrictions=1 | _&202740526
+213 | 35:_&445718292 | L41 | order=304 | group=30 | class=4 | races=20/20 | drivers=7 | participants=7 | restrictions=1 | _&202740654
+215 | 35:_&445718292 | L41 | order=305 | group=30 | class=4 | races=20/20 | drivers=7 | participants=4 | restrictions=1 | _&202739886
+216 | 35:_&445718292 | L51 | order=306 | group=30 | class=5 | races=20/20 | drivers=7 | participants=11 | restrictions=1 | _&202740014
+217 | 35:_&445718292 | L51 | order=307 | group=30 | class=5 | races=20/20 | drivers=7 | participants=11 | restrictions=1 | _&202740142
+218 | 35:_&445718292 | L61 | order=308 | group=30 | class=6 | races=20/20 | drivers=7 | participants=6 | restrictions=1 | _&202741294
+219 | 35:_&445718292 | L61 | order=309 | group=30 | class=6 | races=20/20 | drivers=7 | participants=11 | restrictions=1 | _&202741422
+220 | 36:_&445718164 | L0 | order=400 | group=8 | class=0 | races=42/42 | drivers=7 | participants=4 | restrictions=1 | _&202723886
+400 | 12:_&445750420 | L0 | order=400 | group=64 | class=0 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202756846
+221 | 36:_&445718164 | L11 | order=401 | group=8 | class=1 | races=42/42 | drivers=7 | participants=3 | restrictions=1 | _&202724014
+401 | 12:_&445750420 | L11 | order=401 | group=64 | class=1 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202756718
+222 | 36:_&445718164 | L21 | order=402 | group=8 | class=2 | races=42/42 | drivers=7 | participants=9 | restrictions=1 | _&202724142
+402 | 12:_&445750420 | L21 | order=402 | group=64 | class=2 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202757102
+223 | 36:_&445718164 | L31 | order=403 | group=8 | class=3 | races=42/42 | drivers=7 | participants=9 | restrictions=1 | _&202724270
+403 | 12:_&445750420 | L31 | order=403 | group=64 | class=3 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202756974
+224 | 36:_&445718164 | L41 | order=404 | group=8 | class=4 | races=42/42 | drivers=7 | participants=9 | restrictions=1 | _&202723374
+404 | 12:_&445750420 | L41 | order=404 | group=64 | class=4 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202756334
+225 | 36:_&445718164 | L51 | order=405 | group=8 | class=5 | races=42/42 | drivers=7 | participants=7 | restrictions=1 | _&202723502
+405 | 12:_&445750420 | L0 | order=405 | group=64 | class=0 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202756206
+226 | 36:_&445718164 | L61 | order=406 | group=8 | class=6 | races=42/42 | drivers=7 | participants=9 | restrictions=1 | _&202723630
+406 | 12:_&445750420 | L11 | order=406 | group=64 | class=1 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202756590
+227 | 36:_&445718164 | L71 | order=407 | group=8 | class=7 | races=42/42 | drivers=7 | participants=9 | restrictions=1 | _&202723758
+407 | 12:_&445750420 | L21 | order=407 | group=64 | class=2 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202756462
+228 | 36:_&445718164 | L81 | order=408 | group=8 | class=8 | races=42/42 | drivers=7 | participants=8 | restrictions=1 | _&202724910
+408 | 12:_&445750420 | L31 | order=408 | group=64 | class=3 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202757870
+229 | 36:_&445718164 | L90 | order=409 | group=8 | class=9 | races=42/42 | drivers=7 | participants=12 | restrictions=1 | _&202725038
+409 | 12:_&445750420 | L41 | order=409 | group=64 | class=4 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202757742
+230 | 37:_&445718036 | L0 | order=410 | group=4 | class=0 | races=11/11 | drivers=7 | participants=5 | restrictions=1 | _&202707502
+490 | 20:_&445734292 | L0 | order=410 | group=65536 | class=0 | races=20/20 | drivers=11 | participants=13 | restrictions=1 | _&202740460
+231 | 37:_&445718036 | L11 | order=411 | group=4 | class=1 | races=11/11 | drivers=7 | participants=5 | restrictions=1 | _&202707630
+491 | 20:_&445734292 | L11 | order=411 | group=65536 | class=1 | races=20/20 | drivers=11 | participants=12 | restrictions=1 | _&202740332
+232 | 37:_&445718036 | L21 | order=412 | group=4 | class=2 | races=11/11 | drivers=7 | participants=5 | restrictions=1 | _&202707758
+492 | 20:_&445734292 | L21 | order=412 | group=65536 | class=2 | races=20/20 | drivers=11 | participants=12 | restrictions=1 | _&202740716
+233 | 37:_&445718036 | L31 | order=413 | group=4 | class=3 | races=11/11 | drivers=7 | participants=8 | restrictions=1 | _&202707886
+493 | 13:_&445750292 | L41 | order=413 | group=65536 | class=4 | races=20/20 | drivers=11 | participants=14 | restrictions=1 | _&202740588
+234 | 37:_&445718036 | L41 | order=414 | group=4 | class=4 | races=11/11 | drivers=7 | participants=6 | restrictions=1 | _&202706990
+494 | 13:_&445750292 | L51 | order=414 | group=65536 | class=5 | races=20/20 | drivers=11 | participants=12 | restrictions=1 | _&202739948
+235 | 37:_&445718036 | L51 | order=415 | group=4 | class=5 | races=11/11 | drivers=7 | participants=4 | restrictions=1 | _&202707118
+495 | 13:_&445750292 | L61 | order=415 | group=65536 | class=6 | races=20/20 | drivers=11 | participants=11 | restrictions=1 | _&202739820
+236 | 37:_&445718036 | L61 | order=416 | group=4 | class=6 | races=11/11 | drivers=7 | participants=7 | restrictions=1 | _&202707246
+496 | 13:_&445750292 | L51 | order=416 | group=65536 | class=5 | races=20/20 | drivers=11 | participants=11 | restrictions=1 | _&202740204
+237 | 37:_&445718036 | L71 | order=417 | group=4 | class=7 | races=11/11 | drivers=7 | participants=3 | restrictions=1 | _&202707374
+497 | 13:_&445750292 | L61 | order=417 | group=65536 | class=6 | races=20/20 | drivers=11 | participants=14 | restrictions=1 | _&202740076
+238 | 37:_&445718036 | L81 | order=418 | group=4 | class=8 | races=11/11 | drivers=7 | participants=9 | restrictions=1 | _&202708526
+498 | 13:_&445750292 | L51 | order=418 | group=65536 | class=5 | races=20/20 | drivers=11 | participants=12 | restrictions=1 | _&202741484
+239 | 37:_&445718036 | L90 | order=419 | group=4 | class=9 | races=11/11 | drivers=7 | participants=3 | restrictions=1 | _&202708654
+499 | 13:_&445750292 | L61 | order=419 | group=65536 | class=6 | races=20/20 | drivers=11 | participants=15 | restrictions=1 | _&202741356
+240 | 38:_&445716884 | L0 | order=420 | group=16 | class=0 | races=32/32 | drivers=7 | participants=4 | restrictions=1 | _&202756655
+480 | 16:_&445750932 | L11 | order=420 | group=32768 | class=1 | races=12/12 | drivers=11 | participants=7 | restrictions=1 | _&202756844
+241 | 38:_&445716884 | L11 | order=421 | group=16 | class=1 | races=32/32 | drivers=7 | participants=5 | restrictions=1 | _&202756783
+481 | 16:_&445750932 | L31 | order=421 | group=32768 | class=3 | races=12/12 | drivers=11 | participants=8 | restrictions=1 | _&202756716
+242 | 38:_&445716884 | L21 | order=422 | group=16 | class=2 | races=32/32 | drivers=7 | participants=3 | restrictions=1 | _&202756911
+482 | 16:_&445750932 | L21 | order=422 | group=32768 | class=2 | races=12/12 | drivers=11 | participants=8 | restrictions=1 | _&202757100
+243 | 38:_&445716884 | L31 | order=423 | group=16 | class=3 | races=32/32 | drivers=7 | participants=4 | restrictions=1 | _&202757039
+483 | 16:_&445750932 | L31 | order=423 | group=32768 | class=3 | races=12/12 | drivers=11 | participants=8 | restrictions=1 | _&202756972
+244 | 38:_&445716884 | L41 | order=424 | group=16 | class=4 | races=32/32 | drivers=7 | participants=5 | restrictions=1 | _&202756143
+484 | 16:_&445750932 | L31 | order=424 | group=32768 | class=3 | races=12/12 | drivers=11 | participants=8 | restrictions=1 | _&202756332
+245 | 38:_&445716884 | L51 | order=425 | group=16 | class=5 | races=32/32 | drivers=7 | participants=7 | restrictions=1 | _&202756271
+485 | 16:_&445750932 | L41 | order=425 | group=32768 | class=4 | races=12/12 | drivers=11 | participants=10 | restrictions=1 | _&202756204
+246 | 38:_&445716884 | L61 | order=426 | group=16 | class=6 | races=32/32 | drivers=7 | participants=6 | restrictions=1 | _&202756399
+486 | 16:_&445750932 | L41 | order=426 | group=32768 | class=4 | races=12/12 | drivers=11 | participants=8 | restrictions=1 | _&202756588
+247 | 38:_&445716884 | L71 | order=427 | group=16 | class=7 | races=32/32 | drivers=7 | participants=7 | restrictions=1 | _&202756527
+487 | 16:_&445750932 | L51 | order=427 | group=32768 | class=5 | races=12/12 | drivers=11 | participants=10 | restrictions=1 | _&202756460
+248 | 38:_&445716884 | L81 | order=428 | group=16 | class=8 | races=32/32 | drivers=7 | participants=5 | restrictions=1 | _&202757679
+488 | 16:_&445750932 | L51 | order=428 | group=32768 | class=5 | races=12/12 | drivers=11 | participants=10 | restrictions=1 | _&202757868
+249 | 38:_&445716884 | L90 | order=429 | group=16 | class=9 | races=32/32 | drivers=7 | participants=5 | restrictions=1 | _&202757807
+489 | 16:_&445750932 | L61 | order=429 | group=32768 | class=6 | races=12/12 | drivers=11 | participants=9 | restrictions=1 | _&202757740
+450 | 5:_&445721355 | L31 | order=430 | group=4096 | class=3 | races=6/6 | drivers=9 | participants=8 | restrictions=1 | _&202740463
+451 | 5:_&445721355 | L31 | order=431 | group=4096 | class=3 | races=6/6 | drivers=9 | participants=4 | restrictions=2 | _&202740335
+453 | 5:_&445721355 | L51 | order=432 | group=4096 | class=5 | races=6/6 | drivers=9 | participants=8 | restrictions=1 | _&202740591
+452 | 5:_&445721355 | L61 | order=433 | group=4096 | class=6 | races=6/6 | drivers=9 | participants=8 | restrictions=3 | _&202740719
+457 | 5:_&445721355 | L61 | order=434 | group=4096 | class=6 | races=6/6 | drivers=9 | participants=5 | restrictions=1 | _&202740079
+454 | 5:_&445721355 | L71 | order=435 | group=4096 | class=7 | races=6/6 | drivers=9 | participants=6 | restrictions=1 | _&202739951
+455 | 5:_&445721355 | L71 | order=436 | group=4096 | class=7 | races=6/6 | drivers=9 | participants=9 | restrictions=1 | _&202739823
+456 | 5:_&445721355 | L71 | order=437 | group=4096 | class=7 | races=6/6 | drivers=9 | participants=2 | restrictions=1 | _&202740207
+458 | 5:_&445721355 | L71 | order=438 | group=4096 | class=7 | races=6/6 | drivers=9 | participants=2 | restrictions=1 | _&202741487
+459 | 5:_&445721355 | L102 | order=439 | group=4096 | class=10 | races=6/6 | drivers=9 | participants=11 | restrictions=2 | _&202741359
+410 | 7:_&445721099 | L31 | order=440 | group=128 | class=3 | races=3/3 | drivers=0 | participants=0 | restrictions=1 | _&202740462
+411 | 7:_&445721099 | L41 | order=441 | group=128 | class=4 | races=3/3 | drivers=0 | participants=0 | restrictions=1 | _&202740334
+412 | 7:_&445721099 | L51 | order=442 | group=128 | class=5 | races=4/4 | drivers=0 | participants=0 | restrictions=1 | _&202740718
+413 | 7:_&445721099 | L61 | order=443 | group=128 | class=6 | races=4/4 | drivers=0 | participants=0 | restrictions=1 | _&202740590
+414 | 7:_&445721099 | L31 | order=444 | group=128 | class=3 | races=3/3 | drivers=0 | participants=0 | restrictions=1 | _&202739950
+415 | 7:_&445721099 | L41 | order=445 | group=128 | class=4 | races=3/3 | drivers=0 | participants=0 | restrictions=1 | _&202739822
+416 | 7:_&445721099 | L51 | order=446 | group=128 | class=5 | races=3/3 | drivers=0 | participants=0 | restrictions=1 | _&202740206
+417 | 7:_&445721099 | L61 | order=447 | group=128 | class=6 | races=3/3 | drivers=0 | participants=0 | restrictions=1 | _&202740078
+418 | 7:_&445721099 | L31 | order=448 | group=128 | class=3 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202741486
+419 | 7:_&445721099 | L41 | order=449 | group=128 | class=4 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202741358
+440 | 11:_&445750548 | L51 | order=450 | group=2048 | class=5 | races=4/4 | drivers=11 | participants=1 | restrictions=1 | _&202756847
+441 | 11:_&445750548 | L51 | order=451 | group=2048 | class=5 | races=3/3 | drivers=11 | participants=2 | restrictions=1 | _&202756719
+442 | 11:_&445750548 | L51 | order=452 | group=2048 | class=5 | races=4/4 | drivers=11 | participants=1 | restrictions=1 | _&202757103
+443 | 11:_&445750548 | L61 | order=453 | group=2048 | class=6 | races=4/4 | drivers=11 | participants=1 | restrictions=1 | _&202756975
+444 | 11:_&445750548 | L61 | order=454 | group=2048 | class=6 | races=4/4 | drivers=11 | participants=2 | restrictions=1 | _&202756335
+445 | 11:_&445750548 | L61 | order=455 | group=2048 | class=6 | races=4/4 | drivers=11 | participants=1 | restrictions=1 | _&202756207
+447 | 11:_&445750548 | L71 | order=456 | group=2048 | class=7 | races=4/4 | drivers=11 | participants=1 | restrictions=1 | _&202756463
+446 | 11:_&445750548 | L81 | order=457 | group=2048 | class=8 | races=4/4 | drivers=11 | participants=2 | restrictions=1 | _&202756591
+448 | 11:_&445750548 | L81 | order=458 | group=2048 | class=8 | races=3/3 | drivers=11 | participants=1 | restrictions=1 | _&202757871
+449 | 11:_&445750548 | L90 | order=459 | group=2048 | class=9 | races=4/4 | drivers=11 | participants=1 | restrictions=1 | _&202757743
+470 | 15:_&445751060 | L51 | order=470 | group=16384 | class=5 | races=4/4 | drivers=11 | participants=6 | restrictions=1 | _&202707695
+471 | 15:_&445751060 | L51 | order=471 | group=16384 | class=5 | races=4/4 | drivers=11 | participants=6 | restrictions=1 | _&202707567
+473 | 15:_&445751060 | L51 | order=472 | group=16384 | class=5 | races=4/4 | drivers=11 | participants=7 | restrictions=1 | _&202707823
+472 | 15:_&445751060 | L61 | order=473 | group=16384 | class=6 | races=4/4 | drivers=11 | participants=6 | restrictions=1 | _&202707951
+476 | 15:_&445751060 | L61 | order=475 | group=16384 | class=6 | races=4/4 | drivers=11 | participants=7 | restrictions=1 | _&202707439
+474 | 15:_&445751060 | L71 | order=476 | group=16384 | class=7 | races=4/4 | drivers=11 | participants=7 | restrictions=1 | _&202707183
+475 | 15:_&445751060 | L71 | order=476 | group=16384 | class=7 | races=4/4 | drivers=11 | participants=7 | restrictions=1 | _&202707055
+477 | 15:_&445751060 | L81 | order=477 | group=16384 | class=8 | races=4/4 | drivers=11 | participants=9 | restrictions=1 | _&202707311
+478 | 15:_&445751060 | L81 | order=478 | group=16384 | class=8 | races=4/4 | drivers=11 | participants=6 | restrictions=1 | _&202708719
+479 | 15:_&445751060 | L90 | order=479 | group=16384 | class=9 | races=4/4 | drivers=11 | participants=7 | restrictions=1 | _&202708591
+250 | 39:_&445716756 | L0 | order=500 | group=2 | class=0 | races=24/24 | drivers=9 | participants=9 | restrictions=1 | _&202740271
+501 | 21:_&445734164 | L71 | order=500 | group=131072 | class=7 | races=20/20 | drivers=11 | participants=14 | restrictions=1 | _&202719049
+251 | 39:_&445716756 | L11 | order=501 | group=2 | class=1 | races=24/24 | drivers=9 | participants=9 | restrictions=1 | _&202740399
+500 | 40:_&445767061 | L51 | order=501 | group=0 | class=5 | races=1/1 | drivers=7 | participants=8 | restrictions=1 | _&202719177
+502 | 21:_&445734164 | L71 | order=501 | group=65536 | class=7 | races=20/20 | drivers=11 | participants=14 | restrictions=1 | _&202718921
+252 | 39:_&445716756 | L21 | order=502 | group=2 | class=2 | races=24/24 | drivers=9 | participants=10 | restrictions=1 | _&202740527
+503 | 21:_&445734164 | L71 | order=502 | group=65536 | class=7 | races=20/20 | drivers=11 | participants=13 | restrictions=1 | _&202718793
+253 | 39:_&445716756 | L31 | order=503 | group=2 | class=3 | races=24/24 | drivers=9 | participants=10 | restrictions=1 | _&202740655
+504 | 14:_&445751188 | L81 | order=503 | group=65536 | class=8 | races=20/20 | drivers=11 | participants=14 | restrictions=2 | _&202718665
+254 | 39:_&445716756 | L41 | order=504 | group=2 | class=4 | races=24/24 | drivers=9 | participants=10 | restrictions=1 | _&202739759
+505 | 21:_&445734164 | L81 | order=504 | group=65536 | class=8 | races=20/20 | drivers=11 | participants=12 | restrictions=2 | _&202718537
+255 | 39:_&445716756 | L51 | order=505 | group=2 | class=5 | races=24/24 | drivers=9 | participants=9 | restrictions=1 | _&202739887
+506 | 21:_&445734164 | L81 | order=505 | group=65536 | class=8 | races=20/20 | drivers=11 | participants=12 | restrictions=2 | _&202718409
+256 | 39:_&445716756 | L61 | order=506 | group=2 | class=6 | races=24/24 | drivers=9 | participants=10 | restrictions=1 | _&202740015
+507 | 14:_&445751188 | L90 | order=506 | group=65536 | class=9 | races=20/20 | drivers=11 | participants=13 | restrictions=1 | _&202718281
+257 | 39:_&445716756 | L71 | order=507 | group=2 | class=7 | races=24/24 | drivers=9 | participants=9 | restrictions=1 | _&202740143
+508 | 14:_&445751188 | L90 | order=507 | group=65536 | class=9 | races=20/20 | drivers=11 | participants=12 | restrictions=1 | _&202718153
+258 | 39:_&445716756 | L81 | order=508 | group=2 | class=8 | races=24/24 | drivers=9 | participants=9 | restrictions=2 | _&202741295
+509 | 14:_&445751188 | L90 | order=508 | group=65536 | class=9 | races=20/20 | drivers=11 | participants=12 | restrictions=1 | _&202718025
+259 | 39:_&445716756 | L90 | order=509 | group=2 | class=9 | races=24/24 | drivers=9 | participants=9 | restrictions=1 | _&202741423
+510 | 14:_&445751188 | L90 | order=509 | group=65536 | class=9 | races=20/20 | drivers=11 | participants=13 | restrictions=1 | _&202735561
+600 | 17:_&445750804 | L0 | order=600 | group=32 | class=0 | races=40/40 | drivers=11 | participants=11 | restrictions=1 | _&202719145
+601 | 17:_&445750804 | L11 | order=601 | group=32 | class=1 | races=40/40 | drivers=11 | participants=11 | restrictions=1 | _&202719017
+602 | 17:_&445750804 | L21 | order=602 | group=32 | class=2 | races=40/40 | drivers=11 | participants=12 | restrictions=1 | _&202718889
+603 | 17:_&445750804 | L31 | order=603 | group=32 | class=3 | races=40/40 | drivers=11 | participants=11 | restrictions=1 | _&202718761
+604 | 17:_&445750804 | L41 | order=604 | group=32 | class=4 | races=40/40 | drivers=11 | participants=11 | restrictions=1 | _&202718633
+605 | 17:_&445750804 | L51 | order=605 | group=32 | class=5 | races=40/40 | drivers=11 | participants=11 | restrictions=1 | _&202718505
+606 | 17:_&445750804 | L61 | order=606 | group=32 | class=6 | races=40/40 | drivers=11 | participants=11 | restrictions=1 | _&202718377
+607 | 17:_&445750804 | L71 | order=607 | group=32 | class=7 | races=40/40 | drivers=11 | participants=11 | restrictions=1 | _&202718249
+608 | 17:_&445750804 | L81 | order=608 | group=32 | class=8 | races=40/40 | drivers=11 | participants=12 | restrictions=1 | _&202718121
+609 | 17:_&445750804 | L90 | order=609 | group=32 | class=9 | races=40/40 | drivers=11 | participants=12 | restrictions=1 | _&202717993
+701 | 1:_&445720843 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=1 | restrictions=1 | _&202718985
+702 | 1:_&445720843 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=7 | restrictions=1 | _&202718857
+703 | 41:_&445766933 | L51 | order=1000 | group=0 | class=5 | races=1/1 | drivers=7 | participants=1 | restrictions=1 | _&202718729
+704 | 1:_&445720843 | L51 | order=1000 | group=0 | class=5 | races=1/1 | drivers=7 | participants=7 | restrictions=1 | _&202718601
+705 | 1:_&445720843 | L21 | order=1000 | group=0 | class=2 | races=1/1 | drivers=7 | participants=6 | restrictions=1 | _&202718473
+706 | 1:_&445720843 | L51 | order=1000 | group=0 | class=5 | races=1/1 | drivers=7 | participants=7 | restrictions=1 | _&202718345
+707 | 41:_&445766933 | L71 | order=1000 | group=0 | class=7 | races=1/1 | drivers=7 | participants=2 | restrictions=1 | _&202718217
+708 | 1:_&445720843 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=6 | restrictions=1 | _&202718089
+709 | 1:_&445720843 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=6 | restrictions=1 | _&202717961
+710 | 1:_&445720843 | L31 | order=1000 | group=0 | class=3 | races=1/1 | drivers=7 | participants=4 | restrictions=1 | _&202735497
+711 | 1:_&445720843 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=6 | restrictions=1 | _&202735369
+712 | 1:_&445720843 | L90 | order=1000 | group=0 | class=9 | races=1/1 | drivers=7 | participants=6 | restrictions=1 | _&202735241
+713 | 41:_&445766933 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=2 | restrictions=1 | _&202735113
+714 | 1:_&445720843 | L71 | order=1000 | group=0 | class=7 | races=1/1 | drivers=7 | participants=7 | restrictions=1 | _&202734985
+715 | 41:_&445766933 | L51 | order=1000 | group=0 | class=5 | races=1/1 | drivers=7 | participants=8 | restrictions=1 | _&202734857
+716 | 1:_&445720843 | L51 | order=1000 | group=0 | class=5 | races=1/1 | drivers=7 | participants=1 | restrictions=1 | _&202734729
+717 | 41:_&445766933 | L71 | order=1000 | group=0 | class=7 | races=1/1 | drivers=7 | participants=8 | restrictions=1 | _&202734601
+718 | 12:_&445750420 | L0 | order=1000 | group=0 | class=0 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202734473
+719 | 41:_&445766933 | L71 | order=1000 | group=0 | class=7 | races=1/1 | drivers=7 | participants=3 | restrictions=1 | _&202734345
+720 | 1:_&445720843 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=2 | restrictions=1 | _&202751881
+721 | 41:_&445766933 | L61 | order=1000 | group=0 | class=6 | races=1/1 | drivers=7 | participants=4 | restrictions=1 | _&202751753
+722 | 12:_&445750420 | L0 | order=1000 | group=0 | class=0 | races=1/1 | drivers=0 | participants=0 | restrictions=1 | _&202751625
+724 | 1:_&445720843 | L71 | order=1000 | group=0 | class=7 | races=1/1 | drivers=7 | participants=6 | restrictions=1 | _&202751369
+726 | 41:_&445766933 | L51 | order=1000 | group=0 | class=5 | races=1/1 | drivers=7 | participants=2 | restrictions=1 | _&202751113
+
+================== EVENT RESTRICTIONS — ALL ROWS ==================
+restrictionId=179 event=1 bucket=0 value=00002000040018
+restrictionId=55 event=2 bucket=0 value=00002000040024
+restrictionId=21 event=3 bucket=0 value=00002000040003
+restrictionId=93 event=4 bucket=0 value=0000200004000C
+restrictionId=215 event=5 bucket=0 value=00002000040016
+restrictionId=272 event=5 bucket=0 value=00002000040009
+restrictionId=297 event=6 bucket=0 value=00002000040004
+restrictionId=325 event=7 bucket=0 value=00002000040002
+restrictionId=182 event=8 bucket=0 value=0000200004000A
+restrictionId=170 event=9 bucket=0 value=00002000040010
+restrictionId=172 event=10 bucket=0 value=00002000040013
+restrictionId=178 event=11 bucket=0 value=00002000040014
+restrictionId=147 event=12 bucket=0 value=00002000040005
+restrictionId=114 event=13 bucket=0 value=0000200004000F
+restrictionId=42 event=14 bucket=0 value=00002000040015
+restrictionId=116 event=15 bucket=0 value=0000088004001001
+restrictionId=233 event=15 bucket=0 value=0000088004000101
+restrictionId=231 event=16 bucket=0 value=0000088004001A01
+restrictionId=213 event=17 bucket=0 value=0002080004000007BC001F
+restrictionId=190 event=18 bucket=0 value=00000800040011
+restrictionId=89 event=19 bucket=0 value=0000080804001A04
+restrictionId=24 event=20 bucket=0 value=0020080004020010
+restrictionId=229 event=21 bucket=0 value=0003080004000007C6000007CF001F
+restrictionId=298 event=22 bucket=0 value=002008000401001A
+restrictionId=253 event=23 bucket=0 value=002008000402001A
+restrictionId=79 event=24 bucket=0 value=002008000401001E
+restrictionId=43 event=25 bucket=0 value=0020080004010012
+restrictionId=112 event=25 bucket=0 value=002008000401001F
+restrictionId=149 event=26 bucket=0 value=0020080004010030
+restrictionId=115 event=27 bucket=0 value=0020080004010001
+restrictionId=316 event=27 bucket=0 value=0020080004010010
+restrictionId=31 event=28 bucket=0 value=0020080004010017
+restrictionId=195 event=28 bucket=0 value=0020080004010031
+restrictionId=154 event=29 bucket=0 value=002008000403001F
+restrictionId=134 event=30 bucket=0 value=00080200040205
+restrictionId=82 event=31 bucket=0 value=00800002040101
+restrictionId=62 event=32 bucket=0 value=00080200040905
+restrictionId=108 event=32 bucket=0 value=00080200040A05
+restrictionId=94 event=33 bucket=0 value=0080000214010202
+restrictionId=156 event=34 bucket=0 value=00800002040103
+restrictionId=37 event=35 bucket=0 value=0000080004001F
+restrictionId=203 event=35 bucket=0 value=00000800040017
+restrictionId=2 event=50 bucket=0 value=00002000040008
+restrictionId=72 event=51 bucket=0 value=0000080004001D
+restrictionId=165 event=52 bucket=0 value=00002000040020
+restrictionId=51 event=53 bucket=0 value=0000200004001B
+restrictionId=113 event=54 bucket=0 value=00002000040021
+restrictionId=275 event=55 bucket=0 value=0000200004001A
+restrictionId=198 event=56 bucket=0 value=002008000401000D
+restrictionId=50 event=57 bucket=0 value=002008000402000D
+restrictionId=87 event=58 bucket=0 value=00002000040023
+restrictionId=260 event=59 bucket=0 value=00002000040022
+restrictionId=120 event=60 bucket=0 value=00000800040038
+restrictionId=248 event=61 bucket=0 value=00000800040016
+restrictionId=188 event=62 bucket=0 value=00000800040024
+restrictionId=214 event=63 bucket=0 value=00000800040029
+restrictionId=80 event=64 bucket=0 value=0000080004002E
+restrictionId=232 event=65 bucket=0 value=00000800040033
+restrictionId=163 event=66 bucket=0 value=00000800040035
+restrictionId=135 event=67 bucket=0 value=00000800040034
+restrictionId=157 event=68 bucket=0 value=0002080004000007B1000D
+restrictionId=57 event=69 bucket=0 value=0000080014000302
+restrictionId=193 event=70 bucket=0 value=0000080014000304
+restrictionId=276 event=71 bucket=0 value=00000800040002
+restrictionId=6 event=72 bucket=0 value=00000800040018
+restrictionId=263 event=73 bucket=0 value=0000080014001C04
+restrictionId=48 event=74 bucket=0 value=0020080004010003
+restrictionId=299 event=75 bucket=0 value=0020080004010006
+restrictionId=158 event=76 bucket=0 value=0000088004000D06
+restrictionId=123 event=77 bucket=0 value=0000088004000D04
+restrictionId=105 event=78 bucket=0 value=002008000402000D
+restrictionId=218 event=78 bucket=0 value=002008000401000D
+restrictionId=247 event=79 bucket=0 value=00000800040013
+restrictionId=326 event=80 bucket=0 value=00000800040014
+restrictionId=130 event=81 bucket=0 value=00000800040015
+restrictionId=101 event=82 bucket=0 value=002008000401001B
+restrictionId=125 event=83 bucket=0 value=0000080014001C02
+restrictionId=258 event=84 bucket=0 value=00000800040006
+restrictionId=83 event=86 bucket=0 value=00000800040003
+restrictionId=284 event=87 bucket=0 value=00000800040024
+restrictionId=311 event=88 bucket=0 value=00880000040402
+restrictionId=7 event=89 bucket=0 value=0082000004000007A602
+restrictionId=309 event=90 bucket=0 value=00080200040603
+restrictionId=335 event=91 bucket=0 value=00880000040702
+restrictionId=46 event=92 bucket=0 value=0000080014000602
+restrictionId=262 event=92 bucket=0 value=0000080014000302
+restrictionId=20 event=93 bucket=0 value=00000800040004
+restrictionId=127 event=93 bucket=0 value=00000800040013
+restrictionId=145 event=93 bucket=0 value=00000800040002
+restrictionId=186 event=93 bucket=0 value=00000800040040
+restrictionId=223 event=94 bucket=0 value=00A00000040102
+restrictionId=201 event=95 bucket=0 value=000002000404
+restrictionId=340 event=100 bucket=0 value=00002000040017
+restrictionId=294 event=101 bucket=0 value=0000200004001D
+restrictionId=317 event=102 bucket=0 value=0000200004000B
+restrictionId=196 event=103 bucket=0 value=0000200004000E
+restrictionId=205 event=104 bucket=0 value=00002000040011
+restrictionId=1 event=105 bucket=0 value=0000200004000D
+restrictionId=222 event=105 bucket=0 value=0000200004001E
+restrictionId=271 event=106 bucket=0 value=0002200004000007B60012
+restrictionId=320 event=107 bucket=0 value=0001200004000007B90012
+restrictionId=183 event=108 bucket=0 value=0000200004001F
+restrictionId=322 event=109 bucket=0 value=00002000040006
+restrictionId=122 event=110 bucket=0 value=00002000040007
+restrictionId=220 event=111 bucket=0 value=00000800040059
+restrictionId=169 event=112 bucket=0 value=0002080004000007B60009
+restrictionId=150 event=113 bucket=0 value=0002080004000007B6000B
+restrictionId=286 event=114 bucket=0 value=0002080004000007B6000E
+restrictionId=199 event=115 bucket=0 value=0002080004000007B60026
+restrictionId=107 event=116 bucket=0 value=0002080004000007B6002F
+restrictionId=270 event=117 bucket=0 value=00000800040026
+restrictionId=139 event=118 bucket=0 value=000080000401B5
+restrictionId=291 event=118 bucket=0 value=00008000040269
+restrictionId=314 event=118 bucket=0 value=000080000404A1
+restrictionId=209 event=119 bucket=0 value=0020080004010009
+restrictionId=144 event=120 bucket=0 value=002008000401000B
+restrictionId=142 event=121 bucket=0 value=002008000401000E
+restrictionId=63 event=122 bucket=0 value=002008000401002B
+restrictionId=99 event=123 bucket=0 value=0000080004000B
+restrictionId=153 event=124 bucket=0 value=0000080004000E
+restrictionId=212 event=125 bucket=0 value=00000800040001
+restrictionId=318 event=127 bucket=0 value=00880000040603
+restrictionId=288 event=128 bucket=0 value=0083000004000007B2000007BB03
+restrictionId=12 event=129 bucket=0 value=00002000040011
+restrictionId=77 event=129 bucket=0 value=00002000040012
+restrictionId=131 event=130 bucket=0 value=00002000040007
+restrictionId=245 event=130 bucket=0 value=00002000040006
+restrictionId=332 event=200 bucket=0 value=000800000402
+restrictionId=28 event=201 bucket=0 value=000800000403
+restrictionId=251 event=202 bucket=0 value=000800000404
+restrictionId=292 event=203 bucket=0 value=000800000405
+restrictionId=45 event=204 bucket=0 value=000800000406
+restrictionId=58 event=205 bucket=0 value=000800000407
+restrictionId=67 event=206 bucket=0 value=000800000408
+restrictionId=47 event=207 bucket=0 value=000800000409
+restrictionId=175 event=208 bucket=0 value=00080000040A
+restrictionId=267 event=209 bucket=0 value=00080000040B
+restrictionId=155 event=210 bucket=0 value=00000080040B
+restrictionId=13 event=211 bucket=0 value=000000800401
+restrictionId=304 event=212 bucket=0 value=000000000601
+restrictionId=167 event=213 bucket=0 value=00000000070101
+restrictionId=124 event=214 bucket=0 value=00002000040026
+restrictionId=126 event=215 bucket=0 value=000000800402
+restrictionId=312 event=216 bucket=0 value=000000800403
+restrictionId=4 event=217 bucket=0 value=000000800404
+restrictionId=242 event=218 bucket=0 value=000000800405
+restrictionId=206 event=219 bucket=0 value=000000800406
+restrictionId=90 event=220 bucket=0 value=0000000004
+restrictionId=40 event=221 bucket=0 value=0000000004
+restrictionId=283 event=222 bucket=0 value=0000000004
+restrictionId=338 event=223 bucket=0 value=0000000004
+restrictionId=290 event=224 bucket=0 value=0000000004
+restrictionId=66 event=225 bucket=0 value=0000000004
+restrictionId=152 event=226 bucket=0 value=0000000004
+restrictionId=138 event=227 bucket=0 value=0000000004
+restrictionId=289 event=228 bucket=0 value=0000000004
+restrictionId=207 event=229 bucket=0 value=0000000004
+restrictionId=337 event=230 bucket=0 value=0000000004
+restrictionId=323 event=231 bucket=0 value=0000000004
+restrictionId=239 event=232 bucket=0 value=0000000004
+restrictionId=306 event=233 bucket=0 value=0000000004
+restrictionId=269 event=234 bucket=0 value=0000000004
+restrictionId=171 event=235 bucket=0 value=0000000004
+restrictionId=255 event=236 bucket=0 value=0000000004
+restrictionId=173 event=237 bucket=0 value=0000000004
+restrictionId=164 event=238 bucket=0 value=0000000004
+restrictionId=228 event=239 bucket=0 value=0000000004
+restrictionId=296 event=240 bucket=0 value=0000000004
+restrictionId=225 event=241 bucket=0 value=0000000004
+restrictionId=321 event=242 bucket=0 value=0000000004
+restrictionId=236 event=243 bucket=0 value=0000000004
+restrictionId=30 event=244 bucket=0 value=0000000004
+restrictionId=197 event=245 bucket=0 value=0000000004
+restrictionId=177 event=246 bucket=0 value=0000000004
+restrictionId=15 event=247 bucket=0 value=0000000004
+restrictionId=252 event=248 bucket=0 value=0000000004
+restrictionId=235 event=249 bucket=0 value=0000000004
+restrictionId=200 event=250 bucket=0 value=0000000004
+restrictionId=41 event=251 bucket=0 value=0000000004
+restrictionId=217 event=252 bucket=0 value=0000000004
+restrictionId=104 event=253 bucket=0 value=0000000004
+restrictionId=330 event=254 bucket=0 value=0000000004
+restrictionId=9 event=255 bucket=0 value=0000000004
+restrictionId=307 event=256 bucket=0 value=0000000004
+restrictionId=293 event=257 bucket=0 value=0000000004
+restrictionId=53 event=258 bucket=0 value=0000000004
+restrictionId=118 event=258 bucket=0 value=0000000004
+restrictionId=52 event=259 bucket=0 value=0000000004
+restrictionId=23 event=302 bucket=0 value=0000800004054E
+restrictionId=305 event=307 bucket=0 value=0000800004043A
+restrictionId=74 event=309 bucket=0 value=00008000040417
+restrictionId=3 event=310 bucket=0 value=0000800004055E
+restrictionId=336 event=311 bucket=0 value=000080000404E9
+restrictionId=8 event=314 bucket=0 value=00008000040456
+restrictionId=32 event=318 bucket=0 value=000080000404F5
+restrictionId=261 event=322 bucket=0 value=00008000040438
+restrictionId=59 event=324 bucket=0 value=0000800004043D
+restrictionId=240 event=326 bucket=0 value=00008000040444
+restrictionId=39 event=327 bucket=0 value=00008000040194
+restrictionId=129 event=328 bucket=0 value=000080000401C7
+restrictionId=194 event=330 bucket=0 value=0000800004012B
+restrictionId=65 event=331 bucket=0 value=00008000040435
+restrictionId=18 event=332 bucket=0 value=00008000040143
+restrictionId=333 event=333 bucket=0 value=00008000040282
+restrictionId=54 event=334 bucket=0 value=0000800004041D
+restrictionId=100 event=335 bucket=0 value=00008000040172
+restrictionId=111 event=337 bucket=0 value=0000800004014B
+restrictionId=287 event=338 bucket=0 value=000080000403F1
+restrictionId=334 event=339 bucket=0 value=00008000040424
+restrictionId=184 event=340 bucket=0 value=000080000404CF
+restrictionId=69 event=341 bucket=0 value=000080000401CD
+restrictionId=166 event=342 bucket=0 value=000080000403F3
+restrictionId=202 event=343 bucket=0 value=000080000404B5
+restrictionId=148 event=344 bucket=0 value=00008000040468
+restrictionId=339 event=345 bucket=0 value=0000800004046B
+restrictionId=273 event=346 bucket=0 value=000080000404EC
+restrictionId=279 event=347 bucket=0 value=000080000404D5
+restrictionId=282 event=348 bucket=0 value=000080000403EF
+restrictionId=256 event=400 bucket=0 value=0000000004
+restrictionId=17 event=401 bucket=0 value=0000000004
+restrictionId=161 event=402 bucket=0 value=0000000004
+restrictionId=10 event=403 bucket=0 value=0000000004
+restrictionId=329 event=404 bucket=0 value=0000000004
+restrictionId=204 event=405 bucket=0 value=0000000004
+restrictionId=268 event=406 bucket=0 value=0000000004
+restrictionId=315 event=407 bucket=0 value=0000000004
+restrictionId=176 event=408 bucket=0 value=0000000004
+restrictionId=216 event=409 bucket=0 value=0000000004
+restrictionId=35 event=410 bucket=0 value=0000000004
+restrictionId=189 event=411 bucket=0 value=0000000004
+restrictionId=22 event=412 bucket=0 value=0000000004
+restrictionId=140 event=413 bucket=0 value=0000000004
+restrictionId=11 event=414 bucket=0 value=0000000004
+restrictionId=174 event=415 bucket=0 value=0000000004
+restrictionId=227 event=416 bucket=0 value=0000000004
+restrictionId=151 event=417 bucket=0 value=0000000004
+restrictionId=56 event=418 bucket=0 value=0000000004
+restrictionId=160 event=419 bucket=0 value=0000000004
+restrictionId=68 event=440 bucket=0 value=00000800040009
+restrictionId=159 event=441 bucket=0 value=0000080004001F
+restrictionId=191 event=442 bucket=0 value=00000800040006
+restrictionId=146 event=443 bucket=0 value=0000080004000D
+restrictionId=96 event=444 bucket=0 value=0000080004000B
+restrictionId=44 event=445 bucket=0 value=00000800040015
+restrictionId=238 event=446 bucket=0 value=0008080004140002
+restrictionId=137 event=447 bucket=0 value=00080000040F
+restrictionId=310 event=448 bucket=0 value=00080800040C001F
+restrictionId=27 event=449 bucket=0 value=0020080004030003
+restrictionId=249 event=450 bucket=0 value=0082000004000007B503
+restrictionId=38 event=451 bucket=0 value=0002080004000007B40059
+restrictionId=192 event=451 bucket=0 value=0002080004000007B4000B
+restrictionId=26 event=452 bucket=0 value=00002000040006
+restrictionId=64 event=452 bucket=0 value=0000800004015C
+restrictionId=295 event=452 bucket=0 value=00002000040007
+restrictionId=278 event=453 bucket=0 value=00880000040702
+restrictionId=243 event=454 bucket=0 value=00A00000040201
+restrictionId=224 event=455 bucket=0 value=00080000040F
+restrictionId=60 event=456 bucket=0 value=000800000410
+restrictionId=302 event=457 bucket=0 value=0003000004000007C6000007CF
+restrictionId=241 event=458 bucket=0 value=0000000004
+restrictionId=14 event=459 bucket=0 value=000800000412
+restrictionId=84 event=459 bucket=0 value=000800000411
+restrictionId=29 event=470 bucket=0 value=0000800004056C
+restrictionId=121 event=471 bucket=0 value=000080000403F3
+restrictionId=185 event=472 bucket=0 value=00008000040468
+restrictionId=106 event=473 bucket=0 value=000080000404A0
+restrictionId=180 event=474 bucket=0 value=000080000404FB
+restrictionId=208 event=475 bucket=0 value=00008000040238
+restrictionId=73 event=476 bucket=0 value=00008000040599
+restrictionId=211 event=477 bucket=0 value=00008000040497
+restrictionId=36 event=478 bucket=0 value=000080000405BA
+restrictionId=277 event=479 bucket=0 value=0000800004049F
+restrictionId=265 event=480 bucket=0 value=0000000004
+restrictionId=25 event=481 bucket=0 value=0000000004
+restrictionId=70 event=482 bucket=0 value=0000000004
+restrictionId=319 event=483 bucket=0 value=0000000004
+restrictionId=95 event=484 bucket=0 value=0000000004
+restrictionId=168 event=485 bucket=0 value=0000000004
+restrictionId=88 event=486 bucket=0 value=0000000004
+restrictionId=266 event=487 bucket=0 value=0000000004
+restrictionId=97 event=488 bucket=0 value=0000000004
+restrictionId=143 event=489 bucket=0 value=0000000004
+restrictionId=86 event=490 bucket=0 value=0000000004
+restrictionId=274 event=491 bucket=0 value=0000000004
+restrictionId=136 event=492 bucket=0 value=0000000004
+restrictionId=187 event=493 bucket=0 value=0000000004
+restrictionId=133 event=494 bucket=0 value=0000000004
+restrictionId=33 event=495 bucket=0 value=0000000004
+restrictionId=234 event=496 bucket=0 value=0000000004
+restrictionId=16 event=497 bucket=0 value=0000000004
+restrictionId=78 event=498 bucket=0 value=0000000004
+restrictionId=85 event=499 bucket=0 value=0000000004
+restrictionId=117 event=500 bucket=0 value=010000000006
+restrictionId=19 event=501 bucket=0 value=0000000004
+restrictionId=162 event=502 bucket=0 value=0000000004
+restrictionId=132 event=503 bucket=0 value=0000000004
+restrictionId=92 event=504 bucket=0 value=0000000004
+restrictionId=331 event=504 bucket=0 value=0000000004
+restrictionId=75 event=505 bucket=0 value=0000000004
+restrictionId=327 event=505 bucket=0 value=0000000004
+restrictionId=5 event=506 bucket=0 value=0000000004
+restrictionId=102 event=506 bucket=0 value=0000000004
+restrictionId=103 event=507 bucket=0 value=0000000004
+restrictionId=246 event=508 bucket=0 value=0000000004
+restrictionId=110 event=509 bucket=0 value=0000000004
+restrictionId=281 event=510 bucket=0 value=0000000004
+restrictionId=285 event=600 bucket=0 value=0000000004
+restrictionId=98 event=601 bucket=0 value=0000000004
+restrictionId=244 event=602 bucket=0 value=0000000004
+restrictionId=250 event=603 bucket=0 value=0000000004
+restrictionId=226 event=604 bucket=0 value=0000000004
+restrictionId=119 event=605 bucket=0 value=0000000004
+restrictionId=109 event=606 bucket=0 value=0000000004
+restrictionId=308 event=607 bucket=0 value=0000000004
+restrictionId=300 event=608 bucket=0 value=0000000004
+restrictionId=34 event=609 bucket=0 value=0000000004
+restrictionId=259 event=701 bucket=0 value=0000800004014D
+restrictionId=328 event=702 bucket=0 value=0000080004000D
+restrictionId=49 event=703 bucket=0 value=0000080004000E
+restrictionId=237 event=704 bucket=0 value=000002000409
+restrictionId=61 event=705 bucket=0 value=00002000040021
+restrictionId=141 event=706 bucket=0 value=000002000404
+restrictionId=76 event=707 bucket=0 value=000002000404
+restrictionId=301 event=708 bucket=0 value=00000800040015
+restrictionId=128 event=709 bucket=0 value=0000000004
+restrictionId=91 event=710 bucket=0 value=0002000004000007B1
+restrictionId=313 event=711 bucket=0 value=00000800040002
+restrictionId=219 event=712 bucket=0 value=0000000004
+restrictionId=81 event=713 bucket=0 value=0000080004001C
+restrictionId=324 event=714 bucket=0 value=0000000004
+restrictionId=230 event=715 bucket=0 value=0000000004
+restrictionId=210 event=716 bucket=0 value=000080000404E2
+restrictionId=221 event=717 bucket=0 value=0000000004
+restrictionId=264 event=718 bucket=0 value=000080000404F6
+restrictionId=303 event=719 bucket=0 value=000002000408
+restrictionId=181 event=720 bucket=0 value=0000080004001B
+restrictionId=71 event=721 bucket=0 value=008000000402
+restrictionId=257 event=722 bucket=0 value=00008000040541
+restrictionId=254 event=724 bucket=0 value=010000000407
+restrictionId=280 event=726 bucket=0 value=00000800040006
+
+================== EVENT PARTICIPANT COUNTS ==================
+event=1: rows=3 buckets={'0': 3} priorities={'1': 1, '2': 1, '3': 1}
+event=2: rows=3 buckets={'0': 3} priorities={'2': 1, '3': 1, '1': 1}
+event=3: rows=7 buckets={'0': 7} priorities={'2': 1, '3': 1, '8': 1, '4': 1, '5': 1, '6': 1, '7': 1}
+event=4: rows=4 buckets={'0': 4} priorities={'1': 1, '2': 1, '4': 1, '3': 1}
+event=5: rows=4 buckets={'0': 4} priorities={'1': 1, '2': 1, '4': 1, '3': 1}
+event=6: rows=3 buckets={'0': 3} priorities={'1': 1, '2': 1, '3': 1}
+event=7: rows=4 buckets={'0': 4} priorities={'2': 1, '4': 1, '1': 1, '3': 1}
+event=8: rows=4 buckets={'0': 4} priorities={'3': 1, '2': 1, '1': 1, '4': 1}
+event=9: rows=4 buckets={'0': 4} priorities={'2': 1, '1': 1, '3': 1, '4': 1}
+event=10: rows=4 buckets={'0': 4} priorities={'3': 1, '1': 1, '2': 1, '5': 1}
+event=11: rows=4 buckets={'0': 4} priorities={'1': 1, '3': 1, '4': 1, '2': 1}
+event=12: rows=5 buckets={'0': 5} priorities={'1': 1, '4': 1, '2': 1, '5': 1, '3': 1}
+event=13: rows=3 buckets={'0': 3} priorities={'3': 1, '2': 1, '1': 1}
+event=14: rows=6 buckets={'0': 6} priorities={'4': 1, '2': 1, '6': 1, '3': 1, '5': 1, '1': 1}
+event=15: rows=7 buckets={'0': 7} priorities={'5': 1, '4': 1, '1': 1, '6': 1, '2': 1, '7': 1, '8': 1}
+event=16: rows=6 buckets={'0': 6} priorities={'1': 1, '2': 1, '3': 1, '4': 1, '5': 1, '6': 1}
+event=17: rows=3 buckets={'0': 3} priorities={'1': 1, '3': 1, '2': 1}
+event=18: rows=2 buckets={'0': 2} priorities={'1': 1, '2': 1}
+event=19: rows=4 buckets={'0': 4} priorities={'2': 1, '1': 1, '3': 1, '4': 1}
+event=20: rows=3 buckets={'0': 3} priorities={'2': 1, '3': 1, '1': 1}
+event=21: rows=5 buckets={'0': 5} priorities={'1': 1, '4': 1, '3': 1, '5': 1, '2': 1}
+event=22: rows=6 buckets={'0': 6} priorities={'2': 1, '1': 1, '7': 1, '8': 1, '5': 1, '3': 1}
+event=23: rows=5 buckets={'0': 5} priorities={'3': 1, '1': 1, '4': 1, '5': 1, '2': 1}
+event=24: rows=8 buckets={'0': 8} priorities={'1': 1, '3': 1, '2': 1, '5': 1, '6': 1, '8': 1, '4': 1, '7': 1}
+event=25: rows=7 buckets={'0': 7} priorities={'2': 1, '6': 1, '5': 1, '7': 1, '4': 1, '3': 1, '1': 1}
+event=26: rows=6 buckets={'0': 6} priorities={'2': 1, '3': 1, '6': 1, '7': 1, '5': 1, '4': 1}
+event=27: rows=7 buckets={'0': 7} priorities={'4': 1, '2': 1, '6': 1, '1': 1, '5': 1, '3': 1, '7': 1}
+event=28: rows=6 buckets={'0': 6} priorities={'1': 1, '5': 1, '6': 1, '2': 1, '4': 1, '3': 1}
+event=29: rows=7 buckets={'0': 7} priorities={'3': 1, '5': 1, '4': 1, '6': 1, '1': 1, '7': 1, '2': 1}
+event=30: rows=3 buckets={'0': 3} priorities={'2': 1, '1': 1, '3': 1}
+event=31: rows=8 buckets={'0': 8} priorities={'5': 1, '2': 1, '6': 1, '1': 1, '7': 1, '4': 1, '8': 1, '3': 1}
+event=32: rows=8 buckets={'0': 8} priorities={'4': 1, '7': 1, '5': 1, '6': 1, '2': 1, '3': 1, '8': 1, '1': 1}
+event=33: rows=7 buckets={'0': 7} priorities={'3': 1, '4': 1, '5': 1, '2': 1, '7': 1, '6': 1, '9': 1}
+event=34: rows=7 buckets={'0': 7} priorities={'4': 1, '3': 1, '2': 1, '7': 1, '6': 1, '1': 1, '5': 1}
+event=35: rows=4 buckets={'0': 4} priorities={'3': 1, '4': 1, '1': 1, '2': 1}
+event=50: rows=4 buckets={'0': 4} priorities={'4': 1, '2': 1, '3': 1, '1': 1}
+event=51: rows=2 buckets={'0': 2} priorities={'1': 1, '3': 1}
+event=52: rows=3 buckets={'0': 3} priorities={'1': 1, '2': 1, '3': 1}
+event=53: rows=4 buckets={'0': 4} priorities={'4': 1, '2': 1, '3': 1, '1': 1}
+event=54: rows=7 buckets={'0': 7} priorities={'6': 1, '7': 1, '5': 1, '4': 1, '3': 1, '2': 1, '1': 1}
+event=55: rows=4 buckets={'0': 4} priorities={'1': 1, '4': 1, '2': 1, '3': 1}
+event=56: rows=7 buckets={'0': 7} priorities={'6': 1, '4': 1, '1': 1, '7': 1, '5': 1, '2': 1, '3': 1}
+event=57: rows=5 buckets={'0': 5} priorities={'6': 1, '5': 1, '4': 1, '1': 1, '2': 1}
+event=58: rows=3 buckets={'0': 3} priorities={'1': 1, '3': 1, '2': 1}
+event=59: rows=2 buckets={'0': 2} priorities={'1': 1, '3': 1}
+event=60: rows=3 buckets={'0': 3} priorities={'3': 1, '2': 1, '1': 1}
+event=61: rows=2 buckets={'0': 2} priorities={'2': 1, '1': 1}
+event=62: rows=4 buckets={'0': 4} priorities={'2': 1, '4': 1, '3': 1, '1': 1}
+event=63: rows=4 buckets={'0': 4} priorities={'2': 1, '3': 1, '4': 1, '1': 1}
+event=64: rows=3 buckets={'0': 3} priorities={'2': 1, '1': 1, '3': 1}
+event=65: rows=3 buckets={'0': 3} priorities={'1': 1, '2': 1, '3': 1}
+event=66: rows=3 buckets={'0': 3} priorities={'3': 1, '2': 1, '1': 1}
+event=67: rows=7 buckets={'0': 7} priorities={'3': 1, '5': 1, '4': 1, '8': 1, '6': 1, '7': 1, '2': 1}
+event=68: rows=5 buckets={'0': 5} priorities={'5': 1, '4': 1, '3': 1, '2': 1, '1': 1}
+event=69: rows=4 buckets={'0': 4} priorities={'4': 1, '5': 1, '2': 1, '3': 1}
+event=70: rows=5 buckets={'0': 5} priorities={'5': 1, '4': 1, '3': 1, '1': 1, '2': 1}
+event=71: rows=5 buckets={'0': 5} priorities={'4': 1, '6': 1, '5': 1, '2': 1, '3': 1}
+event=72: rows=5 buckets={'0': 5} priorities={'4': 1, '2': 1, '3': 1, '5': 1, '1': 1}
+event=73: rows=3 buckets={'0': 3} priorities={'3': 1, '2': 1, '1': 1}
+event=74: rows=5 buckets={'0': 5} priorities={'1': 1, '4': 1, '5': 1, '3': 1, '7': 1}
+event=75: rows=6 buckets={'0': 6} priorities={'7': 1, '1': 1, '2': 1, '8': 1, '3': 1, '5': 1}
+event=76: rows=7 buckets={'0': 7} priorities={'7': 1, '6': 1, '3': 1, '4': 1, '2': 1, '1': 1, '5': 1}
+event=77: rows=7 buckets={'0': 7} priorities={'7': 1, '6': 1, '3': 1, '4': 1, '5': 1, '2': 1, '8': 1}
+event=78: rows=7 buckets={'0': 7} priorities={'5': 1, '6': 1, '1': 1, '2': 1, '4': 1, '8': 1, '7': 1}
+event=79: rows=3 buckets={'0': 3} priorities={'2': 1, '3': 1, '1': 1}
+event=80: rows=3 buckets={'0': 3} priorities={'2': 1, '4': 1, '3': 1}
+event=81: rows=7 buckets={'0': 7} priorities={'5': 1, '6': 1, '7': 1, '3': 1, '4': 1, '9': 1, '8': 1}
+event=82: rows=3 buckets={'0': 3} priorities={'2': 1, '3': 1, '1': 1}
+event=83: rows=6 buckets={'0': 6} priorities={'2': 1, '5': 1, '6': 1, '4': 1, '3': 1, '1': 1}
+event=84: rows=5 buckets={'0': 5} priorities={'4': 1, '1': 1, '3': 1, '5': 1, '2': 1}
+event=86: rows=4 buckets={'0': 4} priorities={'4': 1, '1': 1, '2': 1, '3': 1}
+event=87: rows=3 buckets={'0': 3} priorities={'1': 1, '3': 1, '2': 1}
+event=88: rows=6 buckets={'0': 6} priorities={'6': 1, '5': 1, '7': 1, '1': 1, '2': 1, '3': 1}
+event=89: rows=5 buckets={'0': 5} priorities={'3': 1, '4': 1, '2': 1, '5': 1, '1': 1}
+event=90: rows=5 buckets={'0': 5} priorities={'5': 1, '4': 1, '3': 1, '1': 1, '2': 1}
+event=91: rows=7 buckets={'0': 7} priorities={'7': 1, '5': 1, '2': 1, '8': 1, '3': 1, '4': 1, '6': 1}
+event=92: rows=7 buckets={'0': 7} priorities={'3': 1, '1': 1, '2': 1, '7': 1, '5': 1, '4': 1, '6': 1}
+event=93: rows=8 buckets={'0': 8} priorities={'7': 1, '6': 1, '4': 1, '2': 2, '5': 1, '3': 1, '9': 1}
+event=94: rows=6 buckets={'0': 6} priorities={'7': 1, '6': 1, '4': 1, '3': 1, '5': 1, '1': 1}
+event=95: rows=7 buckets={'0': 7} priorities={'7': 1, '8': 1, '3': 1, '5': 1, '1': 1, '6': 1, '4': 1}
+event=100: rows=3 buckets={'0': 3} priorities={'2': 1, '1': 1, '3': 1}
+event=101: rows=4 buckets={'0': 4} priorities={'5': 1, '4': 1, '3': 1, '2': 1}
+event=102: rows=3 buckets={'0': 3} priorities={'1': 1, '3': 1, '2': 1}
+event=103: rows=3 buckets={'0': 3} priorities={'4': 1, '1': 1, '3': 1}
+event=104: rows=7 buckets={'0': 7} priorities={'4': 1, '5': 1, '2': 1, '1': 1, '6': 1, '3': 1, '7': 1}
+event=105: rows=5 buckets={'0': 5} priorities={'1': 1, '4': 1, '2': 1, '3': 1, '5': 1}
+event=106: rows=3 buckets={'0': 3} priorities={'4': 1, '1': 1, '2': 1}
+event=107: rows=6 buckets={'0': 6} priorities={'2': 1, '4': 1, '5': 1, '3': 1, '6': 1, '1': 1}
+event=108: rows=3 buckets={'0': 3} priorities={'2': 1, '3': 1, '1': 1}
+event=109: rows=5 buckets={'0': 5} priorities={'5': 1, '3': 1, '1': 1, '4': 1, '2': 1}
+event=110: rows=6 buckets={'0': 6} priorities={'2': 1, '3': 1, '4': 1, '1': 1, '5': 1, '6': 1}
+event=111: rows=2 buckets={'0': 2} priorities={'3': 1, '1': 1}
+event=112: rows=7 buckets={'0': 7} priorities={'7': 1, '1': 2, '8': 1, '3': 1, '5': 1, '6': 1}
+event=113: rows=3 buckets={'0': 3} priorities={'2': 1, '1': 1, '5': 1}
+event=114: rows=3 buckets={'0': 3} priorities={'1': 1, '2': 1, '4': 1}
+event=115: rows=3 buckets={'0': 3} priorities={'5': 1, '4': 1, '2': 1}
+event=116: rows=3 buckets={'0': 3} priorities={'2': 1, '3': 1, '1': 1}
+event=117: rows=4 buckets={'0': 4} priorities={'4': 1, '3': 1, '2': 1, '1': 1}
+event=118: rows=3 buckets={'0': 3} priorities={'3': 1, '1': 1, '2': 1}
+event=119: rows=7 buckets={'0': 7} priorities={'7': 1, '3': 1, '2': 1, '5': 1, '6': 1, '1': 1, '4': 1}
+event=120: rows=5 buckets={'0': 5} priorities={'1': 1, '4': 1, '2': 1, '3': 1, '5': 1}
+event=121: rows=6 buckets={'0': 6} priorities={'5': 1, '3': 1, '4': 1, '1': 1, '2': 1, '6': 1}
+event=122: rows=4 buckets={'0': 4} priorities={'2': 1, '3': 1, '4': 1, '1': 1}
+event=123: rows=6 buckets={'0': 6} priorities={'6': 1, '3': 1, '4': 1, '2': 1, '7': 1, '1': 1}
+event=124: rows=7 buckets={'0': 7} priorities={'2': 1, '1': 1, '3': 1, '4': 1, '6': 1, '5': 1, '7': 1}
+event=125: rows=5 buckets={'0': 5} priorities={'3': 1, '4': 1, '6': 1, '2': 1, '5': 1}
+event=127: rows=4 buckets={'0': 4} priorities={'1': 1, '3': 1, '5': 1, '2': 1}
+event=128: rows=6 buckets={'0': 6} priorities={'2': 1, '5': 1, '6': 1, '7': 1, '4': 1, '1': 1}
+event=129: rows=4 buckets={'0': 4} priorities={'2': 1, '3': 1, '4': 1, '1': 1}
+event=130: rows=5 buckets={'0': 5} priorities={'2': 1, '1': 1, '4': 1, '5': 1, '3': 1}
+event=200: rows=7 buckets={'0': 7} priorities={'1': 1, '3': 1, '2': 1, '5': 1, '7': 1, '6': 1, '4': 1}
+event=201: rows=7 buckets={'0': 7} priorities={'6': 1, '4': 1, '5': 1, '3': 1, '1': 1, '2': 1, '7': 1}
+event=202: rows=7 buckets={'0': 7} priorities={'5': 1, '1': 1, '4': 1, '7': 1, '2': 1, '8': 1, '6': 1}
+event=203: rows=3 buckets={'0': 3} priorities={'3': 1, '2': 1, '1': 1}
+event=204: rows=6 buckets={'0': 6} priorities={'4': 1, '2': 1, '3': 1, '6': 1, '5': 1, '1': 1}
+event=205: rows=7 buckets={'0': 7} priorities={'3': 1, '5': 1, '1': 1, '8': 1, '6': 1, '2': 1, '4': 1}
+event=206: rows=6 buckets={'0': 6} priorities={'5': 1, '2': 1, '4': 1, '6': 1, '3': 1, '1': 1}
+event=207: rows=5 buckets={'0': 5} priorities={'3': 1, '4': 1, '2': 1, '5': 1, '1': 1}
+event=208: rows=9 buckets={'0': 9} priorities={'8': 1, '6': 1, '5': 1, '2': 1, '9': 1, '4': 1, '1': 1, '3': 1, '7': 1}
+event=209: rows=11 buckets={'0': 11} priorities={'9': 1, '4': 1, '3': 1, '2': 1, '11': 1, '10': 1, '7': 1, '5': 1, '6': 1, '1': 1, '8': 1}
+event=210: rows=4 buckets={'0': 4} priorities={'4': 1, '2': 1, '1': 1, '3': 1}
+event=211: rows=6 buckets={'0': 6} priorities={'3': 1, '7': 1, '5': 1, '1': 1, '4': 1, '2': 1}
+event=212: rows=7 buckets={'0': 7} priorities={'1': 1, '4': 1, '6': 1, '2': 1, '3': 1, '5': 1, '8': 1}
+event=213: rows=7 buckets={'0': 7} priorities={'3': 1, '2': 1, '5': 1, '1': 1, '6': 1, '4': 1, '7': 1}
+event=214: rows=3 buckets={'0': 3} priorities={'1': 1, '3': 1, '2': 1}
+event=215: rows=4 buckets={'0': 4} priorities={'2': 1, '1': 1, '3': 1, '4': 1}
+event=216: rows=11 buckets={'0': 11} priorities={'12': 1, '8': 1, '1': 1, '9': 1, '5': 1, '10': 1, '6': 1, '7': 1, '11': 1, '2': 1, '3': 1}
+event=217: rows=11 buckets={'0': 11} priorities={'11': 1, '13': 1, '6': 1, '9': 1, '10': 1, '12': 1, '2': 1, '8': 1, '7': 1, '5': 1, '4': 1}
+event=218: rows=6 buckets={'0': 6} priorities={'1': 1, '2': 1, '5': 1, '4': 1, '6': 1, '3': 1}
+event=219: rows=11 buckets={'0': 11} priorities={'5': 1, '7': 1, '10': 1, '11': 1, '2': 1, '9': 1, '3': 1, '6': 1, '8': 1, '4': 1, '1': 1}
+event=220: rows=4 buckets={'0': 4} priorities={'5': 1, '3': 1, '2': 1, '1': 1}
+event=221: rows=3 buckets={'0': 3} priorities={'1': 1, '3': 1, '2': 1}
+event=222: rows=9 buckets={'0': 9} priorities={'5': 1, '6': 1, '4': 2, '3': 1, '8': 1, '9': 1, '2': 1, '1': 1}
+event=223: rows=9 buckets={'0': 9} priorities={'5': 1, '6': 1, '7': 1, '8': 1, '2': 1, '9': 1, '12': 1, '4': 1, '11': 1}
+event=224: rows=9 buckets={'0': 9} priorities={'1': 1, '2': 1, '6': 1, '9': 1, '8': 2, '10': 1, '3': 1, '5': 1}
+event=225: rows=7 buckets={'0': 7} priorities={'3': 1, '4': 1, '2': 1, '7': 1, '6': 1, '1': 1, '5': 1}
+event=226: rows=9 buckets={'0': 9} priorities={'8': 1, '9': 1, '7': 1, '1': 1, '6': 1, '5': 1, '3': 1, '2': 1, '4': 1}
+event=227: rows=9 buckets={'0': 9} priorities={'4': 1, '2': 1, '7': 1, '5': 1, '9': 1, '3': 1, '8': 1, '6': 1, '1': 1}
+event=228: rows=8 buckets={'0': 8} priorities={'3': 1, '6': 1, '4': 1, '5': 1, '8': 1, '2': 1, '1': 1, '7': 1}
+event=229: rows=12 buckets={'0': 12} priorities={'11': 1, '1': 1, '3': 1, '12': 1, '2': 1, '5': 1, '4': 1, '10': 1, '6': 1, '7': 1, '8': 1, '9': 1}
+event=230: rows=5 buckets={'0': 5} priorities={'6': 1, '5': 1, '4': 1, '3': 1, '2': 1}
+event=231: rows=5 buckets={'0': 5} priorities={'5': 1, '2': 1, '1': 1, '3': 1, '4': 1}
+event=232: rows=5 buckets={'0': 5} priorities={'5': 1, '3': 1, '4': 1, '2': 1, '1': 1}
+event=233: rows=8 buckets={'0': 8} priorities={'2': 1, '3': 1, '1': 1, '7': 1, '5': 1, '8': 1, '6': 1, '4': 1}
+event=234: rows=6 buckets={'0': 6} priorities={'2': 1, '3': 1, '4': 1, '5': 1, '7': 1, '6': 1}
+event=235: rows=4 buckets={'0': 4} priorities={'3': 1, '2': 1, '1': 1, '4': 1}
+event=236: rows=7 buckets={'0': 7} priorities={'3': 1, '2': 1, '4': 1, '1': 1, '6': 1, '7': 1, '5': 1}
+event=237: rows=3 buckets={'0': 3} priorities={'3': 1, '1': 1, '2': 1}
+event=238: rows=9 buckets={'0': 9} priorities={'3': 1, '9': 1, '6': 1, '1': 1, '2': 1, '5': 1, '8': 1, '4': 1, '7': 1}
+event=239: rows=3 buckets={'0': 3} priorities={'1': 1, '2': 1, '3': 1}
+event=240: rows=4 buckets={'0': 4} priorities={'4': 1, '3': 1, '1': 1, '2': 1}
+event=241: rows=5 buckets={'0': 5} priorities={'1': 1, '2': 1, '3': 1, '4': 1, '5': 1}
+event=242: rows=3 buckets={'0': 3} priorities={'2': 1, '3': 1, '1': 1}
+event=243: rows=4 buckets={'0': 4} priorities={'4': 1, '5': 1, '6': 1, '2': 1}
+event=244: rows=5 buckets={'0': 5} priorities={'3': 1, '2': 1, '1': 1, '5': 1, '4': 1}
+event=245: rows=7 buckets={'0': 7} priorities={'5': 1, '4': 1, '3': 1, '2': 1, '6': 1, '1': 1, '7': 1}
+event=246: rows=6 buckets={'0': 6} priorities={'2': 1, '1': 1, '3': 1, '6': 1, '4': 1, '5': 1}
+event=247: rows=7 buckets={'0': 7} priorities={'1': 1, '3': 1, '4': 1, '7': 1, '2': 1, '6': 1, '5': 1}
+event=248: rows=5 buckets={'0': 5} priorities={'1': 1, '4': 1, '2': 1, '3': 1, '5': 1}
+event=249: rows=5 buckets={'0': 5} priorities={'4': 1, '5': 1, '1': 1, '3': 1, '2': 1}
+event=250: rows=9 buckets={'0': 9} priorities={'12': 1, '8': 1, '10': 1, '7': 1, '5': 1, '6': 1, '4': 1, '1': 1, '3': 1}
+event=251: rows=9 buckets={'0': 9} priorities={'3': 1, '2': 1, '9': 1, '8': 1, '4': 1, '6': 1, '10': 1, '7': 1, '5': 1}
+event=252: rows=10 buckets={'0': 10} priorities={'4': 1, '10': 1, '6': 1, '2': 1, '8': 1, '3': 1, '7': 1, '9': 1, '1': 1, '5': 1}
+event=253: rows=10 buckets={'0': 10} priorities={'6': 1, '7': 2, '8': 1, '2': 1, '10': 2, '9': 2, '4': 1}
+event=254: rows=10 buckets={'0': 10} priorities={'1': 1, '10': 1, '3': 1, '9': 2, '6': 2, '15': 1, '12': 1, '11': 1}
+event=255: rows=9 buckets={'0': 9} priorities={'8': 1, '6': 1, '9': 1, '4': 1, '10': 1, '5': 1, '7': 1, '1': 1, '3': 1}
+event=256: rows=10 buckets={'0': 10} priorities={'7': 1, '11': 1, '2': 1, '1': 1, '12': 1, '9': 1, '4': 1, '6': 1, '5': 1, '10': 1}
+event=257: rows=9 buckets={'0': 9} priorities={'7': 1, '8': 1, '1': 1, '2': 1, '3': 1, '4': 1, '9': 1, '6': 1, '5': 1}
+event=258: rows=9 buckets={'0': 9} priorities={'1': 1, '6': 1, '5': 1, '2': 1, '4': 1, '9': 1, '7': 1, '8': 1, '3': 1}
+event=259: rows=9 buckets={'0': 9} priorities={'4': 1, '5': 1, '1': 1, '6': 1, '7': 1, '8': 1, '2': 1, '3': 1, '9': 1}
+event=302: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=307: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=309: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=310: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=311: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=314: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=318: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=322: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=324: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=326: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=327: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=328: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=330: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=331: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=332: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=333: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=334: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=335: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=337: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=338: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=339: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=340: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=341: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=342: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=343: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=344: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=345: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=346: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=347: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=348: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=440: rows=1 buckets={'1': 1} priorities={'2': 1}
+event=441: rows=2 buckets={'1': 2} priorities={'7': 1, '3': 1}
+event=442: rows=1 buckets={'1': 1} priorities={'1': 1}
+event=443: rows=1 buckets={'1': 1} priorities={'1': 1}
+event=444: rows=2 buckets={'1': 2} priorities={'1': 1, '2': 1}
+event=445: rows=1 buckets={'1': 1} priorities={'1': 1}
+event=446: rows=2 buckets={'1': 2} priorities={'2': 1, '1': 1}
+event=447: rows=1 buckets={'1': 1} priorities={'1': 1}
+event=448: rows=1 buckets={'1': 1} priorities={'1': 1}
+event=449: rows=1 buckets={'1': 1} priorities={'1': 1}
+event=450: rows=8 buckets={'0': 8} priorities={'3': 1, '5': 1, '9': 1, '2': 1, '1': 1, '4': 1, '7': 1, '8': 1}
+event=451: rows=4 buckets={'0': 4} priorities={'1': 1, '3': 1, '7': 1, '4': 1}
+event=452: rows=8 buckets={'0': 8} priorities={'5': 1, '3': 1, '4': 1, '7': 1, '2': 1, '8': 1, '1': 1, '6': 1}
+event=453: rows=8 buckets={'0': 8} priorities={'7': 1, '9': 1, '8': 1, '3': 1, '2': 1, '4': 1, '5': 1, '6': 1}
+event=454: rows=6 buckets={'0': 6} priorities={'4': 2, '6': 1, '2': 1, '5': 1, '3': 1}
+event=455: rows=9 buckets={'0': 9} priorities={'4': 1, '5': 1, '3': 1, '8': 1, '1': 1, '6': 1, '7': 1, '2': 1, '9': 1}
+event=456: rows=2 buckets={'0': 2} priorities={'2': 1, '1': 1}
+event=457: rows=5 buckets={'0': 5} priorities={'2': 1, '5': 1, '4': 1, '3': 1, '1': 1}
+event=458: rows=2 buckets={'0': 2} priorities={'2': 1, '1': 1}
+event=459: rows=11 buckets={'0': 11} priorities={'11': 1, '10': 1, '6': 1, '5': 1, '7': 1, '4': 1, '1': 1, '3': 1, '2': 1, '9': 1, '8': 1}
+event=470: rows=6 buckets={'1': 6} priorities={'4': 1, '2': 1, '1': 1, '5': 1, '3': 1, '6': 1}
+event=471: rows=6 buckets={'0': 1, '1': 5} priorities={'20': 1, '1': 1, '5': 1, '4': 1, '7': 1, '6': 1}
+event=472: rows=6 buckets={'1': 5, '0': 1} priorities={'2': 1, '1': 1, '4': 1, '3': 1, '5': 1, '20': 1}
+event=473: rows=7 buckets={'1': 6, '0': 1} priorities={'3': 1, '6': 1, '2': 1, '1': 1, '4': 1, '5': 1, '20': 1}
+event=474: rows=7 buckets={'1': 6, '0': 1} priorities={'6': 1, '5': 1, '1': 1, '3': 1, '2': 1, '4': 1, '20': 1}
+event=475: rows=7 buckets={'1': 6, '0': 1} priorities={'6': 1, '20': 1, '2': 1, '4': 1, '5': 1, '3': 1, '7': 1}
+event=476: rows=7 buckets={'1': 6, '0': 1} priorities={'3': 1, '20': 1, '4': 1, '2': 1, '1': 1, '5': 1, '6': 1}
+event=477: rows=9 buckets={'1': 8, '0': 1} priorities={'6': 1, '5': 1, '2': 1, '3': 1, '1': 1, '7': 1, '8': 1, '20': 1, '4': 1}
+event=478: rows=6 buckets={'0': 1, '1': 5} priorities={'20': 1, '7': 1, '3': 1, '5': 1, '6': 1, '4': 1}
+event=479: rows=7 buckets={'1': 6, '0': 1} priorities={'1': 1, '8': 1, '7': 1, '5': 1, '6': 1, '4': 1, '20': 1}
+event=480: rows=7 buckets={'0': 1, '1': 6} priorities={'10': 1, '5': 1, '3': 1, '6': 1, '2': 1, '4': 1, '7': 1}
+event=481: rows=8 buckets={'1': 7, '0': 1} priorities={'6': 1, '4': 1, '7': 1, '3': 1, '1': 1, '10': 1, '2': 1, '8': 1}
+event=482: rows=8 buckets={'0': 1, '1': 7} priorities={'10': 1, '7': 1, '4': 1, '6': 1, '1': 1, '2': 1, '5': 1, '3': 1}
+event=483: rows=8 buckets={'0': 1, '1': 7} priorities={'10': 1, '7': 1, '3': 2, '5': 1, '1': 1, '2': 1, '6': 1}
+event=484: rows=8 buckets={'0': 1, '1': 7} priorities={'10': 1, '7': 1, '5': 1, '4': 1, '1': 1, '2': 1, '6': 1, '3': 1}
+event=485: rows=10 buckets={'0': 1, '1': 9} priorities={'20': 1, '7': 1, '9': 1, '8': 1, '5': 1, '3': 1, '1': 1, '2': 1, '6': 1, '4': 1}
+event=486: rows=8 buckets={'1': 7, '0': 1} priorities={'4': 1, '5': 1, '10': 1, '6': 1, '7': 1, '1': 1, '2': 1, '3': 1}
+event=487: rows=10 buckets={'1': 9, '0': 1} priorities={'7': 1, '9': 1, '8': 1, '5': 1, '4': 1, '1': 2, '2': 1, '6': 1, '3': 1}
+event=488: rows=10 buckets={'1': 9, '0': 1} priorities={'7': 1, '9': 1, '8': 1, '10': 1, '5': 1, '2': 1, '4': 1, '1': 1, '6': 1, '3': 1}
+event=489: rows=9 buckets={'1': 8, '0': 1} priorities={'6': 1, '8': 1, '7': 1, '3': 1, '1': 1, '2': 1, '5': 1, '4': 1, '10': 1}
+event=490: rows=13 buckets={'1': 4, '0': 9} priorities={'13': 1, '19': 1, '17': 1, '20': 1, '16': 1, '14': 1, '2': 1, '3': 1, '4': 1, '5': 1, '6': 1, '1': 1, '12': 1}
+event=491: rows=12 buckets={'1': 6, '0': 6} priorities={'15': 1, '1': 1, '16': 1, '3': 1, '5': 1, '2': 1, '4': 1, '13': 1, '14': 1, '11': 1, '12': 1, '17': 1}
+event=492: rows=12 buckets={'0': 5, '1': 7} priorities={'3': 1, '17': 1, '14': 1, '1': 1, '2': 1, '12': 1, '15': 1, '5': 1, '11': 1, '16': 1, '13': 1, '4': 1}
+event=493: rows=14 buckets={'1': 8, '0': 6} priorities={'11': 1, '12': 1, '14': 1, '2': 2, '7': 1, '6': 1, '5': 1, '15': 1, '18': 1, '16': 1, '9': 1, '17': 1, '13': 1}
+event=494: rows=12 buckets={'1': 6, '0': 6} priorities={'13': 1, '5': 1, '6': 1, '16': 1, '11': 1, '12': 1, '3': 1, '4': 1, '1': 1, '2': 1, '15': 1, '14': 1}
+event=495: rows=11 buckets={'1': 6, '0': 5} priorities={'13': 1, '4': 1, '11': 1, '12': 1, '2': 1, '5': 1, '15': 1, '1': 1, '16': 1, '3': 1, '14': 1}
+event=496: rows=11 buckets={'1': 6, '0': 5} priorities={'16': 1, '5': 1, '11': 1, '13': 1, '15': 1, '12': 1, '14': 1, '3': 1, '4': 1, '1': 1, '2': 1}
+event=497: rows=14 buckets={'1': 7, '0': 7} priorities={'17': 1, '14': 1, '11': 1, '16': 1, '13': 1, '2': 1, '4': 1, '12': 1, '3': 1, '15': 1, '5': 1, '6': 1, '7': 1, '1': 1}
+event=498: rows=12 buckets={'0': 6, '1': 6} priorities={'6': 1, '15': 1, '16': 1, '14': 1, '3': 1, '2': 1, '11': 1, '12': 1, '13': 1, '5': 1, '4': 1, '1': 1}
+event=499: rows=15 buckets={'0': 7, '1': 8} priorities={'3': 1, '12': 1, '4': 1, '15': 1, '16': 1, '11': 1, '17': 1, '13': 1, '14': 1, '18': 1, '2': 1, '6': 1, '7': 1, '5': 1, '1': 1}
+event=500: rows=8 buckets={'0': 8} priorities={'500': 1, '700': 1, '100': 1, '400': 1, '200': 1, '800': 1, '600': 1, '300': 1}
+event=501: rows=14 buckets={'0': 7, '1': 7} priorities={'1': 1, '14': 1, '13': 1, '11': 1, '15': 1, '5': 1, '16': 1, '2': 1, '3': 1, '17': 1, '6': 1, '7': 1, '4': 1, '12': 1}
+event=502: rows=14 buckets={'1': 7, '0': 7} priorities={'14': 1, '11': 1, '7': 1, '6': 1, '16': 1, '12': 1, '13': 1, '2': 1, '3': 1, '1': 1, '17': 1, '4': 1, '15': 1, '5': 1}
+event=503: rows=13 buckets={'1': 7, '0': 6} priorities={'12': 1, '6': 1, '11': 1, '5': 1, '1': 1, '3': 1, '2': 1, '15': 1, '16': 1, '13': 1, '14': 1, '17': 1, '4': 1}
+event=504: rows=14 buckets={'1': 7, '0': 7} priorities={'11': 1, '4': 1, '3': 2, '1': 1, '5': 1, '15': 1, '6': 1, '12': 1, '13': 1, '16': 1, '17': 1, '14': 1, '7': 1}
+event=505: rows=12 buckets={'1': 6, '0': 6} priorities={'11': 1, '12': 1, '13': 1, '16': 1, '14': 1, '15': 1, '2': 1, '4': 1, '5': 1, '1': 1, '6': 1, '3': 1}
+event=506: rows=12 buckets={'1': 6, '0': 6} priorities={'12': 1, '4': 1, '5': 1, '11': 1, '13': 1, '2': 1, '16': 1, '3': 1, '14': 1, '15': 1, '6': 1, '1': 1}
+event=507: rows=13 buckets={'0': 8, '1': 5} priorities={'1': 1, '4': 1, '13': 1, '11': 1, '2': 1, '6': 1, '3': 1, '12': 1, '14': 1, '7': 1, '16': 1, '5': 1, '15': 1}
+event=508: rows=12 buckets={'0': 6, '1': 6} priorities={'5': 1, '13': 1, '14': 1, '12': 1, '16': 1, '3': 1, '6': 1, '15': 1, '4': 1, '1': 1, '2': 1, '11': 1}
+event=509: rows=12 buckets={'1': 6, '0': 6} priorities={'12': 1, '2': 1, '16': 2, '1': 1, '6': 1, '5': 1, '14': 1, '15': 1, '4': 1, '3': 1, '11': 1}
+event=510: rows=13 buckets={'1': 7, '0': 6} priorities={'17': 1, '2': 1, '14': 1, '6': 1, '13': 1, '1': 1, '12': 1, '16': 1, '5': 1, '15': 1, '4': 1, '3': 1, '11': 1}
+event=600: rows=11 buckets={'0': 11} priorities={'12': 1, '6': 1, '2': 1, '11': 1, '3': 1, '10': 1, '7': 1, '4': 1, '9': 1, '8': 1, '5': 1}
+event=601: rows=11 buckets={'0': 11} priorities={'2': 1, '1': 1, '6': 1, '9': 1, '4': 1, '7': 1, '11': 1, '12': 1, '8': 1, '5': 1, '10': 1}
+event=602: rows=12 buckets={'0': 12} priorities={'2': 1, '12': 1, '10': 1, '7': 1, '3': 1, '6': 1, '5': 1, '11': 1, '9': 1, '8': 1, '1': 1, '4': 1}
+event=603: rows=11 buckets={'0': 11} priorities={'8': 1, '10': 1, '6': 1, '9': 1, '4': 1, '1': 1, '2': 1, '7': 1, '13': 1, '11': 1, '12': 1}
+event=604: rows=11 buckets={'0': 11} priorities={'4': 1, '9': 1, '2': 1, '10': 1, '1': 1, '11': 1, '6': 1, '7': 1, '13': 1, '12': 1, '8': 1}
+event=605: rows=11 buckets={'0': 11} priorities={'3': 1, '11': 1, '10': 1, '8': 1, '6': 1, '9': 1, '4': 1, '1': 1, '2': 1, '7': 1, '5': 1}
+event=606: rows=11 buckets={'0': 11} priorities={'11': 1, '12': 1, '1': 1, '7': 1, '8': 1, '4': 1, '2': 1, '6': 1, '3': 1, '5': 1, '10': 1}
+event=607: rows=11 buckets={'0': 11} priorities={'1': 1, '12': 1, '9': 1, '11': 1, '5': 1, '7': 1, '8': 1, '2': 1, '3': 1, '6': 1, '4': 1}
+event=608: rows=12 buckets={'0': 12} priorities={'8': 1, '9': 1, '7': 1, '3': 1, '11': 1, '6': 1, '10': 1, '2': 1, '5': 1, '12': 1, '1': 1, '4': 1}
+event=609: rows=12 buckets={'0': 12} priorities={'3': 1, '8': 1, '12': 1, '1': 1, '10': 1, '9': 1, '11': 1, '7': 1, '5': 1, '2': 1, '4': 1, '6': 1}
+event=701: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=702: rows=7 buckets={'0': 7} priorities={'5': 1, '4': 1, '7': 1, '3': 1, '2': 1, '1': 1, '6': 1}
+event=703: rows=1 buckets={'1': 1} priorities={'1': 1}
+event=704: rows=7 buckets={'0': 7} priorities={'7': 1, '5': 1, '1': 1, '4': 1, '6': 1, '2': 1, '3': 1}
+event=705: rows=6 buckets={'0': 6} priorities={'5': 1, '3': 1, '4': 1, '6': 1, '2': 1, '1': 1}
+event=706: rows=7 buckets={'0': 7} priorities={'6': 1, '1': 1, '3': 1, '7': 1, '2': 1, '4': 1, '5': 1}
+event=707: rows=2 buckets={'1': 2} priorities={'2': 1, '1': 1}
+event=708: rows=6 buckets={'0': 6} priorities={'5': 1, '1': 1, '3': 1, '4': 1, '2': 1, '6': 1}
+event=709: rows=6 buckets={'0': 6} priorities={'2': 1, '6': 1, '3': 1, '7': 1, '1': 1, '4': 1}
+event=710: rows=4 buckets={'0': 4} priorities={'1': 1, '3': 1, '2': 1, '4': 1}
+event=711: rows=6 buckets={'0': 6} priorities={'1': 1, '5': 1, '2': 1, '3': 2, '4': 1}
+event=712: rows=6 buckets={'0': 6} priorities={'4': 1, '6': 1, '5': 1, '2': 1, '1': 1, '3': 1}
+event=713: rows=2 buckets={'1': 2} priorities={'2': 1, '1': 1}
+event=714: rows=7 buckets={'0': 7} priorities={'7': 1, '5': 1, '9': 1, '12': 1, '8': 1, '11': 1, '2': 1}
+event=715: rows=8 buckets={'1': 8} priorities={'2': 1, '4': 1, '3': 1, '1': 1, '5': 1, '8': 1, '7': 1, '6': 1}
+event=716: rows=1 buckets={'0': 1} priorities={'1': 1}
+event=717: rows=8 buckets={'1': 8} priorities={'2': 1, '4': 1, '1': 1, '3': 1, '5': 1, '8': 1, '7': 1, '6': 1}
+event=719: rows=3 buckets={'1': 3} priorities={'1': 1, '3': 1, '2': 1}
+event=720: rows=2 buckets={'0': 2} priorities={'2': 1, '1': 1}
+event=721: rows=4 buckets={'1': 4} priorities={'5': 1, '2': 1, '3': 1, '1': 1}
+event=724: rows=6 buckets={'0': 6} priorities={'4': 1, '5': 1, '6': 1, '2': 1, '3': 1, '9': 1}
+event=726: rows=2 buckets={'1': 2} priorities={'1': 1, '2': 1}
+
+================== SELECTED EVENT FULL DETAIL ==================
+Event 600: {'Id': 600, 'Name': '_&202719145', 'Level': 0, 'CareerTypeId': 17, 'Description': '_&202750385', 'NumberOfRaces': 40, 'PittingProfileID': 1, 'CrowdSize': 1.0, 'CrowdExcitement': 1.0, 'NumberOfDrivers': 11, 'CashPrize': 0, 'IsDLC': 0, 'EventOrder': 600, 'GroupMask': 32, 'TargetClass': 0, 'AISkillEasy': 20, 'AISkillMed': 15, 'AISkillHard': 8, 'AISkillPro': 1, 'AITemperamentEasy': 7, 'AITemperamentMed': 5, 'AITemperamentHard': 3, 'AITemperamentPro': 1, 'BonusId': 45, 'CanDupPlayerCar': 1}
+CareerEventType: {'id': 17, 'Name': '_&445750804', 'BannerId': 6, 'RaceModeId': 10, 'Description': '_&445744758', 'IntroVO': 'VO_EVENTS_ChampionshipHeatsRace', 'PosterPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Special_posters\\Championship.tga'}
+Races:
+  {'Id': 2732, 'EventId': 600, 'RaceNumber': 1, 'TrackId': 1, 'NumLaps': 9, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 1, 'DisplayName': '_&3381831686', 'ShortDisplayName': '_&3381851899', 'MediaName': 'Tsukuba', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 2045, 'DefaultStartGridPositionsId': 1, 'FlyingStartPosId': 1, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Tsukuba.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Tsukuba.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Tsukuba1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2300, 'MPPitProfile': 101, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 23, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 3, 'RichPresence': 1, 'SatImageName': '1'}
+  {'Id': 2733, 'EventId': 600, 'RaceNumber': 2, 'TrackId': 0, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 0, 'DisplayName': '_&3381831814', 'ShortDisplayName': '_&3381851771', 'MediaName': 'LagunaSeca', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 3602, 'DefaultStartGridPositionsId': 0, 'FlyingStartPosId': 0, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_LagunaSeca.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_LagunaSeca.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_LagunaSeca1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1000, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 7, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 0, 'SatImageName': '0'}
+  {'Id': 2734, 'EventId': 600, 'RaceNumber': 3, 'TrackId': 36, 'NumLaps': 9, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 36, 'DisplayName': '_&3381827668', 'ShortDisplayName': '_&3381847803', 'MediaName': 'Mugello', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 2880, 'DefaultStartGridPositionsId': 35, 'FlyingStartPosId': 36, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Mugello.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Mugello.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Mugello2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1101, 'MPPitProfile': 35, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 11, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 3, 'RichPresence': 19, 'SatImageName': '35'}
+  {'Id': 2735, 'EventId': 600, 'RaceNumber': 4, 'TrackId': 263, 'NumLaps': 6, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 1} | Track={'id': 263, 'DisplayName': '_&3381801964', 'ShortDisplayName': '_&3381814355', 'MediaName': 'Infin', 'RibbonIndex': 3, 'ReverseIndex': 3, 'Length': 4055, 'DefaultStartGridPositionsId': 260, 'FlyingStartPosId': 1, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Infin.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Infin.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Infin4.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 660, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 49, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 130, 'SatImageName': '260'}
+  {'Id': 2736, 'EventId': 600, 'RaceNumber': 5, 'TrackId': 45, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 45, 'DisplayName': '_&3381811669', 'ShortDisplayName': '_&3381798778', 'MediaName': 'Motegi', 'RibbonIndex': 2, 'ReverseIndex': 2, 'Length': 3030, 'DefaultStartGridPositionsId': 45, 'FlyingStartPosId': 45, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Motegi.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Motegi.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Motegi3.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2401, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 10, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 28, 'SatImageName': '43'}
+  {'Id': 2737, 'EventId': 600, 'RaceNumber': 6, 'TrackId': 34, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 34, 'DisplayName': '_&3381827924', 'ShortDisplayName': '_&3381848059', 'MediaName': 'NurburgringF1', 'RibbonIndex': 6, 'ReverseIndex': 6, 'Length': 3605, 'DefaultStartGridPositionsId': 33, 'FlyingStartPosId': 33, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_NurburgringGP.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_NurburgringGP.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_NurburgringF17.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1302, 'MPPitProfile': 31, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 35, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 17, 'SatImageName': '33'}
+  {'Id': 2738, 'EventId': 600, 'RaceNumber': 7, 'TrackId': 17, 'NumLaps': 9, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 17, 'DisplayName': '_&3381795028', 'ShortDisplayName': '_&3381814907', 'MediaName': 'RoadAtlanta', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 2849, 'DefaultStartGridPositionsId': 16, 'FlyingStartPosId': 16, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_RoadAtlanta.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_RoadAtlanta.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_RoadAtlanta2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1601, 'MPPitProfile': 16, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 16, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 3, 'RichPresence': 11, 'SatImageName': '16'}
+  {'Id': 2739, 'EventId': 600, 'RaceNumber': 8, 'TrackId': 251, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 1} | Track={'id': 251, 'DisplayName': '_&3381850860', 'ShortDisplayName': '_&3381830995', 'MediaName': 'Hockenheim', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 3692, 'DefaultStartGridPositionsId': 250, 'FlyingStartPosId': 1, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Hockenheim.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Hockenheim.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Hockenheim2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 551, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 48, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 124, 'SatImageName': '250'}
+  {'Id': 2740, 'EventId': 600, 'RaceNumber': 9, 'TrackId': 42, 'NumLaps': 9, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 42, 'DisplayName': '_&3381811797', 'ShortDisplayName': '_&3381798138', 'MediaName': 'Sebring', 'RibbonIndex': 2, 'ReverseIndex': 2, 'Length': 3219, 'DefaultStartGridPositionsId': 40, 'FlyingStartPosId': 40, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Sebring.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Sebring.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Sebring3.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1701, 'MPPitProfile': 40, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 17, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 3, 'RichPresence': 25, 'SatImageName': '40'}
+  {'Id': 2741, 'EventId': 600, 'RaceNumber': 10, 'TrackId': 20, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 20, 'DisplayName': '_&3381844820', 'ShortDisplayName': '_&3381831163', 'MediaName': 'Silverstone', 'RibbonIndex': 2, 'ReverseIndex': 2, 'Length': 3621, 'DefaultStartGridPositionsId': 18, 'FlyingStartPosId': 18, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Silverstone.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Silverstone.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Silverstone3.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2001, 'MPPitProfile': 18, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 18, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 14, 'SatImageName': '18'}
+  {'Id': 2742, 'EventId': 600, 'RaceNumber': 11, 'TrackId': 39, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 39, 'DisplayName': '_&3381829588', 'ShortDisplayName': '_&3381846395', 'MediaName': 'Suzuka', 'RibbonIndex': 2, 'ReverseIndex': 2, 'Length': 3460, 'DefaultStartGridPositionsId': 39, 'FlyingStartPosId': 39, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Suzuka.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Suzuka.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Suzuka3.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2201, 'MPPitProfile': 0, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 20, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 22, 'SatImageName': '37'}
+  {'Id': 2743, 'EventId': 600, 'RaceNumber': 12, 'TrackId': 111, 'NumLaps': 9, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 111, 'DisplayName': '_&3381850765', 'ShortDisplayName': '_&3381830962', 'MediaName': 'Catalunya', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 2977, 'DefaultStartGridPositionsId': 110, 'FlyingStartPosId': 6, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Catalunya.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Catalunya.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Catalunya2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 401, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 3, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 56, 'SatImageName': '110'}
+  {'Id': 831, 'EventId': 600, 'RaceNumber': 13, 'TrackId': 121, 'NumLaps': 15, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 121, 'DisplayName': '_&3381801613', 'ShortDisplayName': '_&3381814578', 'MediaName': 'AmalfiGP', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 1851, 'DefaultStartGridPositionsId': 121, 'FlyingStartPosId': 121, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Positano.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Positano.tga', 'IsRealWorld': 0, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Amalfi2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1400, 'MPPitProfile': 0, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 32, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 58, 'SatImageName': '121'}
+  {'Id': 832, 'EventId': 600, 'RaceNumber': 14, 'TrackId': 31, 'NumLaps': 1, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 31, 'DisplayName': '_&3381828564', 'ShortDisplayName': '_&3381847419', 'MediaName': 'Nurburgring', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 20760, 'DefaultStartGridPositionsId': 31, 'FlyingStartPosId': 31, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_NurburgringNord.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_NurburgringNord.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_NurburgringNord1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1300, 'MPPitProfile': 31, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 13, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 1, 'RichPresence': 15, 'SatImageName': '31'}
+  {'Id': 833, 'EventId': 600, 'RaceNumber': 15, 'TrackId': 231, 'NumLaps': 7, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 231, 'DisplayName': '_&3381818093', 'ShortDisplayName': '_&3381798226', 'MediaName': 'Indi', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 4023, 'DefaultStartGridPositionsId': 231, 'FlyingStartPosId': 1, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Indi.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Indi.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Indi2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 631, 'MPPitProfile': 100, 'RibbonConfiguration': 1, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 46, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 2, 'RichPresence': 116, 'SatImageName': '230'}
+  {'Id': 834, 'EventId': 600, 'RaceNumber': 16, 'TrackId': 9, 'NumLaps': 7, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 9, 'DisplayName': '_&3381832710', 'ShortDisplayName': '_&3381850875', 'MediaName': 'SunsetInfield', 'RibbonIndex': 5, 'ReverseIndex': 4, 'Length': 3927, 'DefaultStartGridPositionsId': 4, 'FlyingStartPosId': 4, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_SunsetInfield.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_SunsetInfield.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_SunsetInfield6.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2105, 'MPPitProfile': 8, 'RibbonConfiguration': 1, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 19, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 3, 'RichPresence': 9, 'SatImageName': '4'}
+  {'Id': 835, 'EventId': 600, 'RaceNumber': 17, 'TrackId': 22, 'NumLaps': 9, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+  {'Id': 836, 'EventId': 600, 'RaceNumber': 18, 'TrackId': 83, 'NumLaps': 2, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 83, 'DisplayName': '_&3381811926', 'ShortDisplayName': '_&3381798009', 'MediaName': 'FujimiKaido', 'RibbonIndex': 5, 'ReverseIndex': 0, 'Length': 16415, 'DefaultStartGridPositionsId': 83, 'FlyingStartPosId': 6, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_FujimiKaido.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_FujimiKaido.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_FujimiKaido6.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 501, 'MPPitProfile': 0, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 6, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 1, 'RichPresence': 43, 'SatImageName': '78'}
+  {'Id': 837, 'EventId': 600, 'RaceNumber': 19, 'TrackId': 100, 'NumLaps': 2, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 100, 'DisplayName': '_&3381834253', 'ShortDisplayName': '_&3381847474', 'MediaName': 'LeMans', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 13650, 'DefaultStartGridPositionsId': 100, 'FlyingStartPosId': 100, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_LeMans.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_LeMans.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_LeMans2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 800, 'MPPitProfile': 101, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 8, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 52, 'SatImageName': '100'}
+  {'Id': 838, 'EventId': 600, 'RaceNumber': 20, 'TrackId': 69, 'NumLaps': 6, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 69, 'DisplayName': '_&3381845973', 'ShortDisplayName': '_&3381830010', 'MediaName': 'MapleValley', 'RibbonIndex': 2, 'ReverseIndex': 0, 'Length': 4828, 'DefaultStartGridPositionsId': 69, 'FlyingStartPosId': 69, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_MapleValley.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_MapleValley.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_MapleValley3.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 902, 'MPPitProfile': 67, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 9, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 32, 'SatImageName': '67'}
+  {'Id': 839, 'EventId': 600, 'RaceNumber': 21, 'TrackId': 3, 'NumLaps': 4, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 3, 'DisplayName': '_&3381831942', 'ShortDisplayName': '_&3381852155', 'MediaName': 'RoadAmerica', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 6515, 'DefaultStartGridPositionsId': 3, 'FlyingStartPosId': 3, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_RoadAmerica.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_RoadAmerica.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_RoadAmerica1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1500, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 15, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 3, 'SatImageName': '3'}
+  {'Id': 840, 'EventId': 600, 'RaceNumber': 22, 'TrackId': 241, 'NumLaps': 5, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 241, 'DisplayName': '_&3381834476', 'ShortDisplayName': '_&3381847379', 'MediaName': 'Alps', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 4957, 'DefaultStartGridPositionsId': 240, 'FlyingStartPosId': 1, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Alps.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Alps.tga', 'IsRealWorld': 0, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Alps2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 151, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 47, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 118, 'SatImageName': '240'}
+  {'Id': 841, 'EventId': 600, 'RaceNumber': 23, 'TrackId': 49, 'NumLaps': 4, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+  {'Id': 842, 'EventId': 600, 'RaceNumber': 24, 'TrackId': 141, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 141, 'DisplayName': '_&3381834380', 'ShortDisplayName': '_&3381847347', 'MediaName': 'Autopark', 'RibbonIndex': 2, 'ReverseIndex': 2, 'Length': 3251, 'DefaultStartGridPositionsId': 141, 'FlyingStartPosId': 141, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Autopark.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Autopark.tga', 'IsRealWorld': 0, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_AutoPark3.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1801, 'MPPitProfile': 67, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 1, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 2, 'RichPresence': 61, 'SatImageName': '140'}
+  {'Id': 843, 'EventId': 600, 'RaceNumber': 25, 'TrackId': 260, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 260, 'DisplayName': '_&3381801580', 'ShortDisplayName': '_&3381814739', 'MediaName': 'Infin', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 3573, 'DefaultStartGridPositionsId': 260, 'FlyingStartPosId': 1, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Infin.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Infin.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Infin1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 661, 'MPPitProfile': 4, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 49, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 127, 'SatImageName': '260'}
+  {'Id': 844, 'EventId': 600, 'RaceNumber': 26, 'TrackId': 7, 'NumLaps': 9, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 7, 'DisplayName': '_&3381832454', 'ShortDisplayName': '_&3381851643', 'MediaName': 'SunsetInfield', 'RibbonIndex': 3, 'ReverseIndex': 1, 'Length': 3122, 'DefaultStartGridPositionsId': 6, 'FlyingStartPosId': 6, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_SunsetInfield.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_SunsetInfield.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_SunsetInfield4.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2103, 'MPPitProfile': 4, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 19, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 3, 'RichPresence': 7, 'SatImageName': '4'}
+  {'Id': 845, 'EventId': 600, 'RaceNumber': 27, 'TrackId': 53, 'NumLaps': 13, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+  {'Id': 846, 'EventId': 600, 'RaceNumber': 28, 'TrackId': 43, 'NumLaps': 6, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 43, 'DisplayName': '_&3381811925', 'ShortDisplayName': '_&3381798010', 'MediaName': 'Motegi', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 4800, 'DefaultStartGridPositionsId': 43, 'FlyingStartPosId': 1043, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Motegi.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Motegi.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Motegi1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2400, 'MPPitProfile': 200, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 10, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 26, 'SatImageName': '43'}
+  {'Id': 847, 'EventId': 600, 'RaceNumber': 29, 'TrackId': 57, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+  {'Id': 848, 'EventId': 600, 'RaceNumber': 30, 'TrackId': 51, 'NumLaps': 20, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+  {'Id': 849, 'EventId': 600, 'RaceNumber': 31, 'TrackId': 50, 'NumLaps': 27, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+  {'Id': 850, 'EventId': 600, 'RaceNumber': 32, 'TrackId': 46, 'NumLaps': 11, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 46, 'DisplayName': '_&3381811285', 'ShortDisplayName': '_&3381798650', 'MediaName': 'Motegi', 'RibbonIndex': 3, 'ReverseIndex': 3, 'Length': 2410, 'DefaultStartGridPositionsId': 46, 'FlyingStartPosId': 1046, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Motegi.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Motegi.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Motegi4.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2403, 'MPPitProfile': 100, 'RibbonConfiguration': 1, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 10, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 3, 'QuickRaceLapCount': 4, 'RichPresence': 29, 'SatImageName': '43'}
+  {'Id': 851, 'EventId': 600, 'RaceNumber': 33, 'TrackId': 70, 'NumLaps': 15, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 70, 'DisplayName': '_&3381828437', 'ShortDisplayName': '_&3381847546', 'MediaName': 'MapleValley', 'RibbonIndex': 3, 'ReverseIndex': 1, 'Length': 1866, 'DefaultStartGridPositionsId': 69, 'FlyingStartPosId': 69, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_MapleValley.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_MapleValley.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_MapleValley4.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 903, 'MPPitProfile': 67, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 9, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 4, 'RichPresence': 33, 'SatImageName': '67'}
+  {'Id': 852, 'EventId': 600, 'RaceNumber': 34, 'TrackId': 63, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+  {'Id': 853, 'EventId': 600, 'RaceNumber': 35, 'TrackId': 145, 'NumLaps': 11, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 145, 'DisplayName': '_&3381833868', 'ShortDisplayName': '_&3381847859', 'MediaName': 'Autopark', 'RibbonIndex': 3, 'ReverseIndex': 0, 'Length': 2430, 'DefaultStartGridPositionsId': 143, 'FlyingStartPosId': 6, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Autopark.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Autopark.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_AutoPark4.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1805, 'MPPitProfile': 8, 'RibbonConfiguration': 1, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 1, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 3, 'QuickRaceLapCount': 5, 'RichPresence': 65, 'SatImageName': '140'}
+  {'Id': 854, 'EventId': 600, 'RaceNumber': 36, 'TrackId': 6, 'NumLaps': 6, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 6, 'DisplayName': '_&3381832582', 'ShortDisplayName': '_&3381851515', 'MediaName': 'SunsetInfield', 'RibbonIndex': 2, 'ReverseIndex': 0, 'Length': 4474, 'DefaultStartGridPositionsId': 6, 'FlyingStartPosId': 6, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_SunsetInfield.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_SunsetInfield.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_SunsetInfield3.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2102, 'MPPitProfile': 4, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 19, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 6, 'SatImageName': '4'}
+  {'Id': 855, 'EventId': 600, 'RaceNumber': 37, 'TrackId': 243, 'NumLaps': 5, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 243, 'DisplayName': '_&3381834732', 'ShortDisplayName': '_&3381847123', 'MediaName': 'Alps', 'RibbonIndex': 3, 'ReverseIndex': 0, 'Length': 5842, 'DefaultStartGridPositionsId': 243, 'FlyingStartPosId': 1, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Alps.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Alps.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Alps4.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 153, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 47, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 120, 'SatImageName': '240'}
+  {'Id': 856, 'EventId': 600, 'RaceNumber': 38, 'TrackId': 143, 'NumLaps': 4, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 143, 'DisplayName': '_&3381834636', 'ShortDisplayName': '_&3381847091', 'MediaName': 'Autopark', 'RibbonIndex': 4, 'ReverseIndex': 1, 'Length': 6647, 'DefaultStartGridPositionsId': 143, 'FlyingStartPosId': 6, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Autopark.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Autopark.tga', 'IsRealWorld': 0, 'IsReverse': 1, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_AutoPark5.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 1802, 'MPPitProfile': 16, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 1, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 2, 'RichPresence': 63, 'SatImageName': '140'}
+  {'Id': 857, 'EventId': 600, 'RaceNumber': 39, 'TrackId': 38, 'NumLaps': 12, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track={'id': 38, 'DisplayName': '_&3381829460', 'ShortDisplayName': '_&3381846523', 'MediaName': 'Suzuka', 'RibbonIndex': 1, 'ReverseIndex': 1, 'Length': 2236, 'DefaultStartGridPositionsId': 37, 'FlyingStartPosId': 37, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Suzuka.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Suzuka.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Suzuka2.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 2202, 'MPPitProfile': 37, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 20, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 2, 'QuickRaceLapCount': 3, 'RichPresence': 21, 'SatImageName': '37'}
+  {'Id': 858, 'EventId': 600, 'RaceNumber': 40, 'TrackId': 64, 'NumLaps': 12, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0} | Track=None
+Restrictions:
+  {'ID': 285, 'EventID': 600, 'BucketId': 0, 'Value': '0000000004'}
+Participants:
+  {'ID': 23547, 'EventID': 600, 'Priority': 2, 'Ordinal': 1365, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23549, 'EventID': 600, 'Priority': 3, 'Ordinal': 1362, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23552, 'EventID': 600, 'Priority': 4, 'Ordinal': 1359, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23555, 'EventID': 600, 'Priority': 5, 'Ordinal': 1356, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23545, 'EventID': 600, 'Priority': 6, 'Ordinal': 1371, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23551, 'EventID': 600, 'Priority': 7, 'Ordinal': 1360, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23554, 'EventID': 600, 'Priority': 8, 'Ordinal': 1357, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23553, 'EventID': 600, 'Priority': 9, 'Ordinal': 1358, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23550, 'EventID': 600, 'Priority': 10, 'Ordinal': 1361, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23548, 'EventID': 600, 'Priority': 11, 'Ordinal': 1363, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23543, 'EventID': 600, 'Priority': 12, 'Ordinal': 1391, 'ColorSequence': 0, 'BucketId': 0}
+Matching special race rows:
+
+================== SUPPORTING LOOKUP TABLES ==================
+PittingProfiles (18 rows):
+  {'id': 0, 'Name': 'None', 'PitThreshold_Tires': 0.0, 'PitThreshold_Fuel': 0.0, 'PitThreshold_Engine': 0.0, 'PitThreshold_Transmission': 0.0, 'PitThreshold_Suspension': 0.0, 'PitThreshold_Deviation': 0.0}
+  {'id': 1, 'Name': 'Normal', 'PitThreshold_Tires': 0.01, 'PitThreshold_Fuel': 0.01, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.5, 'PitThreshold_Deviation': 0.0}
+  {'id': 2, 'Name': 'Endurance', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.25, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.1}
+  {'id': 4, 'Name': 'SunsetInfield', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.385, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.04}
+  {'id': 8, 'Name': 'SunsetSpeedway', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.1, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.05}
+  {'id': 16, 'Name': 'RoadAtlanta', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.26, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.04}
+  {'id': 18, 'Name': 'Silverstone', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.465, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.04}
+  {'id': 22, 'Name': 'NewYork', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.185, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.03}
+  {'id': 31, 'Name': 'Nurburgring', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.5, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.1}
+  {'id': 35, 'Name': 'Mugello', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.24, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.05}
+  {'id': 37, 'Name': 'Suzuka', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.335, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.05}
+  {'id': 40, 'Name': 'Sebring', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.23, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.06}
+  {'id': 49, 'Name': 'TestTrack', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.45, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.08}
+  {'id': 67, 'Name': 'MapleValley', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.35, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.05}
+  {'id': 100, 'Name': 'Laguna', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.315, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.04}
+  {'id': 101, 'Name': 'Tsukuba', 'PitThreshold_Tires': 0.25, 'PitThreshold_Fuel': 0.475, 'PitThreshold_Engine': 0.5, 'PitThreshold_Transmission': 0.5, 'PitThreshold_Suspension': 0.1, 'PitThreshold_Deviation': 0.02}
+  {'id': 330, 'Name': 'None', 'PitThreshold_Tires': 0.0, 'PitThreshold_Fuel': 0.0, 'PitThreshold_Engine': 0.0, 'PitThreshold_Transmission': 0.0, 'PitThreshold_Suspension': 0.0, 'PitThreshold_Deviation': 0.0}
+  {'id': 331, 'Name': 'None', 'PitThreshold_Tires': 0.0, 'PitThreshold_Fuel': 0.0, 'PitThreshold_Engine': 0.0, 'PitThreshold_Transmission': 0.0, 'PitThreshold_Suspension': 0.0, 'PitThreshold_Deviation': 0.0}
+EventBonuses (46 rows):
+  {'Id': 1, 'BonusTypeId': 0, 'Amount': 500}
+  {'Id': 2, 'BonusTypeId': 0, 'Amount': 1000}
+  {'Id': 3, 'BonusTypeId': 0, 'Amount': 1500}
+  {'Id': 4, 'BonusTypeId': 0, 'Amount': 2000}
+  {'Id': 5, 'BonusTypeId': 0, 'Amount': 2500}
+  {'Id': 6, 'BonusTypeId': 0, 'Amount': 3000}
+  {'Id': 7, 'BonusTypeId': 0, 'Amount': 3500}
+  {'Id': 8, 'BonusTypeId': 0, 'Amount': 4000}
+  {'Id': 9, 'BonusTypeId': 0, 'Amount': 4500}
+  {'Id': 10, 'BonusTypeId': 0, 'Amount': 5000}
+  {'Id': 11, 'BonusTypeId': 1, 'Amount': 25}
+  {'Id': 12, 'BonusTypeId': 1, 'Amount': 50}
+  {'Id': 13, 'BonusTypeId': 1, 'Amount': 75}
+  {'Id': 14, 'BonusTypeId': 1, 'Amount': 100}
+  {'Id': 15, 'BonusTypeId': 2, 'Amount': 0}
+  {'Id': 16, 'BonusTypeId': 3, 'Amount': 500}
+  {'Id': 17, 'BonusTypeId': 3, 'Amount': 1000}
+  {'Id': 18, 'BonusTypeId': 3, 'Amount': 1500}
+  {'Id': 19, 'BonusTypeId': 3, 'Amount': 2000}
+  {'Id': 20, 'BonusTypeId': 3, 'Amount': 2500}
+  {'Id': 21, 'BonusTypeId': 3, 'Amount': 3000}
+  {'Id': 22, 'BonusTypeId': 3, 'Amount': 3500}
+  {'Id': 23, 'BonusTypeId': 3, 'Amount': 4000}
+  {'Id': 24, 'BonusTypeId': 3, 'Amount': 4500}
+  {'Id': 25, 'BonusTypeId': 3, 'Amount': 5000}
+  {'Id': 26, 'BonusTypeId': 4, 'Amount': 25}
+  {'Id': 27, 'BonusTypeId': 4, 'Amount': 50}
+  {'Id': 28, 'BonusTypeId': 4, 'Amount': 75}
+  {'Id': 29, 'BonusTypeId': 4, 'Amount': 100}
+  {'Id': 30, 'BonusTypeId': 5, 'Amount': 0}
+  {'Id': 31, 'BonusTypeId': 6, 'Amount': 500}
+  {'Id': 32, 'BonusTypeId': 6, 'Amount': 1000}
+  {'Id': 33, 'BonusTypeId': 6, 'Amount': 1500}
+  {'Id': 34, 'BonusTypeId': 6, 'Amount': 2000}
+  {'Id': 35, 'BonusTypeId': 6, 'Amount': 2500}
+  {'Id': 36, 'BonusTypeId': 6, 'Amount': 3000}
+  {'Id': 37, 'BonusTypeId': 6, 'Amount': 3500}
+  {'Id': 38, 'BonusTypeId': 6, 'Amount': 4000}
+  {'Id': 39, 'BonusTypeId': 6, 'Amount': 4500}
+  {'Id': 40, 'BonusTypeId': 6, 'Amount': 5000}
+  {'Id': 41, 'BonusTypeId': 7, 'Amount': 25}
+  {'Id': 42, 'BonusTypeId': 7, 'Amount': 50}
+  {'Id': 43, 'BonusTypeId': 7, 'Amount': 75}
+  {'Id': 44, 'BonusTypeId': 7, 'Amount': 100}
+  {'Id': 45, 'BonusTypeId': 8, 'Amount': 0}
+  {'Id': 46, 'BonusTypeId': 9, 'Amount': 0}
+EventScoring (8 rows):
+  {'ID': 1, 'ScoringID': 1, 'place': 1, 'Credits': 1000}
+  {'ID': 2, 'ScoringID': 1, 'place': 2, 'Credits': 700}
+  {'ID': 3, 'ScoringID': 1, 'place': 3, 'Credits': 500}
+  {'ID': 4, 'ScoringID': 1, 'place': 4, 'Credits': 400}
+  {'ID': 5, 'ScoringID': 1, 'place': 5, 'Credits': 300}
+  {'ID': 6, 'ScoringID': 1, 'place': 6, 'Credits': 200}
+  {'ID': 7, 'ScoringID': 1, 'place': 7, 'Credits': 100}
+  {'ID': 8, 'ScoringID': 1, 'place': 8, 'Credits': 0}
+EventShowroomChallenges (26 rows):
+  {'CarID': 333, 'EventID': 701}
+  {'CarID': 342, 'EventID': 702}
+  {'CarID': 348, 'EventID': 703}
+  {'CarID': 433, 'EventID': 704}
+  {'CarID': 447, 'EventID': 705}
+  {'CarID': 1062, 'EventID': 706}
+  {'CarID': 1119, 'EventID': 707}
+  {'CarID': 1125, 'EventID': 708}
+  {'CarID': 1131, 'EventID': 709}
+  {'CarID': 1154, 'EventID': 710}
+  {'CarID': 1181, 'EventID': 711}
+  {'CarID': 1191, 'EventID': 712}
+  {'CarID': 1202, 'EventID': 713}
+  {'CarID': 1237, 'EventID': 714}
+  {'CarID': 1245, 'EventID': 715}
+  {'CarID': 1250, 'EventID': 716}
+  {'CarID': 1260, 'EventID': 717}
+  {'CarID': 1270, 'EventID': 718}
+  {'CarID': 1275, 'EventID': 719}
+  {'CarID': 1314, 'EventID': 720}
+  {'CarID': 1319, 'EventID': 721}
+  {'CarID': 1345, 'EventID': 722}
+  {'CarID': 1346, 'EventID': 723}
+  {'CarID': 1369, 'EventID': 724}
+  {'CarID': 1372, 'EventID': 725}
+  {'CarID': 1388, 'EventID': 726}
+Protos_ModSignature (5 rows):
+  {'Key': 'Creator', 'Value': 'Protos'}
+  {'Key': 'Credit', 'Value': 'Made by Protos'}
+  {'Key': 'Mod', 'Value': 'Forza Motorsport 4 Unlimited'}
+  {'Key': 'Version', 'Value': '1.0'}
+  {'Key': 'SignatureType', 'Value': 'Informational watermark; not tamper-proof'}
+
+================== TRACK LOOKUP ==================
+id=0 display=_&3381831814 short=_&3381851771 media=LagunaSeca active=1 renderable=1 installed=1 content=0 reverse=0
+id=1 display=_&3381831686 short=_&3381851899 media=Tsukuba active=1 renderable=1 installed=1 content=0 reverse=0
+id=2 display=_&3381832070 short=_&3381852027 media=Tsukuba active=1 renderable=1 installed=1 content=0 reverse=0
+id=3 display=_&3381831942 short=_&3381852155 media=RoadAmerica active=1 renderable=1 installed=1 content=0 reverse=0
+id=4 display=_&3381832326 short=_&3381851259 media=SunsetInfield active=1 renderable=1 installed=1 content=0 reverse=0
+id=5 display=_&3381832198 short=_&3381851387 media=SunsetInfield active=1 renderable=1 installed=1 content=0 reverse=0
+id=6 display=_&3381832582 short=_&3381851515 media=SunsetInfield active=1 renderable=1 installed=1 content=0 reverse=1
+id=7 display=_&3381832454 short=_&3381851643 media=SunsetInfield active=1 renderable=1 installed=1 content=0 reverse=1
+id=8 display=_&3381832838 short=_&3381850747 media=SunsetInfield active=1 renderable=1 installed=1 content=0 reverse=0
+id=9 display=_&3381832710 short=_&3381850875 media=SunsetInfield active=1 renderable=1 installed=1 content=0 reverse=1
+id=16 display=_&3381794900 short=_&3381815035 media=RoadAtlanta active=1 renderable=1 installed=1 content=0 reverse=0
+id=17 display=_&3381795028 short=_&3381814907 media=RoadAtlanta active=1 renderable=1 installed=1 content=0 reverse=0
+id=18 display=_&3381796692 short=_&3381813755 media=Silverstone active=1 renderable=1 installed=1 content=0 reverse=0
+id=19 display=_&3381796820 short=_&3381813627 media=Silverstone active=1 renderable=1 installed=1 content=0 reverse=0
+id=20 display=_&3381844820 short=_&3381831163 media=Silverstone active=1 renderable=1 installed=1 content=0 reverse=0
+id=31 display=_&3381828564 short=_&3381847419 media=Nurburgring active=1 renderable=1 installed=1 content=0 reverse=0
+id=33 display=_&3381828308 short=_&3381847163 media=NurburgringF1 active=1 renderable=1 installed=1 content=0 reverse=0
+id=34 display=_&3381827924 short=_&3381848059 media=NurburgringF1 active=1 renderable=1 installed=1 content=0 reverse=0
+id=35 display=_&3381828052 short=_&3381847931 media=Mugello active=1 renderable=1 installed=1 content=0 reverse=0
+id=36 display=_&3381827668 short=_&3381847803 media=Mugello active=1 renderable=1 installed=1 content=0 reverse=0
+id=37 display=_&3381827796 short=_&3381847675 media=Suzuka active=1 renderable=1 installed=1 content=0 reverse=0
+id=38 display=_&3381829460 short=_&3381846523 media=Suzuka active=1 renderable=1 installed=1 content=0 reverse=0
+id=39 display=_&3381829588 short=_&3381846395 media=Suzuka active=1 renderable=1 installed=1 content=0 reverse=0
+id=40 display=_&3381812053 short=_&3381798394 media=Sebring active=1 renderable=1 installed=1 content=0 reverse=0
+id=41 display=_&3381812181 short=_&3381798266 media=Sebring active=1 renderable=1 installed=1 content=0 reverse=0
+id=42 display=_&3381811797 short=_&3381798138 media=Sebring active=1 renderable=1 installed=1 content=0 reverse=0
+id=43 display=_&3381811925 short=_&3381798010 media=Motegi active=1 renderable=1 installed=1 content=0 reverse=0
+id=44 display=_&3381811541 short=_&3381798906 media=Motegi active=1 renderable=1 installed=1 content=0 reverse=0
+id=45 display=_&3381811669 short=_&3381798778 media=Motegi active=1 renderable=1 installed=1 content=0 reverse=0
+id=46 display=_&3381811285 short=_&3381798650 media=Motegi active=1 renderable=1 installed=1 content=0 reverse=0
+id=67 display=_&3381844181 short=_&3381831290 media=MapleValley active=1 renderable=1 installed=1 content=0 reverse=0
+id=68 display=_&3381845845 short=_&3381830138 media=MapleValley active=1 renderable=1 installed=1 content=0 reverse=0
+id=69 display=_&3381845973 short=_&3381830010 media=MapleValley active=1 renderable=1 installed=1 content=0 reverse=1
+id=70 display=_&3381828437 short=_&3381847546 media=MapleValley active=1 renderable=1 installed=1 content=0 reverse=1
+id=72 display=_&3381828181 short=_&3381847290 media=Nurburgring active=1 renderable=1 installed=1 content=0 reverse=0
+id=73 display=_&3381828309 short=_&3381847162 media=Nurburgring active=1 renderable=1 installed=1 content=0 reverse=0
+id=74 display=_&3381827925 short=_&3381848058 media=Nurburgring active=1 renderable=1 installed=1 content=0 reverse=0
+id=75 display=_&3381828053 short=_&3381847930 media=Nurburgring active=1 renderable=1 installed=1 content=0 reverse=0
+id=78 display=_&3381829461 short=_&3381846522 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=0
+id=79 display=_&3381829589 short=_&3381846394 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=0
+id=80 display=_&3381812054 short=_&3381798393 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=0
+id=81 display=_&3381812182 short=_&3381798265 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=0
+id=82 display=_&3381811798 short=_&3381798137 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=0
+id=83 display=_&3381811926 short=_&3381798009 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=1
+id=84 display=_&3381811542 short=_&3381798905 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=1
+id=85 display=_&3381811670 short=_&3381798777 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=1
+id=86 display=_&3381811286 short=_&3381798649 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=1
+id=87 display=_&3381811414 short=_&3381798521 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=1
+id=88 display=_&3381813078 short=_&3381797369 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=0
+id=89 display=_&3381813206 short=_&3381797241 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=0
+id=90 display=_&3381795670 short=_&3381814777 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=1
+id=91 display=_&3381795798 short=_&3381814649 media=FujimiKaido active=1 renderable=1 installed=1 content=0 reverse=1
+id=100 display=_&3381834253 short=_&3381847474 media=LeMans active=1 renderable=1 installed=1 content=0 reverse=0
+id=101 display=_&3381834381 short=_&3381847346 media=LeMans active=1 renderable=1 installed=1 content=0 reverse=0
+id=110 display=_&3381850637 short=_&3381831090 media=Catalunya active=1 renderable=1 installed=1 content=0 reverse=0
+id=111 display=_&3381850765 short=_&3381830962 media=Catalunya active=1 renderable=1 installed=1 content=0 reverse=0
+id=112 display=_&3381850893 short=_&3381830834 media=Catalunya active=1 renderable=1 installed=1 content=0 reverse=0
+id=120 display=_&3381801485 short=_&3381814706 media=Amalfi active=1 renderable=1 installed=1 content=96 reverse=0
+id=121 display=_&3381801613 short=_&3381814578 media=AmalfiGP active=1 renderable=1 installed=1 content=0 reverse=0
+id=126 display=_&3381801229 short=_&3381814962 media=Amalfi active=1 renderable=1 installed=1 content=96 reverse=1
+id=127 display=_&3381801357 short=_&3381814834 media=AmalfiGP active=1 renderable=1 installed=1 content=0 reverse=1
+id=140 display=_&3381834252 short=_&3381847475 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=0
+id=141 display=_&3381834380 short=_&3381847347 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=0
+id=142 display=_&3381834508 short=_&3381847219 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=0
+id=143 display=_&3381834636 short=_&3381847091 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=1
+id=144 display=_&3381833740 short=_&3381847987 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=1
+id=145 display=_&3381833868 short=_&3381847859 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=1
+id=146 display=_&3381833996 short=_&3381847731 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=0
+id=147 display=_&3381834124 short=_&3381847603 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=0
+id=148 display=_&3381835276 short=_&3381846451 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=0
+id=149 display=_&3381835404 short=_&3381846323 media=Autopark active=1 renderable=1 installed=1 content=0 reverse=0
+id=160 display=_&3381801484 short=_&3381814707 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=161 display=_&3381801612 short=_&3381814579 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=162 display=_&3381801740 short=_&3381814451 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=163 display=_&3381801868 short=_&3381814323 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=164 display=_&3381800972 short=_&3381815219 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=165 display=_&3381801100 short=_&3381815091 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=166 display=_&3381801228 short=_&3381814963 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=167 display=_&3381801356 short=_&3381814835 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=168 display=_&3381802508 short=_&3381813683 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=169 display=_&3381802636 short=_&3381813555 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=0
+id=171 display=_&3381817996 short=_&3381798195 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=172 display=_&3381818124 short=_&3381798067 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=173 display=_&3381818252 short=_&3381797939 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=174 display=_&3381817356 short=_&3381798835 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=175 display=_&3381817484 short=_&3381798707 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=176 display=_&3381817612 short=_&3381798579 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=177 display=_&3381817740 short=_&3381798451 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=178 display=_&3381818892 short=_&3381797299 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=179 display=_&3381819020 short=_&3381797171 media=CrownJewel active=1 renderable=1 installed=1 content=0 reverse=1
+id=196 display=_&3381850383 short=_&3381831344 media=DebugTrack active=0 renderable=1 installed=1 content=0 reverse=0
+id=197 display=_&3381850511 short=_&3381831216 media=DebugTrack active=0 renderable=1 installed=1 content=0 reverse=0
+id=200 display=_&3381834349 short=_&3381847506 media=BVT active=0 renderable=1 installed=1 content=0 reverse=0
+id=201 display=_&3381834477 short=_&3381847378 media=DevBVT_PerfTrack active=0 renderable=1 installed=0 content=0 reverse=0
+id=205 display=_&3381833965 short=_&3381847890 media=TestBed active=0 renderable=1 installed=1 content=0 reverse=0
+id=220 display=_&3381801581 short=_&3381814738 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=0
+id=221 display=_&3381801709 short=_&3381814610 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=0
+id=222 display=_&3381801837 short=_&3381814482 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=0
+id=223 display=_&3381801965 short=_&3381814354 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=0
+id=224 display=_&3381801069 short=_&3381815250 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=0
+id=225 display=_&3381801197 short=_&3381815122 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=0
+id=226 display=_&3381801325 short=_&3381814994 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=0
+id=228 display=_&3381802605 short=_&3381813714 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=1
+id=229 display=_&3381802733 short=_&3381813586 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=1
+id=230 display=_&3381817965 short=_&3381798354 media=Indi active=1 renderable=1 installed=1 content=0 reverse=0
+id=231 display=_&3381818093 short=_&3381798226 media=Indi active=1 renderable=1 installed=1 content=0 reverse=0
+id=240 display=_&3381834348 short=_&3381847507 media=Alps active=1 renderable=1 installed=1 content=0 reverse=0
+id=241 display=_&3381834476 short=_&3381847379 media=Alps active=1 renderable=1 installed=1 content=0 reverse=0
+id=242 display=_&3381834604 short=_&3381847251 media=Alps active=1 renderable=1 installed=1 content=0 reverse=0
+id=243 display=_&3381834732 short=_&3381847123 media=Alps active=1 renderable=1 installed=1 content=0 reverse=1
+id=244 display=_&3381833836 short=_&3381848019 media=Alps active=1 renderable=1 installed=1 content=0 reverse=1
+id=245 display=_&3381833964 short=_&3381847891 media=Alps active=1 renderable=1 installed=1 content=0 reverse=1
+id=250 display=_&3381850732 short=_&3381831123 media=Hockenheim active=1 renderable=1 installed=1 content=0 reverse=0
+id=251 display=_&3381850860 short=_&3381830995 media=Hockenheim active=1 renderable=1 installed=1 content=0 reverse=0
+id=252 display=_&3381850988 short=_&3381830867 media=Hockenheim active=1 renderable=1 installed=1 content=0 reverse=0
+id=253 display=_&3381851116 short=_&3381830739 media=Hockenheim active=1 renderable=1 installed=1 content=0 reverse=0
+id=260 display=_&3381801580 short=_&3381814739 media=Infin active=1 renderable=1 installed=1 content=0 reverse=0
+id=261 display=_&3381801708 short=_&3381814611 media=Infin active=1 renderable=1 installed=1 content=0 reverse=0
+id=262 display=_&3381801836 short=_&3381814483 media=Infin active=1 renderable=1 installed=1 content=0 reverse=0
+id=263 display=_&3381801964 short=_&3381814355 media=Infin active=1 renderable=1 installed=1 content=0 reverse=0
+id=290 display=_&3381850735 short=_&3381831120 media=TopGear active=1 renderable=1 installed=1 content=0 reverse=1
+id=302 display=_&3381834573 short=_&3381847282 media=UIThumbnail active=0 renderable=1 installed=1 content=0 reverse=0
+id=303 display=_&3381834701 short=_&3381847154 media=UIThumBig active=0 renderable=1 installed=1 content=0 reverse=0
+id=308 display=_&3381835341 short=_&3381846514 media=HomeSpace02 active=0 renderable=1 installed=1 content=0 reverse=0
+id=309 display=_&3381835469 short=_&3381846386 media=HomeSpace03 active=0 renderable=1 installed=1 content=0 reverse=0
+id=310 display=_&3381850701 short=_&3381831154 media=HomeSpace04 active=0 renderable=1 installed=1 content=0 reverse=0
+id=313 display=_&3381851085 short=_&3381830770 media=HomeSpace07 active=0 renderable=1 installed=1 content=0 reverse=0
+id=319 display=_&3381851853 short=_&3381830002 media=HomeSpace13 active=0 renderable=1 installed=1 content=0 reverse=0
+id=326 display=_&3381801293 short=_&3381815026 media=HomeSpace20 active=0 renderable=1 installed=1 content=0 reverse=0
+
+================== OUTPUT FILES ==================
+event_catalog.csv: each Events row, joined to CareerEventTypes and aggregated Races/participant/restriction counts
+race_catalog.csv: all Races rows, joined to Tracks
+event_participants.csv: all EventParticipants rows
+event_restrictions.csv: all EventRestrictions rows
+event_research.txt: this report
