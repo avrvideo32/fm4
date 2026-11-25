@@ -1,0 +1,266 @@
+Microsoft Windows [Version 10.0.26300.9974]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\code\py\fm4>py inspect_fm4_events.py gamedb.slt
+Inspection complete. Original database was not modified.
+Report: D:\code\py\fm4\fm4_event_extract\event_research.txt
+Event catalog: D:\code\py\fm4\fm4_event_extract\event_catalog.csv
+Race catalog: D:\code\py\fm4\fm4_event_extract\race_catalog.csv
+Participants: D:\code\py\fm4\fm4_event_extract\event_participants.csv
+Restrictions: D:\code\py\fm4\fm4_event_extract\event_restrictions.csv
+Selected detailed EventID: 499
+Please send event_research.txt first. If we need the detailed raw rows, the CSVs can be added to your GitHub repo.
+
+D:\code\py\fm4>py inspect_fm4_events.py gamedb.slt --event-id 600
+Inspection complete. Original database was not modified.
+Report: D:\code\py\fm4\fm4_event_extract\event_research.txt
+Event catalog: D:\code\py\fm4\fm4_event_extract\event_catalog.csv
+Race catalog: D:\code\py\fm4\fm4_event_extract\race_catalog.csv
+Participants: D:\code\py\fm4\fm4_event_extract\event_participants.csv
+Restrictions: D:\code\py\fm4\fm4_event_extract\event_restrictions.csv
+Selected detailed EventID: 600
+Please send event_research.txt first. If we need the detailed raw rows, the CSVs can be added to your GitHub repo.
+
+D:\code\py\fm4>py inspect_fm4_championships.py gamedb.slt
+FORZA MOTORSPORT 4 — CHAMPIONSHIP DIAGNOSTICS (READ ONLY)
+Database: D:\code\py\fm4\gamedb.slt
+Event range: 600..609
+No database writes performed.
+
+=== EVENTS ===
+Event 600: Level=0 CareerTypeId=17 EventOrder=600 GroupMask=32 TargetClass=0 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=45 CanDupPlayerCar=1
+Event 601: Level=11 CareerTypeId=17 EventOrder=601 GroupMask=32 TargetClass=1 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=30 CanDupPlayerCar=1
+Event 602: Level=21 CareerTypeId=17 EventOrder=602 GroupMask=32 TargetClass=2 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=43 CanDupPlayerCar=1
+Event 603: Level=31 CareerTypeId=17 EventOrder=603 GroupMask=32 TargetClass=3 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=27 CanDupPlayerCar=1
+Event 604: Level=41 CareerTypeId=17 EventOrder=604 GroupMask=32 TargetClass=4 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=45 CanDupPlayerCar=1
+Event 605: Level=51 CareerTypeId=17 EventOrder=605 GroupMask=32 TargetClass=5 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=30 CanDupPlayerCar=1
+Event 606: Level=61 CareerTypeId=17 EventOrder=606 GroupMask=32 TargetClass=6 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=46 CanDupPlayerCar=1
+Event 607: Level=71 CareerTypeId=17 EventOrder=607 GroupMask=32 TargetClass=7 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=45 CanDupPlayerCar=1
+Event 608: Level=81 CareerTypeId=17 EventOrder=608 GroupMask=32 TargetClass=8 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=30 CanDupPlayerCar=1
+Event 609: Level=90 CareerTypeId=17 EventOrder=609 GroupMask=32 TargetClass=9 NumberOfRaces=40 NumberOfDrivers=11 PittingProfileID=1 BonusId=46 CanDupPlayerCar=1
+Events found: 10
+
+=== RACES AND TRACK REFERENCES ===
+Event 600: 40 races; missing Tracks rows: 8
+  MISSING: RaceId=835 RaceNumber=17 TrackId=22 Laps=9 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=841 RaceNumber=23 TrackId=49 Laps=4 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=845 RaceNumber=27 TrackId=53 Laps=13 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=847 RaceNumber=29 TrackId=57 Laps=8 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=848 RaceNumber=30 TrackId=51 Laps=20 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=849 RaceNumber=31 TrackId=50 Laps=27 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=852 RaceNumber=34 TrackId=63 Laps=8 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=858 RaceNumber=40 TrackId=64 Laps=12 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 601: 40 races; missing Tracks rows: 12
+  MISSING: RaceId=865 RaceNumber=19 TrackId=54 Laps=9 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=868 RaceNumber=22 TrackId=24 Laps=10 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=872 RaceNumber=26 TrackId=63 Laps=9 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=873 RaceNumber=27 TrackId=62 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=877 RaceNumber=31 TrackId=52 Laps=22 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=878 RaceNumber=32 TrackId=51 Laps=21 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=879 RaceNumber=33 TrackId=65 Laps=13 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=880 RaceNumber=34 TrackId=57 Laps=8 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=882 RaceNumber=36 TrackId=60 Laps=21 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=883 RaceNumber=37 TrackId=49 Laps=4 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=884 RaceNumber=38 TrackId=23 Laps=10 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=885 RaceNumber=39 TrackId=61 Laps=22 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 602: 40 races; missing Tracks rows: 6
+  MISSING: RaceId=894 RaceNumber=20 TrackId=25 Laps=10 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=895 RaceNumber=21 TrackId=53 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=902 RaceNumber=28 TrackId=62 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=905 RaceNumber=31 TrackId=66 Laps=8 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=908 RaceNumber=34 TrackId=52 Laps=22 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=909 RaceNumber=35 TrackId=58 Laps=4 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 603: 40 races; missing Tracks rows: 6
+  MISSING: RaceId=916 RaceNumber=14 TrackId=56 Laps=15 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=924 RaceNumber=22 TrackId=23 Laps=11 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=928 RaceNumber=26 TrackId=60 Laps=24 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=930 RaceNumber=28 TrackId=66 Laps=9 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=935 RaceNumber=33 TrackId=51 Laps=24 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=937 RaceNumber=35 TrackId=57 Laps=9 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 604: 40 races; missing Tracks rows: 11
+  MISSING: RaceId=945 RaceNumber=15 TrackId=51 Laps=34 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=948 RaceNumber=18 TrackId=24 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=956 RaceNumber=26 TrackId=49 Laps=6 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=958 RaceNumber=28 TrackId=25 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=961 RaceNumber=31 TrackId=63 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=962 RaceNumber=32 TrackId=50 Laps=45 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=963 RaceNumber=33 TrackId=61 Laps=35 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=965 RaceNumber=35 TrackId=53 Laps=22 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=967 RaceNumber=37 TrackId=59 Laps=45 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=969 RaceNumber=39 TrackId=55 Laps=20 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=970 RaceNumber=40 TrackId=22 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 605: 40 races; missing Tracks rows: 7
+  MISSING: RaceId=972 RaceNumber=14 TrackId=22 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=974 RaceNumber=16 TrackId=55 Laps=20 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=986 RaceNumber=28 TrackId=49 Laps=6 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=989 RaceNumber=31 TrackId=57 Laps=13 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=990 RaceNumber=32 TrackId=60 Laps=34 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=991 RaceNumber=33 TrackId=54 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=998 RaceNumber=40 TrackId=64 Laps=20 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 606: 40 races; missing Tracks rows: 6
+  MISSING: RaceId=1927 RaceNumber=19 TrackId=56 Laps=21 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1929 RaceNumber=21 TrackId=22 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1934 RaceNumber=26 TrackId=58 Laps=6 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1935 RaceNumber=27 TrackId=23 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1940 RaceNumber=32 TrackId=59 Laps=46 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1942 RaceNumber=34 TrackId=63 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 607: 40 races; missing Tracks rows: 9
+  MISSING: RaceId=1955 RaceNumber=19 TrackId=25 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1959 RaceNumber=23 TrackId=56 Laps=21 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1962 RaceNumber=26 TrackId=53 Laps=23 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1964 RaceNumber=28 TrackId=65 Laps=21 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1966 RaceNumber=30 TrackId=63 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1968 RaceNumber=32 TrackId=57 Laps=13 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1971 RaceNumber=35 TrackId=60 Laps=35 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1972 RaceNumber=36 TrackId=58 Laps=6 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1973 RaceNumber=37 TrackId=61 Laps=36 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 608: 40 races; missing Tracks rows: 9
+  MISSING: RaceId=1981 RaceNumber=17 TrackId=23 Laps=18 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1988 RaceNumber=24 TrackId=57 Laps=14 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1989 RaceNumber=25 TrackId=59 Laps=51 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1990 RaceNumber=26 TrackId=54 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1991 RaceNumber=27 TrackId=56 Laps=23 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1992 RaceNumber=28 TrackId=60 Laps=38 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=1994 RaceNumber=30 TrackId=25 Laps=18 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2003 RaceNumber=39 TrackId=63 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2004 RaceNumber=40 TrackId=49 Laps=7 ModeRaceNumber=0 TimeOfDayIndex=0
+Event 609: 40 races; missing Tracks rows: 8
+  MISSING: RaceId=2007 RaceNumber=15 TrackId=57 Laps=15 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2014 RaceNumber=22 TrackId=22 Laps=18 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2018 RaceNumber=26 TrackId=53 Laps=26 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2021 RaceNumber=29 TrackId=56 Laps=24 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2024 RaceNumber=32 TrackId=54 Laps=16 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2027 RaceNumber=35 TrackId=51 Laps=39 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2029 RaceNumber=37 TrackId=55 Laps=23 ModeRaceNumber=0 TimeOfDayIndex=0
+  MISSING: RaceId=2032 RaceNumber=40 TrackId=66 Laps=15 ModeRaceNumber=0 TimeOfDayIndex=0
+Total championship races: 400
+Total missing Track references: 82
+
+=== SCHEDULE COMPARISON ===
+Event 601: same race schedule as 600: False
+Event 602: same race schedule as 600: False
+Event 603: same race schedule as 600: False
+Event 604: same race schedule as 600: False
+Event 605: same race schedule as 600: False
+Event 606: same race schedule as 600: False
+Event 607: same race schedule as 600: False
+Event 608: same race schedule as 600: False
+Event 609: same race schedule as 600: False
+
+=== EventParticipants ===
+Event 600: 11 rows; Priority=12 Ordinal=1391 BucketId=0; Priority=6 Ordinal=1371 BucketId=0; Priority=2 Ordinal=1365 BucketId=0; Priority=11 Ordinal=1363 BucketId=0; Priority=3 Ordinal=1362 BucketId=0; Priority=10 Ordinal=1361 BucketId=0; Priority=7 Ordinal=1360 BucketId=0; Priority=4 Ordinal=1359 BucketId=0; Priority=9 Ordinal=1358 BucketId=0; Priority=8 Ordinal=1357 BucketId=0; Priority=5 Ordinal=1356 BucketId=0
+Event 601: 11 rows; Priority=2 Ordinal=1507 BucketId=0; Priority=1 Ordinal=1082 BucketId=0; Priority=6 Ordinal=1061 BucketId=0; Priority=9 Ordinal=1058 BucketId=0; Priority=4 Ordinal=1047 BucketId=0; Priority=7 Ordinal=1037 BucketId=0; Priority=11 Ordinal=1066 BucketId=0; Priority=12 Ordinal=1480 BucketId=0; Priority=8 Ordinal=1374 BucketId=0; Priority=5 Ordinal=1298 BucketId=0; Priority=10 Ordinal=1261 BucketId=0
+Event 602: 12 rows; Priority=2 Ordinal=248 BucketId=0; Priority=12 Ordinal=1089 BucketId=0; Priority=10 Ordinal=1085 BucketId=0; Priority=7 Ordinal=1080 BucketId=0; Priority=3 Ordinal=614 BucketId=0; Priority=6 Ordinal=346 BucketId=0; Priority=5 Ordinal=1348 BucketId=0; Priority=11 Ordinal=1263 BucketId=0; Priority=9 Ordinal=1259 BucketId=0; Priority=8 Ordinal=1223 BucketId=0; Priority=1 Ordinal=1393 BucketId=0; Priority=4 Ordinal=1115 BucketId=0
+Event 603: 11 rows; Priority=8 Ordinal=1100 BucketId=0; Priority=10 Ordinal=1098 BucketId=0; Priority=6 Ordinal=1091 BucketId=0; Priority=9 Ordinal=1077 BucketId=0; Priority=4 Ordinal=658 BucketId=0; Priority=1 Ordinal=616 BucketId=0; Priority=2 Ordinal=469 BucketId=0; Priority=7 Ordinal=443 BucketId=0; Priority=13 Ordinal=371 BucketId=0; Priority=11 Ordinal=1118 BucketId=0; Priority=12 Ordinal=1203 BucketId=0
+Event 604: 11 rows; Priority=4 Ordinal=1099 BucketId=0; Priority=9 Ordinal=1035 BucketId=0; Priority=2 Ordinal=1008 BucketId=0; Priority=10 Ordinal=617 BucketId=0; Priority=1 Ordinal=425 BucketId=0; Priority=11 Ordinal=420 BucketId=0; Priority=6 Ordinal=374 BucketId=0; Priority=7 Ordinal=321 BucketId=0; Priority=13 Ordinal=1375 BucketId=0; Priority=12 Ordinal=1367 BucketId=0; Priority=8 Ordinal=1116 BucketId=0
+Event 605: 11 rows; Priority=3 Ordinal=1090 BucketId=0; Priority=11 Ordinal=1062 BucketId=0; Priority=10 Ordinal=1032 BucketId=0; Priority=8 Ordinal=569 BucketId=0; Priority=6 Ordinal=484 BucketId=0; Priority=9 Ordinal=433 BucketId=0; Priority=4 Ordinal=348 BucketId=0; Priority=1 Ordinal=341 BucketId=0; Priority=2 Ordinal=313 BucketId=0; Priority=7 Ordinal=1250 BucketId=0; Priority=5 Ordinal=1205 BucketId=0
+Event 606: 11 rows; Priority=11 Ordinal=1069 BucketId=0; Priority=12 Ordinal=1017 BucketId=0; Priority=1 Ordinal=1319 BucketId=0; Priority=7 Ordinal=1260 BucketId=0; Priority=8 Ordinal=1202 BucketId=0; Priority=4 Ordinal=1131 BucketId=0; Priority=2 Ordinal=1130 BucketId=0; Priority=6 Ordinal=1128 BucketId=0; Priority=3 Ordinal=1125 BucketId=0; Priority=5 Ordinal=1117 BucketId=0; Priority=10 Ordinal=1433 BucketId=0
+Event 607: 11 rows; Priority=1 Ordinal=588 BucketId=0; Priority=12 Ordinal=554 BucketId=0; Priority=9 Ordinal=548 BucketId=0; Priority=11 Ordinal=542 BucketId=0; Priority=5 Ordinal=541 BucketId=0; Priority=7 Ordinal=1449 BucketId=0; Priority=8 Ordinal=1408 BucketId=0; Priority=2 Ordinal=1235 BucketId=0; Priority=3 Ordinal=1222 BucketId=0; Priority=6 Ordinal=1146 BucketId=0; Priority=4 Ordinal=1111 BucketId=0
+Event 608: 12 rows; Priority=8 Ordinal=631 BucketId=0; Priority=9 Ordinal=1467 BucketId=0; Priority=7 Ordinal=1466 BucketId=0; Priority=3 Ordinal=551 BucketId=0; Priority=11 Ordinal=544 BucketId=0; Priority=6 Ordinal=526 BucketId=0; Priority=10 Ordinal=509 BucketId=0; Priority=2 Ordinal=501 BucketId=0; Priority=5 Ordinal=1406 BucketId=0; Priority=12 Ordinal=390 BucketId=0; Priority=1 Ordinal=1407 BucketId=0; Priority=4 Ordinal=1139 BucketId=0
+Event 609: 12 rows; Priority=3 Ordinal=1400 BucketId=0; Priority=8 Ordinal=555 BucketId=0; Priority=12 Ordinal=549 BucketId=0; Priority=1 Ordinal=1445 BucketId=0; Priority=10 Ordinal=524 BucketId=0; Priority=9 Ordinal=507 BucketId=0; Priority=11 Ordinal=505 BucketId=0; Priority=7 Ordinal=498 BucketId=0; Priority=5 Ordinal=1403 BucketId=0; Priority=2 Ordinal=1182 BucketId=0; Priority=4 Ordinal=1156 BucketId=0; Priority=6 Ordinal=1144 BucketId=0
+
+=== EventRestrictions ===
+Event 600: 1 rows; BucketId=0 Value=0000000004
+Event 601: 1 rows; BucketId=0 Value=0000000004
+Event 602: 1 rows; BucketId=0 Value=0000000004
+Event 603: 1 rows; BucketId=0 Value=0000000004
+Event 604: 1 rows; BucketId=0 Value=0000000004
+Event 605: 1 rows; BucketId=0 Value=0000000004
+Event 606: 1 rows; BucketId=0 Value=0000000004
+Event 607: 1 rows; BucketId=0 Value=0000000004
+Event 608: 1 rows; BucketId=0 Value=0000000004
+Event 609: 1 rows; BucketId=0 Value=0000000004
+
+=== RacesSpecial ===
+Columns: ['RaceId', 'CollObjLayoutId', 'TargetScore_Easy', 'TargetScore_Med', 'TargetScore_Hard', 'TargetScore_Pro', 'MinSpeedRequiredMPH']
+Rows: 86
+{RaceId=1183, CollObjLayoutId=1, TargetScore_Easy=130000.0, TargetScore_Med=142000.0, TargetScore_Hard=160000.0, TargetScore_Pro=190000.0, MinSpeedRequiredMPH=35.0}
+{RaceId=1184, CollObjLayoutId=2, TargetScore_Easy=361000.0, TargetScore_Med=399000.0, TargetScore_Hard=425000.0, TargetScore_Pro=472000.0, MinSpeedRequiredMPH=36.0}
+{RaceId=1185, CollObjLayoutId=3, TargetScore_Easy=361000.0, TargetScore_Med=398000.0, TargetScore_Hard=440000.0, TargetScore_Pro=470000.0, MinSpeedRequiredMPH=36.0}
+{RaceId=1186, CollObjLayoutId=4, TargetScore_Easy=370000.0, TargetScore_Med=411000.0, TargetScore_Hard=452000.0, TargetScore_Pro=493000.0, MinSpeedRequiredMPH=36.0}
+{RaceId=1187, CollObjLayoutId=5, TargetScore_Easy=266000.0, TargetScore_Med=297000.0, TargetScore_Hard=331000.0, TargetScore_Pro=365000.0, MinSpeedRequiredMPH=39.0}
+{RaceId=1188, CollObjLayoutId=6, TargetScore_Easy=470000.0, TargetScore_Med=490000.0, TargetScore_Hard=510000.0, TargetScore_Pro=530000.0, MinSpeedRequiredMPH=35.0}
+{RaceId=1189, CollObjLayoutId=7, TargetScore_Easy=285000.0, TargetScore_Med=320000.0, TargetScore_Hard=360000.0, TargetScore_Pro=400000.0, MinSpeedRequiredMPH=36.0}
+{RaceId=1190, CollObjLayoutId=8, TargetScore_Easy=342000.0, TargetScore_Med=376000.0, TargetScore_Hard=408000.0, TargetScore_Pro=440000.0, MinSpeedRequiredMPH=36.0}
+{RaceId=1191, CollObjLayoutId=3, TargetScore_Easy=365000.0, TargetScore_Med=405000.0, TargetScore_Hard=445000.0, TargetScore_Pro=472000.0, MinSpeedRequiredMPH=36.0}
+{RaceId=1192, CollObjLayoutId=4, TargetScore_Easy=375000.0, TargetScore_Med=420000.0, TargetScore_Hard=460000.0, TargetScore_Pro=495000.0, MinSpeedRequiredMPH=39.0}
+{RaceId=1206, CollObjLayoutId=0, TargetScore_Easy=10.0, TargetScore_Med=10.0, TargetScore_Hard=10.0, TargetScore_Pro=10.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1210, CollObjLayoutId=0, TargetScore_Easy=25.0, TargetScore_Med=25.0, TargetScore_Hard=25.0, TargetScore_Pro=25.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1216, CollObjLayoutId=0, TargetScore_Easy=7.0, TargetScore_Med=7.0, TargetScore_Hard=7.0, TargetScore_Pro=7.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1218, CollObjLayoutId=0, TargetScore_Easy=8.0, TargetScore_Med=8.0, TargetScore_Hard=8.0, TargetScore_Pro=8.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1220, CollObjLayoutId=0, TargetScore_Easy=10.0, TargetScore_Med=10.0, TargetScore_Hard=10.0, TargetScore_Pro=10.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1221, CollObjLayoutId=1, TargetScore_Easy=100000.0, TargetScore_Med=100000.0, TargetScore_Hard=100000.0, TargetScore_Pro=100000.0, MinSpeedRequiredMPH=35.0}
+{RaceId=1222, CollObjLayoutId=0, TargetScore_Easy=7.0, TargetScore_Med=7.0, TargetScore_Hard=7.0, TargetScore_Pro=7.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1224, CollObjLayoutId=0, TargetScore_Easy=15.0, TargetScore_Med=15.0, TargetScore_Hard=15.0, TargetScore_Pro=15.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1225, CollObjLayoutId=6, TargetScore_Easy=400000.0, TargetScore_Med=400000.0, TargetScore_Hard=400000.0, TargetScore_Pro=400000.0, MinSpeedRequiredMPH=35.0}
+{RaceId=1229, CollObjLayoutId=0, TargetScore_Easy=10.0, TargetScore_Med=10.0, TargetScore_Hard=10.0, TargetScore_Pro=10.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1230, CollObjLayoutId=1, TargetScore_Easy=298.0, TargetScore_Med=252.0, TargetScore_Hard=221.0, TargetScore_Pro=199.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1231, CollObjLayoutId=1, TargetScore_Easy=254.0, TargetScore_Med=214.0, TargetScore_Hard=188.0, TargetScore_Pro=169.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1232, CollObjLayoutId=1, TargetScore_Easy=327.0, TargetScore_Med=276.0, TargetScore_Hard=242.0, TargetScore_Pro=218.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1233, CollObjLayoutId=1, TargetScore_Easy=292.0, TargetScore_Med=246.0, TargetScore_Hard=216.0, TargetScore_Pro=194.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1234, CollObjLayoutId=1, TargetScore_Easy=248.0, TargetScore_Med=210.0, TargetScore_Hard=184.0, TargetScore_Pro=166.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1235, CollObjLayoutId=1, TargetScore_Easy=319.0, TargetScore_Med=269.0, TargetScore_Hard=236.0, TargetScore_Pro=212.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1236, CollObjLayoutId=1, TargetScore_Easy=243.0, TargetScore_Med=205.0, TargetScore_Hard=180.0, TargetScore_Pro=162.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1237, CollObjLayoutId=1, TargetScore_Easy=312.0, TargetScore_Med=263.0, TargetScore_Hard=231.0, TargetScore_Pro=208.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1238, CollObjLayoutId=1, TargetScore_Easy=329.0, TargetScore_Med=278.0, TargetScore_Hard=244.0, TargetScore_Pro=219.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1239, CollObjLayoutId=1, TargetScore_Easy=316.0, TargetScore_Med=267.0, TargetScore_Hard=234.0, TargetScore_Pro=211.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1240, CollObjLayoutId=1, TargetScore_Easy=235.0, TargetScore_Med=198.0, TargetScore_Hard=174.0, TargetScore_Pro=157.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1241, CollObjLayoutId=1, TargetScore_Easy=308.0, TargetScore_Med=260.0, TargetScore_Hard=228.0, TargetScore_Pro=205.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1242, CollObjLayoutId=1, TargetScore_Easy=325.0, TargetScore_Med=275.0, TargetScore_Hard=241.0, TargetScore_Pro=217.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1243, CollObjLayoutId=1, TargetScore_Easy=312.0, TargetScore_Med=263.0, TargetScore_Hard=231.0, TargetScore_Pro=208.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1244, CollObjLayoutId=1, TargetScore_Easy=278.0, TargetScore_Med=235.0, TargetScore_Hard=206.0, TargetScore_Pro=186.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1245, CollObjLayoutId=1, TargetScore_Easy=263.0, TargetScore_Med=222.0, TargetScore_Hard=195.0, TargetScore_Pro=176.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1246, CollObjLayoutId=1, TargetScore_Easy=241.0, TargetScore_Med=204.0, TargetScore_Hard=179.0, TargetScore_Pro=161.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1247, CollObjLayoutId=1, TargetScore_Easy=273.0, TargetScore_Med=230.0, TargetScore_Hard=202.0, TargetScore_Pro=182.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1248, CollObjLayoutId=1, TargetScore_Easy=258.0, TargetScore_Med=218.0, TargetScore_Hard=191.0, TargetScore_Pro=172.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1249, CollObjLayoutId=1, TargetScore_Easy=236.0, TargetScore_Med=200.0, TargetScore_Hard=175.0, TargetScore_Pro=158.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1250, CollObjLayoutId=1, TargetScore_Easy=252.0, TargetScore_Med=213.0, TargetScore_Hard=187.0, TargetScore_Pro=168.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1251, CollObjLayoutId=1, TargetScore_Easy=231.0, TargetScore_Med=195.0, TargetScore_Hard=171.0, TargetScore_Pro=154.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1252, CollObjLayoutId=1, TargetScore_Easy=402.0, TargetScore_Med=339.0, TargetScore_Hard=298.0, TargetScore_Pro=268.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1253, CollObjLayoutId=1, TargetScore_Easy=248.0, TargetScore_Med=210.0, TargetScore_Hard=184.0, TargetScore_Pro=166.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1254, CollObjLayoutId=1, TargetScore_Easy=227.0, TargetScore_Med=192.0, TargetScore_Hard=168.0, TargetScore_Pro=151.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1255, CollObjLayoutId=1, TargetScore_Easy=387.0, TargetScore_Med=327.0, TargetScore_Hard=287.0, TargetScore_Pro=258.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1256, CollObjLayoutId=1, TargetScore_Easy=336.0, TargetScore_Med=284.0, TargetScore_Hard=249.0, TargetScore_Pro=224.0, MinSpeedRequiredMPH=0.0}
+{RaceId=1257, CollObjLayoutId=1, TargetScore_Easy=331.0, TargetScore_Med=280.0, TargetScore_Hard=245.0, TargetScore_Pro=221.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3608, CollObjLayoutId=0, TargetScore_Easy=54.0, TargetScore_Med=63.0, TargetScore_Hard=67.0, TargetScore_Pro=75.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3609, CollObjLayoutId=0, TargetScore_Easy=53.0, TargetScore_Med=62.0, TargetScore_Hard=66.0, TargetScore_Pro=73.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3610, CollObjLayoutId=0, TargetScore_Easy=51.0, TargetScore_Med=59.0, TargetScore_Hard=63.0, TargetScore_Pro=70.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3611, CollObjLayoutId=0, TargetScore_Easy=51.0, TargetScore_Med=67.0, TargetScore_Hard=71.0, TargetScore_Pro=79.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3612, CollObjLayoutId=0, TargetScore_Easy=38.0, TargetScore_Med=44.0, TargetScore_Hard=47.0, TargetScore_Pro=52.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3613, CollObjLayoutId=0, TargetScore_Easy=43.0, TargetScore_Med=49.0, TargetScore_Hard=53.0, TargetScore_Pro=59.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3614, CollObjLayoutId=0, TargetScore_Easy=46.0, TargetScore_Med=53.0, TargetScore_Hard=57.0, TargetScore_Pro=63.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3615, CollObjLayoutId=0, TargetScore_Easy=21.0, TargetScore_Med=25.0, TargetScore_Hard=27.0, TargetScore_Pro=29.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3616, CollObjLayoutId=0, TargetScore_Easy=25.0, TargetScore_Med=29.0, TargetScore_Hard=31.0, TargetScore_Pro=34.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3617, CollObjLayoutId=0, TargetScore_Easy=30.0, TargetScore_Med=35.0, TargetScore_Hard=38.0, TargetScore_Pro=42.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3618, CollObjLayoutId=0, TargetScore_Easy=37.0, TargetScore_Med=43.0, TargetScore_Hard=46.0, TargetScore_Pro=51.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3619, CollObjLayoutId=0, TargetScore_Easy=38.0, TargetScore_Med=44.0, TargetScore_Hard=47.0, TargetScore_Pro=52.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3620, CollObjLayoutId=0, TargetScore_Easy=42.0, TargetScore_Med=48.0, TargetScore_Hard=52.0, TargetScore_Pro=58.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3621, CollObjLayoutId=0, TargetScore_Easy=31.0, TargetScore_Med=36.0, TargetScore_Hard=39.0, TargetScore_Pro=43.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3622, CollObjLayoutId=0, TargetScore_Easy=50.0, TargetScore_Med=58.0, TargetScore_Hard=62.0, TargetScore_Pro=69.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3623, CollObjLayoutId=0, TargetScore_Easy=44.0, TargetScore_Med=51.0, TargetScore_Hard=55.0, TargetScore_Pro=61.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3624, CollObjLayoutId=0, TargetScore_Easy=49.0, TargetScore_Med=57.0, TargetScore_Hard=61.0, TargetScore_Pro=68.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3625, CollObjLayoutId=0, TargetScore_Easy=43.0, TargetScore_Med=50.0, TargetScore_Hard=54.0, TargetScore_Pro=60.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3626, CollObjLayoutId=0, TargetScore_Easy=53.0, TargetScore_Med=62.0, TargetScore_Hard=66.0, TargetScore_Pro=73.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3627, CollObjLayoutId=0, TargetScore_Easy=34.0, TargetScore_Med=40.0, TargetScore_Hard=43.0, TargetScore_Pro=47.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3628, CollObjLayoutId=0, TargetScore_Easy=32.0, TargetScore_Med=37.0, TargetScore_Hard=40.0, TargetScore_Pro=44.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3629, CollObjLayoutId=0, TargetScore_Easy=76.0, TargetScore_Med=88.0, TargetScore_Hard=95.0, TargetScore_Pro=105.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3630, CollObjLayoutId=0, TargetScore_Easy=46.0, TargetScore_Med=53.0, TargetScore_Hard=57.0, TargetScore_Pro=63.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3631, CollObjLayoutId=0, TargetScore_Easy=31.0, TargetScore_Med=35.0, TargetScore_Hard=38.0, TargetScore_Pro=42.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3632, CollObjLayoutId=0, TargetScore_Easy=101.0, TargetScore_Med=117.0, TargetScore_Hard=125.0, TargetScore_Pro=139.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3633, CollObjLayoutId=0, TargetScore_Easy=47.0, TargetScore_Med=54.0, TargetScore_Hard=58.0, TargetScore_Pro=64.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3634, CollObjLayoutId=0, TargetScore_Easy=53.0, TargetScore_Med=62.0, TargetScore_Hard=66.0, TargetScore_Pro=73.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3635, CollObjLayoutId=0, TargetScore_Easy=58.0, TargetScore_Med=67.0, TargetScore_Hard=72.0, TargetScore_Pro=80.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3636, CollObjLayoutId=0, TargetScore_Easy=50.0, TargetScore_Med=58.0, TargetScore_Hard=62.0, TargetScore_Pro=69.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3637, CollObjLayoutId=0, TargetScore_Easy=62.0, TargetScore_Med=72.0, TargetScore_Hard=78.0, TargetScore_Pro=86.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3638, CollObjLayoutId=0, TargetScore_Easy=62.0, TargetScore_Med=71.0, TargetScore_Hard=77.0, TargetScore_Pro=85.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3639, CollObjLayoutId=0, TargetScore_Easy=52.0, TargetScore_Med=60.0, TargetScore_Hard=64.0, TargetScore_Pro=71.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3640, CollObjLayoutId=0, TargetScore_Easy=60.0, TargetScore_Med=68.0, TargetScore_Hard=75.0, TargetScore_Pro=82.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3641, CollObjLayoutId=0, TargetScore_Easy=71.0, TargetScore_Med=82.0, TargetScore_Hard=88.0, TargetScore_Pro=97.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3642, CollObjLayoutId=0, TargetScore_Easy=69.0, TargetScore_Med=80.0, TargetScore_Hard=86.0, TargetScore_Pro=95.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3643, CollObjLayoutId=0, TargetScore_Easy=155.0, TargetScore_Med=180.0, TargetScore_Hard=193.0, TargetScore_Pro=214.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3644, CollObjLayoutId=0, TargetScore_Easy=62.0, TargetScore_Med=71.0, TargetScore_Hard=77.0, TargetScore_Pro=85.0, MinSpeedRequiredMPH=0.0}
+{RaceId=3645, CollObjLayoutId=0, TargetScore_Easy=79.0, TargetScore_Med=91.0, TargetScore_Hard=98.0, TargetScore_Pro=108.0, MinSpeedRequiredMPH=0.0}
+
+=== END ===
+
+D:\code\py\fm4>
