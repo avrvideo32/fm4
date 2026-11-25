@@ -215,3 +215,40 @@ python -m pip install pillow
 ```
 
 These scripts have been committed to GitHub, but the archive patcher is tested in Xenia only for adding the original Event 302 artwork unchanged. The XDS generator has only passed the output-size check so far; its custom image has not yet been visually decoded or tested in the game.
+
+
+## Related FH1 research: ZIP container quirks
+
+The user found this useful technical reference for Forza Horizon 1:
+- Overview: https://arcanite24.github.io/pinyon-shift/game-files/#files-zip-container-quirks
+- Reference patcher: https://github.com/arcanite24/pinyon-shift/blob/dev/tools/patch-fh1-archive.py
+- Native reader: https://github.com/arcanite24/pinyon-shift/blob/dev/src/ui/hostui/fh1_archive.cpp
+
+Relevant findings from that work:
+- ZIP central-directory extra field `0x1123` stores the absolute offset of the compressed payload, not merely the local-header offset.
+- A rebuilt archive must update both the normal central-directory local-header offset (field at byte 42) and `0x1123`.
+- Some FH1 archives omit local headers entirely; for those, the directory offset is itself the payload offset.
+- The FH1 implementation detects a local-header signature and, if present, adds 30 bytes plus filename and extra-field lengths to reach the payload.
+- CRC-32 is calculated over decompressed file contents.
+
+How this applies to our FM4 case:
+- Our direct inspection of the actual FM4 `Media\\UI\\Textures.zip` found 4,544 entries and every entry had a local ZIP header and a 4-byte `0x1123` extra field.
+- All 4,544 original `0x1123` values pointed to the actual compressed payload offsets.
+- The working byte-preserving Event 749 poster clone patcher preserves the entire original local-file area and central-directory records, and adds new records while relocating both local-header offset and central `0x1123` payload offset.
+- Therefore the FH1 no-local-header branch is important general knowledge, but it was not present in the inspected FM4 archive.
+
+The FH1 patcher also contains an experimental `xmem_stored()` function that wraps literal LZX blocks in XMem chunk framing (32 KiB chunks, method 21). Its comments explicitly say native UI delivery remains experimental. Do not assume FH1's custom XMem literal stream has been validated for FM4.
+
+The CuteTenshii/lzx README independently documents the same 0x1123 field and says its compressor emits XMemCompress-style method-21 streams. It has been validated with its own decoder and libmspack, but its README says game loading of repacked archives has not been verified. Our observed Xenia freeze with `lzxzip update` therefore remains a warning; testing the newly generated payload in a staging ZIP and then transplanting it into the FM4 archive with minimal original-record changes is a separate experiment.
+
+A new helper is committed:
+- [`tools/append_fm4_lzx_entries.py`](tools/append_fm4_lzx_entries.py) — accepts a small staging ZIP created with `lzxzip create` and appends its method-21 `.xds` entries to the FM4 archive while preserving the original local-file area and original central-directory records byte-for-byte. It relocates the normal local-header offsets and central `0x1123` payload offsets. This script has **not yet been tested** with the generated poster artwork or in Xenia.
+
+Potential next experiment:
+1. Put only the two generated Event 749 XDS files in a staging folder with the correct archive-relative names:
+   - `UI4/Logos/Posters/EventBkgd749.xds`
+   - `UI4/Logos/Posters_SM/EventBkgd749.xds`
+2. Use `lzxzip create` to make a tiny staging ZIP from that folder and `lzxzip test` it.
+3. Use `append_fm4_lzx_entries.py` to append those staged entries to a clean/known-good FM4 archive that does not already contain Event 749 names. The user's current working game archive may already contain the two cloned Event 749 entries; if so, use their separately saved clean original or add replacement support before proceeding.
+4. Validate the final archive with `lzxzip list` and `lzxzip test`.
+5. Only then test in Xenia. Success is not guaranteed until the game loads and the event poster is visually confirmed.
