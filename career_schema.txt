@@ -1,0 +1,335 @@
+FM4 FULL DATABASE SCHEMA / CAREER REGISTRATION AUDIT
+Database: D:\code\py\fm4\gamedb.slt
+READ ONLY — no writes will be performed.
+
+=== DATABASE OBJECT COUNTS ===
+Tables: 201
+Views: 0
+Triggers: 0
+Indexes: 0
+
+=== ALL TABLE NAMES ===
+AIDiff
+AILineChoices
+AIPlayerColors
+AIPlayers
+AIRubberbandModeChoices
+AIRubberbands
+AISkillAdjustments
+AISkills
+AITemperaments
+AffinityLevelDef
+ArcadeCarList
+AuctionSearchValues
+AutoSteerOverrides
+BackfireLevels
+BristolLayouts
+CameraOverrides
+CarClasses
+CarDetails
+CarExceptions
+CarInvalidDefaultParts
+CarListFilters
+CarPartPositions
+CarTrackOffsets
+CareerEventTypes
+Combo_Colors
+Combo_Colors_Exceptions
+Combo_Engines
+Combo_TireBrandCompound
+ContentOffers
+ContentOffersMapping
+ControllerLayouts
+DamageDiffSettings
+Data_Car
+Data_CarBody
+Data_Drivetrain
+Data_Engine
+Data_Motor
+Demo_CarList
+EnvironmentTimeOfDay
+Environments
+EventBonuses
+EventGroups
+EventParticipants
+EventRandomBonuses
+EventRestrictions
+EventScoring
+EventShowroomChallenges
+Events
+FlyingStartPositions
+GameOptionCategories
+GameOptionCategoryMap
+GameOptionGroups
+GameOptionMap
+GameOptionValues
+GameOptions
+GraffitiPoints
+HasCarExperience
+HopperRaces
+IECars
+KinectSplitscreenCars
+KinectSplitscreenTracks
+List_AeroPhysics
+List_AntiSwayPhysics
+List_Aspiration
+List_BadgeAndTitleUnlocks
+List_BrakeType
+List_CarMake
+List_CarType
+List_ColorClass
+List_ColorFinish
+List_Country
+List_Cylinders
+List_DamageModDef
+List_DriveType
+List_EngineConfig
+List_EnginePlacement
+List_FamilyBody
+List_FamilyModel
+List_FamilySpecial
+List_MaterialType
+List_PartAttribute
+List_PartManufacturer
+List_PartsStrings
+List_Region
+List_ShiftSystem
+List_SpecialColors
+List_SpringDamperPhysics
+List_SuspensionPhysicsType
+List_SuspensionType
+List_TireAffectCurve
+List_TireCompound
+List_TireFrictionCurve
+List_TireFrictionMultiCurve
+List_TorqueCurve
+List_Unlocks
+List_UpgradeAntiSwayFront
+List_UpgradeAntiSwayRear
+List_UpgradeBrakes
+List_UpgradeCarBody
+List_UpgradeCarBodyChassisStiffness
+List_UpgradeCarBodyFrontBumper
+List_UpgradeCarBodyHood
+List_UpgradeCarBodyRearBumper
+List_UpgradeCarBodySideSkirt
+List_UpgradeCarBodyTireWidthFront
+List_UpgradeCarBodyTireWidthRear
+List_UpgradeCarBodyWeight
+List_UpgradeDrivetrain
+List_UpgradeDrivetrainClutch
+List_UpgradeDrivetrainDifferential
+List_UpgradeDrivetrainDriveline
+List_UpgradeDrivetrainTransmission
+List_UpgradeEngine
+List_UpgradeEngineCSC
+List_UpgradeEngineCamshaft
+List_UpgradeEngineDSC
+List_UpgradeEngineDisplacement
+List_UpgradeEngineExhaust
+List_UpgradeEngineFlywheel
+List_UpgradeEngineFuelSystem
+List_UpgradeEngineIgnition
+List_UpgradeEngineIntake
+List_UpgradeEngineIntercooler
+List_UpgradeEngineManifold
+List_UpgradeEngineOilCooling
+List_UpgradeEnginePistonsCompression
+List_UpgradeEngineRestrictorPlate
+List_UpgradeEngineTurboQuad
+List_UpgradeEngineTurboSingle
+List_UpgradeEngineTurboTwin
+List_UpgradeEngineValves
+List_UpgradeMotor
+List_UpgradeMotorParts
+List_UpgradeRearWing
+List_UpgradeRimSizeFront
+List_UpgradeRimSizeRear
+List_UpgradeSpringDamper
+List_UpgradeTireCompound
+List_VariableTiming
+List_WheelStyle
+List_Wheels
+Livery_Categories
+Livery_Decals
+Livery_DecalsSortOrder
+Livery_VinylNames
+Livery_VinylsDecals
+MPAIDifficultyMap
+MultiDiscContentPacks
+MultiDiscSlides
+NewProfile_BadgeTitleProgress
+NewProfile_BadgeTitleUnlocks
+NewProfile_CarExperienceRevealsSeen
+NewProfile_CarExperienceUnlocks
+NewProfile_CarPointsOfInterestProgress
+NewProfile_Career_AIHistory
+NewProfile_Career_Affinity
+NewProfile_Career_CarGroups
+NewProfile_Career_EventResults
+NewProfile_Career_Garage
+NewProfile_Career_PurchasedParts
+NewProfile_Career_RaceResults
+NewProfile_Career_TrackUsage
+NewProfile_ChangeTracking
+NewProfile_ContentSeen
+NewProfile_GameplayAggregate
+NewProfile_LastUsedGarageId
+PerformanceBudget
+PerformanceBudgetCameras
+PittingProfiles
+PlayerLevelDef
+Powertrains
+Protos_ModSignature
+Races
+RacesSpecial
+Rewards_DriverLevelv3
+Rewards_ShowroomUnlocks
+SplitPoints
+StartGridPositions
+StripeColors
+TeamColors
+TempCar
+TempEngine
+ThumbnailTypes
+TireMod_FrictionScale
+TrackPittingZones
+TrackSpecificAI
+TrackStartingMerges
+Tracks
+TrialLoadingImages
+TurnSections
+UpgradeAreas
+UpgradeTypes
+UpgradeWizardParts
+UpgradeWizardPartsRemoval
+UpgradeWizardPowerRemoval
+Upgrades
+VersionInfo
+VolatileHostOptions
+WheelExceptions
+WheelLayouts
+WheelNormOffsets
+
+=== CAREER / EVENT / PROGRESSION-RELATED TABLE SCHEMAS ===
+CarClasses [11 rows]
+  Id:INTEGER PK, DisplayName:TEXT, Description:TEXT, CarImagePath:TEXT, ClassColor:INT, SecondaryColor:INT, MaxPerformanceIndex:REAL, MaxDisplayPerformanceIndex:INT, BadgeTexturePathPrefix:TEXT, CareerMinEligiblePI:INT
+CarDetails [33 rows]
+  Id:INTEGER PK, DisplayName:TEXT, DisplayType:TEXT, SortField:TEXT, HelpString:TEXT, SortOrder:INT, Career:INT, Arcade:INT, Clan:INT, FracDigits:INT
+CareerEventTypes [32 rows]
+  id:INTEGER PK, Name:TEXT, BannerId:INT, RaceModeId:INT, Description:TEXT, IntroVO:TEXT, PosterPath:TEXT
+Data_Car [503 rows]
+  Id:INTEGER PK, Year:INT, MakeID:INT, DisplayName:TEXT, ModelShort:TEXT, MediaName:TEXT, ClassID:INT, CarTypeID:INT, CarClassModifier:REAL, FamilyModelID:INT, FamilyBodyID:INT, EnginePlacementID:INT, MaterialTypeID:INT, PowertrainID:INT, CurbWeight:REAL, WeightDistribution:REAL, NumGears:INT, TireBrandID:INT, BaseRarity:REAL, FrontTireWidthMM:INT, FrontTireAspect:INT, FrontWheelDiameterIN:INT, RearTireWidthMM:INT, RearTireAspect:INT, RearWheelDiameterIN:INT, Time:0-60-sec:REAL, Time:0-100-sec:REAL, QuarterMileTime-sec:REAL, QuarterMileSpeed-mph:REAL, TopSpeed-mph:REAL, SpeedLimiterID:INT, BaseCost:INT, PerformanceIndex:REAL, SteerMaxAngle:REAL, SteerMaxAngVelTurning:REAL, SteerMaxAngVelStraighten:REAL, SteerAngVelCountersteer:REAL, SteerAngVelDynFindPeak:REAL, SteerAccelTimeToMaxRate:REAL, SteerSpeedSensitiveMaxGees:REAL, SteerSpeedSensitiveMinMaxAngle:REAL, SteerSpeedSensitiveSlowSpeed:REAL, SteerSpeedSensitiveFastSpeed:REAL, SteerSpeedSensitiveFastRateScale:REAL, AssistsTCSSlipDefTakeoff:REAL, AssistsTCSSlipDefMoving:REAL, AutoSteerOverrideID:INT, FixListingRearFricScale:REAL, FixListingNormSlip0:REAL, FixListingNormSlip1:REAL, FixListingSteerAngle0:REAL, FixListingSteerAngle1:REAL, BodyAeroLongitudinalDrag:REAL, BodyAeroVerticalDrag:REAL, BodyAeroLateralDragFront:REAL, BodyAeroLateralDragRear:REAL, BodyAeroForwardDownforceFront:REAL, BodyAeroForwardDownforceRear:REAL, BodyAeroAngleZeroDownforce:REAL, BodyAeroWIForceScale:REAL, TireAeroHackShouldApply:INT, TireAeroHackMinSpringLoad:REAL, TireAeroHackMaxSpringLoad:REAL, AIPlayerID:INT, SimPeakPower:REAL, SimPeakAngVel:REAL, SimPeakTorque:REAL, SimPeakTorqueAngVel:REAL, SimRedlineAngVel:REAL, SimTimeTo60MPH:REAL, SimTimeTo100MPH:REAL, SimTimeQuarterMile:REAL, SimTopSpeed:REAL, SimBrakeDistance100MPH:REAL, SimLatGees60MPH:REAL, SimLatGees120MPH:REAL, SimSpeedQuarterMile:REAL, SimBrakeDistance60MPH:REAL, HandlingRating:REAL, SpeedRating:REAL, AccelerationRating:REAL, BrakingRating:REAL, GameTorqueScale:REAL, GameDragScale:REAL, CaliperAngleFront:REAL, CaliperAngleRear:REAL, Thumbnail:TEXT, ContentId:INT, IsPurchased:INT, IsUnicorn:INT, SteerMaxAngleFiltered:REAL, HasLivery:INT, WingMask:INT, CaliperRGBFront:INT, CaliperRGBRear:INT, StockWheelID:INT, IsArcade:INT, IsInstalled:INT, LaunchRating:REAL, GaugeID:INT, FamilySpecialID:INT, EngineConfigID:INT, DriveTypeID:INT, RegionID:INT, CountryID:INT, MakeName:TEXT, MakeIcon:TEXT, CylinderID:INT, AspirationTypeId:INT, Displacement:INT, ModelId:INT, IsCarExperienceUnlocked:INT, HasCarExperience:INT, FrontStockRideHeight:REAL, RearStockRideHeight:REAL, IsDrivable:INT, HasRaceLivery:INT
+EventBonuses [46 rows]
+  Id:INTEGER PK, BonusTypeId:INT, Amount:INT
+EventGroups [18 rows]
+  Id:INTEGER PK, DisplayName:TEXT
+EventParticipants [1681 rows]
+  ID:INTEGER PK, EventID:INT, Priority:INT, Ordinal:INT, ColorSequence:INT, BucketId:INT
+EventRandomBonuses [81 rows]
+  RandomBonusTypeId:INT, BonusId:INT, Weight:INT, MinDriverLevel:INT, MaxDriverLevel:INT
+EventRestrictions [340 rows]
+  ID:INTEGER PK, EventID:INT, BucketId:INT, Value:TEXT
+EventScoring [8 rows]
+  ID:INTEGER PK, ScoringID:INT, place:INT, Credits:INT
+EventShowroomChallenges [26 rows]
+  CarID:INTEGER PK, EventID:INT
+Events [315 rows]
+  Id:INTEGER PK, Name:TEXT, Level:INT, CareerTypeId:INT, Description:TEXT, NumberOfRaces:INT, PittingProfileID:INT, CrowdSize:REAL, CrowdExcitement:REAL, NumberOfDrivers:INT, CashPrize:INT, IsDLC:INT, EventOrder:INT, GroupMask:INT, TargetClass:INT, AISkillEasy:INT, AISkillMed:INT, AISkillHard:INT, AISkillPro:INT, AITemperamentEasy:INT, AITemperamentMed:INT, AITemperamentHard:INT, AITemperamentPro:INT, BonusId:INT, CanDupPlayerCar:INT
+GameOptionCategoryMap [391 rows]
+  GroupId:INT, CatId:INT, OptionId:INT, DefValue:INT, isVisible:INT, isLocked:INT
+GameOptionGroups [17 rows]
+  Id:INTEGER PK, GroupName:TEXT
+HopperRaces [20 rows]
+  Id:INTEGER PK, TrackId:INT, NumLaps:INT
+List_BadgeAndTitleUnlocks [460 rows]
+  UnlockId:INTEGER PK, UnlockCategory:INT, UnlockLevel:INT, UnlockName:TEXT, UnlockDescription:TEXT, UnlockBadgeTexture:TEXT, BadgeSelectionTexture:TEXT, UnlockTitleString:TEXT, HasBadge:INT, HasTitle:INT, SortOrder:INT, IsSecret:INT
+List_Unlocks [4 rows]
+  Id:INTEGER PK, UnlockState:TEXT
+NewProfile_BadgeTitleProgress [0 rows]
+  RuleId:INTEGER PK, CurrentProgress:INT
+NewProfile_BadgeTitleUnlocks [0 rows]
+  UnlockId:INTEGER PK, IsNewBadge:INT, IsNewTitle:INT
+NewProfile_CarExperienceUnlocks [4 rows]
+  CarID:INTEGER PK
+NewProfile_CarPointsOfInterestProgress [0 rows]
+  CarOrdinal:INTEGER PK, NumPOIActivations:INT
+NewProfile_Career_AIHistory [0 rows]
+  AIPlayerId:INTEGER PK, Lvl:INT, TotalWinnings:INT, DistanceDriven:INT, TimeDriven:INT, NumVictories:INT, NumPodiums:INT, NumRaces:INT, TotalRepairs:INT
+NewProfile_Career_Affinity [0 rows]
+  GroupId:INTEGER PK, XP:INT, TimeDriven:INT, DistanceDriven:INT
+NewProfile_Career_CarGroups [0 rows]
+  ID:INTEGER PK, SortOrder:INT, DisplayName:TEXT
+NewProfile_Career_EventResults [0 rows]
+  EventId:INTEGER PK, Place:INT
+NewProfile_Career_Garage [0 rows]
+  Id:INTEGER PK, CarId:INT, PerformanceIndex:REAL, ClassID:INT, PartsValue:INT, SpeedRating:REAL, AccelerationRating:REAL, LaunchRating:REAL, BrakingRating:REAL, HandlingRating:REAL, CurbWeight:REAL, WeightDistribution:REAL, AspirationTypeId:INT, SimPeakPower:REAL, SimPeakAngVel:REAL, SimPeakTorque:REAL, SimPeakTorqueAngVel:REAL, SimRedlineAngVel:REAL, PeakIntakePSI:REAL, DistanceDriven:INT, TimeDriven:INT, TotalWinnings:INT, TotalRepairs:INT, NumVictories:INT, NumPodiums:INT, NumRaces:INT, NumOwners:INT, NumTimesSold:INT, CurOwnerPurchaseDate:INT, CurOwnerNumRaces:INT, CurOwnerWinnings:INT, OriginalOwner:TEXT, CarGroup:INT, Flags:INT, Engine:INT, Drivetrain:INT, CarBody:INT, Motor:INT, Brakes:INT, SpringDamper:INT, AntiSwayFront:INT, AntiSwayRear:INT, TireCompound:INT, RearWing:INT, RimSizeFront:INT, RimSizeRear:INT, Camshaft:INT, Valves:INT, Displacement:INT, PistonsCompression:INT, FuelSystem:INT, Ignition:INT, Exhaust:INT, Intake:INT, Flywheel:INT, Manifold:INT, RestrictorPlate:INT, OilCooling:INT, SingleTurbo:INT, TwinTurbo:INT, QuadTurbo:INT, SuperchargerCSC:INT, SuperchargerDSC:INT, Intercooler:INT, Clutch:INT, Transmission:INT, Driveline:INT, Differential:INT, FrontBumper:INT, RearBumper:INT, Hood:INT, SideSkirts:INT, TireWidthFront:INT, TireWidthRear:INT, WeightReduction:INT, ChassisStiffness:INT, MotorParts:INT, TireBrand:INT, WheelStyle:INT, DefaultManufacturerColorIndex:INT, LiveryFileName:TEXT, Guid:TEXT, Thumbnail:TEXT, Tuning_frontTirePressure:REAL, Tuning_rearTirePressure:REAL, Tuning_finalDriveRatio:REAL, Tuning_firstGear:REAL, Tuning_secondGear:REAL, Tuning_thirdGear:REAL, Tuning_fourthGear:REAL, Tuning_fifthGear:REAL, Tuning_sixthGear:REAL, Tuning_seventhGear:REAL, Tuning_eighthGear:REAL, Tuning_frontCamber:REAL, Tuning_rearCamber:REAL, Tuning_frontToe:REAL, Tuning_rearToe:REAL, Tuning_frontCaster:REAL, Tuning_frontSwaybar:REAL, Tuning_rearSwaybar:REAL, Tuning_frontSpring:REAL, Tuning_rearSpring:REAL, Tuning_frontRideHeight:REAL, Tuning_rearRideHeight:REAL, Tuning_frontDampingStiffness:REAL, Tuning_rearDampingStiffness:REAL, Tuning_frontBumpRatio:REAL, Tuning_rearBumpRatio:REAL, Tuning_frontDownforce:REAL, Tuning_rearDownforce:REAL, Tuning_brakeBalance:REAL, Tuning_brakePressure:REAL, Tuning_frontAccel:REAL, Tuning_rearAccel:REAL, Tuning_frontDecel:REAL, Tuning_rearDecel:REAL, Tuning_centerTorque:REAL, SharedID:INT
+NewProfile_Career_PurchasedParts [0 rows]
+  GarageId:INT, PartEnum:INT, PartId:INT, ManufacturerId:INT, PricePaid:INT
+NewProfile_Career_RaceResults [0 rows]
+  RaceId:INTEGER PK, Place:INT
+NewProfile_Career_TrackUsage [0 rows]
+  TrackId:INTEGER PK, NumCareerRaces:INT, NumNonCareerRaces:INT, Viewed:INT
+Races [3064 rows]
+  Id:INTEGER PK, EventId:INT, RaceNumber:INT, TrackId:INT, NumLaps:INT, ModeRaceNumber:INT, TimeOfDayIndex:INT
+RacesSpecial [86 rows]
+  RaceId:INTEGER PK, CollObjLayoutId:INT, TargetScore_Easy:REAL, TargetScore_Med:REAL, TargetScore_Hard:REAL, TargetScore_Pro:REAL, MinSpeedRequiredMPH:REAL
+Rewards_DriverLevelv3 [0 rows]
+  Id:INTEGER PK, DriverLevel:INT, RewardCarId:INT, SortOrder:INT
+Rewards_ShowroomUnlocks [2 rows]
+  NumCompletedUnlocks:INT, RewardCarId:INTEGER PK
+TempCar [0 rows]
+  Id:INTEGER, Year:INTEGER, MakeID:INTEGER, DisplayName:TEXT, ModelShort:TEXT, MediaName:TEXT, ClassID:INTEGER, CarTypeID:INTEGER, CarClassModifier:REAL, FamilyModelID:INTEGER, FamilyBodyID:INTEGER, EnginePlacementID:INTEGER, MaterialTypeID:INTEGER, PowertrainID:INTEGER, CurbWeight:REAL, WeightDistribution:REAL, NumGears:INTEGER, TireBrandID:INTEGER, BaseRarity:REAL, FrontTireWidthMM:INTEGER, FrontTireAspect:INTEGER, FrontWheelDiameterIN:INTEGER, RearTireWidthMM:INTEGER, RearTireAspect:INTEGER, RearWheelDiameterIN:INTEGER, Time:0-60-sec:REAL, Time:0-100-sec:REAL, QuarterMileTime-sec:REAL, QuarterMileSpeed-mph:REAL, TopSpeed-mph:REAL, SpeedLimiterID:INTEGER, BaseCost:INTEGER, PerformanceIndex:REAL, SteerMaxAngle:REAL, SteerMaxAngVelTurning:REAL, SteerMaxAngVelStraighten:REAL, SteerAngVelCountersteer:REAL, SteerAngVelDynFindPeak:REAL, SteerAccelTimeToMaxRate:REAL, SteerSpeedSensitiveMaxGees:REAL, SteerSpeedSensitiveMinMaxAngle:REAL, SteerSpeedSensitiveSlowSpeed:REAL, SteerSpeedSensitiveFastSpeed:REAL, SteerSpeedSensitiveFastRateScale:REAL, AssistsTCSSlipDefTakeoff:REAL, AssistsTCSSlipDefMoving:REAL, AutoSteerOverrideID:INTEGER, FixListingRearFricScale:REAL, FixListingNormSlip0:REAL, FixListingNormSlip1:REAL, FixListingSteerAngle0:REAL, FixListingSteerAngle1:REAL, BodyAeroLongitudinalDrag:REAL, BodyAeroVerticalDrag:REAL, BodyAeroLateralDragFront:REAL, BodyAeroLateralDragRear:REAL, BodyAeroForwardDownforceFront:REAL, BodyAeroForwardDownforceRear:REAL, BodyAeroAngleZeroDownforce:REAL, BodyAeroWIForceScale:REAL, TireAeroHackShouldApply:INTEGER, TireAeroHackMinSpringLoad:REAL, TireAeroHackMaxSpringLoad:REAL, AIPlayerID:INTEGER, SimPeakPower:REAL, SimPeakAngVel:REAL, SimPeakTorque:REAL, SimPeakTorqueAngVel:REAL, SimRedlineAngVel:REAL, SimTimeTo60MPH:REAL, SimTimeTo100MPH:REAL, SimTimeQuarterMile:REAL, SimTopSpeed:REAL, SimBrakeDistance100MPH:REAL, SimLatGees60MPH:REAL, SimLatGees120MPH:REAL, SimSpeedQuarterMile:REAL, SimBrakeDistance60MPH:REAL, HandlingRating:REAL, SpeedRating:REAL, AccelerationRating:REAL, BrakingRating:REAL, GameTorqueScale:REAL, GameDragScale:REAL, CaliperAngleFront:REAL, CaliperAngleRear:REAL, Thumbnail:TEXT, ContentId:INTEGER, IsPurchased:INTEGER, IsUnicorn:INTEGER, SteerMaxAngleFiltered:REAL, HasLivery:INTEGER, WingMask:INTEGER, CaliperRGBFront:INTEGER, CaliperRGBRear:INTEGER, StockWheelID:INTEGER, IsArcade:INTEGER, IsInstalled:INTEGER, LaunchRating:REAL, GaugeID:INTEGER, FamilySpecialID:INTEGER, EngineConfigID:INTEGER, DriveTypeID:INTEGER, RegionID:INTEGER, CountryID:INTEGER, MakeName:TEXT, MakeIcon:TEXT, CylinderID:INTEGER, AspirationTypeId:INTEGER, Displacement:INTEGER, ModelId:INTEGER, IsCarExperienceUnlocked:INTEGER, HasCarExperience:INTEGER, FrontStockRideHeight:REAL, RearStockRideHeight:REAL, IsDrivable:INTEGER, HasRaceLivery:INTEGER
+Tracks [129 rows]
+  id:INTEGER PK, DisplayName:TEXT, ShortDisplayName:TEXT, MediaName:TEXT, RibbonIndex:INT, ReverseIndex:INT, Length:INT, DefaultStartGridPositionsId:INT, FlyingStartPosId:INT, Logo:TEXT, LogoSmall:TEXT, IsRealWorld:INT, IsReverse:INT, IsHomespace:INT, Active:INT, MiniRibbonPath:TEXT, ContentId:INT, IsPurchased:INT, MPSortOrder:INT, MPPitProfile:INT, RibbonConfiguration:INT, CarsPerUniverse:INT, Renderable:INT, DriftScoreScalar:REAL, StartLine:REAL, FinishLine:REAL, XMirror321:INT, IsInstalled:INT, EnvironmentId:INT, WinningsScalar:REAL, QuickRaceLapCountKinect:INT, QuickRaceLapCount:INT, RichPresence:INT, SatImageName:TEXT
+
+=== FOREIGN KEY DEFINITIONS ===
+No declared foreign keys.
+
+=== EVENT 302 LOOKUP ACROSS EVENT-RELATED TABLES ===
+Data_Car.Id: 1 row(s) equal 302
+  {'Id': 302, 'Year': 2004, 'MakeID': 16, 'DisplayName': '_&3444159309', 'ModelShort': '_&3444128578', 'MediaName': 'HON_CivicR_04', 'ClassID': 3, 'CarTypeID': 1, 'CarClassModifier': 0.0, 'FamilyModelID': 3, 'FamilyBodyID': 4, 'EnginePlacementID': 1, 'MaterialTypeID': 1, 'PowertrainID': 0, 'CurbWeight': 11.9, 'WeightDistribution': 0.61, 'NumGears': 6, 'TireBrandID': 2, 'BaseRarity': 3.6, 'FrontTireWidthMM': 205, 'FrontTireAspect': 45, 'FrontWheelDiameterIN': 17, 'RearTireWidthMM': 205, 'RearTireAspect': 45, 'RearWheelDiameterIN': 17, 'Time:0-60-sec': 6.2, 'Time:0-100-sec': 15.4, 'QuarterMileTime-sec': 15.2, 'QuarterMileSpeed-mph': 92.7, 'TopSpeed-mph': 147.0, 'SpeedLimiterID': 0, 'BaseCost': 20000, 'PerformanceIndex': 0.334, 'SteerMaxAngle': 42.0, 'SteerMaxAngVelTurning': 100.0, 'SteerMaxAngVelStraighten': 105.0, 'SteerAngVelCountersteer': 140.0, 'SteerAngVelDynFindPeak': 10.0, 'SteerAccelTimeToMaxRate': 0.01, 'SteerSpeedSensitiveMaxGees': 1.0, 'SteerSpeedSensitiveMinMaxAngle': 5.0, 'SteerSpeedSensitiveSlowSpeed': 1.0, 'SteerSpeedSensitiveFastSpeed': 120.0, 'SteerSpeedSensitiveFastRateScale': 1.0, 'AssistsTCSSlipDefTakeoff': 33.0, 'AssistsTCSSlipDefMoving': 0.5, 'AutoSteerOverrideID': 1, 'FixListingRearFricScale': 1.35, 'FixListingNormSlip0': 0.5, 'FixListingNormSlip1': 1.0, 'FixListingSteerAngle0': 0.5, 'FixListingSteerAngle1': 1.0, 'BodyAeroLongitudinalDrag': 185.5766, 'BodyAeroVerticalDrag': 500.0, 'BodyAeroLateralDragFront': 305.0, 'BodyAeroLateralDragRear': 195.0, 'BodyAeroForwardDownforceFront': -80.3, 'BodyAeroForwardDownforceRear': -65.7, 'BodyAeroAngleZeroDownforce': 45.0, 'BodyAeroWIForceScale': 0.43, 'TireAeroHackShouldApply': 1, 'TireAeroHackMinSpringLoad': 1.0, 'TireAeroHackMaxSpringLoad': 1.55, 'AIPlayerID': 0, 'SimPeakPower': 1579.858154, 'SimPeakAngVel': 837.757629, 'SimPeakTorque': 2.02, 'SimPeakTorqueAngVel': 733.037964, 'SimRedlineAngVel': 890.117432, 'SimTimeTo60MPH': 7.000037, 'SimTimeTo100MPH': 16.049927, 'SimTimeQuarterMile': 15.233273, 'SimTopSpeed': 67.625, 'SimBrakeDistance100MPH': 113.702637, 'SimLatGees60MPH': 0.795592, 'SimLatGees120MPH': 0.773725, 'SimSpeedQuarterMile': 43.868824, 'SimBrakeDistance60MPH': 41.761719, 'HandlingRating': 4.437792, 'SpeedRating': 4.840195, 'AccelerationRating': 6.283334, 'BrakingRating': 4.332431, 'GameTorqueScale': 1.0, 'GameDragScale': 1.0, 'CaliperAngleFront': -1.381854, 'CaliperAngleRear': -1.309506, 'Thumbnail': 'game:\\Media\\UI\\Textures\\Thumbnails\\Thumbnail_302.xds', 'ContentId': 0, 'IsPurchased': 1, 'IsUnicorn': 0, 'SteerMaxAngleFiltered': 26.0, 'HasLivery': 0, 'WingMask': 1, 'CaliperRGBFront': 8421504, 'CaliperRGBRear': 8421504, 'StockWheelID': 50, 'IsArcade': 0, 'IsInstalled': 1, 'LaunchRating': 6.209524, 'GaugeID': -1, 'FamilySpecialID': 3, 'EngineConfigID': 3, 'DriveTypeID': 1, 'RegionID': 1, 'CountryID': 5, 'MakeName': '_&857938004', 'MakeIcon': 'BOING', 'CylinderID': 1, 'AspirationTypeId': 1, 'Displacement': 1998, 'ModelId': 302, 'IsCarExperienceUnlocked': 0, 'HasCarExperience': 0, 'FrontStockRideHeight': 0.2166, 'RearStockRideHeight': 0.2166, 'IsDrivable': 1, 'HasRaceLivery': 0}
+Data_Car.StockWheelID: 4 row(s) equal 302
+  {'Id': 588, 'Year': 2006, 'MakeID': 13, 'DisplayName': '_&3444160143', 'ModelShort': '_&3444129408', 'MediaName': 'FER_62_F430GT_06', 'ClassID': 7, 'CarTypeID': 3, 'CarClassModifier': 0.0, 'FamilyModelID': 28, 'FamilyBodyID': 21, 'EnginePlacementID': 2, 'MaterialTypeID': 2, 'PowertrainID': 2, 'CurbWeight': 11.95, 'WeightDistribution': 0.45, 'NumGears': 6, 'TireBrandID': 8, 'BaseRarity': 9.6, 'FrontTireWidthMM': 270, 'FrontTireAspect': 35, 'FrontWheelDiameterIN': 18, 'RearTireWidthMM': 280, 'RearTireAspect': 45, 'RearWheelDiameterIN': 18, 'Time:0-60-sec': 3.0, 'Time:0-100-sec': 6.5, 'QuarterMileTime-sec': 10.5, 'QuarterMileSpeed-mph': 135.0, 'TopSpeed-mph': 186.0, 'SpeedLimiterID': 0, 'BaseCost': 750000, 'PerformanceIndex': 0.738, 'SteerMaxAngle': 42.0, 'SteerMaxAngVelTurning': 100.0, 'SteerMaxAngVelStraighten': 105.0, 'SteerAngVelCountersteer': 140.0, 'SteerAngVelDynFindPeak': 10.0, 'SteerAccelTimeToMaxRate': 0.01, 'SteerSpeedSensitiveMaxGees': 1.0, 'SteerSpeedSensitiveMinMaxAngle': 5.0, 'SteerSpeedSensitiveSlowSpeed': 1.0, 'SteerSpeedSensitiveFastSpeed': 120.0, 'SteerSpeedSensitiveFastRateScale': 1.0, 'AssistsTCSSlipDefTakeoff': 33.0, 'AssistsTCSSlipDefMoving': 0.5, 'AutoSteerOverrideID': 2, 'FixListingRearFricScale': 1.35, 'FixListingNormSlip0': 0.5, 'FixListingNormSlip1': 1.0, 'FixListingSteerAngle0': 0.5, 'FixListingSteerAngle1': 1.0, 'BodyAeroLongitudinalDrag': 265.1991, 'BodyAeroVerticalDrag': 500.0, 'BodyAeroLateralDragFront': 225.0, 'BodyAeroLateralDragRear': 275.0, 'BodyAeroForwardDownforceFront': 73.6, 'BodyAeroForwardDownforceRear': 110.4, 'BodyAeroAngleZeroDownforce': 45.0, 'BodyAeroWIForceScale': 0.726, 'TireAeroHackShouldApply': 1, 'TireAeroHackMinSpringLoad': 1.0, 'TireAeroHackMaxSpringLoad': 1.55, 'AIPlayerID': 0, 'SimPeakPower': 3758.471924, 'SimPeakAngVel': 827.285583, 'SimPeakTorque': 5.15204, 'SimPeakTorqueAngVel': 628.318176, 'SimRedlineAngVel': 942.477295, 'SimTimeTo60MPH': 4.083331, 'SimTimeTo100MPH': 7.25004, 'SimTimeQuarterMile': 11.599995, 'SimTopSpeed': 80.453537, 'SimBrakeDistance100MPH': 75.13916, 'SimLatGees60MPH': 1.135139, 'SimLatGees120MPH': 1.338886, 'SimSpeedQuarterMile': 59.332108, 'SimBrakeDistance60MPH': 30.257324, 'HandlingRating': 7.613215, 'SpeedRating': 6.855814, 'AccelerationRating': 9.05569, 'BrakingRating': 7.646086, 'GameTorqueScale': 1.0, 'GameDragScale': 1.0, 'CaliperAngleFront': -1.671355, 'CaliperAngleRear': 1.679472, 'Thumbnail': 'game:\\Media\\UI\\Textures\\Thumbnails\\Thumbnail_588.xds', 'ContentId': 0, 'IsPurchased': 1, 'IsUnicorn': 0, 'SteerMaxAngleFiltered': 29.0, 'HasLivery': 1, 'WingMask': 1, 'CaliperRGBFront': 11175730, 'CaliperRGBRear': 11175730, 'StockWheelID': 302, 'IsArcade': 0, 'IsInstalled': 1, 'LaunchRating': 8.195895, 'GaugeID': -1, 'FamilySpecialID': 2, 'EngineConfigID': 1, 'DriveTypeID': 2, 'RegionID': 2, 'CountryID': 4, 'MakeName': '_&857938644', 'MakeIcon': 'BOING', 'CylinderID': 4, 'AspirationTypeId': 1, 'Displacement': 3998, 'ModelId': 588, 'IsCarExperienceUnlocked': 0, 'HasCarExperience': 0, 'FrontStockRideHeight': 0.1083, 'RearStockRideHeight': 0.0984, 'IsDrivable': 1, 'HasRaceLivery': 1}
+  {'Id': 1143, 'Year': 2008, 'MakeID': 13, 'DisplayName': '_&3444121464', 'ModelShort': '_&3444119740', 'MediaName': 'FER_90_F430GT_08', 'ClassID': 7, 'CarTypeID': 3, 'CarClassModifier': 0.0, 'FamilyModelID': 28, 'FamilyBodyID': 21, 'EnginePlacementID': 2, 'MaterialTypeID': 2, 'PowertrainID': 2, 'CurbWeight': 11.95, 'WeightDistribution': 0.45, 'NumGears': 6, 'TireBrandID': 8, 'BaseRarity': 0.0, 'FrontTireWidthMM': 270, 'FrontTireAspect': 35, 'FrontWheelDiameterIN': 18, 'RearTireWidthMM': 280, 'RearTireAspect': 45, 'RearWheelDiameterIN': 18, 'Time:0-60-sec': 3.0, 'Time:0-100-sec': 6.5, 'QuarterMileTime-sec': 10.5, 'QuarterMileSpeed-mph': 135.0, 'TopSpeed-mph': 186.0, 'SpeedLimiterID': 0, 'BaseCost': 750000, 'PerformanceIndex': 0.738, 'SteerMaxAngle': 42.0, 'SteerMaxAngVelTurning': 100.0, 'SteerMaxAngVelStraighten': 105.0, 'SteerAngVelCountersteer': 140.0, 'SteerAngVelDynFindPeak': 10.0, 'SteerAccelTimeToMaxRate': 0.01, 'SteerSpeedSensitiveMaxGees': 1.0, 'SteerSpeedSensitiveMinMaxAngle': 5.0, 'SteerSpeedSensitiveSlowSpeed': 1.0, 'SteerSpeedSensitiveFastSpeed': 120.0, 'SteerSpeedSensitiveFastRateScale': 1.0, 'AssistsTCSSlipDefTakeoff': 33.0, 'AssistsTCSSlipDefMoving': 0.5, 'AutoSteerOverrideID': 2, 'FixListingRearFricScale': 1.35, 'FixListingNormSlip0': 0.5, 'FixListingNormSlip1': 1.0, 'FixListingSteerAngle0': 0.5, 'FixListingSteerAngle1': 1.0, 'BodyAeroLongitudinalDrag': 265.1991, 'BodyAeroVerticalDrag': 500.0, 'BodyAeroLateralDragFront': 225.0, 'BodyAeroLateralDragRear': 275.0, 'BodyAeroForwardDownforceFront': 73.6, 'BodyAeroForwardDownforceRear': 110.4, 'BodyAeroAngleZeroDownforce': 45.0, 'BodyAeroWIForceScale': 0.726, 'TireAeroHackShouldApply': 1, 'TireAeroHackMinSpringLoad': 1.0, 'TireAeroHackMaxSpringLoad': 1.55, 'AIPlayerID': 0, 'SimPeakPower': 3758.471924, 'SimPeakAngVel': 827.285583, 'SimPeakTorque': 5.15204, 'SimPeakTorqueAngVel': 628.318176, 'SimRedlineAngVel': 942.477295, 'SimTimeTo60MPH': 4.083331, 'SimTimeTo100MPH': 7.25004, 'SimTimeQuarterMile': 11.599995, 'SimTopSpeed': 80.453537, 'SimBrakeDistance100MPH': 75.13916, 'SimLatGees60MPH': 1.135139, 'SimLatGees120MPH': 1.338886, 'SimSpeedQuarterMile': 59.332108, 'SimBrakeDistance60MPH': 30.257324, 'HandlingRating': 7.613215, 'SpeedRating': 6.855814, 'AccelerationRating': 9.05569, 'BrakingRating': 7.646086, 'GameTorqueScale': 1.0, 'GameDragScale': 1.0, 'CaliperAngleFront': -1.671355, 'CaliperAngleRear': 1.679472, 'Thumbnail': 'game:\\Media\\UI\\Textures\\Thumbnails\\Thumbnail_1143.xds', 'ContentId': 0, 'IsPurchased': 1, 'IsUnicorn': 0, 'SteerMaxAngleFiltered': 29.0, 'HasLivery': 1, 'WingMask': 1, 'CaliperRGBFront': 11175730, 'CaliperRGBRear': 11175730, 'StockWheelID': 302, 'IsArcade': 0, 'IsInstalled': 1, 'LaunchRating': 8.195895, 'GaugeID': -1, 'FamilySpecialID': 2, 'EngineConfigID': 1, 'DriveTypeID': 2, 'RegionID': 2, 'CountryID': 4, 'MakeName': '_&857938644', 'MakeIcon': 'BOING', 'CylinderID': 4, 'AspirationTypeId': 1, 'Displacement': 3998, 'ModelId': 1143, 'IsCarExperienceUnlocked': 0, 'HasCarExperience': 0, 'FrontStockRideHeight': 0.1083, 'RearStockRideHeight': 0.0984, 'IsDrivable': 1, 'HasRaceLivery': 1}
+  {'Id': 1401, 'Year': 2010, 'MakeID': 13, 'DisplayName': '_&3444121305', 'ModelShort': '_&3444119837', 'MediaName': 'FER_89_F430GT_10', 'ClassID': 7, 'CarTypeID': 3, 'CarClassModifier': 0.0, 'FamilyModelID': 28, 'FamilyBodyID': 21, 'EnginePlacementID': 2, 'MaterialTypeID': 2, 'PowertrainID': 2, 'CurbWeight': 11.95, 'WeightDistribution': 0.45, 'NumGears': 6, 'TireBrandID': 8, 'BaseRarity': 0.0, 'FrontTireWidthMM': 270, 'FrontTireAspect': 35, 'FrontWheelDiameterIN': 18, 'RearTireWidthMM': 280, 'RearTireAspect': 45, 'RearWheelDiameterIN': 18, 'Time:0-60-sec': 3.0, 'Time:0-100-sec': 6.5, 'QuarterMileTime-sec': 10.5, 'QuarterMileSpeed-mph': 135.0, 'TopSpeed-mph': 186.0, 'SpeedLimiterID': 0, 'BaseCost': 750000, 'PerformanceIndex': 0.738, 'SteerMaxAngle': 42.0, 'SteerMaxAngVelTurning': 100.0, 'SteerMaxAngVelStraighten': 105.0, 'SteerAngVelCountersteer': 140.0, 'SteerAngVelDynFindPeak': 10.0, 'SteerAccelTimeToMaxRate': 0.01, 'SteerSpeedSensitiveMaxGees': 1.0, 'SteerSpeedSensitiveMinMaxAngle': 5.0, 'SteerSpeedSensitiveSlowSpeed': 1.0, 'SteerSpeedSensitiveFastSpeed': 120.0, 'SteerSpeedSensitiveFastRateScale': 1.0, 'AssistsTCSSlipDefTakeoff': 33.0, 'AssistsTCSSlipDefMoving': 0.5, 'AutoSteerOverrideID': 2, 'FixListingRearFricScale': 1.35, 'FixListingNormSlip0': 0.5, 'FixListingNormSlip1': 1.0, 'FixListingSteerAngle0': 0.5, 'FixListingSteerAngle1': 1.0, 'BodyAeroLongitudinalDrag': 265.1991, 'BodyAeroVerticalDrag': 500.0, 'BodyAeroLateralDragFront': 225.0, 'BodyAeroLateralDragRear': 275.0, 'BodyAeroForwardDownforceFront': 73.6, 'BodyAeroForwardDownforceRear': 110.4, 'BodyAeroAngleZeroDownforce': 45.0, 'BodyAeroWIForceScale': 0.726, 'TireAeroHackShouldApply': 1, 'TireAeroHackMinSpringLoad': 1.0, 'TireAeroHackMaxSpringLoad': 1.55, 'AIPlayerID': 0, 'SimPeakPower': 3758.471924, 'SimPeakAngVel': 827.285583, 'SimPeakTorque': 5.15204, 'SimPeakTorqueAngVel': 628.318176, 'SimRedlineAngVel': 942.477295, 'SimTimeTo60MPH': 4.083331, 'SimTimeTo100MPH': 7.25004, 'SimTimeQuarterMile': 11.599995, 'SimTopSpeed': 80.453537, 'SimBrakeDistance100MPH': 75.13916, 'SimLatGees60MPH': 1.135139, 'SimLatGees120MPH': 1.338886, 'SimSpeedQuarterMile': 59.332108, 'SimBrakeDistance60MPH': 30.257324, 'HandlingRating': 7.613215, 'SpeedRating': 6.855814, 'AccelerationRating': 9.05569, 'BrakingRating': 7.646086, 'GameTorqueScale': 1.0, 'GameDragScale': 1.0, 'CaliperAngleFront': -1.671355, 'CaliperAngleRear': 1.679472, 'Thumbnail': 'game:\\Media\\UI\\Textures\\Thumbnails\\Thumbnail_1401.xds', 'ContentId': 0, 'IsPurchased': 1, 'IsUnicorn': 0, 'SteerMaxAngleFiltered': 29.0, 'HasLivery': 1, 'WingMask': 1, 'CaliperRGBFront': 11175730, 'CaliperRGBRear': 11175730, 'StockWheelID': 302, 'IsArcade': 0, 'IsInstalled': 1, 'LaunchRating': 8.195895, 'GaugeID': -1, 'FamilySpecialID': 2, 'EngineConfigID': 1, 'DriveTypeID': 2, 'RegionID': 2, 'CountryID': 4, 'MakeName': '_&857938644', 'MakeIcon': 'BOING', 'CylinderID': 4, 'AspirationTypeId': 1, 'Displacement': 3998, 'ModelId': 1401, 'IsCarExperienceUnlocked': 0, 'HasCarExperience': 0, 'FrontStockRideHeight': 0.1083, 'RearStockRideHeight': 0.0984, 'IsDrivable': 1, 'HasRaceLivery': 1}
+Data_Car.ModelId: 1 row(s) equal 302
+  {'Id': 302, 'Year': 2004, 'MakeID': 16, 'DisplayName': '_&3444159309', 'ModelShort': '_&3444128578', 'MediaName': 'HON_CivicR_04', 'ClassID': 3, 'CarTypeID': 1, 'CarClassModifier': 0.0, 'FamilyModelID': 3, 'FamilyBodyID': 4, 'EnginePlacementID': 1, 'MaterialTypeID': 1, 'PowertrainID': 0, 'CurbWeight': 11.9, 'WeightDistribution': 0.61, 'NumGears': 6, 'TireBrandID': 2, 'BaseRarity': 3.6, 'FrontTireWidthMM': 205, 'FrontTireAspect': 45, 'FrontWheelDiameterIN': 17, 'RearTireWidthMM': 205, 'RearTireAspect': 45, 'RearWheelDiameterIN': 17, 'Time:0-60-sec': 6.2, 'Time:0-100-sec': 15.4, 'QuarterMileTime-sec': 15.2, 'QuarterMileSpeed-mph': 92.7, 'TopSpeed-mph': 147.0, 'SpeedLimiterID': 0, 'BaseCost': 20000, 'PerformanceIndex': 0.334, 'SteerMaxAngle': 42.0, 'SteerMaxAngVelTurning': 100.0, 'SteerMaxAngVelStraighten': 105.0, 'SteerAngVelCountersteer': 140.0, 'SteerAngVelDynFindPeak': 10.0, 'SteerAccelTimeToMaxRate': 0.01, 'SteerSpeedSensitiveMaxGees': 1.0, 'SteerSpeedSensitiveMinMaxAngle': 5.0, 'SteerSpeedSensitiveSlowSpeed': 1.0, 'SteerSpeedSensitiveFastSpeed': 120.0, 'SteerSpeedSensitiveFastRateScale': 1.0, 'AssistsTCSSlipDefTakeoff': 33.0, 'AssistsTCSSlipDefMoving': 0.5, 'AutoSteerOverrideID': 1, 'FixListingRearFricScale': 1.35, 'FixListingNormSlip0': 0.5, 'FixListingNormSlip1': 1.0, 'FixListingSteerAngle0': 0.5, 'FixListingSteerAngle1': 1.0, 'BodyAeroLongitudinalDrag': 185.5766, 'BodyAeroVerticalDrag': 500.0, 'BodyAeroLateralDragFront': 305.0, 'BodyAeroLateralDragRear': 195.0, 'BodyAeroForwardDownforceFront': -80.3, 'BodyAeroForwardDownforceRear': -65.7, 'BodyAeroAngleZeroDownforce': 45.0, 'BodyAeroWIForceScale': 0.43, 'TireAeroHackShouldApply': 1, 'TireAeroHackMinSpringLoad': 1.0, 'TireAeroHackMaxSpringLoad': 1.55, 'AIPlayerID': 0, 'SimPeakPower': 1579.858154, 'SimPeakAngVel': 837.757629, 'SimPeakTorque': 2.02, 'SimPeakTorqueAngVel': 733.037964, 'SimRedlineAngVel': 890.117432, 'SimTimeTo60MPH': 7.000037, 'SimTimeTo100MPH': 16.049927, 'SimTimeQuarterMile': 15.233273, 'SimTopSpeed': 67.625, 'SimBrakeDistance100MPH': 113.702637, 'SimLatGees60MPH': 0.795592, 'SimLatGees120MPH': 0.773725, 'SimSpeedQuarterMile': 43.868824, 'SimBrakeDistance60MPH': 41.761719, 'HandlingRating': 4.437792, 'SpeedRating': 4.840195, 'AccelerationRating': 6.283334, 'BrakingRating': 4.332431, 'GameTorqueScale': 1.0, 'GameDragScale': 1.0, 'CaliperAngleFront': -1.381854, 'CaliperAngleRear': -1.309506, 'Thumbnail': 'game:\\Media\\UI\\Textures\\Thumbnails\\Thumbnail_302.xds', 'ContentId': 0, 'IsPurchased': 1, 'IsUnicorn': 0, 'SteerMaxAngleFiltered': 26.0, 'HasLivery': 0, 'WingMask': 1, 'CaliperRGBFront': 8421504, 'CaliperRGBRear': 8421504, 'StockWheelID': 50, 'IsArcade': 0, 'IsInstalled': 1, 'LaunchRating': 6.209524, 'GaugeID': -1, 'FamilySpecialID': 3, 'EngineConfigID': 3, 'DriveTypeID': 1, 'RegionID': 1, 'CountryID': 5, 'MakeName': '_&857938004', 'MakeIcon': 'BOING', 'CylinderID': 1, 'AspirationTypeId': 1, 'Displacement': 1998, 'ModelId': 302, 'IsCarExperienceUnlocked': 0, 'HasCarExperience': 0, 'FrontStockRideHeight': 0.2166, 'RearStockRideHeight': 0.2166, 'IsDrivable': 1, 'HasRaceLivery': 0}
+EventParticipants.EventID: 1 row(s) equal 302
+  {'ID': 22510, 'EventID': 302, 'Priority': 1, 'Ordinal': 1358, 'ColorSequence': 0, 'BucketId': 0}
+EventParticipants.Ordinal: 2 row(s) equal 302
+  {'ID': 23772, 'EventID': 3, 'Priority': 4, 'Ordinal': 302, 'ColorSequence': 0, 'BucketId': 0}
+  {'ID': 23852, 'EventID': 15, 'Priority': 8, 'Ordinal': 302, 'ColorSequence': 0, 'BucketId': 0}
+EventRestrictions.ID: 1 row(s) equal 302
+  {'ID': 302, 'EventID': 457, 'BucketId': 0, 'Value': '0003000004000007C6000007CF'}
+EventRestrictions.EventID: 1 row(s) equal 302
+  {'ID': 23, 'EventID': 302, 'BucketId': 0, 'Value': '0000800004054E'}
+Events.Id: 1 row(s) equal 302
+  {'Id': 302, 'Name': '_&202756878', 'Level': 0, 'CareerTypeId': 33, 'Description': '_&202760706', 'NumberOfRaces': 1, 'PittingProfileID': 1, 'CrowdSize': 1.0, 'CrowdExcitement': 1.0, 'NumberOfDrivers': 11, 'CashPrize': 0, 'IsDLC': 0, 'EventOrder': 0, 'GroupMask': 30, 'TargetClass': 0, 'AISkillEasy': 20, 'AISkillMed': 15, 'AISkillHard': 8, 'AISkillPro': 1, 'AITemperamentEasy': 7, 'AITemperamentMed': 5, 'AITemperamentHard': 3, 'AITemperamentPro': 1, 'BonusId': 1, 'CanDupPlayerCar': 1}
+Events.EventOrder: 1 row(s) equal 302
+  {'Id': 211, 'Name': '_&202740398', 'Level': 11, 'CareerTypeId': 35, 'Description': '_&202744738', 'NumberOfRaces': 20, 'PittingProfileID': 1, 'CrowdSize': 1.0, 'CrowdExcitement': 1.0, 'NumberOfDrivers': 7, 'CashPrize': 0, 'IsDLC': 0, 'EventOrder': 302, 'GroupMask': 30, 'TargetClass': 1, 'AISkillEasy': 20, 'AISkillMed': 15, 'AISkillHard': 8, 'AISkillPro': 1, 'AITemperamentEasy': 7, 'AITemperamentMed': 5, 'AITemperamentHard': 3, 'AITemperamentPro': 1, 'BonusId': 36, 'CanDupPlayerCar': 1}
+List_BadgeAndTitleUnlocks.UnlockId: 1 row(s) equal 302
+  {'UnlockId': 302, 'UnlockCategory': 7, 'UnlockLevel': 2, 'UnlockName': 'Radical_Affinity_2', 'UnlockDescription': '_&1505448425', 'UnlockBadgeTexture': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Manufacturer_Logos_SM\\L_MAN_Radical_Logo.tga', 'BadgeSelectionTexture': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Manufacturer_Logos_SM_wtbg\\L_MAN_Radical_Logo.tga', 'UnlockTitleString': '_&1505471969', 'HasBadge': 1, 'HasTitle': 1, 'SortOrder': 5901, 'IsSecret': 0}
+List_BadgeAndTitleUnlocks.SortOrder: 5 row(s) equal 302
+  {'UnlockId': 132, 'UnlockCategory': 4, 'UnlockLevel': 3, 'UnlockName': 'AlfaRomeo_Affinity_3', 'UnlockDescription': '_&1505464745', 'UnlockBadgeTexture': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Manufacturer_Logos_SM\\L_MAN_AlfaRomeo_Logo.tga', 'BadgeSelectionTexture': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Manufacturer_Logos_SM_wtbg\\L_MAN_AlfaRomeo_Logo.tga', 'UnlockTitleString': '_&1505455521', 'HasBadge': 1, 'HasTitle': 1, 'SortOrder': 302, 'IsSecret': 0}
+  {'UnlockId': 395, 'UnlockCategory': 9, 'UnlockLevel': 3, 'UnlockName': 'Drive_NurburgringNord_3', 'UnlockDescription': '_&1505432171', 'UnlockBadgeTexture': 'GAME:\\Media\\UI\\Textures\\BadgeImages\\milesdriveninspecifictrack_greenhellish.tga', 'BadgeSelectionTexture': 'GAME:\\Media\\UI\\Textures\\BadgeImages\\milesdriveninspecifictrack_greenhellish.tga', 'UnlockTitleString': '_&1505488483', 'HasBadge': 1, 'HasTitle': 1, 'SortOrder': 302, 'IsSecret': 0}
+  {'UnlockId': 416, 'UnlockCategory': 10, 'UnlockLevel': 0, 'UnlockName': 'RacesWon_3', 'UnlockDescription': '_&1505432329', 'UnlockBadgeTexture': 'GAME:\\Media\\UI\\Textures\\BadgeImages\\statistics_winnerscircle.tga', 'BadgeSelectionTexture': 'GAME:\\Media\\UI\\Textures\\BadgeImages\\statistics_winnerscircle.tga', 'UnlockTitleString': '_&1505488641', 'HasBadge': 1, 'HasTitle': 1, 'SortOrder': 302, 'IsSecret': 0}
+Races.Id: 1 row(s) equal 302
+  {'Id': 302, 'EventId': 223, 'RaceNumber': 36, 'TrackId': 60, 'NumLaps': 16, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0}
+Races.EventId: 1 row(s) equal 302
+  {'Id': 3356, 'EventId': 302, 'RaceNumber': 1, 'TrackId': 70, 'NumLaps': 8, 'ModeRaceNumber': 0, 'TimeOfDayIndex': 0}
+Tracks.id: 1 row(s) equal 302
+  {'id': 302, 'DisplayName': '_&3381834573', 'ShortDisplayName': '_&3381847282', 'MediaName': 'UIThumbnail', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 3562, 'DefaultStartGridPositionsId': 300, 'FlyingStartPosId': 6, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_Generic.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_Generic.tga', 'IsRealWorld': 1, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 0, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_Generic1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 995, 'MPPitProfile': 0, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 27, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 1, 'QuickRaceLapCount': 3, 'RichPresence': -1, 'SatImageName': ''}
+Tracks.MPSortOrder: 1 row(s) equal 302
+  {'id': 161, 'DisplayName': '_&3381801612', 'ShortDisplayName': '_&3381814579', 'MediaName': 'CrownJewel', 'RibbonIndex': 0, 'ReverseIndex': 0, 'Length': 901, 'DefaultStartGridPositionsId': 160, 'FlyingStartPosId': 160, 'Logo': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos\\L_TRK_OldCourse.tga', 'LogoSmall': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Track_Logos_SM\\L_TRK_OldCourse.tga', 'IsRealWorld': 0, 'IsReverse': 0, 'IsHomespace': 0, 'Active': 1, 'MiniRibbonPath': 'GAME:\\Media\\UI\\Textures\\UI4\\Logos\\Mini_Track_Ribbons\\RIB_OldCourse1.tga', 'ContentId': 0, 'IsPurchased': 1, 'MPSortOrder': 302, 'MPPitProfile': 100, 'RibbonConfiguration': 0, 'CarsPerUniverse': 0, 'Renderable': 1, 'DriftScoreScalar': 1.0, 'StartLine': 0.0, 'FinishLine': 1.0, 'XMirror321': 0, 'IsInstalled': 1, 'EnvironmentId': 4, 'WinningsScalar': 0.5, 'QuickRaceLapCountKinect': 3, 'QuickRaceLapCount': 5, 'RichPresence': 71, 'SatImageName': '160'}
+
+=== EVENT 302 AND NEIGHBOURING EVENTS ===
+{'Id': 302, 'Name': '_&202756878', 'Level': 0, 'CareerTypeId': 33, 'NumberOfRaces': 1, 'EventOrder': 0, 'GroupMask': 30, 'TargetClass': 0, 'IsDLC': 0}
+{'Id': 307, 'Name': '_&202756494', 'Level': 11, 'CareerTypeId': 33, 'NumberOfRaces': 1, 'EventOrder': 0, 'GroupMask': 30, 'TargetClass': 1, 'IsDLC': 0}
+{'Id': 327, 'Name': '_&202723726', 'Level': 31, 'CareerTypeId': 33, 'NumberOfRaces': 1, 'EventOrder': 2, 'GroupMask': 30, 'TargetClass': 3, 'IsDLC': 0}
+{'Id': 330, 'Name': '_&202707470', 'Level': 31, 'CareerTypeId': 33, 'NumberOfRaces': 1, 'EventOrder': 3, 'GroupMask': 30, 'TargetClass': 3, 'IsDLC': 0}
+
+=== EVENT-RELATED VIEWS / TRIGGERS ===
+None found by name or SQL text.
+
+=== END OF AUDIT ===
