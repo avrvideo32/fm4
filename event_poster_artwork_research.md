@@ -256,3 +256,7 @@ Potential next experiment:
 
 A replacement-oriented helper is now committed:
 - [`tools/replace_fm4_lzx_entries.py`](tools/replace_fm4_lzx_entries.py) — takes a working archive that already contains the Event 749 entries, plus a staging archive containing new method-21 XDS records. It appends the new local records, replaces only the matching central-directory records, updates the normal local-header offsets and `0x1123` absolute payload offsets, and preserves every other original central-directory record and the complete existing local-file area byte-for-byte. The old Event 749 local records remain as unreferenced/orphaned bytes; the central directory points to the new records. This is an experimental workflow and is not yet tested.
+
+
+A PNG preview decoder is also committed:
+- [`tools/preview_fm4_xds.py`](tools/preview_fm4_xds.py) — decodes the supported EventBkgd format 50 / tiled / endian 2 / ZYXW / single-mip layout back to PNG. Use it to inspect the generated full and small XDS visually before archive insertion. This decoder is purpose-built for the confirmed poster format, not a general XDS reader.
