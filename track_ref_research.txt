@@ -1,0 +1,359 @@
+﻿FORZA MOTORSPORT 4 — TRACK REFERENCE AUDIT (READ ONLY)
+Database: D:\code\py\fm4\gamedb.slt
+Unresolved TrackId candidates: 22, 23, 24, 25, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+No database writes performed.
+
+=== TABLES WITH TRACK / ROUTE / HOPPER IN NAME ===
+CarTrackOffsets: 170 rows; columns=['Id', 'FrontOffset', 'RearOffset', 'UpgradeFrontOffset', 'UpgradeRearOffset']
+HopperRaces: 20 rows; columns=['Id', 'TrackId', 'NumLaps']
+KinectSplitscreenTracks: 30 rows; columns=['TrackId']
+NewProfile_Career_TrackUsage: 0 rows; columns=['TrackId', 'NumCareerRaces', 'NumNonCareerRaces', 'Viewed']
+NewProfile_ChangeTracking: 0 rows; columns=['TableID', 'RowID', 'Action', 'TransactionId']
+TrackPittingZones: 80 rows; columns=['Tracks_id', 'SpeedLimit', 'EnterFirstMergeWP', 'EnterLastMergeWP', 'EnterMergeCompleteWP', 'ExitMergeWP', 'ExitMergeCompleteWP']
+TrackSpecificAI: 12 rows; columns=['ID', 'Tracks_id', 'AIDiff_id', 'DistBehindForTorqueBoost', 'StartRubberbandingDistance', 'MaxRubberbandingEffectDistance', 'StartTorqueCutDistance', 'MaxTorqueCutDistance']
+TrackStartingMerges: 157 rows; columns=['Tracks_id', 'WaypointsToFirstMerge', 'WaypointsBeforeCorner', 'WaypointsBetweenMerges', 'MaxStartOfflineDistance']
+Tracks: 129 rows; columns=['id', 'DisplayName', 'ShortDisplayName', 'MediaName', 'RibbonIndex', 'ReverseIndex', 'Length', 'DefaultStartGridPositionsId', 'FlyingStartPosId', 'Logo', 'LogoSmall', 'IsRealWorld', 'IsReverse', 'IsHomespace', 'Active', 'MiniRibbonPath', 'ContentId', 'IsPurchased', 'MPSortOrder', 'MPPitProfile', 'RibbonConfiguration', 'CarsPerUniverse', 'Renderable', 'DriftScoreScalar', 'StartLine', 'FinishLine', 'XMirror321', 'IsInstalled', 'EnvironmentId', 'WinningsScalar', 'QuickRaceLapCountKinect', 'QuickRaceLapCount', 'RichPresence', 'SatImageName']
+
+=== ALL TABLES WITH A TRACK-ID-LIKE COLUMN ===
+AITemperaments.Passing_TrackEdgeClearance
+Data_CarBody.ModelFrontTrackOuter
+Data_CarBody.ModelRearTrackOuter
+GraffitiPoints.TrackId
+HopperRaces.TrackId
+KinectSplitscreenTracks.TrackId
+NewProfile_Career_TrackUsage.TrackId
+Races.TrackId
+SplitPoints.TrackId
+TrackPittingZones.Tracks_id
+TrackSpecificAI.Tracks_id
+TrackStartingMerges.Tracks_id
+TurnSections.TrackId
+
+=== ROWS USING UNRESOLVED IDS IN TRACK/ROUTE COLUMNS ===
+-- GraffitiPoints.TrackId: 100 matching row(s)
+  { ID=986, TrackId=22, Split=0.0, DriftScalar=0.0 }
+  { ID=987, TrackId=22, Split=0.15, DriftScalar=1.0 }
+  { ID=988, TrackId=22, Split=0.251, DriftScalar=0.0 }
+  { ID=989, TrackId=22, Split=0.586, DriftScalar=1.0 }
+  { ID=990, TrackId=22, Split=0.671, DriftScalar=0.0 }
+  { ID=991, TrackId=22, Split=0.697, DriftScalar=1.0 }
+  { ID=992, TrackId=22, Split=0.812, DriftScalar=0.0 }
+  { ID=993, TrackId=23, Split=0.0, DriftScalar=0.0 }
+  { ID=994, TrackId=23, Split=0.08, DriftScalar=1.0 }
+  { ID=995, TrackId=23, Split=0.153, DriftScalar=0.0 }
+  { ID=996, TrackId=23, Split=0.178, DriftScalar=1.0 }
+  { ID=997, TrackId=23, Split=0.245, DriftScalar=0.0 }
+  { ID=998, TrackId=23, Split=0.295, DriftScalar=1.0 }
+  { ID=999, TrackId=23, Split=0.368, DriftScalar=0.0 }
+  { ID=1000, TrackId=23, Split=0.456, DriftScalar=1.0 }
+  { ID=1001, TrackId=23, Split=0.527, DriftScalar=0.0 }
+  { ID=1002, TrackId=23, Split=0.58, DriftScalar=1.0 }
+  { ID=1003, TrackId=23, Split=0.674, DriftScalar=0.0 }
+  { ID=1004, TrackId=23, Split=0.693, DriftScalar=1.0 }
+  { ID=1005, TrackId=23, Split=0.817, DriftScalar=0.0 }
+  { ID=1006, TrackId=23, Split=0.89, DriftScalar=1.0 }
+  { ID=1007, TrackId=23, Split=0.948, DriftScalar=0.0 }
+  { ID=1008, TrackId=25, Split=0.0, DriftScalar=0.0 }
+  { ID=1009, TrackId=25, Split=0.043, DriftScalar=1.0 }
+  { ID=1010, TrackId=25, Split=0.108, DriftScalar=0.0 }
+  { ID=1011, TrackId=25, Split=0.178, DriftScalar=1.0 }
+  { ID=1012, TrackId=25, Split=0.315, DriftScalar=0.0 }
+  { ID=1013, TrackId=25, Split=0.329, DriftScalar=1.0 }
+  { ID=1014, TrackId=25, Split=0.39, DriftScalar=0.0 }
+  { ID=1015, TrackId=25, Split=0.433, DriftScalar=1.0 }
+  { ID=1016, TrackId=25, Split=0.55, DriftScalar=0.0 }
+  { ID=1017, TrackId=25, Split=0.624, DriftScalar=1.0 }
+  { ID=1018, TrackId=25, Split=0.705, DriftScalar=0.0 }
+  { ID=1019, TrackId=25, Split=0.735, DriftScalar=1.0 }
+  { ID=1020, TrackId=25, Split=0.828, DriftScalar=0.0 }
+  { ID=1021, TrackId=25, Split=0.846, DriftScalar=1.0 }
+  { ID=1022, TrackId=25, Split=0.923, DriftScalar=0.0 }
+  { ID=1023, TrackId=24, Split=0.0, DriftScalar=0.0 }
+  { ID=1024, TrackId=24, Split=0.168, DriftScalar=1.0 }
+  { ID=1025, TrackId=24, Split=0.318, DriftScalar=0.0 }
+  { ID=1026, TrackId=24, Split=0.33, DriftScalar=1.0 }
+  { ID=1027, TrackId=24, Split=0.388, DriftScalar=0.0 }
+  { ID=1028, TrackId=24, Split=0.716, DriftScalar=1.0 }
+  { ID=1029, TrackId=24, Split=0.83, DriftScalar=0.0 }
+  { ID=1506, TrackId=49, Split=0.0, DriftScalar=0.0 }
+  { ID=1507, TrackId=49, Split=0.055, DriftScalar=1.0 }
+  { ID=1508, TrackId=49, Split=0.093, DriftScalar=0.0 }
+  { ID=1509, TrackId=49, Split=0.102, DriftScalar=1.0 }
+  { ID=1510, TrackId=49, Split=0.13, DriftScalar=0.0 }
+  { ID=1511, TrackId=49, Split=0.154, DriftScalar=1.0 }
+  { ID=1512, TrackId=49, Split=0.207, DriftScalar=0.0 }
+  { ID=1513, TrackId=49, Split=0.215, DriftScalar=1.0 }
+  { ID=1514, TrackId=49, Split=0.292, DriftScalar=0.0 }
+  { ID=1515, TrackId=49, Split=0.315, DriftScalar=1.0 }
+  { ID=1516, TrackId=49, Split=0.341, DriftScalar=0.0 }
+  { ID=1517, TrackId=49, Split=0.371, DriftScalar=1.0 }
+  { ID=1518, TrackId=49, Split=0.417, DriftScalar=0.0 }
+  { ID=1519, TrackId=49, Split=0.438, DriftScalar=1.0 }
+  { ID=1520, TrackId=49, Split=0.522, DriftScalar=0.0 }
+  { ID=1521, TrackId=49, Split=0.536, DriftScalar=1.0 }
+  { ID=1522, TrackId=49, Split=0.583, DriftScalar=0.0 }
+  { ID=1523, TrackId=49, Split=0.589, DriftScalar=1.0 }
+  { ID=1524, TrackId=49, Split=0.601, DriftScalar=0.0 }
+  { ID=1525, TrackId=49, Split=0.606, DriftScalar=1.0 }
+  { ID=1526, TrackId=49, Split=0.62, DriftScalar=0.0 }
+  { ID=1527, TrackId=49, Split=0.657, DriftScalar=1.0 }
+  { ID=1528, TrackId=49, Split=0.688, DriftScalar=0.0 }
+  { ID=1529, TrackId=49, Split=0.694, DriftScalar=1.0 }
+  { ID=1530, TrackId=49, Split=0.729, DriftScalar=0.0 }
+  { ID=1531, TrackId=49, Split=0.763, DriftScalar=1.0 }
+  { ID=1532, TrackId=49, Split=0.787, DriftScalar=0.0 }
+  { ID=1533, TrackId=49, Split=0.803, DriftScalar=1.0 }
+  { ID=1534, TrackId=49, Split=0.978, DriftScalar=0.0 }
+  { ID=1535, TrackId=50, Split=0.0, DriftScalar=0.0 }
+  { ID=1536, TrackId=50, Split=0.031, DriftScalar=1.0 }
+  { ID=1537, TrackId=50, Split=0.498, DriftScalar=0.0 }
+  { ID=1538, TrackId=50, Split=0.532, DriftScalar=1.0 }
+  { ID=1539, TrackId=50, Split=0.971, DriftScalar=0.0 }
+  { ID=1540, TrackId=51, Split=0.0, DriftScalar=0.0 }
+  { ID=1541, TrackId=51, Split=0.01, DriftScalar=1.0 }
+  { ID=1542, TrackId=51, Split=0.374, DriftScalar=0.0 }
+  { ID=1543, TrackId=51, Split=0.4, DriftScalar=1.0 }
+  { ID=1544, TrackId=51, Split=0.853, DriftScalar=0.0 }
+  { ID=1545, TrackId=52, Split=0.0, DriftScalar=0.0 }
+  { ID=1546, TrackId=52, Split=0.052, DriftScalar=1.0 }
+  { ID=1547, TrackId=52, Split=0.417, DriftScalar=0.0 }
+  { ID=1548, TrackId=52, Split=0.633, DriftScalar=1.0 }
+  { ID=1549, TrackId=52, Split=0.923, DriftScalar=0.0 }
+  { ID=1550, TrackId=53, Split=0.0, DriftScalar=0.0 }
+  { ID=1551, TrackId=53, Split=0.18, DriftScalar=1.0 }
+  { ID=1552, TrackId=53, Split=0.35, DriftScalar=0.0 }
+  { ID=1553, TrackId=53, Split=0.388, DriftScalar=1.0 }
+  { ID=1554, TrackId=53, Split=0.5, DriftScalar=0.0 }
+  { ID=1555, TrackId=53, Split=0.577, DriftScalar=1.0 }
+  { ID=1556, TrackId=53, Split=0.713, DriftScalar=0.0 }
+  { ID=1557, TrackId=53, Split=0.729, DriftScalar=1.0 }
+  { ID=1558, TrackId=53, Split=0.921, DriftScalar=0.0 }
+  { ID=1559, TrackId=54, Split=0.0, DriftScalar=0.0 }
+  { ID=1560, TrackId=54, Split=0.039, DriftScalar=1.0 }
+  { ID=1561, TrackId=54, Split=0.145, DriftScalar=0.0 }
+-- Races.TrackId: 100 matching row(s)
+  { Id=1, EventId=240, RaceNumber=29, TrackId=22, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=2, EventId=240, RaceNumber=30, TrackId=23, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=3, EventId=240, RaceNumber=31, TrackId=24, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=4, EventId=240, RaceNumber=32, TrackId=25, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=5, EventId=241, RaceNumber=29, TrackId=22, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=6, EventId=241, RaceNumber=30, TrackId=23, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=7, EventId=241, RaceNumber=31, TrackId=24, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=8, EventId=241, RaceNumber=32, TrackId=25, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=9, EventId=242, RaceNumber=29, TrackId=22, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=10, EventId=242, RaceNumber=30, TrackId=23, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=11, EventId=242, RaceNumber=31, TrackId=24, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=12, EventId=242, RaceNumber=32, TrackId=25, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=13, EventId=243, RaceNumber=29, TrackId=22, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=14, EventId=243, RaceNumber=30, TrackId=23, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=15, EventId=243, RaceNumber=31, TrackId=24, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=16, EventId=243, RaceNumber=32, TrackId=25, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=17, EventId=244, RaceNumber=29, TrackId=22, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=18, EventId=244, RaceNumber=30, TrackId=23, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=19, EventId=244, RaceNumber=31, TrackId=24, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=20, EventId=244, RaceNumber=32, TrackId=25, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=21, EventId=245, RaceNumber=29, TrackId=22, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=22, EventId=245, RaceNumber=30, TrackId=23, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=23, EventId=245, RaceNumber=31, TrackId=24, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=24, EventId=245, RaceNumber=32, TrackId=25, NumLaps=8, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=25, EventId=246, RaceNumber=29, TrackId=22, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=26, EventId=246, RaceNumber=30, TrackId=23, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=27, EventId=246, RaceNumber=31, TrackId=24, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=28, EventId=246, RaceNumber=32, TrackId=25, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=29, EventId=247, RaceNumber=29, TrackId=22, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=30, EventId=247, RaceNumber=30, TrackId=23, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=31, EventId=247, RaceNumber=31, TrackId=24, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=32, EventId=247, RaceNumber=32, TrackId=25, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=33, EventId=248, RaceNumber=29, TrackId=22, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=34, EventId=248, RaceNumber=30, TrackId=23, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=35, EventId=248, RaceNumber=31, TrackId=24, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=36, EventId=248, RaceNumber=32, TrackId=25, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=37, EventId=249, RaceNumber=29, TrackId=22, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=38, EventId=249, RaceNumber=30, TrackId=23, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=39, EventId=249, RaceNumber=31, TrackId=24, NumLaps=12, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=40, EventId=249, RaceNumber=32, TrackId=25, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=41, EventId=250, RaceNumber=14, TrackId=22, NumLaps=27, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=46, EventId=251, RaceNumber=9, TrackId=23, NumLaps=33, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=50, EventId=252, RaceNumber=3, TrackId=23, NumLaps=38, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=52, EventId=252, RaceNumber=17, TrackId=25, NumLaps=38, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=54, EventId=253, RaceNumber=7, TrackId=23, NumLaps=44, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=56, EventId=253, RaceNumber=12, TrackId=25, NumLaps=44, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=57, EventId=254, RaceNumber=23, TrackId=22, NumLaps=49, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=58, EventId=254, RaceNumber=6, TrackId=23, NumLaps=49, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=63, EventId=255, RaceNumber=4, TrackId=24, NumLaps=56, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=67, EventId=256, RaceNumber=15, TrackId=24, NumLaps=62, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=69, EventId=257, RaceNumber=13, TrackId=22, NumLaps=67, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=76, EventId=258, RaceNumber=11, TrackId=25, NumLaps=71, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=77, EventId=259, RaceNumber=11, TrackId=22, NumLaps=79, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=80, EventId=259, RaceNumber=7, TrackId=25, NumLaps=79, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=180, EventId=220, RaceNumber=25, TrackId=49, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=181, EventId=220, RaceNumber=26, TrackId=50, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=182, EventId=220, RaceNumber=27, TrackId=51, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=183, EventId=220, RaceNumber=28, TrackId=52, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=184, EventId=220, RaceNumber=29, TrackId=53, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=185, EventId=220, RaceNumber=30, TrackId=54, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=186, EventId=220, RaceNumber=31, TrackId=55, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=187, EventId=220, RaceNumber=32, TrackId=56, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=188, EventId=220, RaceNumber=33, TrackId=57, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=189, EventId=220, RaceNumber=34, TrackId=58, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=190, EventId=220, RaceNumber=35, TrackId=59, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=191, EventId=220, RaceNumber=36, TrackId=60, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=192, EventId=220, RaceNumber=37, TrackId=61, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=193, EventId=220, RaceNumber=38, TrackId=62, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=194, EventId=220, RaceNumber=39, TrackId=63, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=195, EventId=220, RaceNumber=40, TrackId=64, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=196, EventId=220, RaceNumber=41, TrackId=65, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=197, EventId=220, RaceNumber=42, TrackId=66, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=217, EventId=221, RaceNumber=25, TrackId=49, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=218, EventId=221, RaceNumber=26, TrackId=50, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=219, EventId=221, RaceNumber=27, TrackId=51, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=220, EventId=221, RaceNumber=28, TrackId=52, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=221, EventId=221, RaceNumber=29, TrackId=53, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=222, EventId=221, RaceNumber=30, TrackId=54, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=223, EventId=221, RaceNumber=31, TrackId=55, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=224, EventId=221, RaceNumber=32, TrackId=56, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=225, EventId=221, RaceNumber=33, TrackId=57, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=226, EventId=221, RaceNumber=34, TrackId=58, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=227, EventId=221, RaceNumber=35, TrackId=59, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=228, EventId=221, RaceNumber=36, TrackId=60, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=229, EventId=221, RaceNumber=37, TrackId=61, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=230, EventId=221, RaceNumber=38, TrackId=62, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=231, EventId=221, RaceNumber=39, TrackId=63, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=232, EventId=221, RaceNumber=40, TrackId=64, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=233, EventId=221, RaceNumber=41, TrackId=65, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=234, EventId=221, RaceNumber=42, TrackId=66, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=254, EventId=222, RaceNumber=25, TrackId=49, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=255, EventId=222, RaceNumber=26, TrackId=50, NumLaps=21, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=256, EventId=222, RaceNumber=27, TrackId=51, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=257, EventId=222, RaceNumber=28, TrackId=52, NumLaps=16, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=258, EventId=222, RaceNumber=29, TrackId=53, NumLaps=11, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=259, EventId=222, RaceNumber=30, TrackId=54, NumLaps=7, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=260, EventId=222, RaceNumber=31, TrackId=55, NumLaps=9, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=261, EventId=222, RaceNumber=32, TrackId=56, NumLaps=10, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=262, EventId=222, RaceNumber=33, TrackId=57, NumLaps=6, ModeRaceNumber=0, TimeOfDayIndex=0 }
+  { Id=263, EventId=222, RaceNumber=34, TrackId=58, NumLaps=3, ModeRaceNumber=0, TimeOfDayIndex=0 }
+-- SplitPoints.TrackId: 43 matching row(s)
+  { ID=129, TrackId=49, Split=0.143 }
+  { ID=130, TrackId=49, Split=0.294 }
+  { ID=131, TrackId=49, Split=0.41 }
+  { ID=132, TrackId=49, Split=0.519 }
+  { ID=133, TrackId=49, Split=0.644 }
+  { ID=134, TrackId=49, Split=0.749 }
+  { ID=135, TrackId=49, Split=0.884 }
+  { ID=136, TrackId=50, Split=0.5 }
+  { ID=137, TrackId=51, Split=0.375 }
+  { ID=138, TrackId=52, Split=0.489 }
+  { ID=139, TrackId=53, Split=0.5 }
+  { ID=140, TrackId=54, Split=0.323 }
+  { ID=141, TrackId=54, Split=0.463 }
+  { ID=142, TrackId=54, Split=0.731 }
+  { ID=143, TrackId=55, Split=0.385 }
+  { ID=144, TrackId=55, Split=0.701 }
+  { ID=145, TrackId=56, Split=0.29 }
+  { ID=146, TrackId=56, Split=0.58 }
+  { ID=147, TrackId=56, Split=0.79 }
+  { ID=148, TrackId=57, Split=0.231 }
+  { ID=149, TrackId=57, Split=0.504 }
+  { ID=150, TrackId=57, Split=0.742 }
+  { ID=151, TrackId=58, Split=0.11 }
+  { ID=152, TrackId=58, Split=0.244 }
+  { ID=153, TrackId=58, Split=0.405 }
+  { ID=154, TrackId=58, Split=0.46 }
+  { ID=155, TrackId=58, Split=0.563 }
+  { ID=156, TrackId=58, Split=0.682 }
+  { ID=157, TrackId=58, Split=0.845 }
+  { ID=158, TrackId=59, Split=0.373 }
+  { ID=159, TrackId=60, Split=0.53 }
+  { ID=160, TrackId=61, Split=0.489 }
+  { ID=161, TrackId=62, Split=0.41 }
+  { ID=162, TrackId=63, Split=0.259 }
+  { ID=163, TrackId=63, Split=0.506 }
+  { ID=164, TrackId=63, Split=0.792 }
+  { ID=165, TrackId=64, Split=0.364 }
+  { ID=166, TrackId=64, Split=0.733 }
+  { ID=167, TrackId=65, Split=0.35 }
+  { ID=168, TrackId=65, Split=0.652 }
+  { ID=169, TrackId=66, Split=0.215 }
+  { ID=170, TrackId=66, Split=0.428 }
+  { ID=171, TrackId=66, Split=0.751 }
+-- TrackPittingZones.Tracks_id: 4 matching row(s)
+  { Tracks_id=22, SpeedLimit=20.0, EnterFirstMergeWP=1102, EnterLastMergeWP=1132, EnterMergeCompleteWP=1127, ExitMergeWP=1270, ExitMergeCompleteWP=-1 }
+  { Tracks_id=23, SpeedLimit=20.0, EnterFirstMergeWP=1102, EnterLastMergeWP=1132, EnterMergeCompleteWP=1127, ExitMergeWP=1270, ExitMergeCompleteWP=-1 }
+  { Tracks_id=24, SpeedLimit=20.0, EnterFirstMergeWP=110, EnterLastMergeWP=173, EnterMergeCompleteWP=163, ExitMergeWP=310, ExitMergeCompleteWP=-1 }
+  { Tracks_id=25, SpeedLimit=20.0, EnterFirstMergeWP=128, EnterLastMergeWP=178, EnterMergeCompleteWP=163, ExitMergeWP=310, ExitMergeCompleteWP=-1 }
+-- TrackStartingMerges.Tracks_id: 22 matching row(s)
+  { Tracks_id=22, WaypointsToFirstMerge=12, WaypointsBeforeCorner=-60, WaypointsBetweenMerges=15, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=23, WaypointsToFirstMerge=12, WaypointsBeforeCorner=-100, WaypointsBetweenMerges=10, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=24, WaypointsToFirstMerge=12, WaypointsBeforeCorner=-70, WaypointsBetweenMerges=15, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=25, WaypointsToFirstMerge=12, WaypointsBeforeCorner=-105, WaypointsBetweenMerges=8, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=49, WaypointsToFirstMerge=10, WaypointsBeforeCorner=-30, WaypointsBetweenMerges=15, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=50, WaypointsToFirstMerge=78, WaypointsBeforeCorner=-107, WaypointsBetweenMerges=6, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=51, WaypointsToFirstMerge=78, WaypointsBeforeCorner=-107, WaypointsBetweenMerges=6, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=52, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-100, WaypointsBetweenMerges=6, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=53, WaypointsToFirstMerge=10, WaypointsBeforeCorner=-30, WaypointsBetweenMerges=15, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=54, WaypointsToFirstMerge=8, WaypointsBeforeCorner=-104, WaypointsBetweenMerges=14, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=55, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-50, WaypointsBetweenMerges=7, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=56, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-80, WaypointsBetweenMerges=8, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=57, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-80, WaypointsBetweenMerges=8, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=58, WaypointsToFirstMerge=8, WaypointsBeforeCorner=-90, WaypointsBetweenMerges=22, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=59, WaypointsToFirstMerge=90, WaypointsBeforeCorner=-105, WaypointsBetweenMerges=6, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=60, WaypointsToFirstMerge=12, WaypointsBeforeCorner=-105, WaypointsBetweenMerges=10, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=61, WaypointsToFirstMerge=5, WaypointsBeforeCorner=0, WaypointsBetweenMerges=7, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=62, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-90, WaypointsBetweenMerges=10, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=63, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-90, WaypointsBetweenMerges=10, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=64, WaypointsToFirstMerge=5, WaypointsBeforeCorner=0, WaypointsBetweenMerges=7, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=65, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-105, WaypointsBetweenMerges=9, MaxStartOfflineDistance=1.5 }
+  { Tracks_id=66, WaypointsToFirstMerge=5, WaypointsBeforeCorner=-105, WaypointsBetweenMerges=9, MaxStartOfflineDistance=1.5 }
+
+=== TRACKS TABLE IDS AROUND THE GAPS ===
+Tracks columns: ['id', 'DisplayName', 'ShortDisplayName', 'MediaName', 'RibbonIndex', 'ReverseIndex', 'Length', 'DefaultStartGridPositionsId', 'FlyingStartPosId', 'Logo', 'LogoSmall', 'IsRealWorld', 'IsReverse', 'IsHomespace', 'Active', 'MiniRibbonPath', 'ContentId', 'IsPurchased', 'MPSortOrder', 'MPPitProfile', 'RibbonConfiguration', 'CarsPerUniverse', 'Renderable', 'DriftScoreScalar', 'StartLine', 'FinishLine', 'XMirror321', 'IsInstalled', 'EnvironmentId', 'WinningsScalar', 'QuickRaceLapCountKinect', 'QuickRaceLapCount', 'RichPresence', 'SatImageName']
+Existing rows from ID 16..70: 24
+  id=16; DisplayName='_&3381794900'; ShortDisplayName='_&3381815035'; MediaName='RoadAtlanta'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=17; DisplayName='_&3381795028'; ShortDisplayName='_&3381814907'; MediaName='RoadAtlanta'; ReverseIndex=1; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=18; DisplayName='_&3381796692'; ShortDisplayName='_&3381813755'; MediaName='Silverstone'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=19; DisplayName='_&3381796820'; ShortDisplayName='_&3381813627'; MediaName='Silverstone'; ReverseIndex=1; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=20; DisplayName='_&3381844820'; ShortDisplayName='_&3381831163'; MediaName='Silverstone'; ReverseIndex=2; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=31; DisplayName='_&3381828564'; ShortDisplayName='_&3381847419'; MediaName='Nurburgring'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=33; DisplayName='_&3381828308'; ShortDisplayName='_&3381847163'; MediaName='NurburgringF1'; ReverseIndex=5; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=34; DisplayName='_&3381827924'; ShortDisplayName='_&3381848059'; MediaName='NurburgringF1'; ReverseIndex=6; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=35; DisplayName='_&3381828052'; ShortDisplayName='_&3381847931'; MediaName='Mugello'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=36; DisplayName='_&3381827668'; ShortDisplayName='_&3381847803'; MediaName='Mugello'; ReverseIndex=1; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=37; DisplayName='_&3381827796'; ShortDisplayName='_&3381847675'; MediaName='Suzuka'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=38; DisplayName='_&3381829460'; ShortDisplayName='_&3381846523'; MediaName='Suzuka'; ReverseIndex=1; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=39; DisplayName='_&3381829588'; ShortDisplayName='_&3381846395'; MediaName='Suzuka'; ReverseIndex=2; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=40; DisplayName='_&3381812053'; ShortDisplayName='_&3381798394'; MediaName='Sebring'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=41; DisplayName='_&3381812181'; ShortDisplayName='_&3381798266'; MediaName='Sebring'; ReverseIndex=1; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=42; DisplayName='_&3381811797'; ShortDisplayName='_&3381798138'; MediaName='Sebring'; ReverseIndex=2; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=43; DisplayName='_&3381811925'; ShortDisplayName='_&3381798010'; MediaName='Motegi'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=44; DisplayName='_&3381811541'; ShortDisplayName='_&3381798906'; MediaName='Motegi'; ReverseIndex=1; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=45; DisplayName='_&3381811669'; ShortDisplayName='_&3381798778'; MediaName='Motegi'; ReverseIndex=2; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=46; DisplayName='_&3381811285'; ShortDisplayName='_&3381798650'; MediaName='Motegi'; ReverseIndex=3; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=67; DisplayName='_&3381844181'; ShortDisplayName='_&3381831290'; MediaName='MapleValley'; ReverseIndex=0; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=68; DisplayName='_&3381845845'; ShortDisplayName='_&3381830138'; MediaName='MapleValley'; ReverseIndex=1; IsReverse=0; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=69; DisplayName='_&3381845973'; ShortDisplayName='_&3381830010'; MediaName='MapleValley'; ReverseIndex=0; IsReverse=1; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+  id=70; DisplayName='_&3381828437'; ShortDisplayName='_&3381847546'; MediaName='MapleValley'; ReverseIndex=1; IsReverse=1; Active=1; ContentId=0; IsPurchased=1; IsInstalled=1
+
+=== HOPPERRACES ===
+Columns: ['Id', 'TrackId', 'NumLaps']; rows: 20
+  { Id=1, TrackId=140, NumLaps=3 }
+  { Id=2, TrackId=110, NumLaps=3 }
+  { Id=3, TrackId=240, NumLaps=3 }
+  { Id=4, TrackId=163, NumLaps=3 }
+  { Id=5, TrackId=67, NumLaps=3 }
+  { Id=6, TrackId=0, NumLaps=3 }
+  { Id=7, TrackId=35, NumLaps=3 }
+  { Id=8, TrackId=250, NumLaps=3 }
+  { Id=9, TrackId=3, NumLaps=3 }
+  { Id=10, TrackId=16, NumLaps=3 }
+  { Id=11, TrackId=40, NumLaps=3 }
+  { Id=12, TrackId=18, NumLaps=3 }
+  { Id=13, TrackId=4, NumLaps=3 }
+  { Id=14, TrackId=37, NumLaps=3 }
+  { Id=15, TrackId=1, NumLaps=3 }
+  { Id=16, TrackId=43, NumLaps=3 }
+  { Id=17, TrackId=230, NumLaps=3 }
+  { Id=18, TrackId=263, NumLaps=3 }
+  { Id=19, TrackId=33, NumLaps=3 }
+  { Id=20, TrackId=220, NumLaps=3 }
+
+=== END ===
