@@ -1,3 +1,6 @@
+# OBSOLETE: This created Event 750 as a C-class event using Event 106 metadata.
+# Do NOT use for the current F-class goal. Use create_fm4_event_fclass_multirace.py instead.
+
 #!/usr/bin/env python3
 """Create Event 750 by cloning the working three-race C-class Event 106.
 
