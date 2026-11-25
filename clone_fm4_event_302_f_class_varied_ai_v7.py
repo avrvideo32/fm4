@@ -208,7 +208,7 @@ def main():
         race_ids = copy_races(dst, TEMPLATE_EVENT_ID, new_event_id)
 
         # Do not copy Event 302's Ford Ka-specific restriction. Instead,
-        # copy the class-only restriction from existing F-class event 600.
+        # copy the existing F-class reference restriction from Event 600.
         ai_cars = copy_f_class_ai_roster(
             dst,
             new_event_id,
@@ -246,7 +246,7 @@ def main():
             )
         print("Ford Ka-specific restriction: NOT copied")
         print(
-            f"Generic F-class restriction:   copied from Event {F_CLASS_ROSTER_EVENT_ID} "
+            f"F-class reference restriction: copied from Event {F_CLASS_ROSTER_EVENT_ID} "
             f"as ID {new_restriction_id}, Value={restriction_value}"
         )
         print(f"SQLite integrity:     {integrity}")
