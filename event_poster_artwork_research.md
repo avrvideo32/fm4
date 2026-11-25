@@ -290,3 +290,17 @@ The custom artwork generation path is currently **experimental and not game-veri
 After restoring `Textures_event749_rawcopy.zip`, the user confirmed Event 749 displays the original Ford Ka / Event 302 poster. This confirms the EventBkgd749 filenames are recognized by the career UI for this event; poster registration/filename lookup is not the reason the custom artwork was missing. The custom-XDS Xenia freeze must now be isolated to the custom texture payload, compression stream, or a per-entry interaction.
 
 Next isolation step: replace only the small Event 749 XDS using a staging ZIP, leaving the full-size Event 749 entry as the byte-identical Event 302 clone. Base the replacement on `Textures_event749_rawcopy.zip`, which is already game-load-tested. If small-only succeeds, then test the full entry separately.
+
+
+### Isolation result: small custom poster alone loads (2026-11-25)
+
+The user created a staging ZIP containing only the custom small poster `UI4/Logos/Posters_SM/EventBkgd749.xds`, then replaced that entry in `Textures_event749_rawcopy.zip` using `replace_fm4_lzx_entries.py`.
+- Output: `Textures_event749_small_test.zip`
+- Replaced entries: 1
+- Compressed size: 61,877 bytes; uncompressed: 98,356 bytes
+- `lzxzip test`: 4,546 entries, 0 failures
+- Xenia launched successfully with this archive.
+- Event 749 still displayed the Ford Ka poster. The full-size Event 749 poster entry was deliberately left as the byte-identical Event 302/Ford Ka texture. The menu may simply be displaying the full-size poster; we have not proven whether the small poster was rendered in this UI.
+- This establishes that the generated small XDS and its newly compressed method-21 stream do not by themselves cause the earlier startup freeze, at least in this test.
+
+Next: test only the full-size custom XDS, basing the test archive on `Textures_event749_rawcopy.zip` (known-good duplicate-art archive), leaving the small poster as the original Ford Ka clone. Build a staging ZIP with just `UI4/Logos/Posters/EventBkgd749.xds`, replace that one entry, validate, then test Xenia. If it freezes, the full-size custom XDS or its stream is isolated as the cause. If it loads, investigate menu selection/rendering and whether the combination itself mattered.
