@@ -260,3 +260,26 @@ A replacement-oriented helper is now committed:
 
 A PNG preview decoder is also committed:
 - [`tools/preview_fm4_xds.py`](tools/preview_fm4_xds.py) — decodes the supported EventBkgd format 50 / tiled / endian 2 / ZYXW / single-mip layout back to PNG. Use it to inspect the generated full and small XDS visually before archive insertion. This decoder is purpose-built for the confirmed poster format, not a general XDS reader.
+
+
+## Result: first custom-art Xenia test failed (2026-11-25)
+
+The custom XDS files decoded back to PNG previews that the user inspected and said looked good. Both generated XDS files had the exact template file lengths:
+- Full: 2,375,732 bytes (922 x 617)
+- Small: 98,356 bytes (185 x 123)
+
+They were compressed with `lzxzip create` into a staging archive. `lzxzip test` passed for the staging archive. `replace_fm4_lzx_entries.py` transplanted those streams into the known-working Event 749 archive; it preserved the original local-file area and unaffected central records. The resulting ZIP listed both Event 749 entries as method 21 and `lzxzip test` passed. However, after the user copied the custom archive into the game folder, Xenia froze.
+
+Interpretation:
+- CRC/integrity validation and successful preview decoding are not sufficient to prove compatibility with the game's native XMem/LZX decoder or its XDS loader.
+- We do not yet know whether the freeze is caused by the newly generated LZX streams, XDS payload contents/header, the full poster, the small poster, or another central/local metadata difference.
+- Restore the known-working archive `Textures_event749_rawcopy.zip` to the game before any more tests. That archive was previously confirmed to load in Xenia, with original Event 302 poster bytes cloned to Event 749.
+
+Recommended isolation plan (after confirming the working archive launches again):
+1. Keep the original EventBkgd302 poster entries unchanged; only replace one Event 749 entry at a time.
+2. First test replacing only the *small* Event 749 entry, leaving the full-size one as the byte-identical Event 302 clone. Then restore the working archive and separately test only the *full* entry. This isolates which texture is triggering the freeze.
+3. Before further game tests, validate generated XDS files using an independent XDS decoder (e.g. build/use CuteTenshii/xds), not only the custom preview decoder. Compare output pixels against the original PNG to verify channel order, swizzle and texture layout.
+4. Investigate whether FM4 expects a different XMem compression framing/window or particular ZIP header fields than the lzxzip-generated stream. The fact that the same lzxzip stream passes its own test and is listed as method 21 does not establish game compatibility.
+5. Do not overwrite the game archive with another custom archive until isolated tests pass.
+
+The custom artwork generation path is currently **experimental and not game-verified**. The byte-preserving cloning path for unchanged Event 302 poster content remains game-load-tested.
