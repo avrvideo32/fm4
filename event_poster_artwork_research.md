@@ -7,7 +7,7 @@ This note records the tested archive workflow and the current experiment for cre
 ## Current status
 
 - Event 749 is a custom career event cloned from Event 302.
-- FM4's poster archive is `Media\\UI\\Textures.zip`.
+- FM4's poster archive is `Media\UI\Textures.zip`.
 - Event poster assets use the event ID in their filenames. For Event 302, the relevant entries are:
   - `UI4/Logos/Posters/EventBkgd302.xds`
   - `UI4/Logos/Posters_SM/EventBkgd302.xds`
@@ -21,36 +21,36 @@ This note records the tested archive workflow and the current experiment for cre
 
 ## Paths used on the user's Windows PC
 
-The current local workspace is `D:\\code\\py\\fm4`.
+The current local workspace is `D:\code\py\fm4`.
 
 Original extracted game archive:
 ```text
-D:\\hlam\\fm4\\Forza-Motorsport-4-USA-Disc-1-Play-Disc-XBOX-360\\Forza-Motorsport-4-USA-Disc-1-Play-Disc-XBOX-360\\Media\\UI\\Textures.zip
+D:\hlam\fm4\Forza-Motorsport-4-USA-Disc-1-Play-Disc-XBOX-360\Forza-Motorsport-4-USA-Disc-1-Play-Disc-XBOX-360\Media\UI\Textures.zip
 ```
 
 Extracted original poster templates:
 ```text
-D:\\code\\py\\fm4\\poster_originals\\UI4\\Logos\\Posters\\EventBkgd302.xds
-D:\\code\\py\\fm4\\poster_originals\\UI4\\Logos\\Posters_SM\\EventBkgd302.xds
+D:\code\py\fm4\poster_originals\UI4\Logos\Posters\EventBkgd302.xds
+D:\code\py\fm4\poster_originals\UI4\Logos\Posters_SM\EventBkgd302.xds
 ```
 
 Generated sample art:
 ```text
-D:\\code\\py\\fm4\\fm4_event749_artwork_922x617.png
+D:\code\py\fm4\fm4_event749_artwork_922x617.png
 ```
 The sample is a cinematic red supercar / sunset race circuit image with “WORLD CHAMPIONSHIP” text, 922 x 617 pixels, RGB.
 
 Full-size custom XDS currently generated:
 ```text
-D:\\code\\py\\fm4\\poster_changes\\UI4\\Logos\\Posters\\EventBkgd749.xds
+D:\code\py\fm4\poster_changes\UI4\Logos\Posters\EventBkgd749.xds
 ```
 Reported size: **2,375,732 bytes**, exactly matching the Event 302 full-size template.
 
 Working archive patcher output:
 ```text
-D:\\code\\py\\fm4\\Textures_event749_rawcopy.zip
+D:\code\py\fm4\Textures_event749_rawcopy.zip
 ```
-This archive was copied into the game's `Media\\UI\\Textures.zip` and Xenia loaded the game successfully.
+This archive was copied into the game's `Media\UI\Textures.zip` and Xenia loaded the game successfully.
 
 ## Exact poster texture specifications
 
@@ -130,13 +130,13 @@ Important: `add_fm4_event749_posters.py` is a first-time *add* patcher. It refus
 ### Existing archive tool paths
 
 ```text
-D:\\code\\py\\fm4\\lzx\\build\\bin\\Release\\lzxzip.exe
+D:\code\py\fm4\lzx\build\bin\Release\lzxzip.exe
 ```
 
 Example validation:
 ```powershell
-$lzx = "D:\\code\\py\\fm4\\lzx\\build\\bin\\Release\\lzxzip.exe"
-$output = "D:\\code\\py\\fm4\\Textures_event749_rawcopy.zip"
+$lzx = "D:\code\py\fm4\lzx\build\bin\Release\lzxzip.exe"
+$output = "D:\code\py\fm4\Textures_event749_rawcopy.zip"
 
 & $lzx list $output | Select-String "EventBkgd749"
 & $lzx test $output
@@ -156,10 +156,10 @@ The helper script is `make_fm4_xds_from_png.py`. It:
 
 The full-size command already used:
 ```powershell
-$script = "D:\\code\\py\\fm4\\make_fm4_xds_from_png.py"
-$template = "D:\\code\\py\\fm4\\poster_originals\\UI4\\Logos\\Posters\\EventBkgd302.xds"
-$image = "D:\\code\\py\\fm4\\fm4_event749_artwork_922x617.png"
-$output = "D:\\code\\py\\fm4\\poster_changes\\UI4\\Logos\\Posters\\EventBkgd749.xds"
+$script = "D:\code\py\fm4\make_fm4_xds_from_png.py"
+$template = "D:\code\py\fm4\poster_originals\UI4\Logos\Posters\EventBkgd302.xds"
+$image = "D:\code\py\fm4\fm4_event749_artwork_922x617.png"
+$output = "D:\code\py\fm4\poster_changes\UI4\Logos\Posters\EventBkgd749.xds"
 
 python $script $template $image $output --force
 ```
