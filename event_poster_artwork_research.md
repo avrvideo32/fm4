@@ -252,3 +252,7 @@ Potential next experiment:
 3. Use `append_fm4_lzx_entries.py` to append those staged entries to a clean/known-good FM4 archive that does not already contain Event 749 names. The user's current working game archive may already contain the two cloned Event 749 entries; if so, use their separately saved clean original or add replacement support before proceeding.
 4. Validate the final archive with `lzxzip list` and `lzxzip test`.
 5. Only then test in Xenia. Success is not guaranteed until the game loads and the event poster is visually confirmed.
+
+
+A replacement-oriented helper is now committed:
+- [`tools/replace_fm4_lzx_entries.py`](tools/replace_fm4_lzx_entries.py) — takes a working archive that already contains the Event 749 entries, plus a staging archive containing new method-21 XDS records. It appends the new local records, replaces only the matching central-directory records, updates the normal local-header offsets and `0x1123` absolute payload offsets, and preserves every other original central-directory record and the complete existing local-file area byte-for-byte. The old Event 749 local records remain as unreferenced/orphaned bytes; the central directory points to the new records. This is an experimental workflow and is not yet tested.
