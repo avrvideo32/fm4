@@ -283,3 +283,10 @@ Recommended isolation plan (after confirming the working archive launches again)
 5. Do not overwrite the game archive with another custom archive until isolated tests pass.
 
 The custom artwork generation path is currently **experimental and not game-verified**. The byte-preserving cloning path for unchanged Event 302 poster content remains game-load-tested.
+
+
+### Registration check: original cloned poster is visible (2026-11-25)
+
+After restoring `Textures_event749_rawcopy.zip`, the user confirmed Event 749 displays the original Ford Ka / Event 302 poster. This confirms the EventBkgd749 filenames are recognized by the career UI for this event; poster registration/filename lookup is not the reason the custom artwork was missing. The custom-XDS Xenia freeze must now be isolated to the custom texture payload, compression stream, or a per-entry interaction.
+
+Next isolation step: replace only the small Event 749 XDS using a staging ZIP, leaving the full-size Event 749 entry as the byte-identical Event 302 clone. Base the replacement on `Textures_event749_rawcopy.zip`, which is already game-load-tested. If small-only succeeds, then test the full entry separately.
