@@ -1,0 +1,2927 @@
+AIDiff:
+CREATE TABLE [AIDiff]  (
+[id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+)
+
+AILineChoices:
+CREATE TABLE [AILineChoices]  (
+[AISkills_id] INT
+,[LineID] INT
+,[RelativeFrequency] REAL
+)
+
+AIPlayerColors:
+CREATE TABLE [AIPlayerColors]  (
+[PlayerId] INT
+,[PrimaryColorValid] INT
+,[PrimaryColor] INT
+,[IsMetallic] INT
+,[SpecialColorId] INT
+)
+
+AIPlayers:
+CREATE TABLE [AIPlayers]  (
+[Id] INTEGER PRIMARY KEY
+,[Name] TEXT
+,[FirstName] TEXT
+,[LastName] TEXT
+,[CountryId] INT
+,[UISkill] INT
+,[Fee] INT
+,[HiredSkill] INT
+,[HiredAggro] INT
+,[SkillModifier] INT
+,[AggroModifier] INT
+,[DriverTypeID] INT
+,[Bio] TEXT
+,[Rank] INT
+)
+
+AIRubberbandModeChoices:
+CREATE TABLE [AIRubberbandModeChoices]  (
+[Id] INTEGER PRIMARY KEY
+,[AIRubberbands_id] INT
+,[AIRubberbandModes_id] INT
+,[Region] INT
+,[RelativeFrequency] REAL
+,[Amount] REAL
+)
+
+AIRubberbands:
+CREATE TABLE [AIRubberbands]  (
+[id] INTEGER PRIMARY KEY
+,[StartRubberbandingDistance] REAL
+,[MaxRubberbandingEffectDistance] REAL
+,[StartTorqueCutDistance] REAL
+,[MaxTorqueCutDistance] REAL
+,[TorqueCutFactor] REAL
+)
+
+AISkillAdjustments:
+CREATE TABLE [AISkillAdjustments]  (
+[TimeRatio] INT
+,[SkillAdjustment] INT
+)
+
+AISkills:
+CREATE TABLE [AISkills]  (
+[id] INTEGER PRIMARY KEY
+,[SoloLapping_OfflineTractionAssistFactor] REAL
+,[SoloLapping_BrakingMinimum] REAL
+,[SoloLapping_BrakingMaximum] REAL
+,[SoloLapping_CorneringMinimum] REAL
+,[SoloLapping_CorneringMaximum] REAL
+,[SoloLapping_DistBehindForMaxPerformance] REAL
+,[SoloLapping_NominalTorqueScale] REAL
+,[SoloLapping_NominalCheatLevel] INT
+,[SoloLapping_DistBehindForTorqueBoost] REAL
+,[SoloLapping_TorqueBoostCheatLevel] INT
+,[SoloLapping_FarBehindTorqueBoost] REAL
+,[Rubberbands_id] INT
+)
+
+AITemperaments:
+CREATE TABLE [AITemperaments]  (
+[id] INTEGER PRIMARY KEY
+,[MiscDriver_Pass] INT
+,[Passing_AggressionLevel] REAL
+,[Passing_StartPassAtImpactTime] REAL
+,[Passing_TrailingDistance] REAL
+,[Passing_ScriptedPassProbability] REAL
+,[Passing_InteractionLinePassProbability] REAL
+,[Passing_LowRelVelPassProbability] REAL
+,[Passing_CarClearance] REAL
+,[Passing_TrackEdgeClearance] REAL
+)
+
+AffinityLevelDef:
+CREATE TABLE [AffinityLevelDef]  (
+[Id] INTEGER PRIMARY KEY
+,[XP] INT
+,[Discount] REAL
+,[BonusCredits] INT
+)
+
+ArcadeCarList:
+CREATE TABLE [ArcadeCarList]  (
+[CarId] INTEGER PRIMARY KEY
+,[Level] INT
+)
+
+AuctionSearchValues:
+CREATE TABLE [AuctionSearchValues]  (
+[ValueId] INTEGER PRIMARY KEY
+,[Min] REAL
+,[Max] REAL
+)
+
+AutoSteerOverrides:
+CREATE TABLE [AutoSteerOverrides]  (
+[Id] INTEGER PRIMARY KEY
+,[STMSlipMin] REAL
+,[STMSlipMax] REAL
+,[AutoSteerSTMSlipMin] REAL
+,[AutoSteerSTMSlipMax] REAL
+)
+
+BackfireLevels:
+CREATE TABLE [BackfireLevels]  (
+[ExhaustLevel] INT
+,[CamLevel] INT
+,[BackfireLevel] INT
+)
+
+BristolLayouts:
+CREATE TABLE [BristolLayouts]  (
+[LayoutId] INTEGER PRIMARY KEY
+,[LeftThumbUp] TEXT
+,[LeftThumbDown] TEXT
+,[LeftThumbButton] TEXT
+,[RightThumbUp] TEXT
+,[RightThumbDown] TEXT
+,[RightThumbLeft] TEXT
+,[RightThumbRight] TEXT
+,[RightThumbButton] TEXT
+,[DPadUp] TEXT
+,[DPadDown] TEXT
+,[DPadLeft] TEXT
+,[DPadRight] TEXT
+,[ButtonA] TEXT
+,[ButtonB] TEXT
+,[ButtonX] TEXT
+,[ButtonY] TEXT
+,[LeftShoulder] TEXT
+,[RightShoulder] TEXT
+,[LeftTrigger] TEXT
+,[RightTrigger] TEXT
+)
+
+CameraOverrides:
+CREATE TABLE [CameraOverrides]  (
+[CarId] INTEGER PRIMARY KEY
+,[CamFollowLowHeightOffset] REAL
+,[CamFollowLowRadiusOffset] REAL
+,[CamFollowLowTargetYOffset] REAL
+,[CamFollowHighHeightOffset] REAL
+,[CamFollowHighRadiusOffset] REAL
+,[CamFollowHighTargetYOffset] REAL
+,[CamBumperHighHeightOffset] REAL
+,[CamBumperHighZOffset] REAL
+,[CamBumperLowHeightOffset] REAL
+,[CamBumperLowZOffset] REAL
+,[CamHoodHeightOffset] REAL
+,[CamHoodZOffset] REAL
+,[CamHoodPitchOffset] REAL
+,[CamCockpitOffsetX] REAL
+,[CamCockpitOffsetY] REAL
+,[CamCockpitOffsetZ] REAL
+,[SplitscreenCamCockpitOffsetX] REAL
+,[SplitscreenCamCockpitOffsetY] REAL
+,[SplitscreenCamCockpitOffsetZ] REAL
+,[CockpitWheelPositionOffsetX] REAL
+,[CockpitWheelPositionOffsetY] REAL
+,[CockpitWheelPositionOffsetZ] REAL
+,[CockpitWheelRotationOffset] REAL
+)
+
+CarClasses:
+CREATE TABLE [CarClasses]  (
+[Id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+,[Description] TEXT
+,[CarImagePath] TEXT
+,[ClassColor] INT
+,[SecondaryColor] INT
+,[MaxPerformanceIndex] REAL
+,[MaxDisplayPerformanceIndex] INT
+,[BadgeTexturePathPrefix] TEXT
+,[CareerMinEligiblePI] INT
+)
+
+CarDetails:
+CREATE TABLE [CarDetails]  (
+[Id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+,[DisplayType] TEXT
+,[SortField] TEXT
+,[HelpString] TEXT
+,[SortOrder] INT
+,[Career] INT
+,[Arcade] INT
+,[Clan] INT
+,[FracDigits] INT
+)
+
+CarExceptions:
+CREATE TABLE [CarExceptions]  (
+[CarID] INTEGER PRIMARY KEY
+,[NoMirrors] INT
+,[NoWindows] INT
+,[NoHood] INT
+,[NoPaintableWing] INT
+)
+
+CarInvalidDefaultParts:
+CREATE TABLE [CarInvalidDefaultParts]  (
+[Ordinal] INT
+,[PartEnumValue] INT
+)
+
+CarListFilters:
+CREATE TABLE [CarListFilters]  (
+[CarID] INTEGER PRIMARY KEY
+,[IsNullCar] INT
+)
+
+CarPartPositions:
+CREATE TABLE [CarPartPositions]  (
+[ID] INT
+,[Ordinal] INT
+,[PartId] INT
+,[PartPosX] REAL
+,[PartPosY] REAL
+,[PartPosZ] REAL
+)
+
+CarTrackOffsets:
+CREATE TABLE [CarTrackOffsets]  (
+[Id] INT
+,[FrontOffset] REAL
+,[RearOffset] REAL
+,[UpgradeFrontOffset] REAL
+,[UpgradeRearOffset] REAL
+)
+
+CareerEventTypes:
+CREATE TABLE [CareerEventTypes]  (
+[id] INTEGER PRIMARY KEY
+,[Name] TEXT
+,[BannerId] INT
+,[RaceModeId] INT
+,[Description] TEXT
+,[IntroVO] TEXT
+,[PosterPath] TEXT
+)
+
+Combo_Colors:
+CREATE TABLE [Combo_Colors]  (
+[ID] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Sequence] INT
+,[Metallic] INT
+,[RGB] INT
+,[BaseTexture] TEXT
+,[DamageTexture] TEXT
+,[ColorClassId] INT
+)
+
+Combo_Colors_Exceptions:
+CREATE TABLE [Combo_Colors_Exceptions]  (
+[ID] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Sequence] INT
+,[HasColor2] INT
+,[Color2] INT
+,[HasStripe] INT
+,[ColorStripe] INT
+)
+
+Combo_Engines:
+CREATE TABLE [Combo_Engines]  (
+[EngineComboID] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[EngineID] INT
+,[Stock] INT
+)
+
+Combo_TireBrandCompound:
+CREATE TABLE [Combo_TireBrandCompound]  (
+[Id] INTEGER PRIMARY KEY
+,[TireBrandId] INT
+,[TireCompoundId] INT
+,[PriceScale] REAL
+,[WearScale] REAL
+,[FrictionScale] REAL
+,[PeakSASRScale] REAL
+,[PriceDisplay] INT
+,[WearDisplay] INT
+,[FrictionDisplay] INT
+,[PeakSASRDisplay] INT
+)
+
+ContentOffers:
+CREATE TABLE [ContentOffers]  (
+[ID] TEXT
+,[OfferId] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+,[Description] TEXT
+,[PubOfferingID] INT
+,[LicenseLevel] INT
+,[LicenseMask] INT
+,[IsDLC] INT
+,[ImagePath] TEXT
+,[ThumbPath] TEXT
+,[IsInstalled] INT
+,[IsPurchased] INT
+,[IsVIP] INT
+,[Hidden] INT
+,[IsALaCarte] INT
+,[SeasonPassOffer] BIGINT
+)
+
+ContentOffersMapping:
+CREATE TABLE [ContentOffersMapping]  (
+[Id] INTEGER PRIMARY KEY
+,[OfferId] BIGINT
+,[ContentId] INT
+,[ContentType] INT
+)
+
+ControllerLayouts:
+CREATE TABLE [ControllerLayouts]  (
+[LayoutId] INTEGER PRIMARY KEY
+,[LeftThumbUp] TEXT
+,[LeftThumbDown] TEXT
+,[LeftThumbButton] TEXT
+,[RightThumbUp] TEXT
+,[RightThumbDown] TEXT
+,[RightThumbLeft] TEXT
+,[RightThumbRight] TEXT
+,[RightThumbButton] TEXT
+,[DPadUp] TEXT
+,[DPadDown] TEXT
+,[DPadLeft] TEXT
+,[DPadRight] TEXT
+,[ButtonA] TEXT
+,[ButtonB] TEXT
+,[ButtonX] TEXT
+,[ButtonY] TEXT
+,[LeftShoulder] TEXT
+,[RightShoulder] TEXT
+,[LeftTrigger] TEXT
+,[RightTrigger] TEXT
+)
+
+DamageDiffSettings:
+CREATE TABLE [DamageDiffSettings]  (
+[DamageDiff] INTEGER PRIMARY KEY
+,[AllowRolloverHuman] INT
+,[AllowRolloverAI] INT
+,[AllowDetachWheelHuman] INT
+,[AllowDetachWheelAI] INT
+)
+
+Data_Car:
+CREATE TABLE [Data_Car]  (
+[Id] INTEGER PRIMARY KEY
+,[Year] INT
+,[MakeID] INT
+,[DisplayName] TEXT
+,[ModelShort] TEXT
+,[MediaName] TEXT
+,[ClassID] INT
+,[CarTypeID] INT
+,[CarClassModifier] REAL
+,[FamilyModelID] INT
+,[FamilyBodyID] INT
+,[EnginePlacementID] INT
+,[MaterialTypeID] INT
+,[PowertrainID] INT
+,[CurbWeight] REAL
+,[WeightDistribution] REAL
+,[NumGears] INT
+,[TireBrandID] INT
+,[BaseRarity] REAL
+,[FrontTireWidthMM] INT
+,[FrontTireAspect] INT
+,[FrontWheelDiameterIN] INT
+,[RearTireWidthMM] INT
+,[RearTireAspect] INT
+,[RearWheelDiameterIN] INT
+,[Time:0-60-sec] REAL
+,[Time:0-100-sec] REAL
+,[QuarterMileTime-sec] REAL
+,[QuarterMileSpeed-mph] REAL
+,[TopSpeed-mph] REAL
+,[SpeedLimiterID] INT
+,[BaseCost] INT
+,[PerformanceIndex] REAL
+,[SteerMaxAngle] REAL
+,[SteerMaxAngVelTurning] REAL
+,[SteerMaxAngVelStraighten] REAL
+,[SteerAngVelCountersteer] REAL
+,[SteerAngVelDynFindPeak] REAL
+,[SteerAccelTimeToMaxRate] REAL
+,[SteerSpeedSensitiveMaxGees] REAL
+,[SteerSpeedSensitiveMinMaxAngle] REAL
+,[SteerSpeedSensitiveSlowSpeed] REAL
+,[SteerSpeedSensitiveFastSpeed] REAL
+,[SteerSpeedSensitiveFastRateScale] REAL
+,[AssistsTCSSlipDefTakeoff] REAL
+,[AssistsTCSSlipDefMoving] REAL
+,[AutoSteerOverrideID] INT
+,[FixListingRearFricScale] REAL
+,[FixListingNormSlip0] REAL
+,[FixListingNormSlip1] REAL
+,[FixListingSteerAngle0] REAL
+,[FixListingSteerAngle1] REAL
+,[BodyAeroLongitudinalDrag] REAL
+,[BodyAeroVerticalDrag] REAL
+,[BodyAeroLateralDragFront] REAL
+,[BodyAeroLateralDragRear] REAL
+,[BodyAeroForwardDownforceFront] REAL
+,[BodyAeroForwardDownforceRear] REAL
+,[BodyAeroAngleZeroDownforce] REAL
+,[BodyAeroWIForceScale] REAL
+,[TireAeroHackShouldApply] INT
+,[TireAeroHackMinSpringLoad] REAL
+,[TireAeroHackMaxSpringLoad] REAL
+,[AIPlayerID] INT
+,[SimPeakPower] REAL
+,[SimPeakAngVel] REAL
+,[SimPeakTorque] REAL
+,[SimPeakTorqueAngVel] REAL
+,[SimRedlineAngVel] REAL
+,[SimTimeTo60MPH] REAL
+,[SimTimeTo100MPH] REAL
+,[SimTimeQuarterMile] REAL
+,[SimTopSpeed] REAL
+,[SimBrakeDistance100MPH] REAL
+,[SimLatGees60MPH] REAL
+,[SimLatGees120MPH] REAL
+,[SimSpeedQuarterMile] REAL
+,[SimBrakeDistance60MPH] REAL
+,[HandlingRating] REAL
+,[SpeedRating] REAL
+,[AccelerationRating] REAL
+,[BrakingRating] REAL
+,[GameTorqueScale] REAL
+,[GameDragScale] REAL
+,[CaliperAngleFront] REAL
+,[CaliperAngleRear] REAL
+,[Thumbnail] TEXT
+,[ContentId] INT
+,[IsPurchased] INT
+,[IsUnicorn] INT
+,[SteerMaxAngleFiltered] REAL
+,[HasLivery] INT
+,[WingMask] INT
+,[CaliperRGBFront] INT
+,[CaliperRGBRear] INT
+,[StockWheelID] INT
+,[IsArcade] INT
+,[IsInstalled] INT
+,[LaunchRating] REAL
+,[GaugeID] INT
+,[FamilySpecialID] INT
+,[EngineConfigID] INT
+,[DriveTypeID] INT
+,[RegionID] INT
+,[CountryID] INT
+,[MakeName] TEXT
+,[MakeIcon] TEXT
+,[CylinderID] INT
+,[AspirationTypeId] INT
+,[Displacement] INT
+,[ModelId] INT
+,[IsCarExperienceUnlocked] INT
+,[HasCarExperience] INT
+,[FrontStockRideHeight] REAL
+,[RearStockRideHeight] REAL
+,[IsDrivable] INT
+,[HasRaceLivery] INT
+)
+
+Data_CarBody:
+CREATE TABLE [Data_CarBody]  (
+[Id] INTEGER PRIMARY KEY
+,[ModelWheelbase] REAL
+,[ModelFrontTrackOuter] REAL
+,[ModelRearTrackOuter] REAL
+,[ModelFrontStockRideHeight] REAL
+,[ModelRearStockRideHeight] REAL
+,[BottomCenterWheelbasePosx] REAL
+,[BottomCenterWheelbasePosy] REAL
+,[BottomCenterWheelbasePosZ] REAL
+,[PristineBoundingBoxMinX] REAL
+,[PristineBoundingBoxMinY] REAL
+,[PristineBoundingBoxMinZ] REAL
+,[PristineBoundingBoxMaxX] REAL
+,[PristineBoundingBoxMaxY] REAL
+,[PristineBoundingBoxMaxZ] REAL
+)
+
+Data_Drivetrain:
+CREATE TABLE [Data_Drivetrain]  (
+[DrivetrainID] INTEGER PRIMARY KEY
+,[DrivetypeID] INT
+,[EngineMountingDirection] INT
+)
+
+Data_Engine:
+CREATE TABLE [Data_Engine]  (
+[EngineID] INTEGER PRIMARY KEY
+,[EngineMass-kg] REAL
+,[MediaName] TEXT
+,[ConfigID] INT
+,[CylinderID] INT
+,[Compression] REAL
+,[VariableTimingID] INT
+,[AspirationID_Stock] INT
+,[StockBoost-bar] REAL
+,[MomentInertia] REAL
+,[GasTankSize] REAL
+,[TorqueSteerLeftSpeedScale] REAL
+,[TorqueSteerRightSpeedScale] REAL
+,[EngineGraphingMaxTorque] REAL
+,[EngineGraphingMaxPower] REAL
+,[EngineName] TEXT
+,[EngineRotation] INT
+,[Carbureted] INT
+,[Diesel] INT
+,[Rotary] INT
+)
+
+Data_Motor:
+CREATE TABLE [Data_Motor]  (
+[MotorID] INTEGER PRIMARY KEY
+,[MotorMass-kg] REAL
+,[MediaName] TEXT
+,[MomentInertia] REAL
+,[MotorGraphingMaxTorque] REAL
+,[MotorGraphingMaxPower] REAL
+,[MotorName] TEXT
+,[RedlineRPM] REAL
+,[NumRPMEntriesArray] INT
+,[TorqueCurveFullThrottleID] INT
+,[BatteryCapacity] REAL
+,[ConfigID] INT
+)
+
+Demo_CarList:
+CREATE TABLE [Demo_CarList]  (
+[Id] INTEGER PRIMARY KEY
+,[DemoOrder] INT
+)
+
+EnvironmentTimeOfDay:
+CREATE TABLE [EnvironmentTimeOfDay]  (
+[Id] INTEGER PRIMARY KEY
+,[EnvironmentId] INT
+,[TimeOfDayIndex] INT
+,[Temperature] INT
+,[Description] TEXT
+,[Icon] TEXT
+)
+
+Environments:
+CREATE TABLE [Environments]  (
+[Id] INTEGER PRIMARY KEY
+,[Location] TEXT
+,[ImagePath] TEXT
+,[MediaName] TEXT
+,[DisplayName] TEXT
+,[ShortDisplayName] TEXT
+,[ThumbImageName] TEXT
+,[Description] TEXT
+,[CountryId] INT
+,[ShowOnMap] INT
+,[MapX] REAL
+,[MapY] REAL
+)
+
+EventBonuses:
+CREATE TABLE [EventBonuses]  (
+[Id] INTEGER PRIMARY KEY
+,[BonusTypeId] INT
+,[Amount] INT
+)
+
+EventGroups:
+CREATE TABLE [EventGroups]  (
+[Id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+)
+
+EventParticipants:
+CREATE TABLE [EventParticipants]  (
+[ID] INTEGER PRIMARY KEY
+,[EventID] INT
+,[Priority] INT
+,[Ordinal] INT
+,[ColorSequence] INT
+,[BucketId] INT
+)
+
+EventRandomBonuses:
+CREATE TABLE [EventRandomBonuses]  (
+[RandomBonusTypeId] INT
+,[BonusId] INT
+,[Weight] INT
+,[MinDriverLevel] INT
+,[MaxDriverLevel] INT
+)
+
+EventRestrictions:
+CREATE TABLE [EventRestrictions]  (
+[ID] INTEGER PRIMARY KEY
+,[EventID] INT
+,[BucketId] INT
+,[Value] TEXT
+)
+
+EventScoring:
+CREATE TABLE [EventScoring]  (
+[ID] INTEGER PRIMARY KEY
+,[ScoringID] INT
+,[place] INT
+,[Credits] INT
+)
+
+EventShowroomChallenges:
+CREATE TABLE [EventShowroomChallenges]  (
+[CarID] INTEGER PRIMARY KEY
+,[EventID] INT
+)
+
+Events:
+CREATE TABLE [Events]  (
+[Id] INTEGER PRIMARY KEY
+,[Name] TEXT
+,[Level] INT
+,[CareerTypeId] INT
+,[Description] TEXT
+,[NumberOfRaces] INT
+,[PittingProfileID] INT
+,[CrowdSize] REAL
+,[CrowdExcitement] REAL
+,[NumberOfDrivers] INT
+,[CashPrize] INT
+,[IsDLC] INT
+,[EventOrder] INT
+,[GroupMask] INT
+,[TargetClass] INT
+,[AISkillEasy] INT
+,[AISkillMed] INT
+,[AISkillHard] INT
+,[AISkillPro] INT
+,[AITemperamentEasy] INT
+,[AITemperamentMed] INT
+,[AITemperamentHard] INT
+,[AITemperamentPro] INT
+,[BonusId] INT
+,[CanDupPlayerCar] INT
+)
+
+FlyingStartPositions:
+CREATE TABLE [FlyingStartPositions]  (
+[id] INTEGER PRIMARY KEY
+,[PosX] REAL
+,[PosY] REAL
+,[PosZ] REAL
+,[HeadingX] REAL
+,[HeadingY] REAL
+,[HeadingZ] REAL
+,[Speed] REAL
+)
+
+GameOptionCategories:
+CREATE TABLE [GameOptionCategories]  (
+[Id] INTEGER PRIMARY KEY
+,[CategoryName] TEXT
+,[DisplayName] TEXT
+)
+
+GameOptionCategoryMap:
+CREATE TABLE [GameOptionCategoryMap]  (
+[GroupId] INT
+,[CatId] INT
+,[OptionId] INT
+,[DefValue] INT
+,[isVisible] INT
+,[isLocked] INT
+)
+
+GameOptionGroups:
+CREATE TABLE [GameOptionGroups]  (
+[Id] INTEGER PRIMARY KEY
+,[GroupName] TEXT
+)
+
+GameOptionMap:
+CREATE TABLE [GameOptionMap]  (
+[OptionId] INT
+,[ValueId] INT
+)
+
+GameOptionValues:
+CREATE TABLE [GameOptionValues]  (
+[Id] INT
+,[DisplayName] TEXT
+,[Token] TEXT
+,[Value] INT
+,[Clause] TEXT
+)
+
+GameOptions:
+CREATE TABLE [GameOptions]  (
+[Id] INT
+,[DisplayName] TEXT
+,[Token] TEXT
+,[isProperty] INT
+,[xblValue] INT
+,[Query] TEXT
+,[NumMin] INT
+,[NumMax] INT
+)
+
+GraffitiPoints:
+CREATE TABLE [GraffitiPoints]  (
+[ID] INTEGER PRIMARY KEY
+,[TrackId] INT
+,[Split] REAL
+,[DriftScalar] REAL
+)
+
+HasCarExperience:
+CREATE TABLE [HasCarExperience]  (
+[CarId] INTEGER PRIMARY KEY
+)
+
+HopperRaces:
+CREATE TABLE [HopperRaces]  (
+[Id] INTEGER PRIMARY KEY
+,[TrackId] INT
+,[NumLaps] INT
+)
+
+IECars:
+CREATE TABLE [IECars]  (
+[CarId] INTEGER PRIMARY KEY
+,[SortOrder] INT
+)
+
+KinectSplitscreenCars:
+CREATE TABLE [KinectSplitscreenCars]  (
+[Ordinal] INT
+)
+
+KinectSplitscreenTracks:
+CREATE TABLE [KinectSplitscreenTracks]  (
+[TrackId] INT
+)
+
+List_AeroPhysics:
+CREATE TABLE [List_AeroPhysics]  (
+[AeroPhysicsID] INTEGER PRIMARY KEY
+,[DefaultTuneSlider] REAL
+,[Drag0] REAL
+,[Downforce0] REAL
+,[Drag1] REAL
+,[Downforce1] REAL
+,[AngleZeroDownforce] REAL
+,[LateralDrag] REAL
+,[DFTorqueScaleOneSliderInput0] REAL
+,[DFTorqueScaleOneSliderInput1] REAL
+,[DFTorqueScaleOneSliderInput2] REAL
+,[DFTorqueScaleOneTorqueScaleOutput0] REAL
+,[DFTorqueScaleOneTorqueScaleOutput1] REAL
+,[DFTorqueScaleOneTorqueScaleOutput2] REAL
+,[DFTorqueScaleTwoSliderInput0] REAL
+,[DFTorqueScaleTwoSliderInput1] REAL
+,[DFTorqueScaleTwoSliderInput2] REAL
+,[DFTorqueScaleTwoTorqueScaleOutput0] REAL
+,[DFTorqueScaleTwoTorqueScaleOutput1] REAL
+,[DFTorqueScaleTwoTorqueScaleOutput2] REAL
+)
+
+List_AntiSwayPhysics:
+CREATE TABLE [List_AntiSwayPhysics]  (
+[AntiSwayPhysicsID] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[DefSwaybarStiffness] REAL
+,[MinSwaybarStiffness] REAL
+,[MaxSwaybarStiffness] REAL
+,[SwaybarDamping] REAL
+)
+
+List_Aspiration:
+CREATE TABLE [List_Aspiration]  (
+[AspirationID] INTEGER PRIMARY KEY
+,[Aspiration] TEXT
+,[DisplayName] TEXT
+,[ShortDisplayName] TEXT
+,[KeyPartEnum] INT
+)
+
+List_BadgeAndTitleUnlocks:
+CREATE TABLE [List_BadgeAndTitleUnlocks]  (
+[UnlockId] INTEGER PRIMARY KEY
+,[UnlockCategory] INT
+,[UnlockLevel] INT
+,[UnlockName] TEXT
+,[UnlockDescription] TEXT
+,[UnlockBadgeTexture] TEXT
+,[BadgeSelectionTexture] TEXT
+,[UnlockTitleString] TEXT
+,[HasBadge] INT
+,[HasTitle] INT
+,[SortOrder] INT
+,[IsSecret] INT
+)
+
+List_BrakeType:
+CREATE TABLE [List_BrakeType]  (
+[BrakeTypeID] INTEGER PRIMARY KEY
+,[BrakeType] TEXT
+,[PartName] TEXT
+)
+
+List_CarMake:
+CREATE TABLE [List_CarMake]  (
+[ID] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+,[ManufacturerCode] TEXT
+,[CountryID] INT
+,[IconPath] TEXT
+,[IconPathLight] TEXT
+,[IconPathBase] TEXT
+,[Profile] TEXT
+)
+
+List_CarType:
+CREATE TABLE [List_CarType]  (
+[Id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+)
+
+List_ColorClass:
+CREATE TABLE [List_ColorClass]  (
+[ColorClassId] INTEGER PRIMARY KEY
+,[ColorClass] TEXT
+,[UIColor] INT
+)
+
+List_ColorFinish:
+CREATE TABLE [List_ColorFinish]  (
+[ColorFinishID] INTEGER PRIMARY KEY
+,[ColorFinish] TEXT
+)
+
+List_Country:
+CREATE TABLE [List_Country]  (
+[CountryID] INTEGER PRIMARY KEY
+,[Country] TEXT
+,[RegionID] INT
+,[IconPath] TEXT
+)
+
+List_Cylinders:
+CREATE TABLE [List_Cylinders]  (
+[CylinderID] INTEGER PRIMARY KEY
+,[Number] INT
+,[Description] TEXT
+,[Rotors] INT
+)
+
+List_DamageModDef:
+CREATE TABLE [List_DamageModDef]  (
+[DamageModDefID] INTEGER PRIMARY KEY
+,[DamageModName] TEXT
+,[ModZeroDamage] REAL
+,[ModFullDamage] REAL
+,[DamageMinImpact] REAL
+,[DamageMaxImpact] REAL
+,[DamageMin] REAL
+,[DamageMax] REAL
+,[RandomImpact] REAL
+,[ProbabilityMinImpact] REAL
+,[ProbabilityMaxImpact] REAL
+,[ProbabilityMin] REAL
+,[ProbabilityMax] REAL
+)
+
+List_DriveType:
+CREATE TABLE [List_DriveType]  (
+[ID] INTEGER PRIMARY KEY
+,[DriveType] TEXT
+,[DisplayName] TEXT
+)
+
+List_EngineConfig:
+CREATE TABLE [List_EngineConfig]  (
+[ConfigID] INTEGER PRIMARY KEY
+,[EngineConfig] TEXT
+,[DisplayName] TEXT
+)
+
+List_EnginePlacement:
+CREATE TABLE [List_EnginePlacement]  (
+[ID] INTEGER PRIMARY KEY
+,[EnginePlacement] TEXT
+,[DisplayName] TEXT
+)
+
+List_FamilyBody:
+CREATE TABLE [List_FamilyBody]  (
+[Id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+)
+
+List_FamilyModel:
+CREATE TABLE [List_FamilyModel]  (
+[Id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+)
+
+List_FamilySpecial:
+CREATE TABLE [List_FamilySpecial]  (
+[FamilySpecialID] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+)
+
+List_MaterialType:
+CREATE TABLE [List_MaterialType]  (
+[MaterialTypeID] INTEGER PRIMARY KEY
+,[Material] TEXT
+,[PhysicsMaterialID] INT
+)
+
+List_PartAttribute:
+CREATE TABLE [List_PartAttribute]  (
+[PartAttributeID] INTEGER PRIMARY KEY
+,[ManufacturerID] INT
+,[Price] INT
+,[Mass] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+)
+
+List_PartManufacturer:
+CREATE TABLE [List_PartManufacturer]  (
+[Id] INTEGER PRIMARY KEY
+,[PartManufacturer] TEXT
+,[LogoPath] TEXT
+)
+
+List_PartsStrings:
+CREATE TABLE [List_PartsStrings]  (
+[Id] INTEGER PRIMARY KEY
+,[PartsString] TEXT
+)
+
+List_Region:
+CREATE TABLE [List_Region]  (
+[Id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+)
+
+List_ShiftSystem:
+CREATE TABLE [List_ShiftSystem]  (
+[ShiftSystemID] INTEGER PRIMARY KEY
+,[ShiftSystem] TEXT
+)
+
+List_SpecialColors:
+CREATE TABLE [List_SpecialColors]  (
+[ID] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+,[Finish] INT
+,[PriColorValid] INT
+,[PriColorRGB] INT
+,[SecColorValid] INT
+,[SecColorRGB] INT
+,[TwoToneScale] REAL
+,[TwoToneBias] REAL
+,[TwoTonePower] REAL
+)
+
+List_SpringDamperPhysics:
+CREATE TABLE [List_SpringDamperPhysics]  (
+[SpringDamperPhysicsID] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[SuspensionPhysicsTypeID] INT
+,[DefRideHeight] REAL
+,[MinRideHeight] REAL
+,[MaxRideHeight] REAL
+,[MaxCompressHeight] REAL
+,[DefSpringRate] REAL
+,[MinSpringRate] REAL
+,[MaxSpringRate] REAL
+,[DefDampenBumpRate] REAL
+,[MinDampenBumpRate] REAL
+,[MaxDampenBumpRate] REAL
+,[DampenBumpClamp] REAL
+,[DefDampenReboundRate] REAL
+,[MinDampenReboundRate] REAL
+,[MaxDampenReboundRate] REAL
+,[DampenReboundClamp] REAL
+,[BumpstopStiffness] REAL
+,[BumpstopDamping] REAL
+,[ChassisPivotX] REAL
+,[ChassisPivotY] REAL
+,[TirePivotX] REAL
+,[CamberChangeRatioCompression] REAL
+,[CamberChangeRatioExpansion] REAL
+,[StaticToe] REAL
+,[StaticCamber] REAL
+,[Caster] REAL
+,[SteerRotAxisTireOffsetX] REAL
+,[YMaxSpringVel] REAL
+,[MaxStretchDeltaFromRideHeight] REAL
+)
+
+List_SuspensionPhysicsType:
+CREATE TABLE [List_SuspensionPhysicsType]  (
+[SuspensionPhysicsTypeID] INT
+,[Name] TEXT
+)
+
+List_SuspensionType:
+CREATE TABLE [List_SuspensionType]  (
+[SuspensionTypeID] INTEGER PRIMARY KEY
+,[SuspensionType] TEXT
+)
+
+List_TireAffectCurve:
+CREATE TABLE [List_TireAffectCurve]  (
+[AffectCurveID] INTEGER PRIMARY KEY
+,[NumValues] INT
+,[MinInput] REAL
+,[MaxInput] REAL
+,[OutputScale] REAL
+,[v0] REAL
+,[v1] REAL
+,[v2] REAL
+,[v3] REAL
+,[v4] REAL
+,[v5] REAL
+,[v6] REAL
+,[v7] REAL
+,[v8] REAL
+,[v9] REAL
+,[v10] REAL
+,[v11] REAL
+,[v12] REAL
+,[v13] REAL
+,[v14] REAL
+,[v15] REAL
+,[v16] REAL
+,[v17] REAL
+,[v18] REAL
+,[v19] REAL
+,[v20] REAL
+)
+
+List_TireCompound:
+CREATE TABLE [List_TireCompound]  (
+[TireCompoundID] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+,[TorqueFreeLatFrictionScale] REAL
+,[TorqueFreeLongFrictionScaleBrake] REAL
+,[TorqueFreeLongFrictionScaleAccel0] REAL
+,[TorqueFreeLongFrictionScaleAccel1] REAL
+,[TorqueFreeLongFrictionScaleAccelSpeed0] REAL
+,[TorqueFreeLongFrictionScaleAccelSpeed1] REAL
+,[WetFrictionModFrictionScale] REAL
+,[WetFrictionModSlipScale] REAL
+,[MomentInertia] REAL
+,[TireFricWidth0] REAL
+,[TireFricWidth1] REAL
+,[TireFricScale0] REAL
+,[TireFricScale1] REAL
+,[AirTempDiffHeatTransfer] REAL
+,[AirTempDiffHeatTransferOverheated] REAL
+,[OverheatedTemp] REAL
+,[AirSpeedToDoubleHeatTransfer] REAL
+,[RollResistanceHeatTransfer] REAL
+,[FrictionHeatTransfer] REAL
+,[FrictionWear] REAL
+,[RelTireSpeedToDoubleHeatTransfer] REAL
+,[LoadToDoubleHeatTransfer] REAL
+,[HeatSlipMagToSlipPercentIn0] REAL
+,[HeatSlipMagToSlipPercentOut0] REAL
+,[HeatSlipMagToSlipPercentIn1] REAL
+,[HeatSlipMagToSlipPercentOut1] REAL
+,[HeatSlipMagToSlipPercentIn2] REAL
+,[HeatSlipMagToSlipPercentOut2] REAL
+,[PressureChangeSpeed] REAL
+,[SlidingFrictionHeatTransfer] REAL
+,[SlidingOffsetCooling] REAL
+,[SlidingOffsetOverheatedTemp] REAL
+,[SlidingOffsetCoolingOverheated] REAL
+,[SlidingSlipIn0] REAL
+,[SlidingSlipOut0] REAL
+,[SlidingSlipIn1] REAL
+,[SlidingSlipOut1] REAL
+,[SlidingOffsetAddToTemp] REAL
+,[SlidingOffsetAddToTempClamp] REAL
+,[CamberAffectOutsideHeatIn] REAL
+,[CamberAffectOutsideHeatOut] REAL
+,[HUDTemps0] REAL
+,[HUDTemps1] REAL
+,[HUDTemps2] REAL
+,[HUDTemps3] REAL
+,[FrictionMultiCurveLateralID] INT
+,[FrictionMultiCurveLongitudinalID] INT
+,[AffectCurveTempAffectFrictionID] INT
+,[AffectCurveTempAffectWearID] INT
+,[AffectCurvePressureAffectFrictionID] INT
+,[AffectCurvePressureAffectWearID] INT
+,[AffectCurveStartPressureAffectPeakSASRID] INT
+,[AffectCurveCamberAffectLatFrictionID] INT
+,[AffectCurveCamberAffectLongFrictionID] INT
+,[AffectCurveWearAffectFrictionID] INT
+,[AffectCurveSpeedAffectFrictionID] INT
+,[AffectCurveNormSlipAngleAffectAlignTorqueID] INT
+,[AffectCurveNormSlipRatioAffectAlignTorqueID] INT
+,[AffectCurveLoadAffectAlignTorqueID] INT
+)
+
+List_TireFrictionCurve:
+CREATE TABLE [List_TireFrictionCurve]  (
+[FrictionCurveID] INTEGER PRIMARY KEY
+,[NumCurveValues] INT
+,[FrictionScale] REAL
+,[v0] REAL
+,[v1] REAL
+,[v2] REAL
+,[v3] REAL
+,[v4] REAL
+,[v5] REAL
+,[v6] REAL
+,[v7] REAL
+,[v8] REAL
+,[v9] REAL
+,[v10] REAL
+,[v11] REAL
+,[v12] REAL
+,[v13] REAL
+,[v14] REAL
+,[v15] REAL
+,[v16] REAL
+,[v17] REAL
+,[v18] REAL
+,[v19] REAL
+,[v20] REAL
+,[v21] REAL
+,[v22] REAL
+,[v23] REAL
+,[v24] REAL
+,[v25] REAL
+,[v26] REAL
+,[v27] REAL
+,[v28] REAL
+,[v29] REAL
+,[v30] REAL
+,[v31] REAL
+,[v32] REAL
+,[v33] REAL
+,[v34] REAL
+,[v35] REAL
+,[v36] REAL
+,[v37] REAL
+,[v38] REAL
+,[v39] REAL
+,[v40] REAL
+,[v41] REAL
+,[v42] REAL
+,[v43] REAL
+,[v44] REAL
+,[v45] REAL
+,[v46] REAL
+,[v47] REAL
+,[v48] REAL
+,[v49] REAL
+,[v50] REAL
+,[v51] REAL
+,[v52] REAL
+,[v53] REAL
+,[v54] REAL
+,[v55] REAL
+,[v56] REAL
+,[v57] REAL
+,[v58] REAL
+,[v59] REAL
+,[v60] REAL
+,[v61] REAL
+,[v62] REAL
+,[v63] REAL
+,[v64] REAL
+,[v65] REAL
+,[v66] REAL
+,[v67] REAL
+,[v68] REAL
+,[v69] REAL
+,[v70] REAL
+,[v71] REAL
+,[v72] REAL
+,[v73] REAL
+,[v74] REAL
+,[v75] REAL
+,[v76] REAL
+,[v77] REAL
+,[v78] REAL
+,[v79] REAL
+,[v80] REAL
+,[v81] REAL
+,[v82] REAL
+,[v83] REAL
+,[v84] REAL
+,[v85] REAL
+,[v86] REAL
+,[v87] REAL
+,[v88] REAL
+,[v89] REAL
+,[v90] REAL
+,[v91] REAL
+,[v92] REAL
+,[v93] REAL
+,[v94] REAL
+,[v95] REAL
+,[v96] REAL
+,[v97] REAL
+,[v98] REAL
+,[v99] REAL
+)
+
+List_TireFrictionMultiCurve:
+CREATE TABLE [List_TireFrictionMultiCurve]  (
+[FrictionMultiCurveID] INTEGER PRIMARY KEY
+,[MaxSlip] REAL
+,[MinLoadCurve] REAL
+,[MaxLoadCurve] REAL
+,[LoadClamp] REAL
+,[TireFrictionCurveID0] INT
+,[TireFrictionCurveID1] INT
+)
+
+List_TorqueCurve:
+CREATE TABLE [List_TorqueCurve]  (
+[TorqueCurveID] INTEGER PRIMARY KEY
+,[TorqueScale] REAL
+,[NumTorqueValues] INT
+,[v0] REAL
+,[v1] REAL
+,[v2] REAL
+,[v3] REAL
+,[v4] REAL
+,[v5] REAL
+,[v6] REAL
+,[v7] REAL
+,[v8] REAL
+,[v9] REAL
+,[v10] REAL
+,[v11] REAL
+,[v12] REAL
+,[v13] REAL
+,[v14] REAL
+,[v15] REAL
+,[v16] REAL
+,[v17] REAL
+,[v18] REAL
+,[v19] REAL
+,[v20] REAL
+,[v21] REAL
+,[v22] REAL
+,[v23] REAL
+,[v24] REAL
+,[v25] REAL
+,[v26] REAL
+,[v27] REAL
+,[v28] REAL
+,[v29] REAL
+,[v30] REAL
+,[v31] REAL
+,[v32] REAL
+,[v33] REAL
+,[v34] REAL
+,[v35] REAL
+,[v36] REAL
+,[v37] REAL
+,[v38] REAL
+,[v39] REAL
+,[v40] REAL
+,[v41] REAL
+,[v42] REAL
+,[v43] REAL
+,[v44] REAL
+,[v45] REAL
+,[v46] REAL
+,[v47] REAL
+,[v48] REAL
+,[v49] REAL
+,[v50] REAL
+,[v51] REAL
+,[v52] REAL
+,[v53] REAL
+,[v54] REAL
+,[v55] REAL
+,[v56] REAL
+,[v57] REAL
+,[v58] REAL
+,[v59] REAL
+,[v60] REAL
+,[v61] REAL
+,[v62] REAL
+,[v63] REAL
+,[v64] REAL
+,[v65] REAL
+,[v66] REAL
+,[v67] REAL
+,[v68] REAL
+,[v69] REAL
+,[v70] REAL
+,[v71] REAL
+,[v72] REAL
+,[v73] REAL
+,[v74] REAL
+,[v75] REAL
+,[v76] REAL
+,[v77] REAL
+,[v78] REAL
+,[v79] REAL
+,[v80] REAL
+,[v81] REAL
+,[v82] REAL
+,[v83] REAL
+,[v84] REAL
+,[v85] REAL
+,[v86] REAL
+,[v87] REAL
+,[v88] REAL
+,[v89] REAL
+,[v90] REAL
+,[v91] REAL
+,[v92] REAL
+,[v93] REAL
+,[v94] REAL
+,[v95] REAL
+,[v96] REAL
+,[v97] REAL
+,[v98] REAL
+,[v99] REAL
+,[v100] REAL
+,[v101] REAL
+,[v102] REAL
+,[v103] REAL
+,[v104] REAL
+,[v105] REAL
+,[v106] REAL
+,[v107] REAL
+,[v108] REAL
+,[v109] REAL
+,[v110] REAL
+,[v111] REAL
+,[v112] REAL
+,[v113] REAL
+,[v114] REAL
+,[v115] REAL
+,[v116] REAL
+,[v117] REAL
+,[v118] REAL
+,[v119] REAL
+,[v120] REAL
+,[v121] REAL
+,[v122] REAL
+,[v123] REAL
+,[v124] REAL
+,[v125] REAL
+,[v126] REAL
+,[v127] REAL
+,[v128] REAL
+,[v129] REAL
+,[v130] REAL
+,[v131] REAL
+,[v132] REAL
+,[v133] REAL
+,[v134] REAL
+,[v135] REAL
+,[v136] REAL
+,[v137] REAL
+,[v138] REAL
+,[v139] REAL
+,[v140] REAL
+,[v141] REAL
+,[v142] REAL
+,[v143] REAL
+,[v144] REAL
+,[v145] REAL
+,[v146] REAL
+,[v147] REAL
+,[v148] REAL
+,[v149] REAL
+,[v150] REAL
+,[v151] REAL
+,[v152] REAL
+,[v153] REAL
+,[v154] REAL
+,[v155] REAL
+,[v156] REAL
+,[v157] REAL
+,[v158] REAL
+,[v159] REAL
+,[v160] REAL
+,[v161] REAL
+,[v162] REAL
+,[v163] REAL
+,[v164] REAL
+,[v165] REAL
+,[v166] REAL
+,[v167] REAL
+,[v168] REAL
+,[v169] REAL
+,[v170] REAL
+,[v171] REAL
+,[v172] REAL
+,[v173] REAL
+,[v174] REAL
+,[v175] REAL
+,[v176] REAL
+,[v177] REAL
+,[v178] REAL
+,[v179] REAL
+,[v180] REAL
+,[v181] REAL
+,[v182] REAL
+,[v183] REAL
+,[v184] REAL
+,[v185] REAL
+,[ZeroThrottleTorqueScale] REAL
+)
+
+List_Unlocks:
+CREATE TABLE [List_Unlocks]  (
+[Id] INTEGER PRIMARY KEY
+,[UnlockState] TEXT
+)
+
+List_UpgradeAntiSwayFront:
+CREATE TABLE [List_UpgradeAntiSwayFront]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[IsStock] INT
+,[AntiSwayPhysicsID] INT
+)
+
+List_UpgradeAntiSwayRear:
+CREATE TABLE [List_UpgradeAntiSwayRear]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[IsStock] INT
+,[AntiSwayPhysicsID] INT
+)
+
+List_UpgradeBrakes:
+CREATE TABLE [List_UpgradeBrakes]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[FrontBrakeSize] INT
+,[FrontBrakeTypeID] INT
+,[FrontCaliperPistons] INT
+,[RearBrakeSize] INT
+,[RearBrakeTypeID] INT
+,[RearCaliperPistons] INT
+,[GameFrictionScaleBraking] REAL
+,[BrakeTorqueSlider] REAL
+,[BrakeBiasSlider] REAL
+,[BiasHandbrake] REAL
+,[ReleasePointABS] REAL
+,[DurationABS] REAL
+,[ReleasePointABSFrontNoSteer] REAL
+,[ReleasePointABSFrontFullSteer] REAL
+,[ReleasePointABSRearNoSteer] REAL
+,[ReleasePointABSRearFullSteer] REAL
+,[DamageModDefID] INT
+)
+
+List_UpgradeCarBody:
+CREATE TABLE [List_UpgradeCarBody]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[CarBodyID] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+)
+
+List_UpgradeCarBodyChassisStiffness:
+CREATE TABLE [List_UpgradeCarBodyChassisStiffness]  (
+[Id] INTEGER PRIMARY KEY
+,[CarbodyId] INT
+,[Level] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[Price] INT
+,[PartsStringID] INT
+,[CMHeightDiff] REAL
+,[IsStock] INT
+,[FrontLatFrictionScale] REAL
+,[RearLatFrictionScale] REAL
+,[FrontLongFrictionScale] REAL
+,[RearLongFrictionScale] REAL
+)
+
+List_UpgradeCarBodyFrontBumper:
+CREATE TABLE [List_UpgradeCarBodyFrontBumper]  (
+[Id] INTEGER PRIMARY KEY
+,[CarBodyID] INT
+,[Level] INT
+,[IsStock] INT
+,[Sequence] INT
+,[ManufacturerId] INT
+,[PartsStringId] TEXT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[AeroPhysicsID] INT
+)
+
+List_UpgradeCarBodyHood:
+CREATE TABLE [List_UpgradeCarBodyHood]  (
+[Id] INTEGER PRIMARY KEY
+,[CarBodyID] INT
+,[Level] INT
+,[IsStock] INT
+,[Sequence] INT
+,[ManufacturerId] INT
+,[PartsStringId] TEXT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+)
+
+List_UpgradeCarBodyRearBumper:
+CREATE TABLE [List_UpgradeCarBodyRearBumper]  (
+[Id] INTEGER PRIMARY KEY
+,[CarBodyID] INT
+,[Level] INT
+,[IsStock] INT
+,[Sequence] INT
+,[ManufacturerId] INT
+,[PartsStringId] TEXT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[BodyAeroForwardDownforceFront] REAL
+,[BodyAeroForwardDownforceRear] REAL
+)
+
+List_UpgradeCarBodySideSkirt:
+CREATE TABLE [List_UpgradeCarBodySideSkirt]  (
+[Id] INTEGER PRIMARY KEY
+,[CarBodyID] INT
+,[Level] INT
+,[IsStock] INT
+,[Sequence] INT
+,[ManufacturerId] INT
+,[PartsStringId] TEXT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+)
+
+List_UpgradeCarBodyTireWidthFront:
+CREATE TABLE [List_UpgradeCarBodyTireWidthFront]  (
+[Id] INTEGER PRIMARY KEY
+,[CarBodyId] INT
+,[Level] INT
+,[IsStock] INT
+,[FrontTireWidth] INT
+,[Price] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+)
+
+List_UpgradeCarBodyTireWidthRear:
+CREATE TABLE [List_UpgradeCarBodyTireWidthRear]  (
+[Id] INTEGER PRIMARY KEY
+,[CarBodyId] INT
+,[Level] INT
+,[IsStock] INT
+,[RearTireWidth] INT
+,[Price] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+)
+
+List_UpgradeCarBodyWeight:
+CREATE TABLE [List_UpgradeCarBodyWeight]  (
+[Id] INTEGER PRIMARY KEY
+,[CarBodyId] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[Mass] REAL
+,[Price] INT
+,[PartsStringID] INT
+,[InitialMass] REAL
+,[CMHeight] REAL
+,[CMBackFront] REAL
+,[CMLeftRight] REAL
+,[BlockDimX] REAL
+,[BlockDimY] REAL
+,[BlockDimZ] REAL
+)
+
+List_UpgradeDrivetrain:
+CREATE TABLE [List_UpgradeDrivetrain]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[DrivetrainID] INT
+,[PowertrainId] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[Level] INT
+,[ManufacturerId] INT
+,[Price] INT
+,[IsStock] INT
+)
+
+List_UpgradeDrivetrainClutch:
+CREATE TABLE [List_UpgradeDrivetrainClutch]  (
+[Id] INTEGER PRIMARY KEY
+,[DrivetrainID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[ClutchMaxTorque] REAL
+,[ClutchInTime] REAL
+,[ClutchOutTime] REAL
+)
+
+List_UpgradeDrivetrainDifferential:
+CREATE TABLE [List_UpgradeDrivetrainDifferential]  (
+[Id] INTEGER PRIMARY KEY
+,[DrivetrainID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[FrontLimitedSlipTorqueAccel] REAL
+,[FrontLimitedSlipTorqueDecel] REAL
+,[FrontLimitedSlipRelVelClamp] REAL
+,[FrontLimitedSlipAccelDefInputTorque] REAL
+,[RearLimitedSlipTorqueAccel] REAL
+,[RearLimitedSlipTorqueDecel] REAL
+,[RearLimitedSlipRelVelClamp] REAL
+,[RearLimitedSlipAccelDefInputTorque] REAL
+,[CenterLimitedSlipTorqueAccel] REAL
+,[CenterLimitedSlipTorqueDecel] REAL
+,[CenterLimitedSlipRelVelClamp] REAL
+,[CenterLimitedSlipAccelDefInputTorque] REAL
+,[RearToqueSplit] REAL
+)
+
+List_UpgradeDrivetrainDriveline:
+CREATE TABLE [List_UpgradeDrivetrainDriveline]  (
+[Id] INTEGER PRIMARY KEY
+,[DrivetrainId] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[MomentInertia] REAL
+)
+
+List_UpgradeDrivetrainTransmission:
+CREATE TABLE [List_UpgradeDrivetrainTransmission]  (
+[Id] INTEGER PRIMARY KEY
+,[DrivetrainID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[MomentInertia] REAL
+,[GearShiftTime] REAL
+,[FinalDriveRatio] REAL
+,[NumGears] INT
+,[GearRatio0] REAL
+,[GearRatio1] REAL
+,[GearRatio2] REAL
+,[GearRatio3] REAL
+,[GearRatio4] REAL
+,[GearRatio5] REAL
+,[GearRatio6] REAL
+,[GearRatio7] REAL
+,[GearRatio8] REAL
+,[CVTShiftTime] REAL
+)
+
+List_UpgradeEngine:
+CREATE TABLE [List_UpgradeEngine]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[EngineID] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[Price] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+)
+
+List_UpgradeEngineCSC:
+CREATE TABLE [List_UpgradeEngineCSC]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[PartsStringID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[ZeroRPMScale] REAL
+,[RedlineRPMScale] REAL
+,[RobScale] REAL
+,[TorqueDropOffRPM0] REAL
+,[TorqueDropOffRPM1] REAL
+,[TorqueDropOffScale0] REAL
+,[TorqueDropOffScale1] REAL
+)
+
+List_UpgradeEngineCamshaft:
+CREATE TABLE [List_UpgradeEngineCamshaft]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[RedlineRPM] REAL
+,[StallRPM] REAL
+,[StartRPM] REAL
+,[RedlineWearSpeed] REAL
+,[TorqueCurveMaxRPM] REAL
+,[NumRPMEntriesArray] INT
+,[TorqueCurveFullThrottleID] INT
+)
+
+List_UpgradeEngineDSC:
+CREATE TABLE [List_UpgradeEngineDSC]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[PartsStringID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[ZeroRPMScale] REAL
+,[RedlineRPMScale] REAL
+,[RobScale] REAL
+,[TorqueDropOffRPM0] REAL
+,[TorqueDropOffRPM1] REAL
+,[TorqueDropOffScale0] REAL
+,[TorqueDropOffScale1] REAL
+)
+
+List_UpgradeEngineDisplacement:
+CREATE TABLE [List_UpgradeEngineDisplacement]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[Price] INT
+,[TorqueScale] REAL
+,[Disp] INT
+)
+
+List_UpgradeEngineExhaust:
+CREATE TABLE [List_UpgradeEngineExhaust]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[PartsStringID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEngineFlywheel:
+CREATE TABLE [List_UpgradeEngineFlywheel]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerId] INT
+,[MassDiff] REAL
+,[Price] INT
+,[MomentInertia] REAL
+)
+
+List_UpgradeEngineFuelSystem:
+CREATE TABLE [List_UpgradeEngineFuelSystem]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[PartsStringID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEngineIgnition:
+CREATE TABLE [List_UpgradeEngineIgnition]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[PartsStringID] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEngineIntake:
+CREATE TABLE [List_UpgradeEngineIntake]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[PartsStringID] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEngineIntercooler:
+CREATE TABLE [List_UpgradeEngineIntercooler]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[PartsStringID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[MaxScaleScale] REAL
+)
+
+List_UpgradeEngineManifold:
+CREATE TABLE [List_UpgradeEngineManifold]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEngineOilCooling:
+CREATE TABLE [List_UpgradeEngineOilCooling]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEnginePistonsCompression:
+CREATE TABLE [List_UpgradeEnginePistonsCompression]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEngineRestrictorPlate:
+CREATE TABLE [List_UpgradeEngineRestrictorPlate]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeEngineTurboQuad:
+CREATE TABLE [List_UpgradeEngineTurboQuad]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[Price] INT
+,[MomentInertia] REAL
+,[MaxScale] REAL
+,[PowerMaxScale] REAL
+,[MinScale] REAL
+,[PowerMinScale] REAL
+,[RobScale] REAL
+,[TorqueDropOffRPM0] REAL
+,[TorqueDropOffRPM1] REAL
+,[TorqueDropOffScale0] REAL
+,[TorqueDropOffScale1] REAL
+)
+
+List_UpgradeEngineTurboSingle:
+CREATE TABLE [List_UpgradeEngineTurboSingle]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[Price] INT
+,[MomentInertia] REAL
+,[MaxScale] REAL
+,[PowerMaxScale] REAL
+,[MinScale] REAL
+,[PowerMinScale] REAL
+,[RobScale] REAL
+,[TorqueDropOffRPM0] REAL
+,[TorqueDropOffRPM1] REAL
+,[TorqueDropOffScale0] REAL
+,[TorqueDropOffScale1] REAL
+)
+
+List_UpgradeEngineTurboTwin:
+CREATE TABLE [List_UpgradeEngineTurboTwin]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[Price] INT
+,[MomentInertia] REAL
+,[MaxScale] REAL
+,[PowerMaxScale] REAL
+,[MinScale] REAL
+,[PowerMinScale] REAL
+,[RobScale] REAL
+,[TorqueDropOffRPM0] REAL
+,[TorqueDropOffRPM1] REAL
+,[TorqueDropOffScale0] REAL
+,[TorqueDropOffScale1] REAL
+)
+
+List_UpgradeEngineValves:
+CREATE TABLE [List_UpgradeEngineValves]  (
+[Id] INTEGER PRIMARY KEY
+,[EngineID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeMotor:
+CREATE TABLE [List_UpgradeMotor]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[MotorID] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[Price] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+)
+
+List_UpgradeMotorParts:
+CREATE TABLE [List_UpgradeMotorParts]  (
+[Id] INTEGER PRIMARY KEY
+,[MotorID] INT
+,[Level] INT
+,[IsStock] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[WeightDistDiff] REAL
+,[Price] INT
+,[TorqueScale] REAL
+)
+
+List_UpgradeRearWing:
+CREATE TABLE [List_UpgradeRearWing]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[IsStock] INT
+,[Sequence] INT
+,[ManufacturerId] INT
+,[PartsStringId] TEXT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[AeroPhysicsID] INT
+)
+
+List_UpgradeRimSizeFront:
+CREATE TABLE [List_UpgradeRimSizeFront]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[IsStock] INT
+,[FrontWheelDiameter] INT
+,[Price] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+)
+
+List_UpgradeRimSizeRear:
+CREATE TABLE [List_UpgradeRimSizeRear]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[IsStock] INT
+,[RearWheelDiameter] INT
+,[Price] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+)
+
+List_UpgradeSpringDamper:
+CREATE TABLE [List_UpgradeSpringDamper]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[ManufacturerID] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+,[Price] INT
+,[IsStock] INT
+,[SuspensionDamageModDefID] INT
+,[TiresDamageModDefID] INT
+,[FrontSpringDamperPhysicsID] INT
+,[RearSpringDamperPhysicsID] INT
+)
+
+List_UpgradeTireCompound:
+CREATE TABLE [List_UpgradeTireCompound]  (
+[Id] INTEGER PRIMARY KEY
+,[Ordinal] INT
+,[Level] INT
+,[IsStock] INT
+,[TireCompoundID] INT
+,[ManufacturerID] INT
+,[Price] INT
+,[MassDiff] REAL
+,[DragScale] REAL
+,[WindInstabilityScale] REAL
+)
+
+List_VariableTiming:
+CREATE TABLE [List_VariableTiming]  (
+[VariableTimingID] INTEGER PRIMARY KEY
+,[VariableTimingType] TEXT
+)
+
+List_WheelStyle:
+CREATE TABLE [List_WheelStyle]  (
+[WheelStyleID] INTEGER PRIMARY KEY
+,[MediaName] TEXT
+,[DisplayName] TEXT
+)
+
+List_Wheels:
+CREATE TABLE [List_Wheels]  (
+[ID] INTEGER PRIMARY KEY
+,[MediaName] TEXT
+,[DisplayName] TEXT
+,[PartManufacturerID] INT
+,[Mass] REAL
+,[Price] INT
+,[IsStock] INT
+,[Type] TEXT
+,[Lip] INT
+,[CenterCap] INT
+,[Logo] INT
+,[ActualColor] TEXT
+,[WheelColor] TEXT
+,[RGB] INT
+,[BrakeDrawOffset] REAL
+,[IconPath] TEXT
+)
+
+Livery_Categories:
+CREATE TABLE [Livery_Categories]  (
+[ID] INTEGER PRIMARY KEY
+,[livtype] INT
+,[name] TEXT
+,[vinyllocfield] TEXT
+,[sortOrder] INT
+)
+
+Livery_Decals:
+CREATE TABLE [Livery_Decals]  (
+[ID] INTEGER PRIMARY KEY
+,[Filename] TEXT
+,[DisplayName] TEXT
+,[AlphaSort] TEXT
+)
+
+Livery_DecalsSortOrder:
+CREATE TABLE [Livery_DecalsSortOrder]  (
+[ID] INTEGER PRIMARY KEY
+,[MakeID] INT
+,[Sequence] INT
+,[Livery_DecalID] INT
+)
+
+Livery_VinylNames:
+CREATE TABLE [Livery_VinylNames]  (
+[ID] INTEGER PRIMARY KEY
+,[SequenceText] TEXT
+,[UpperAlphaText] TEXT
+,[LowerAlphaText] TEXT
+,[LowerAlphaText2] TEXT
+)
+
+Livery_VinylsDecals:
+CREATE TABLE [Livery_VinylsDecals]  (
+[ID] INTEGER PRIMARY KEY
+,[Category] INT
+,[Name] TEXT
+,[Path] TEXT
+)
+
+MPAIDifficultyMap:
+CREATE TABLE [MPAIDifficultyMap]  (
+[Id] INTEGER PRIMARY KEY
+,[AISkill] INT
+,[AITemperament] INT
+)
+
+MultiDiscContentPacks:
+CREATE TABLE [MultiDiscContentPacks]  (
+[ID] TEXT
+,[DashDisplayName] TEXT
+,[Description] TEXT
+,[LongDescription] TEXT
+,[intID] INT
+,[PubOfferingID] INT
+,[LicenseLevel] INT
+,[LicenseMask] INT
+,[IsDLC] INT
+)
+
+MultiDiscSlides:
+CREATE TABLE [MultiDiscSlides]  (
+[contentPackID] TEXT
+,[slideNumber] INT
+,[imagePath] TEXT
+)
+
+NewProfile_BadgeTitleProgress:
+CREATE TABLE [NewProfile_BadgeTitleProgress]  (
+[RuleId] INTEGER PRIMARY KEY
+,[CurrentProgress] INT
+)
+
+NewProfile_BadgeTitleUnlocks:
+CREATE TABLE [NewProfile_BadgeTitleUnlocks]  (
+[UnlockId] INTEGER PRIMARY KEY
+,[IsNewBadge] INT
+,[IsNewTitle] INT
+)
+
+NewProfile_CarExperienceRevealsSeen:
+CREATE TABLE [NewProfile_CarExperienceRevealsSeen]  (
+[CarID] INTEGER PRIMARY KEY
+)
+
+NewProfile_CarExperienceUnlocks:
+CREATE TABLE [NewProfile_CarExperienceUnlocks]  (
+[CarID] INTEGER PRIMARY KEY
+)
+
+NewProfile_CarPointsOfInterestProgress:
+CREATE TABLE [NewProfile_CarPointsOfInterestProgress]  (
+[CarOrdinal] INTEGER PRIMARY KEY
+,[NumPOIActivations] INT
+)
+
+NewProfile_Career_AIHistory:
+CREATE TABLE [NewProfile_Career_AIHistory]  (
+[AIPlayerId] INTEGER PRIMARY KEY
+,[Lvl] INT
+,[TotalWinnings] INT
+,[DistanceDriven] INT
+,[TimeDriven] INT
+,[NumVictories] INT
+,[NumPodiums] INT
+,[NumRaces] INT
+,[TotalRepairs] INT
+)
+
+NewProfile_Career_Affinity:
+CREATE TABLE [NewProfile_Career_Affinity]  (
+[GroupId] INTEGER PRIMARY KEY
+,[XP] INT
+,[TimeDriven] INT
+,[DistanceDriven] INT
+)
+
+NewProfile_Career_CarGroups:
+CREATE TABLE [NewProfile_Career_CarGroups]  (
+[ID] INTEGER PRIMARY KEY
+,[SortOrder] INT
+,[DisplayName] TEXT
+)
+
+NewProfile_Career_EventResults:
+CREATE TABLE [NewProfile_Career_EventResults]  (
+[EventId] INTEGER PRIMARY KEY
+,[Place] INT
+)
+
+NewProfile_Career_Garage:
+CREATE TABLE [NewProfile_Career_Garage]  (
+[Id] INTEGER PRIMARY KEY
+,[CarId] INT
+,[PerformanceIndex] REAL
+,[ClassID] INT
+,[PartsValue] INT
+,[SpeedRating] REAL
+,[AccelerationRating] REAL
+,[LaunchRating] REAL
+,[BrakingRating] REAL
+,[HandlingRating] REAL
+,[CurbWeight] REAL
+,[WeightDistribution] REAL
+,[AspirationTypeId] INT
+,[SimPeakPower] REAL
+,[SimPeakAngVel] REAL
+,[SimPeakTorque] REAL
+,[SimPeakTorqueAngVel] REAL
+,[SimRedlineAngVel] REAL
+,[PeakIntakePSI] REAL
+,[DistanceDriven] INT
+,[TimeDriven] INT
+,[TotalWinnings] INT
+,[TotalRepairs] INT
+,[NumVictories] INT
+,[NumPodiums] INT
+,[NumRaces] INT
+,[NumOwners] INT
+,[NumTimesSold] INT
+,[CurOwnerPurchaseDate] INT
+,[CurOwnerNumRaces] INT
+,[CurOwnerWinnings] INT
+,[OriginalOwner] TEXT
+,[CarGroup] INT
+,[Flags] INT
+,[Engine] INT
+,[Drivetrain] INT
+,[CarBody] INT
+,[Motor] INT
+,[Brakes] INT
+,[SpringDamper] INT
+,[AntiSwayFront] INT
+,[AntiSwayRear] INT
+,[TireCompound] INT
+,[RearWing] INT
+,[RimSizeFront] INT
+,[RimSizeRear] INT
+,[Camshaft] INT
+,[Valves] INT
+,[Displacement] INT
+,[PistonsCompression] INT
+,[FuelSystem] INT
+,[Ignition] INT
+,[Exhaust] INT
+,[Intake] INT
+,[Flywheel] INT
+,[Manifold] INT
+,[RestrictorPlate] INT
+,[OilCooling] INT
+,[SingleTurbo] INT
+,[TwinTurbo] INT
+,[QuadTurbo] INT
+,[SuperchargerCSC] INT
+,[SuperchargerDSC] INT
+,[Intercooler] INT
+,[Clutch] INT
+,[Transmission] INT
+,[Driveline] INT
+,[Differential] INT
+,[FrontBumper] INT
+,[RearBumper] INT
+,[Hood] INT
+,[SideSkirts] INT
+,[TireWidthFront] INT
+,[TireWidthRear] INT
+,[WeightReduction] INT
+,[ChassisStiffness] INT
+,[MotorParts] INT
+,[TireBrand] INT
+,[WheelStyle] INT
+,[DefaultManufacturerColorIndex] INT
+,[LiveryFileName] TEXT
+,[Guid] TEXT
+,[Thumbnail] TEXT
+,[Tuning_frontTirePressure] REAL
+,[Tuning_rearTirePressure] REAL
+,[Tuning_finalDriveRatio] REAL
+,[Tuning_firstGear] REAL
+,[Tuning_secondGear] REAL
+,[Tuning_thirdGear] REAL
+,[Tuning_fourthGear] REAL
+,[Tuning_fifthGear] REAL
+,[Tuning_sixthGear] REAL
+,[Tuning_seventhGear] REAL
+,[Tuning_eighthGear] REAL
+,[Tuning_frontCamber] REAL
+,[Tuning_rearCamber] REAL
+,[Tuning_frontToe] REAL
+,[Tuning_rearToe] REAL
+,[Tuning_frontCaster] REAL
+,[Tuning_frontSwaybar] REAL
+,[Tuning_rearSwaybar] REAL
+,[Tuning_frontSpring] REAL
+,[Tuning_rearSpring] REAL
+,[Tuning_frontRideHeight] REAL
+,[Tuning_rearRideHeight] REAL
+,[Tuning_frontDampingStiffness] REAL
+,[Tuning_rearDampingStiffness] REAL
+,[Tuning_frontBumpRatio] REAL
+,[Tuning_rearBumpRatio] REAL
+,[Tuning_frontDownforce] REAL
+,[Tuning_rearDownforce] REAL
+,[Tuning_brakeBalance] REAL
+,[Tuning_brakePressure] REAL
+,[Tuning_frontAccel] REAL
+,[Tuning_rearAccel] REAL
+,[Tuning_frontDecel] REAL
+,[Tuning_rearDecel] REAL
+,[Tuning_centerTorque] REAL
+,[SharedID] INT
+)
+
+NewProfile_Career_PurchasedParts:
+CREATE TABLE [NewProfile_Career_PurchasedParts]  (
+[GarageId] INT
+,[PartEnum] INT
+,[PartId] INT
+,[ManufacturerId] INT
+,[PricePaid] INT
+)
+
+NewProfile_Career_RaceResults:
+CREATE TABLE [NewProfile_Career_RaceResults]  (
+[RaceId] INTEGER PRIMARY KEY
+,[Place] INT
+)
+
+NewProfile_Career_TrackUsage:
+CREATE TABLE [NewProfile_Career_TrackUsage]  (
+[TrackId] INTEGER PRIMARY KEY
+,[NumCareerRaces] INT
+,[NumNonCareerRaces] INT
+,[Viewed] INT
+)
+
+NewProfile_ChangeTracking:
+CREATE TABLE [NewProfile_ChangeTracking]  (
+[TableID] INT
+,[RowID] INT
+,[Action] INT
+,[TransactionId] INT
+)
+
+NewProfile_ContentSeen:
+CREATE TABLE [NewProfile_ContentSeen]  (
+[ContentType_ContentId] INTEGER PRIMARY KEY
+)
+
+NewProfile_GameplayAggregate:
+CREATE TABLE [NewProfile_GameplayAggregate]  (
+[EntryType] INTEGER PRIMARY KEY
+,[Count] INT
+,[Value] INT
+)
+
+NewProfile_LastUsedGarageId:
+CREATE TABLE [NewProfile_LastUsedGarageId]  (
+[LastUsedGarageId] INTEGER PRIMARY KEY
+)
+
+PerformanceBudget:
+CREATE TABLE [PerformanceBudget]  (
+[BudgetArea] TEXT
+,[BudgetItem] TEXT
+,[MetricName] TEXT
+,[Scenario] TEXT
+,[Budget] REAL
+,[Units] TEXT
+,[LongDescription] TEXT
+,[CameraType] INT
+,[DisplayOrder] INT
+)
+
+PerformanceBudgetCameras:
+CREATE TABLE [PerformanceBudgetCameras]  (
+[CameraName] TEXT
+,[CameraType] INTEGER PRIMARY KEY
+)
+
+PittingProfiles:
+CREATE TABLE [PittingProfiles]  (
+[id] INTEGER PRIMARY KEY
+,[Name] TEXT
+,[PitThreshold_Tires] REAL
+,[PitThreshold_Fuel] REAL
+,[PitThreshold_Engine] REAL
+,[PitThreshold_Transmission] REAL
+,[PitThreshold_Suspension] REAL
+,[PitThreshold_Deviation] REAL
+)
+
+PlayerLevelDef:
+CREATE TABLE [PlayerLevelDef]  (
+[Id] INTEGER PRIMARY KEY
+,[XP] INT
+,[MaxGiftCars] INT
+)
+
+Powertrains:
+CREATE TABLE [Powertrains]  (
+[Id] INTEGER PRIMARY KEY
+,[DrivetrainId] INT
+,[EnginePlacementId] INT
+,[IconPath] TEXT
+,[SmallIconPath] TEXT
+)
+
+Protos_ModSignature:
+CREATE TABLE Protos_ModSignature (Key TEXT PRIMARY KEY, Value TEXT NOT NULL)
+
+Races:
+CREATE TABLE [Races]  (
+[Id] INTEGER PRIMARY KEY
+,[EventId] INT
+,[RaceNumber] INT
+,[TrackId] INT
+,[NumLaps] INT
+,[ModeRaceNumber] INT
+,[TimeOfDayIndex] INT
+)
+
+RacesSpecial:
+CREATE TABLE [RacesSpecial]  (
+[RaceId] INTEGER PRIMARY KEY
+,[CollObjLayoutId] INT
+,[TargetScore_Easy] REAL
+,[TargetScore_Med] REAL
+,[TargetScore_Hard] REAL
+,[TargetScore_Pro] REAL
+,[MinSpeedRequiredMPH] REAL
+)
+
+Rewards_DriverLevelv3:
+CREATE TABLE [Rewards_DriverLevelv3]  (
+[Id] INTEGER PRIMARY KEY
+,[DriverLevel] INT
+,[RewardCarId] INT
+,[SortOrder] INT
+)
+
+Rewards_ShowroomUnlocks:
+CREATE TABLE [Rewards_ShowroomUnlocks]  (
+[NumCompletedUnlocks] INT
+,[RewardCarId] INTEGER PRIMARY KEY
+)
+
+SplitPoints:
+CREATE TABLE [SplitPoints]  (
+[ID] INTEGER PRIMARY KEY
+,[TrackId] INT
+,[Split] REAL
+)
+
+StartGridPositions:
+CREATE TABLE [StartGridPositions]  (
+[id] INT
+,[StartIndex] INT
+,[MetersBackFromStartLine] REAL
+,[MetersRightOfCenterLine] REAL
+,[Yaw] REAL
+)
+
+StripeColors:
+CREATE TABLE [StripeColors]  (
+[Ordinal] INT
+,[Sequence] INT
+,[ColorStripe] INT
+,[MetallicAmount] REAL
+)
+
+TeamColors:
+CREATE TABLE [TeamColors]  (
+[id] INTEGER PRIMARY KEY
+,[rgb] INT
+,[DisplayName] TEXT
+)
+
+TempCar:
+CREATE TABLE "TempCar" (
+        "Id"    INTEGER,
+        "Year"  INTEGER,
+        "MakeID"        INTEGER,
+        "DisplayName"   TEXT,
+        "ModelShort"    TEXT,
+        "MediaName"     TEXT,
+        "ClassID"       INTEGER,
+        "CarTypeID"     INTEGER,
+        "CarClassModifier"      REAL,
+        "FamilyModelID" INTEGER,
+        "FamilyBodyID"  INTEGER,
+        "EnginePlacementID"     INTEGER,
+        "MaterialTypeID"        INTEGER,
+        "PowertrainID"  INTEGER,
+        "CurbWeight"    REAL,
+        "WeightDistribution"    REAL,
+        "NumGears"      INTEGER,
+        "TireBrandID"   INTEGER,
+        "BaseRarity"    REAL,
+        "FrontTireWidthMM"      INTEGER,
+        "FrontTireAspect"       INTEGER,
+        "FrontWheelDiameterIN"  INTEGER,
+        "RearTireWidthMM"       INTEGER,
+        "RearTireAspect"        INTEGER,
+        "RearWheelDiameterIN"   INTEGER,
+        "Time:0-60-sec" REAL,
+        "Time:0-100-sec"        REAL,
+        "QuarterMileTime-sec"   REAL,
+        "QuarterMileSpeed-mph"  REAL,
+        "TopSpeed-mph"  REAL,
+        "SpeedLimiterID"        INTEGER,
+        "BaseCost"      INTEGER,
+        "PerformanceIndex"      REAL,
+        "SteerMaxAngle" REAL,
+        "SteerMaxAngVelTurning" REAL,
+        "SteerMaxAngVelStraighten"      REAL,
+        "SteerAngVelCountersteer"       REAL,
+        "SteerAngVelDynFindPeak"        REAL,
+        "SteerAccelTimeToMaxRate"       REAL,
+        "SteerSpeedSensitiveMaxGees"    REAL,
+        "SteerSpeedSensitiveMinMaxAngle"        REAL,
+        "SteerSpeedSensitiveSlowSpeed"  REAL,
+        "SteerSpeedSensitiveFastSpeed"  REAL,
+        "SteerSpeedSensitiveFastRateScale"      REAL,
+        "AssistsTCSSlipDefTakeoff"      REAL,
+        "AssistsTCSSlipDefMoving"       REAL,
+        "AutoSteerOverrideID"   INTEGER,
+        "FixListingRearFricScale"       REAL,
+        "FixListingNormSlip0"   REAL,
+        "FixListingNormSlip1"   REAL,
+        "FixListingSteerAngle0" REAL,
+        "FixListingSteerAngle1" REAL,
+        "BodyAeroLongitudinalDrag"      REAL,
+        "BodyAeroVerticalDrag"  REAL,
+        "BodyAeroLateralDragFront"      REAL,
+        "BodyAeroLateralDragRear"       REAL,
+        "BodyAeroForwardDownforceFront" REAL,
+        "BodyAeroForwardDownforceRear"  REAL,
+        "BodyAeroAngleZeroDownforce"    REAL,
+        "BodyAeroWIForceScale"  REAL,
+        "TireAeroHackShouldApply"       INTEGER,
+        "TireAeroHackMinSpringLoad"     REAL,
+        "TireAeroHackMaxSpringLoad"     REAL,
+        "AIPlayerID"    INTEGER,
+        "SimPeakPower"  REAL,
+        "SimPeakAngVel" REAL,
+        "SimPeakTorque" REAL,
+        "SimPeakTorqueAngVel"   REAL,
+        "SimRedlineAngVel"      REAL,
+        "SimTimeTo60MPH"        REAL,
+        "SimTimeTo100MPH"       REAL,
+        "SimTimeQuarterMile"    REAL,
+        "SimTopSpeed"   REAL,
+        "SimBrakeDistance100MPH"        REAL,
+        "SimLatGees60MPH"       REAL,
+        "SimLatGees120MPH"      REAL,
+        "SimSpeedQuarterMile"   REAL,
+        "SimBrakeDistance60MPH" REAL,
+        "HandlingRating"        REAL,
+        "SpeedRating"   REAL,
+        "AccelerationRating"    REAL,
+        "BrakingRating" REAL,
+        "GameTorqueScale"       REAL,
+        "GameDragScale" REAL,
+        "CaliperAngleFront"     REAL,
+        "CaliperAngleRear"      REAL,
+        "Thumbnail"     TEXT,
+        "ContentId"     INTEGER,
+        "IsPurchased"   INTEGER,
+        "IsUnicorn"     INTEGER,
+        "SteerMaxAngleFiltered" REAL,
+        "HasLivery"     INTEGER,
+        "WingMask"      INTEGER,
+        "CaliperRGBFront"       INTEGER,
+        "CaliperRGBRear"        INTEGER,
+        "StockWheelID"  INTEGER,
+        "IsArcade"      INTEGER,
+        "IsInstalled"   INTEGER,
+        "LaunchRating"  REAL,
+        "GaugeID"       INTEGER,
+        "FamilySpecialID"       INTEGER,
+        "EngineConfigID"        INTEGER,
+        "DriveTypeID"   INTEGER,
+        "RegionID"      INTEGER,
+        "CountryID"     INTEGER,
+        "MakeName"      TEXT,
+        "MakeIcon"      TEXT,
+        "CylinderID"    INTEGER,
+        "AspirationTypeId"      INTEGER,
+        "Displacement"  INTEGER,
+        "ModelId"       INTEGER,
+        "IsCarExperienceUnlocked"       INTEGER,
+        "HasCarExperience"      INTEGER,
+        "FrontStockRideHeight"  REAL,
+        "RearStockRideHeight"   REAL,
+        "IsDrivable"    INTEGER,
+        "HasRaceLivery" INTEGER
+)
+
+TempEngine:
+CREATE TABLE "TempEngine" (
+        "Id"    INTEGER,
+        "Ordinal"       INTEGER,
+        "Level" INTEGER,
+        "EngineID"      INTEGER,
+        "IsStock"       INTEGER,
+        "ManufacturerID"        INTEGER,
+        "Price" INTEGER,
+        "MassDiff"      REAL,
+        "WeightDistDiff"        REAL,
+        "DragScale"     REAL,
+        "WindInstabilityScale"  REAL
+)
+
+ThumbnailTypes:
+CREATE TABLE [ThumbnailTypes]  (
+[Id] INT
+,[TableName] TEXT
+,[ColumnName] TEXT
+)
+
+TireMod_FrictionScale:
+CREATE TABLE [TireMod_FrictionScale]  (
+[Ordinal] INTEGER PRIMARY KEY
+,[FrontFrictionScale] REAL
+,[RearFrictionScale] REAL
+)
+
+TrackPittingZones:
+CREATE TABLE [TrackPittingZones]  (
+[Tracks_id] INTEGER PRIMARY KEY
+,[SpeedLimit] REAL
+,[EnterFirstMergeWP] INT
+,[EnterLastMergeWP] INT
+,[EnterMergeCompleteWP] INT
+,[ExitMergeWP] INT
+,[ExitMergeCompleteWP] INT
+)
+
+TrackSpecificAI:
+CREATE TABLE [TrackSpecificAI]  (
+[ID] INTEGER PRIMARY KEY
+,[Tracks_id] INT
+,[AIDiff_id] INT
+,[DistBehindForTorqueBoost] REAL
+,[StartRubberbandingDistance] REAL
+,[MaxRubberbandingEffectDistance] REAL
+,[StartTorqueCutDistance] REAL
+,[MaxTorqueCutDistance] REAL
+)
+
+TrackStartingMerges:
+CREATE TABLE [TrackStartingMerges]  (
+[Tracks_id] INTEGER PRIMARY KEY
+,[WaypointsToFirstMerge] INT
+,[WaypointsBeforeCorner] INT
+,[WaypointsBetweenMerges] INT
+,[MaxStartOfflineDistance] REAL
+)
+
+Tracks:
+CREATE TABLE [Tracks]  (
+[id] INTEGER PRIMARY KEY
+,[DisplayName] TEXT
+,[ShortDisplayName] TEXT
+,[MediaName] TEXT
+,[RibbonIndex] INT
+,[ReverseIndex] INT
+,[Length] INT
+,[DefaultStartGridPositionsId] INT
+,[FlyingStartPosId] INT
+,[Logo] TEXT
+,[LogoSmall] TEXT
+,[IsRealWorld] INT
+,[IsReverse] INT
+,[IsHomespace] INT
+,[Active] INT
+,[MiniRibbonPath] TEXT
+,[ContentId] INT
+,[IsPurchased] INT
+,[MPSortOrder] INT
+,[MPPitProfile] INT
+,[RibbonConfiguration] INT
+,[CarsPerUniverse] INT
+,[Renderable] INT
+,[DriftScoreScalar] REAL
+,[StartLine] REAL
+,[FinishLine] REAL
+,[XMirror321] INT
+,[IsInstalled] INT
+,[EnvironmentId] INT
+,[WinningsScalar] REAL
+,[QuickRaceLapCountKinect] INT
+,[QuickRaceLapCount] INT
+,[RichPresence] INT
+,[SatImageName] TEXT
+)
+
+TrialLoadingImages:
+CREATE TABLE [TrialLoadingImages]  (
+[ID] INT
+,[imagePath] TEXT
+)
+
+TurnSections:
+CREATE TABLE [TurnSections]  (
+[TrackId] INT
+,[Begin] REAL
+,[End] REAL
+,[Apex] REAL
+)
+
+UpgradeAreas:
+CREATE TABLE [UpgradeAreas]  (
+[id] INTEGER PRIMARY KEY
+,[Name] TEXT
+,[Description] TEXT
+,[IconPath] TEXT
+,[ImagePath] TEXT
+)
+
+UpgradeTypes:
+CREATE TABLE [UpgradeTypes]  (
+[id] INTEGER PRIMARY KEY
+,[PartEnum] INT
+,[AreaId] INT
+,[IsException] INT
+,[DisplayOrder] INT
+,[Name] TEXT
+,[Description] TEXT
+,[IconPath] TEXT
+,[ImagePath] TEXT
+)
+
+UpgradeWizardParts:
+CREATE TABLE [UpgradeWizardParts]  (
+[PartEnum] INT
+,[PartLevel] INT
+,[SortBalanced] INT
+)
+
+UpgradeWizardPartsRemoval:
+CREATE TABLE [UpgradeWizardPartsRemoval]  (
+[PartEnum] INTEGER PRIMARY KEY
+,[SortBalanced] INT
+)
+
+UpgradeWizardPowerRemoval:
+CREATE TABLE [UpgradeWizardPowerRemoval]  (
+[PartEnum] INTEGER PRIMARY KEY
+,[RemoveOrder] INT
+)
+
+Upgrades:
+CREATE TABLE [Upgrades]  (
+[id] INTEGER PRIMARY KEY
+,[TypeId] TEXT
+,[IsException] INT
+,[Name] TEXT
+,[Level] INT
+,[Description] TEXT
+,[IconPath] TEXT
+,[ImagePath] TEXT
+)
+
+VersionInfo:
+CREATE TABLE [VersionInfo]  (
+[database_version] INTEGER PRIMARY KEY
+)
+
+VolatileHostOptions:
+CREATE TABLE [VolatileHostOptions]  (
+[OptionId] INT
+)
+
+WheelExceptions:
+CREATE TABLE [WheelExceptions]  (
+[WheelID] INTEGER PRIMARY KEY
+)
+
+WheelLayouts:
+CREATE TABLE [WheelLayouts]  (
+[LayoutId] INTEGER PRIMARY KEY
+,[LeftThumbUp] TEXT
+,[LeftThumbDown] TEXT
+,[LeftThumbButton] TEXT
+,[RightThumbUp] TEXT
+,[RightThumbDown] TEXT
+,[RightThumbLeft] TEXT
+,[RightThumbRight] TEXT
+,[RightThumbButton] TEXT
+,[DPadUp] TEXT
+,[DPadDown] TEXT
+,[DPadLeft] TEXT
+,[DPadRight] TEXT
+,[ButtonA] TEXT
+,[ButtonB] TEXT
+,[ButtonX] TEXT
+,[ButtonY] TEXT
+,[LeftShoulder] TEXT
+,[RightShoulder] TEXT
+,[LeftTrigger] TEXT
+,[RightTrigger] TEXT
+)
+
+WheelNormOffsets:
+CREATE TABLE [WheelNormOffsets]  (
+[Id] INT
+,[NormOffset] REAL
+)
