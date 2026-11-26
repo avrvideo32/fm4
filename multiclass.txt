@@ -1,0 +1,202 @@
+ D:\code\py\fm4\create_fm4_event_fclass_multirace.py:1:#!/usr/bin/env python3
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:2:"""Convert the existing three-race Event 750 test entry into
+an early F-class event.
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:3:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:4:Source database:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:9:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:10:This uses Event 200 as the complete, proven early F-class
+road-race template:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:11:- Level 0, standard road-race mode, TargetClass 0 (F class)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:12:- its own AI participant roster and restriction
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:13:- first three races from its existing 20-race schedule
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:24:SOURCE = BASE / "gamedb_multirace_test.slt"
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:25:DEST = BASE / "gamedb_multirace_fclass_test.slt"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:26:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:27:TARGET_EVENT_ID = 750
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:28:F_CLASS_TEMPLATE_ID = 200
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:29:RACE_COUNT = 3
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:30:EXPECTED_TARGET_CLASS = 0
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:31:EXPECTED_RESTRICTION = "000800000402"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:32:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:34:    "Races": ("Id", 3842),
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:35:    "EventParticipants": ("ID", 76007),
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:36:    "EventRestrictions": ("ID", 439),
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:37:}
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:38:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:97:        raise SystemExit(f"Source database not found:
+{SOURCE}")
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:98:    if DEST.exists():
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:99:        raise SystemExit(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:100:            f"Output already exists: {DEST}\n"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:101:            "Rename or remove the old output before running
+this script again."
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:102:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:106:        target_before = get_event(src, TARGET_EVENT_ID)
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:107:        template = get_event(src, F_CLASS_TEMPLATE_ID)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:108:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:109:        if int(target_before["NumberOfRaces"]) != RACE_COUNT:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:110:            raise RuntimeError(
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:111:                f"Event {TARGET_EVENT_ID} should currently
+be the three-race test; "
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:114:        target_old_races = rows_for_event(src, "Races",
+TARGET_EVENT_ID)
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:115:        if len(target_old_races) != RACE_COUNT:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:116:            raise RuntimeError(
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:117:                f"Event {TARGET_EVENT_ID} has
+{len(target_old_races)} race rows, expected 3"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:119:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:120:        if int(template["TargetClass"]) !=
+EXPECTED_TARGET_CLASS:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:121:            raise RuntimeError(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:122:                f"Event {F_CLASS_TEMPLATE_ID} is not F
+class: "
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:123:                f"TargetClass={template['TargetClass']}"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:124:            )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:126:            raise RuntimeError(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:127:                f"Event {F_CLASS_TEMPLATE_ID} is not an
+early Level 0 event: "
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:128:                f"Level={template['Level']}"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:129:            )
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:130:        if int(template["NumberOfRaces"]) < RACE_COUNT:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:131:            raise RuntimeError("F-class template has fewer
+than three races")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:132:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:133:        template_races = rows_for_event(src, "Races",
+F_CLASS_TEMPLATE_ID)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:134:        template_races.sort(key=lambda r:
+int(r["RaceNumber"]))
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:135:        template_races = template_races[:RACE_COUNT]
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:136:        if [int(r["RaceNumber"]) for r in template_races] !=
+[1, 2, 3]:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:137:            raise RuntimeError("Event 200 does not begin
+with race numbers 1, 2, 3")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:139:        participants = rows_for_event(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:140:            src, "EventParticipants", F_CLASS_TEMPLATE_ID
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:141:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:142:        restrictions = rows_for_event(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:143:            src, "EventRestrictions", F_CLASS_TEMPLATE_ID
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:144:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:145:        showroom = rows_for_event(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:146:            src, "EventShowroomChallenges",
+F_CLASS_TEMPLATE_ID
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:147:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:148:        if int(template["NumberOfDrivers"]) !=
+len(participants):
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:172:            ).fetchone()
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:173:            if car is None or int(car[0]) !=
+EXPECTED_TARGET_CLASS or int(car[1]) != 1:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:174:                raise RuntimeError(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:175:                    f"Event 200 participant car {car_id} is
+not a drivable F-class car: {car}"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:176:                )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:177:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:188:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:189:        # Calculate a new display order in Event 200's early
+F-class career section.
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:190:        next_order = src.execute(
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:191:            'SELECT COALESCE(MAX("EventOrder"), -1) + 1 FROM
+"Events" '
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:204:    src =
+sqlite3.connect(f"file:{SOURCE.as_posix()}?mode=ro", uri=True)
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:205:    dst = sqlite3.connect(DEST)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:206:    try:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:207:        src.backup(dst)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:225:        dst.execute(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:226:            'DELETE FROM "EventParticipants" WHERE "EventID"
+= ?',
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:227:            (TARGET_EVENT_ID,),
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:228:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:229:        dst.execute(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:230:            'DELETE FROM "EventRestrictions" WHERE "EventID"
+= ?',
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:231:            (TARGET_EVENT_ID,),
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:232:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:237:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:238:        # Reuse Event 200's complete early F-class event
+setup, keeping ID 750.
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:239:        new_event = dict(template)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:240:        new_event["Id"] = TARGET_EVENT_ID
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:241:        new_event["EventOrder"] = int(next_order)
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:242:        new_event["NumberOfRaces"] = RACE_COUNT
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:243:        update_names = [name for name in new_event if name
+!= "Id"]
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:244:        dst.execute(
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:264:            row = dict(original)
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:265:            row["ID"] = next_id(dst, "EventParticipants")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:266:            row["EventID"] = TARGET_EVENT_ID
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:267:            insert_row(dst, "EventParticipants", row)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:268:            new_participant_ids.append(row["ID"])
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:269:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:272:            row = dict(original)
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:273:            row["ID"] = next_id(dst, "EventRestrictions")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:274:            row["EventID"] = TARGET_EVENT_ID
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:275:            insert_row(dst, "EventRestrictions", row)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:276:            new_restriction_ids.append(row["ID"])
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:277:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:284:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:285:        # Verify Event 750 now uses the exact F-class
+template values.
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:286:        final_event = get_event(dst, TARGET_EVENT_ID)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:287:        final_races = rows_for_event(dst, "Races",
+TARGET_EVENT_ID)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:288:        final_participants = rows_for_event(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:289:            dst, "EventParticipants", TARGET_EVENT_ID
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:290:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:291:        final_restrictions = rows_for_event(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:292:            dst, "EventRestrictions", TARGET_EVENT_ID
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:293:        )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:294:        if (
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:295:            int(final_event["TargetClass"]) !=
+EXPECTED_TARGET_CLASS
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:296:            or int(final_event["Level"]) != 0
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:297:            or int(final_event["NumberOfRaces"]) !=
+RACE_COUNT
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:298:            or len(final_races) != RACE_COUNT
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:299:            or len(final_participants) != len(participants)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:300:            or len(final_restrictions) != 1
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:309:            ).fetchone()
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:310:            if car is None or int(car[0]) !=
+EXPECTED_TARGET_CLASS or int(car[1]) != 1:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:311:                raise RuntimeError(
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:312:                    f"Final participant {row['Ordinal']} is
+not a drivable F-class car"
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:313:                )
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:314:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:315:        integrity = dst.execute("PRAGMA
+integrity_check").fetchone()[0]
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:316:        if integrity != "ok":
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:317:            raise RuntimeError(f"SQLite integrity_check
+failed: {integrity}")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:318:
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:319:        dst.commit()
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:320:
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:321:        print("SUCCESS: converted Event 750 to an early
+F-class three-race event")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:322:        print(f"Source database:          {SOURCE}")
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:323:        print(f"Output database:           {DEST}")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:324:        print(f"Event ID retained:
+{TARGET_EVENT_ID}")
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:325:        print(f"Template:                  Event
+{F_CLASS_TEMPLATE_ID} (existing F-class road race)")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:326:        print(f"CareerTypeId:
+{final_event['CareerTypeId']}")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:327:        print(f"Level:
+{final_event['Level']}")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:329:        print(f"EventOrder:
+{final_event['EventOrder']}")
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:330:        print(f"TargetClass:
+{final_event['TargetClass']} (F class)")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:331:        print(f"NumberOfRaces:
+{final_event['NumberOfRaces']}")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:332:        print(f"NumberOfDrivers:
+{final_event['NumberOfDrivers']}")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:336:        print(f"Race-special rows copied:
+{new_special_count}")
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:337:        print(f"SQLite integrity_check:    {integrity}")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:338:        print("Source database was not modified.")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:339:        print("Textures.zip and poster files were not
+changed.")
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:342:        dst.close()
+> D:\code\py\fm4\create_fm4_event_fclass_multirace.py:343:        DEST.unlink(missing_ok=True)
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:344:        raise
+  D:\code\py\fm4\create_fm4_event_fclass_multirace.py:345:    finally:
