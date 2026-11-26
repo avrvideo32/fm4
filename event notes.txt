@@ -1,0 +1,137 @@
+ D:\code\py\fm4\create_fm4_event750_multirace.py:1:# OBSOLETE: This created Event 750 as a C-class event using Event
+106 metadata.
+  D:\code\py\fm4\create_fm4_event750_multirace.py:2:# Do NOT use for the current F-class goal. Use
+create_fm4_event_fclass_multirace.py instead.
+  D:\code\py\fm4\create_fm4_event750_multirace.py:3:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:4:#!/usr/bin/env python3
+> D:\code\py\fm4\create_fm4_event750_multirace.py:5:"""Create Event 750 by cloning the working three-race C-class
+Event 106.
+  D:\code\py\fm4\create_fm4_event750_multirace.py:6:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:7:The script never modifies its source database. It writes:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:19:BASE = Path(__file__).resolve().parent
+  D:\code\py\fm4\create_fm4_event750_multirace.py:20:DEST = BASE / "gamedb_multirace_test.slt"
+> D:\code\py\fm4\create_fm4_event750_multirace.py:21:TEMPLATE_EVENT_ID = 106
+  D:\code\py\fm4\create_fm4_event750_multirace.py:22:EXPECTED_RACES = 3
+  D:\code\py\fm4\create_fm4_event750_multirace.py:23:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:27:    "Races": ("Id", 3842),
+  D:\code\py\fm4\create_fm4_event750_multirace.py:28:    "EventParticipants": ("ID", 76007),
+> D:\code\py\fm4\create_fm4_event750_multirace.py:29:    "EventRestrictions": ("ID", 439),
+  D:\code\py\fm4\create_fm4_event750_multirace.py:30:}
+  D:\code\py\fm4\create_fm4_event750_multirace.py:31:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:127:    try:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:128:        event_columns = get_columns(src, "Events")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:129:        template_values = src.execute(
+  D:\code\py\fm4\create_fm4_event750_multirace.py:130:            'SELECT * FROM "Events" WHERE "Id" = ?',
+> D:\code\py\fm4\create_fm4_event750_multirace.py:131:            (TEMPLATE_EVENT_ID,),
+  D:\code\py\fm4\create_fm4_event750_multirace.py:132:        ).fetchone()
+> D:\code\py\fm4\create_fm4_event750_multirace.py:133:        if template_values is None:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:134:            raise RuntimeError(f"Template event
+{TEMPLATE_EVENT_ID} is missing")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:135:        template = dict(zip(event_columns, template_values))
+  D:\code\py\fm4\create_fm4_event750_multirace.py:136:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:137:        race_columns = get_columns(src, "Races")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:138:        race_values = src.execute(
+  D:\code\py\fm4\create_fm4_event750_multirace.py:139:            'SELECT * FROM "Races" WHERE "EventId" = ? ORDER BY
+"RaceNumber"',
+> D:\code\py\fm4\create_fm4_event750_multirace.py:140:            (TEMPLATE_EVENT_ID,),
+  D:\code\py\fm4\create_fm4_event750_multirace.py:141:        ).fetchall()
+  D:\code\py\fm4\create_fm4_event750_multirace.py:142:        source_races = [dict(zip(race_columns, value)) for value
+in race_values]
+  D:\code\py\fm4\create_fm4_event750_multirace.py:144:        if len(source_races) != EXPECTED_RACES:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:145:            raise RuntimeError(
+> D:\code\py\fm4\create_fm4_event750_multirace.py:146:                f"Event {TEMPLATE_EVENT_ID} should have
+{EXPECTED_RACES} races; "
+  D:\code\py\fm4\create_fm4_event750_multirace.py:147:                f"found {len(source_races)}"
+  D:\code\py\fm4\create_fm4_event750_multirace.py:148:            )
+  D:\code\py\fm4\create_fm4_event750_multirace.py:149:        numbers = [int(row["RaceNumber"]) for row in
+source_races]
+  D:\code\py\fm4\create_fm4_event750_multirace.py:150:        if numbers != [1, 2, 3]:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:151:            raise RuntimeError(f"Unexpected template RaceNumber
+sequence: {numbers}")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:152:        if int(template["NumberOfRaces"]) != EXPECTED_RACES:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:153:            raise RuntimeError(
+> D:\code\py\fm4\create_fm4_event750_multirace.py:154:                f"Template declares
+NumberOfRaces={template['NumberOfRaces']}"
+  D:\code\py\fm4\create_fm4_event750_multirace.py:155:            )
+  D:\code\py\fm4\create_fm4_event750_multirace.py:156:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:157:        source_participants = event_rows(src,
+"EventParticipants", TEMPLATE_EVENT_ID)
+> D:\code\py\fm4\create_fm4_event750_multirace.py:158:        source_restrictions = event_rows(src,
+"EventRestrictions", TEMPLATE_EVENT_ID)
+  D:\code\py\fm4\create_fm4_event750_multirace.py:159:        source_showroom = event_rows(
+> D:\code\py\fm4\create_fm4_event750_multirace.py:160:            src, "EventShowroomChallenges", TEMPLATE_EVENT_ID
+  D:\code\py\fm4\create_fm4_event750_multirace.py:161:        )
+  D:\code\py\fm4\create_fm4_event750_multirace.py:162:        if not source_participants:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:163:            raise RuntimeError("Template event has no AI
+participant rows")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:164:        if not source_restrictions:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:165:            raise RuntimeError("Template event has no
+restriction rows")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:166:        if source_showroom:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:167:            raise RuntimeError(
+> D:\code\py\fm4\create_fm4_event750_multirace.py:168:                "Template has showroom challenge rows; refusing
+to omit them"
+  D:\code\py\fm4\create_fm4_event750_multirace.py:169:            )
+  D:\code\py\fm4\create_fm4_event750_multirace.py:170:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:205:        new_event_id = allocate_id(dst, "Events")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:206:        next_order = dst.execute(
+> D:\code\py\fm4\create_fm4_event750_multirace.py:207:            'SELECT COALESCE(MAX("EventOrder"), -1) + 1 FROM
+"Events" '
+> D:\code\py\fm4\create_fm4_event750_multirace.py:208:            'WHERE "CareerTypeId" = ? AND "Level" = ? AND
+"GroupMask" = ?',
+> D:\code\py\fm4\create_fm4_event750_multirace.py:209:            (template["CareerTypeId"], template["Level"],
+template["GroupMask"]),
+  D:\code\py\fm4\create_fm4_event750_multirace.py:210:        ).fetchone()[0]
+  D:\code\py\fm4\create_fm4_event750_multirace.py:211:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:212:        new_event = dict(template)
+  D:\code\py\fm4\create_fm4_event750_multirace.py:213:        new_event["Id"] = new_event_id
+> D:\code\py\fm4\create_fm4_event750_multirace.py:214:        new_event["EventOrder"] = int(next_order)
+  D:\code\py\fm4\create_fm4_event750_multirace.py:215:        insert_row(dst, "Events", new_event)
+  D:\code\py\fm4\create_fm4_event750_multirace.py:216:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:234:            new_participant_ids.append(participant["ID"])
+  D:\code\py\fm4\create_fm4_event750_multirace.py:235:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:236:        new_restriction_ids = []
+> D:\code\py\fm4\create_fm4_event750_multirace.py:237:        for original in source_restrictions:
+> D:\code\py\fm4\create_fm4_event750_multirace.py:238:            restriction = dict(original)
+> D:\code\py\fm4\create_fm4_event750_multirace.py:239:            restriction["ID"] = allocate_id(dst,
+"EventRestrictions")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:240:            restriction["EventID"] = new_event_id
+> D:\code\py\fm4\create_fm4_event750_multirace.py:241:            insert_row(dst, "EventRestrictions", restriction)
+> D:\code\py\fm4\create_fm4_event750_multirace.py:242:            new_restriction_ids.append(restriction["ID"])
+  D:\code\py\fm4\create_fm4_event750_multirace.py:243:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:244:        for original in source_special:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:256:            (new_event_id,),
+  D:\code\py\fm4\create_fm4_event750_multirace.py:257:        ).fetchone()[0]
+> D:\code\py\fm4\create_fm4_event750_multirace.py:258:        actual_restrictions = dst.execute(
+> D:\code\py\fm4\create_fm4_event750_multirace.py:259:            'SELECT COUNT(*) FROM "EventRestrictions" WHERE
+"EventID" = ?',
+  D:\code\py\fm4\create_fm4_event750_multirace.py:260:            (new_event_id,),
+  D:\code\py\fm4\create_fm4_event750_multirace.py:261:        ).fetchone()[0]
+  D:\code\py\fm4\create_fm4_event750_multirace.py:265:        if actual_participants != len(source_participants):
+  D:\code\py\fm4\create_fm4_event750_multirace.py:266:            raise RuntimeError("EventParticipants verification
+failed")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:267:        if actual_restrictions != len(source_restrictions):
+> D:\code\py\fm4\create_fm4_event750_multirace.py:268:            raise RuntimeError("EventRestrictions verification
+failed")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:269:
+  D:\code\py\fm4\create_fm4_event750_multirace.py:270:        integrity = dst.execute("PRAGMA
+integrity_check").fetchone()[0]
+  D:\code\py\fm4\create_fm4_event750_multirace.py:278:        print(f"Source contains Event 749: {source_has_749}")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:279:        print(f"Output DB:              {DEST}")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:280:        print(f"Template event:         {TEMPLATE_EVENT_ID}")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:281:        print(f"New event ID:           {new_event_id}")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:282:        print(f"CareerTypeId:
+{new_event['CareerTypeId']}")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:283:        print(f"Level:                   {new_event['Level']}")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:284:        print(f"GroupMask:
+{new_event['GroupMask']}")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:285:        print(f"TargetClass:
+{new_event['TargetClass']} (C class)")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:286:        print(f"EventOrder:              {next_order}")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:287:        print(f"Race IDs:                {new_race_ids}")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:288:        print(f"Participant rows copied:
+{len(new_participant_ids)}")
+> D:\code\py\fm4\create_fm4_event750_multirace.py:289:        print(f"Restriction rows copied:
+{len(new_restriction_ids)}")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:290:        print(f"RacesSpecial rows copied: {len(source_special)}")
+  D:\code\py\fm4\create_fm4_event750_multirace.py:291:        print(f"SQLite integrity_check:  {integrity}")
